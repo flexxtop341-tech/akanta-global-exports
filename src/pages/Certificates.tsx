@@ -1,38 +1,72 @@
-import { FileText, Upload } from "lucide-react";
+import { Award, ShieldCheck, FileText, CheckCircle2, Shield } from "lucide-react";
+import PageHero from "@/components/PageHero";
+
+const badges = [
+  "100% Compliance Rate",
+  "Regular Third-Party Audits",
+  "Transparent Documentation",
+  "International Standards",
+];
 
 const certs = [
-  { title: "Export License", desc: "Valid export license issued by the Government of India." },
-  { title: "MSME Registration", desc: "Registered under the Micro, Small and Medium Enterprises Development Act." },
-  { title: "Trade Compliance Certificates", desc: "Compliance certifications for international trade standards." },
+  { icon: Award, category: "Quality Management", title: "ISO 9001:2015", desc: "International standard for quality management systems, ensuring consistent quality in all operations." },
+  { icon: Shield, category: "Environmental Management", title: "ISO 14001:2015", desc: "Certification for environmental management systems, demonstrating our commitment to sustainability." },
+  { icon: FileText, category: "Food Safety", title: "FSSAI License", desc: "Food Safety and Standards Authority of India certification for all food product exports." },
+  { icon: CheckCircle2, category: "Import-Export Code", title: "IEC Registration", desc: "Government of India Import Export Code, mandatory for all international trade operations." },
+  { icon: Award, category: "Agricultural Exports", title: "APEDA Registration", desc: "Agricultural and Processed Food Products Export Development Authority registration." },
+  { icon: Shield, category: "Trade Association", title: "FIEO Membership", desc: "Federation of Indian Export Organizations membership for premier export support." },
 ];
 
 const Certificates = () => {
   return (
-    <section className="py-20 bg-card">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-foreground mb-2">Certificates</h1>
-        <div className="h-1 w-16 bg-accent rounded mb-10" />
-        <p className="text-muted-foreground max-w-2xl mb-12">
-          Akanta Global maintains all necessary certifications and compliance documents for international trade.
-        </p>
+    <>
+      <PageHero
+        title="Certifications"
+        subtitle="Our commitment to quality and compliance is backed by internationally recognized certifications."
+      />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certs.map((cert, i) => (
-            <div key={i} className="bg-background rounded-lg border border-border p-8 card-hover text-center">
-              <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText size={28} className="text-accent" />
+      {/* Badges */}
+      <section className="py-10 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            {badges.map((badge, i) => (
+              <div key={i} className="flex items-center gap-2 bg-card border border-border rounded-full px-5 py-2.5">
+                <CheckCircle2 size={16} className="text-accent" />
+                <span className="text-sm font-medium text-foreground">{badge}</span>
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{cert.title}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{cert.desc}</p>
-              <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
-                <Upload size={14} />
-                <span>Document available upon request</span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Cert Cards */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certs.map((cert, i) => (
+              <div key={i} className="bg-card rounded-lg border border-border p-8 card-hover text-center">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <cert.icon size={26} className="text-accent" />
+                </div>
+                <span className="text-accent font-semibold text-xs uppercase tracking-wider">{cert.category}</span>
+                <h3 className="text-xl font-bold text-foreground mt-1 mb-2">{cert.title}</h3>
+                <p className="text-sm text-muted-foreground">{cert.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Commitment */}
+      <section className="py-16 bg-primary">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">Our Commitment to Compliance</h2>
+          <p className="text-primary-foreground/80 leading-relaxed">
+            At Akanta Global, we maintain the highest standards of regulatory compliance across all markets we operate in. Our certifications are regularly renewed and audited by independent third-party organizations to ensure continued adherence to international standards.
+          </p>
+        </div>
+      </section>
+    </>
   );
 };
 

@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
 import {
   Pen, Search, ClipboardCheck, FileText, Truck, Package,
-  ShieldCheck, DollarSign, Clock, Heart, Handshake, Users
+  Globe, ShieldCheck, DollarSign, Clock, Heart, Award
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import aboutImg from "@/assets/about-image.jpg";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
+
+const stats = [
+  { value: "45+", label: "Countries Served", dark: true },
+  { value: "98%", label: "On-Time Delivery", dark: false },
+  { value: "12+", label: "Years of Experience", dark: true },
+  { value: "100%", label: "Quality Assured", dark: false },
+];
 
 const services = [
   { icon: Pen, title: "Writing Instrument Exports", desc: "Premium ball pens, gel pens, and promotional writing instruments." },
@@ -20,12 +26,12 @@ const services = [
 ];
 
 const whyUs = [
-  { icon: ShieldCheck, title: "Strict Quality Checks", desc: "Every product passes multi-level inspection." },
-  { icon: DollarSign, title: "Transparent Pricing", desc: "No hidden costs. Clear, competitive quotes." },
-  { icon: Clock, title: "Reliable Shipments", desc: "Consistent on-time delivery track record." },
-  { icon: Heart, title: "Ethical Sourcing", desc: "Fair trade practices across our supply chain." },
-  { icon: Handshake, title: "Long-Term Partnerships", desc: "We invest in lasting business relationships." },
-  { icon: Users, title: "Strong Supplier Network", desc: "Trusted network of verified Indian manufacturers." },
+  { icon: Globe, title: "Global Network", desc: "Extensive partner network spanning 50+ countries for seamless international trade operations." },
+  { icon: ShieldCheck, title: "Quality Control", desc: "Stringent quality assurance at every step ensures only premium products reach our clients." },
+  { icon: DollarSign, title: "Competitive Pricing", desc: "Strategic sourcing and efficient operations enable us to offer the best market prices." },
+  { icon: Clock, title: "Timely Delivery", desc: "Reliable logistics and proactive tracking ensure your shipments arrive on schedule." },
+  { icon: Heart, title: "Ethical Practices", desc: "Committed to sustainable and ethical business practices throughout our supply chain." },
+  { icon: Award, title: "Certified Excellence", desc: "ISO certified operations with industry-recognized quality and compliance standards." },
 ];
 
 const products = [
@@ -68,43 +74,65 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Snapshot */}
-      <section className="py-20 bg-card">
+      {/* About Snapshot with Stats */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-2">About Akanta Global</h2>
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">About Akanta Global</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-2">
+                Trusted Supplier of Writing Instruments from India
+              </h2>
               <div className="h-1 w-16 bg-accent mb-6 rounded" />
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Based in Nashik, Maharashtra, Akanta Global is an export-focused international trade company specializing in high-quality writing instruments from India. We bridge the gap between India's finest pen manufacturers and global markets.
+                Akanta Global is committed to exporting high-quality, export-grade pens that meet international standards — supporting buyers with transparent pricing, timely delivery, and dependable service.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With a commitment to quality, transparency, and timely delivery, we serve international importers, stationery distributors, and promotional product companies worldwide.
+                We help importers, distributors, and promotional product companies grow their businesses through ethical sourcing, strong supplier partnerships, and customer-focused solutions.
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors"
+                className="inline-flex items-center text-accent font-semibold hover:text-accent-light transition-colors border border-accent rounded-md px-5 py-2.5"
               >
-                Learn More →
+                Learn More About Us →
               </Link>
             </div>
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img src={aboutImg} alt="Akanta Global office" className="w-full h-80 object-cover" />
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, i) => (
+                <div
+                  key={i}
+                  className={`rounded-xl p-6 ${
+                    stat.dark
+                      ? "bg-primary text-primary-foreground"
+                      : "bg-background border border-border"
+                  }`}
+                >
+                  <span className={`text-3xl font-bold ${stat.dark ? "text-accent" : "text-accent"}`}>
+                    {stat.value}
+                  </span>
+                  <p className={`text-sm mt-1 ${stat.dark ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* What We Do */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-foreground mb-2">What We Do</h2>
-            <div className="h-1 w-16 bg-accent mx-auto rounded" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Services</span>
+            <h2 className="text-3xl font-bold text-foreground mt-2 mb-2">What We Do</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive trade solutions designed to connect your business with global markets efficiently and reliably.
+            </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => (
-              <div key={i} className="bg-card p-8 rounded-lg card-hover border border-border">
+              <div key={i} className="bg-background p-8 rounded-lg card-hover border border-border">
                 <s.icon size={32} className="text-accent-light mb-4" />
                 <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
@@ -115,16 +143,21 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-card">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-foreground mb-2">Why Choose Us</h2>
-            <div className="h-1 w-16 bg-accent mx-auto rounded" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Advantages</span>
+            <h2 className="text-3xl font-bold text-foreground mt-2 mb-2">Why Choose Akanta Global</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Partner with a company that prioritizes your success through reliability, transparency, and exceptional service.
+            </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyUs.map((item, i) => (
-              <div key={i} className="p-8 rounded-lg card-hover border border-border bg-background">
-                <item.icon size={28} className="text-accent mb-4" />
+              <div key={i} className="p-8 rounded-lg card-hover border border-border bg-card">
+                <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
+                  <item.icon size={22} className="text-accent" />
+                </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
@@ -134,7 +167,7 @@ const Index = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-bold text-foreground mb-2">Featured Products</h2>
@@ -142,7 +175,7 @@ const Index = () => {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((p, i) => (
-              <div key={i} className="bg-card rounded-lg overflow-hidden card-hover border border-border">
+              <div key={i} className="bg-background rounded-lg overflow-hidden card-hover border border-border">
                 <div className="relative">
                   <img src={p.image} alt={p.title} className="w-full h-56 object-cover" />
                   <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">
