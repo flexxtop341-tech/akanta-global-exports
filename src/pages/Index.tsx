@@ -3,7 +3,6 @@ import {
   Pen, Search, ClipboardCheck, FileText, Truck, Package,
   Globe, ShieldCheck, DollarSign, Clock, Heart, Award
 } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
@@ -57,22 +56,24 @@ const Index = () => {
         {/* No overlay - video plays clearly */}
         <div className="relative container mx-auto px-4 py-20">
           <div className="max-w-2xl fade-in-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
-              Connecting Global Markets with Trust & Excellence
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 drop-shadow-lg">
+              <span className="gold-gradient-text">Connecting Global Markets</span>
+              <br />
+              <span className="text-white drop-shadow-lg">with Trust & Excellence</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/85 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
               Akanta Global is a trusted Indian export company delivering high-quality, export-grade writing instruments to international markets.
             </p>
             <div className="flex flex-wrap gap-4 fade-in-up stagger-2">
               <Link
                 to="/products"
-                className="bg-accent text-accent-foreground px-7 py-3 rounded-md font-semibold hover:bg-accent-light transition-colors"
+                className="bg-gold text-white px-7 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
               >
                 Explore Our Products
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-primary-foreground/40 text-primary-foreground px-7 py-3 rounded-md font-semibold hover:bg-primary-foreground/10 transition-colors"
+                className="border-2 border-white/50 text-white px-7 py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm"
               >
                 Contact Us
               </Link>
@@ -86,11 +87,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider">About Akanta Global</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-2">
-                Trusted Supplier of Writing Instruments from India
+              <span className="text-gold font-semibold text-sm uppercase tracking-widest">About Akanta Global</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-2">
+                <span className="gold-gradient-text">Trusted Supplier</span>{" "}
+                <span className="text-foreground">of Writing Instruments from India</span>
               </h2>
-              <div className="h-1 w-16 bg-accent mb-6 rounded" />
+              <div className="gold-divider mb-6" />
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Akanta Global is committed to exporting high-quality, export-grade pens that meet international standards — supporting buyers with transparent pricing, timely delivery, and dependable service.
               </p>
@@ -99,7 +101,7 @@ const Index = () => {
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center text-accent font-semibold hover:text-accent-light transition-colors border border-accent rounded-md px-5 py-2.5"
+                className="inline-flex items-center text-gold font-semibold hover:text-gold-light transition-colors border border-gold rounded-md px-5 py-2.5"
               >
                 Learn More About Us →
               </Link>
@@ -108,15 +110,13 @@ const Index = () => {
               {stats.map((stat, i) => (
                 <div
                   key={i}
-                  className={`rounded-xl p-6 ${
+                  className={`rounded-xl p-6 premium-shadow ${
                     stat.dark
                       ? "bg-primary text-primary-foreground"
-                      : "bg-background border border-border"
+                      : "bg-card border border-border"
                   }`}
                 >
-                  <span className={`text-3xl font-bold ${stat.dark ? "text-accent" : "text-accent"}`}>
-                    {stat.value}
-                  </span>
+                  <span className="text-3xl font-bold gold-gradient-text">{stat.value}</span>
                   <p className={`text-sm mt-1 ${stat.dark ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
                     {stat.label}
                   </p>
@@ -131,16 +131,20 @@ const Index = () => {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Services</span>
-            <h2 className="text-3xl font-bold text-foreground mt-2 mb-2">What We Do</h2>
+            <span className="text-gold font-semibold text-sm uppercase tracking-widest">Our Services</span>
+            <h2 className="text-3xl font-bold mt-2 mb-2">
+              <span className="gold-gradient-text">What We Do</span>
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Comprehensive trade solutions designed to connect your business with global markets efficiently and reliably.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((s, i) => (
-              <div key={i} className="bg-background p-8 rounded-lg card-hover border border-border">
-                <s.icon size={32} className="text-accent-light mb-4" />
+              <div key={i} className="bg-background p-8 rounded-lg card-hover border border-border premium-shadow">
+                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+                  <s.icon size={24} className="text-gold" />
+                </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
@@ -153,19 +157,21 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Advantages</span>
-            <h2 className="text-3xl font-bold text-foreground mt-2 mb-2">Why Choose Akanta Global</h2>
+            <span className="text-gold font-semibold text-sm uppercase tracking-widest">Our Advantages</span>
+            <h2 className="text-3xl font-bold mt-2 mb-2">
+              <span className="gold-gradient-text">Why Choose Akanta Global</span>
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Partner with a company that prioritizes your success through reliability, transparency, and exceptional service.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyUs.map((item, i) => (
-              <div key={i} className="p-8 rounded-lg card-hover border border-border bg-card">
+              <div key={i} className="p-8 rounded-lg card-hover border border-border bg-card premium-shadow">
                 <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-4">
-                  <item.icon size={22} className="text-accent" />
+                  <item.icon size={22} className="text-gold-light" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
+                <h3 className="text-lg font-semibold text-gold-dark mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
@@ -177,15 +183,18 @@ const Index = () => {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-foreground mb-2">Featured Products</h2>
-            <div className="h-1 w-16 bg-accent mx-auto rounded" />
+            <span className="text-gold font-semibold text-sm uppercase tracking-widest">Our Collection</span>
+            <h2 className="text-3xl font-bold mt-2 mb-2">
+              <span className="gold-gradient-text">Featured Products</span>
+            </h2>
+            <div className="gold-divider mx-auto mt-3" />
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((p, i) => (
-              <div key={i} className="bg-background rounded-lg overflow-hidden card-hover border border-border">
+              <div key={i} className="bg-background rounded-lg overflow-hidden card-hover border border-border premium-shadow">
                 <div className="relative">
                   <img src={p.image} alt={p.title} className="w-full h-56 object-cover" />
-                  <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="absolute top-3 right-3 bg-gold text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                     Export Ready
                   </span>
                 </div>
@@ -206,17 +215,21 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Let's Grow Your Business Globally
+      <section className="py-20 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.4) 1px, transparent 1px)`,
+          backgroundSize: '24px 24px'
+        }} />
+        <div className="relative container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="gold-gradient-text">Let's Grow Your Business Globally</span>
           </h2>
           <p className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
             Partner with Akanta Global for reliable, high-quality pen exports from India to the world.
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-accent text-accent-foreground px-8 py-3.5 rounded-md font-semibold hover:bg-accent-light transition-colors"
+            className="inline-block bg-gold text-white px-8 py-3.5 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
           >
             Start a Partnership
           </Link>

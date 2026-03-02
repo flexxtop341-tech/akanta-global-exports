@@ -48,9 +48,9 @@ const Header = () => {
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-colors hover:text-gold ${
                 location.pathname === item.path
-                  ? "text-primary"
+                  ? "text-gold"
                   : "text-foreground/70"
               }`}
             >
@@ -63,7 +63,7 @@ const Header = () => {
           <div id="google_translate_element" className="text-sm" />
           <Link
             to="/contact"
-            className="bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-primary-dark transition-colors"
+            className="bg-gold text-white px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-gold-dark transition-colors shadow-md"
           >
             Request Quote
           </Link>
@@ -89,7 +89,7 @@ const Header = () => {
                 to={item.path}
                 className={`text-sm font-medium py-2 transition-colors ${
                   location.pathname === item.path
-                    ? "text-primary"
+                    ? "text-gold"
                     : "text-foreground/70"
                 }`}
               >
@@ -98,7 +98,7 @@ const Header = () => {
             ))}
             <Link
               to="/contact"
-              className="bg-primary text-primary-foreground px-5 py-2.5 rounded-md text-sm font-semibold text-center mt-2 hover:bg-primary-dark transition-colors"
+              className="bg-gold text-white px-5 py-2.5 rounded-md text-sm font-semibold text-center mt-2 hover:bg-gold-dark transition-colors"
             >
               Request Quote
             </Link>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
@@ -38,32 +39,31 @@ const products = [
 const Products = () => {
   return (
     <>
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Our Products</h1>
-          <div className="h-1 w-16 bg-accent rounded mb-4" />
-          <p className="text-muted-foreground mb-12 max-w-2xl">
-            We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export.
-          </p>
+      <PageHero
+        title="Our Products"
+        subtitle="We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export."
+      />
 
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10">
             {products.map((p, i) => (
-              <div key={i} className="bg-background rounded-lg overflow-hidden border border-border card-hover">
+              <div key={i} className="bg-card rounded-lg overflow-hidden border border-border card-hover premium-shadow">
                 <div className="relative">
                   <img src={p.image} alt={p.title} className="w-full h-64 object-cover" />
-                  <span className="absolute top-3 right-3 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="absolute top-3 right-3 bg-gold text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                     Export Ready
                   </span>
                 </div>
                 <div className="p-6">
-                  <h2 className="text-xl font-semibold text-foreground mb-2">{p.title}</h2>
+                  <h2 className="text-xl font-semibold gold-gradient-text mb-2">{p.title}</h2>
                   <p className="text-sm text-muted-foreground mb-4">{p.desc}</p>
                   <div className="mb-4">
-                    <h4 className="text-xs font-semibold uppercase tracking-wider text-foreground/70 mb-2">Specifications</h4>
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-gold-dark mb-2">Specifications</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       {p.specs.map((s, j) => (
                         <li key={j} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 bg-accent rounded-full shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-gold rounded-full shrink-0" />
                           {s}
                         </li>
                       ))}
@@ -72,7 +72,7 @@ const Products = () => {
                   <p className="text-xs text-muted-foreground mb-4">MOQ: {p.moq}</p>
                   <Link
                     to="/contact"
-                    className="inline-block bg-primary text-primary-foreground text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-primary-dark transition-colors"
+                    className="inline-block bg-gold text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-gold-dark transition-colors shadow-md"
                   >
                     Request Quote
                   </Link>

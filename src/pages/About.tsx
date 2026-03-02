@@ -44,10 +44,12 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Who We Are</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-6">
-                A Trusted Global Supplier of Writing Instruments from India
+              <span className="text-gold font-semibold text-sm uppercase tracking-widest">Who We Are</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-2">
+                <span className="gold-gradient-text">A Trusted Global Supplier</span>{" "}
+                <span className="text-foreground">of Writing Instruments from India</span>
               </h2>
+              <div className="gold-divider mb-6" />
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Akanta Global is an international export company focused on supplying high-quality, export-grade pens that meet international standards. We support our buyers with transparent pricing, timely delivery, and dependable service.
@@ -60,12 +62,12 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-primary rounded-xl p-8 text-primary-foreground">
-              <h3 className="text-xl font-bold mb-6">What We Do</h3>
+            <div className="bg-primary rounded-xl p-8 text-primary-foreground premium-shadow">
+              <h3 className="text-xl font-bold mb-6 gold-gradient-text">What We Do</h3>
               <div className="space-y-4">
                 {whatWeDo.map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 size={20} className="text-accent shrink-0 mt-0.5" />
+                    <CheckCircle2 size={20} className="text-gold shrink-0 mt-0.5" />
                     <span className="text-sm text-primary-foreground/90">{item}</span>
                   </div>
                 ))}
@@ -78,14 +80,16 @@ const About = () => {
       {/* Core Strengths */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-14">Our Core Strengths</h2>
+          <h2 className="text-3xl font-bold text-center mb-14">
+            <span className="gold-gradient-text">Our Core Strengths</span>
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {strengths.map((s, i) => (
-              <div key={i} className="bg-background rounded-lg p-8 border border-border text-center card-hover">
-                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <s.icon size={24} className="text-accent" />
+              <div key={i} className="bg-background rounded-lg p-8 border border-border text-center card-hover premium-shadow">
+                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                  <s.icon size={24} className="text-gold" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
+                <h3 className="text-lg font-semibold text-gold-dark mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
               </div>
             ))}
@@ -101,23 +105,23 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our History</span>
-            <h2 className="text-3xl font-bold text-foreground mt-2">Key Milestones</h2>
+            <span className="text-gold font-semibold text-sm uppercase tracking-widest">Our History</span>
+            <h2 className="text-3xl font-bold mt-2">
+              <span className="gold-gradient-text">Key Milestones</span>
+            </h2>
           </div>
           <div className="relative max-w-3xl mx-auto">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gold/20 -translate-x-1/2 hidden md:block" />
             {milestones.map((m, i) => (
               <div key={i} className={`relative flex items-start mb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 <div className={`w-full md:w-1/2 ${i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                  <div className="bg-card rounded-lg p-6 border border-border">
-                    <span className="text-accent font-bold text-lg">{m.year}</span>
+                  <div className="bg-card rounded-lg p-6 border border-border premium-shadow">
+                    <span className="text-gold font-bold text-lg">{m.year}</span>
                     <h3 className="font-semibold text-foreground mt-1">{m.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{m.desc}</p>
                   </div>
                 </div>
-                {/* Dot */}
-                <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-accent top-6 hidden md:block" />
+                <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gold top-6 hidden md:block shadow-md" />
               </div>
             ))}
           </div>
@@ -128,18 +132,20 @@ const About = () => {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">How We Work</span>
-            <h2 className="text-3xl font-bold text-foreground mt-2 mb-2">Our Business Model</h2>
+            <span className="text-gold font-semibold text-sm uppercase tracking-widest">How We Work</span>
+            <h2 className="text-3xl font-bold mt-2 mb-2">
+              <span className="gold-gradient-text">Our Business Model</span>
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               A streamlined approach designed to deliver quality and efficiency at every step.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {businessSteps.map((step, i) => (
-              <div key={i} className="bg-background rounded-lg p-8 border border-border card-hover">
-                <span className="text-4xl font-bold text-muted/40">{step.num}</span>
-                <h3 className="text-lg font-semibold text-foreground mt-2 mb-2">{step.title}</h3>
-                <div className="h-0.5 w-6 bg-accent mb-3" />
+              <div key={i} className="bg-background rounded-lg p-8 border border-border card-hover premium-shadow">
+                <span className="text-4xl font-bold text-gold/20">{step.num}</span>
+                <h3 className="text-lg font-semibold text-gold-dark mt-2 mb-2">{step.title}</h3>
+                <div className="gold-divider mb-3" style={{ width: '24px' }} />
                 <p className="text-sm text-muted-foreground">{step.desc}</p>
               </div>
             ))}
