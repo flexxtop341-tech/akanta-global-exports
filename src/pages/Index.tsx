@@ -54,7 +54,7 @@ const Index = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 hero-gradient" />
+        {/* No overlay - video plays clearly */}
         <div className="relative container mx-auto px-4 py-20">
           <div className="max-w-2xl fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
