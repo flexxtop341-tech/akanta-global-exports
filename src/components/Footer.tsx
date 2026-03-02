@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Akanta Global</h3>
+            <h3 className="text-xl font-bold mb-4 gold-gradient-text">Akanta Global</h3>
             <p className="text-sm text-footer-foreground/70 leading-relaxed">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
@@ -16,8 +16,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
-            <div className="h-0.5 w-8 bg-accent mb-4" />
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gold">Quick Links</h4>
+            <div className="gold-divider mb-4" style={{ width: '32px' }} />
             <nav className="flex flex-col gap-2">
               {[
                 { label: "Home", path: "/" },
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-sm text-footer-foreground/70 hover:text-footer-foreground transition-colors"
+                  className="text-sm text-footer-foreground/70 hover:text-gold transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -38,8 +38,8 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Services</h4>
-            <div className="h-0.5 w-8 bg-accent mb-4" />
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gold">Services</h4>
+            <div className="gold-divider mb-4" style={{ width: '32px' }} />
             <nav className="flex flex-col gap-2 text-sm text-footer-foreground/70">
               <span>Writing Instrument Exports</span>
               <span>Quality Inspection</span>
@@ -50,26 +50,26 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Contact Us</h4>
-            <div className="h-0.5 w-8 bg-accent mb-4" />
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gold">Contact Us</h4>
+            <div className="gold-divider mb-4" style={{ width: '32px' }} />
             <div className="flex flex-col gap-3 text-sm text-footer-foreground/70">
-              <a href="mailto:akantaglobal@gmail.com" className="flex items-center gap-2 hover:text-footer-foreground transition-colors">
-                <Mail size={14} className="text-accent-light shrink-0" />
+              <a href="mailto:akantaglobal@gmail.com" className="flex items-center gap-2 hover:text-gold transition-colors">
+                <Mail size={14} className="text-gold shrink-0" />
                 akantaglobal@gmail.com
               </a>
-              <a href="tel:+919673398945" className="flex items-center gap-2 hover:text-footer-foreground transition-colors">
-                <Phone size={14} className="text-accent-light shrink-0" />
+              <a href="tel:+919673398945" className="flex items-center gap-2 hover:text-gold transition-colors">
+                <Phone size={14} className="text-gold shrink-0" />
                 +91 96733 98945
               </a>
               <div className="flex items-start gap-2">
-                <MapPin size={14} className="text-accent-light shrink-0 mt-0.5" />
+                <MapPin size={14} className="text-gold shrink-0 mt-0.5" />
                 <span>Nashik – 422003, Maharashtra, India</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="h-px bg-accent/30 my-10" />
+        <div className="h-px my-10" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.4), transparent)' }} />
 
         <p className="text-center text-xs text-footer-foreground/50">
           © {new Date().getFullYear()} Akanta Global. All rights reserved.

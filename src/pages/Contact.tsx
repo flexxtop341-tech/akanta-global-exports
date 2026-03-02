@@ -40,13 +40,13 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {infoCards.map((card, i) => (
-              <div key={i} className="bg-card rounded-lg border border-border p-6">
+              <div key={i} className="bg-card rounded-lg border border-border p-6 premium-shadow">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <card.icon size={18} className="text-accent" />
+                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                    <card.icon size={18} className="text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-sm mb-1">{card.title}</h3>
+                    <h3 className="font-semibold text-gold-dark text-sm mb-1">{card.title}</h3>
                     {card.lines.map((line, j) => (
                       <p key={j} className="text-xs text-muted-foreground">{line}</p>
                     ))}
@@ -63,8 +63,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Form */}
-            <div className="bg-card rounded-lg border border-border p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6">Send Us a Message</h2>
+            <div className="bg-card rounded-lg border border-border p-8 premium-shadow">
+              <h2 className="text-2xl font-bold mb-6">
+                <span className="gold-gradient-text">Send Us a Message</span>
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
@@ -73,7 +75,7 @@ const Contact = () => {
                       type="text" required placeholder="John Doe"
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     />
                   </div>
                   <div>
@@ -82,7 +84,7 @@ const Contact = () => {
                       type="email" required placeholder="john@example.com"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     />
                   </div>
                 </div>
@@ -93,7 +95,7 @@ const Contact = () => {
                       type="tel" placeholder="+1 234 567 8900"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     />
                   </div>
                   <div>
@@ -102,7 +104,7 @@ const Contact = () => {
                       type="text" placeholder="Your Company"
                       value={form.company}
                       onChange={(e) => setForm({ ...form, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold"
                     />
                   </div>
                 </div>
@@ -112,12 +114,12 @@ const Contact = () => {
                     required rows={5} placeholder="Tell us about your requirements..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold resize-none"
                   />
                 </div>
                 <button
                   type="submit" disabled={sending}
-                  className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-semibold hover:bg-primary-dark transition-colors disabled:opacity-50 flex items-center gap-2"
+                  className="bg-gold text-white px-8 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors disabled:opacity-50 flex items-center gap-2 shadow-md"
                 >
                   {sending ? "Sending..." : "Send Message"} <Send size={16} />
                 </button>
@@ -126,7 +128,7 @@ const Contact = () => {
 
             {/* Map + CTA */}
             <div className="space-y-6">
-              <div className="rounded-lg overflow-hidden border border-border h-80">
+              <div className="rounded-lg overflow-hidden border border-border h-80 premium-shadow">
                 <iframe
                   title="Akanta Global Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119960.3!2d73.7!3d20.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb0b4a5f0b1b%3A0x736885e3b123a9c2!2sNashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1"
@@ -136,12 +138,12 @@ const Contact = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-              <div className="bg-primary rounded-lg p-8 text-primary-foreground">
-                <h3 className="text-xl font-bold mb-2">Let's Start a Global Partnership</h3>
+              <div className="bg-primary rounded-lg p-8 text-primary-foreground premium-shadow">
+                <h3 className="text-xl font-bold mb-2 gold-gradient-text">Let's Start a Global Partnership</h3>
                 <p className="text-sm text-primary-foreground/80 mb-4">
                   Ready to expand your business globally? Our team is here to help you navigate international trade with confidence.
                 </p>
-                <div className="flex items-center gap-2 text-accent text-sm mb-4">
+                <div className="flex items-center gap-2 text-gold text-sm mb-4">
                   <CheckCircle2 size={16} />
                   <span>Response within 24 hours</span>
                 </div>

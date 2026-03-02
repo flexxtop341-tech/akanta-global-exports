@@ -1,4 +1,5 @@
 import { Search, ClipboardCheck, FileText, Truck, Package, HeadphonesIcon } from "lucide-react";
+import PageHero from "@/components/PageHero";
 
 const steps = [
   { icon: Search, title: "Manufacturer Verification", desc: "We carefully vet and verify Indian pen manufacturers for quality and reliability." },
@@ -12,11 +13,13 @@ const steps = [
 const CompanyDetails = () => {
   return (
     <>
-      <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Company Details</h1>
-          <div className="h-1 w-16 bg-accent rounded mb-10" />
+      <PageHero
+        title="Company Details"
+        subtitle="Learn about our operations, business model, and commitment to excellence in international trade."
+      />
 
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl space-y-4 text-muted-foreground leading-relaxed mb-16">
             <p>
               Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As an export-focused company, we maintain strong partnerships with verified pen manufacturers across the region.
@@ -26,17 +29,22 @@ const CompanyDetails = () => {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-foreground mb-2">Our Business Process</h2>
-          <div className="h-1 w-16 bg-accent rounded mb-10" />
+          <span className="text-gold font-semibold text-sm uppercase tracking-widest">Step by Step</span>
+          <h2 className="text-2xl font-bold mt-2 mb-2">
+            <span className="gold-gradient-text">Our Business Process</span>
+          </h2>
+          <div className="gold-divider mb-10" />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {steps.map((step, i) => (
-              <div key={i} className="relative bg-background p-8 rounded-lg border border-border card-hover">
-                <span className="absolute top-4 right-4 text-4xl font-bold text-muted/60">
+              <div key={i} className="relative bg-card p-8 rounded-lg border border-border card-hover premium-shadow">
+                <span className="absolute top-4 right-4 text-4xl font-bold text-gold/15">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <step.icon size={28} className="text-accent-light mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+                  <step.icon size={24} className="text-gold" />
+                </div>
+                <h3 className="text-lg font-semibold text-gold-dark mb-2">{step.title}</h3>
                 <p className="text-sm text-muted-foreground">{step.desc}</p>
               </div>
             ))}
