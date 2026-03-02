@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    --background: 40 20% 96%;
-    --foreground: 228 13% 19%;
+    --background: 30 14% 94%;
+    --foreground: 0 0% 1%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 228 13% 19%;
+    --card: 30 14% 97%;
+    --card-foreground: 0 0% 1%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 228 13% 19%;
+    --popover: 30 14% 97%;
+    --popover-foreground: 0 0% 1%;
 
-    --primary: 243 65% 23%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 213 66% 21%;
+    --primary-foreground: 30 14% 94%;
 
-    --primary-dark: 245 65% 16%;
+    --primary-dark: 213 66% 14%;
 
-    --secondary: 40 20% 96%;
-    --secondary-foreground: 228 13% 19%;
+    --secondary: 28 16% 80%;
+    --secondary-foreground: 0 0% 1%;
 
-    --muted: 40 10% 92%;
-    --muted-foreground: 228 10% 46%;
+    --muted: 28 16% 85%;
+    --muted-foreground: 213 20% 35%;
 
-    --accent: 36 64% 48%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 28 16% 80%;
+    --accent-foreground: 0 0% 1%;
 
-    --accent-light: 36 87% 59%;
+    --accent-light: 28 20% 72%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 30 14% 94%;
 
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 243 65% 23%;
+    --border: 28 14% 82%;
+    --input: 28 14% 82%;
+    --ring: 213 66% 21%;
 
     --radius: 0.5rem;
 
-    --footer: 243 65% 12%;
-    --footer-foreground: 0 0% 100%;
+    --footer: 0 0% 1%;
+    --footer-foreground: 30 14% 94%;
 
-    --hero-overlay: 245 65% 16%;
+    --hero-overlay: 213 66% 14%;
   }
 }
 
