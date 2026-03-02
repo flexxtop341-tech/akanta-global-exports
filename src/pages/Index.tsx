@@ -46,7 +46,14 @@ const Index = () => {
     <>
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <video
+          src="/hero-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 hero-gradient" />
         <div className="relative container mx-auto px-4 py-20">
           <div className="max-w-2xl fade-in-up">
