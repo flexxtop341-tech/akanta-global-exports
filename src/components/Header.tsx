@@ -46,7 +46,7 @@ const Header = () => {
           <img
             src={logo}
             alt="Akanta Global"
-            className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+            className="h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 
