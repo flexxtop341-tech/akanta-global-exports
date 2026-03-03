@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/akanta-logo-new.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold mb-4 gold-gradient-text">Akanta Global</h3>
+            <img src={logo} alt="Akanta Global" className="h-16 w-auto mb-3 brightness-0 invert" />
             <p className="text-sm text-footer-foreground/70 leading-relaxed">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
