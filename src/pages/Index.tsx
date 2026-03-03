@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/akanta-logo-new.png";
+
 
 const stats = [
   { value: "45+", label: "Countries Served", dark: true },
@@ -22,16 +22,16 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative container mx-auto px-4 py-20">
-          <div className="flex flex-col items-center text-center fade-in-up">
-            <img
-              src={logo}
-              alt="Akanta Global"
-              className="h-40 md:h-56 lg:h-64 w-auto mb-6 drop-shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
-            />
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-wide drop-shadow-lg mb-8" style={{ letterSpacing: '0.08em' }}>
-              Stronger Together
+          <div className="max-w-2xl fade-in-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 drop-shadow-lg">
+              <span className="gold-gradient-text">Connecting Global Markets</span>
+              <br />
+              <span className="text-white drop-shadow-lg">with Trust & Excellence</span>
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md">
+              Akanta Global is a trusted Indian export company delivering high-quality, export-grade writing instruments to international markets.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 fade-in-up stagger-2">
+            <div className="flex flex-wrap gap-4 fade-in-up stagger-2">
               <Link
                 to="/products"
                 className="bg-gold text-white px-7 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
