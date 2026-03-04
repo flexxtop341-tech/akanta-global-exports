@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
@@ -48,9 +49,23 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10">
             {products.map((p, i) => (
-              <div key={i} className="bg-card rounded-lg overflow-hidden border border-border card-hover premium-shadow">
-                <div className="relative">
-                  <img src={p.image} alt={p.title} className="w-full h-64 object-cover" />
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                className="bg-card rounded-lg overflow-hidden border border-border premium-shadow group"
+              >
+                <div className="relative overflow-hidden">
+                  <motion.img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-64 object-cover"
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.5 }}
+                  />
                   <span className="absolute top-3 right-3 bg-gold text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                     Export Ready
                   </span>
@@ -70,14 +85,16 @@ const Products = () => {
                     </ul>
                   </div>
                   <p className="text-xs text-muted-foreground mb-4">MOQ: {p.moq}</p>
-                  <Link
-                    to="/contact"
-                    className="inline-block bg-gold text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-gold-dark transition-colors shadow-md"
-                  >
-                    Request Quote
-                  </Link>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+                    <Link
+                      to="/contact"
+                      className="inline-block bg-gold text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-gold-dark transition-colors shadow-md"
+                    >
+                      Request Quote
+                    </Link>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
