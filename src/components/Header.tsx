@@ -21,6 +21,25 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
+    if (showTranslate) {
+      // Re-initialize Google Translate when dropdown opens
+      const tryInit = () => {
+        const w = window as any;
+        if (w.google?.translate?.TranslateElement) {
+          const el = document.getElementById('google_translate_element');
+          if (el) el.innerHTML = '';
+          new w.google.translate.TranslateElement(
+            { pageLanguage: 'en', layout: w.google.translate.TranslateElement.InlineLayout.SIMPLE },
+            'google_translate_element'
+          );
+        }
+      };
+      // Small delay to ensure DOM element is rendered
+      setTimeout(tryInit, 100);
+    }
+  }, [showTranslate]);
+
+  useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
