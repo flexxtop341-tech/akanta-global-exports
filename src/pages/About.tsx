@@ -1,4 +1,5 @@
 import { Globe, ShieldCheck, Users, CheckCircle2 } from "lucide-react";
+import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 
 const whatWeDo = [
@@ -31,6 +32,29 @@ const businessSteps = [
   { num: "04", title: "Delivery & Support", desc: "Timely delivery with real-time tracking and dedicated after-sales support." },
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number = 0) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.6, delay: i * 0.15, ease: "easeOut" as const },
+  }),
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: (i: number = 0) => ({
+    opacity: 1, scale: 1,
+    transition: { duration: 0.5, delay: i * 0.1, ease: "easeOut" as const },
+  }),
+};
+
+const float = {
+  animate: {
+    y: [0, -8, 0],
+    transition: { duration: 3, repeat: Infinity, ease: "easeInOut" as const },
+  },
+};
+
 const About = () => {
   return (
     <>
@@ -43,36 +67,49 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <span className="text-gold font-semibold text-sm uppercase tracking-widest">Who We Are</span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-2">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+            >
+              <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">Who We Are</motion.span>
+              <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
                 <span className="gold-gradient-text">A Trusted Global Supplier</span>{" "}
                 <span className="text-foreground">of Writing Instruments from India</span>
-              </h2>
-              <div className="gold-divider mb-6" />
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Akanta Global is an international export company focused on supplying high-quality, export-grade pens that meet international standards. We support our buyers with transparent pricing, timely delivery, and dependable service.
-                </p>
-                <p>
-                  Our mission is to help importers, distributors, and promotional product companies grow their businesses through ethical sourcing, strong supplier partnerships, and customer-focused solutions.
-                </p>
-                <p>
-                  We envision Indian-made pens gaining worldwide recognition for their value, consistency, and craftsmanship — and Akanta Global is committed to making that vision a reality.
-                </p>
-              </div>
-            </div>
-            <div className="bg-primary rounded-xl p-8 text-primary-foreground premium-shadow">
+              </motion.h2>
+              <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
+              <motion.div variants={fadeUp} custom={3} className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>Akanta Global is an international export company focused on supplying high-quality, export-grade pens that meet international standards. We support our buyers with transparent pricing, timely delivery, and dependable service.</p>
+                <p>Our mission is to help importers, distributors, and promotional product companies grow their businesses through ethical sourcing, strong supplier partnerships, and customer-focused solutions.</p>
+                <p>We envision Indian-made pens gaining worldwide recognition for their value, consistency, and craftsmanship — and Akanta Global is committed to making that vision a reality.</p>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-80px" }}
+              variants={scaleIn}
+              whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+              className="bg-primary rounded-xl p-8 text-primary-foreground premium-shadow"
+            >
               <h3 className="text-xl font-bold mb-6 gold-gradient-text">What We Do</h3>
               <div className="space-y-4">
                 {whatWeDo.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1, duration: 0.4 }}
+                    whileHover={{ x: 6, transition: { duration: 0.2 } }}
+                    className="flex items-start gap-3 cursor-default"
+                  >
                     <CheckCircle2 size={20} className="text-gold shrink-0 mt-0.5" />
                     <span className="text-sm text-primary-foreground/90">{item}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -80,18 +117,31 @@ const About = () => {
       {/* Core Strengths */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-14">
+          <motion.h2
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-3xl font-bold text-center mb-14"
+          >
             <span className="gold-gradient-text">Our Core Strengths</span>
-          </h2>
+          </motion.h2>
           <div className="grid md:grid-cols-3 gap-8">
             {strengths.map((s, i) => (
-              <div key={i} className="bg-background rounded-lg p-8 border border-border text-center card-hover premium-shadow">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+              <motion.div
+                key={i}
+                initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
+                variants={scaleIn} custom={i}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px -12px hsl(var(--gold) / 0.2)", transition: { duration: 0.3 } }}
+                className="bg-background rounded-lg p-8 border border-border text-center premium-shadow cursor-default"
+              >
+                <motion.div
+                  animate={float.animate}
+                  className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4"
+                >
                   <s.icon size={24} className="text-gold" />
-                </div>
+                </motion.div>
                 <h3 className="text-lg font-semibold text-gold-dark mb-2">{s.title}</h3>
                 <p className="text-sm text-muted-foreground">{s.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -104,25 +154,35 @@ const About = () => {
       />
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <span className="text-gold font-semibold text-sm uppercase tracking-widest">Our History</span>
-            <h2 className="text-3xl font-bold mt-2">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
+            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">Our History</motion.span>
+            <motion.h2 variants={fadeUp} custom={1} className="text-3xl font-bold mt-2">
               <span className="gold-gradient-text">Key Milestones</span>
-            </h2>
-          </div>
+            </motion.h2>
+          </motion.div>
           <div className="relative max-w-3xl mx-auto">
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gold/20 -translate-x-1/2 hidden md:block" />
             {milestones.map((m, i) => (
-              <div key={i} className={`relative flex items-start mb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
+                className={`relative flex items-start mb-12 ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+              >
                 <div className={`w-full md:w-1/2 ${i % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                  <div className="bg-card rounded-lg p-6 border border-border premium-shadow">
+                  <motion.div
+                    whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+                    className="bg-card rounded-lg p-6 border border-border premium-shadow"
+                  >
                     <span className="text-gold font-bold text-lg">{m.year}</span>
                     <h3 className="font-semibold text-foreground mt-1">{m.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{m.desc}</p>
-                  </div>
+                  </motion.div>
                 </div>
                 <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-gold top-6 hidden md:block shadow-md" />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -131,23 +191,29 @@ const About = () => {
       {/* Business Model */}
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <span className="text-gold font-semibold text-sm uppercase tracking-widest">How We Work</span>
-            <h2 className="text-3xl font-bold mt-2 mb-2">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-14">
+            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">How We Work</motion.span>
+            <motion.h2 variants={fadeUp} custom={1} className="text-3xl font-bold mt-2 mb-2">
               <span className="gold-gradient-text">Our Business Model</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.p variants={fadeUp} custom={2} className="text-muted-foreground max-w-2xl mx-auto">
               A streamlined approach designed to deliver quality and efficiency at every step.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {businessSteps.map((step, i) => (
-              <div key={i} className="bg-background rounded-lg p-8 border border-border card-hover premium-shadow">
+              <motion.div
+                key={i}
+                initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
+                variants={fadeUp} custom={i}
+                whileHover={{ y: -10, scale: 1.03, transition: { duration: 0.3 } }}
+                className="bg-background rounded-lg p-8 border border-border premium-shadow cursor-default"
+              >
                 <span className="text-4xl font-bold text-gold/20">{step.num}</span>
                 <h3 className="text-lg font-semibold text-gold-dark mt-2 mb-2">{step.title}</h3>
                 <div className="gold-divider mb-3" style={{ width: '24px' }} />
                 <p className="text-sm text-muted-foreground">{step.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

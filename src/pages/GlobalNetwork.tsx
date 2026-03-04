@@ -1,5 +1,28 @@
 import { Globe, ShieldCheck, Users, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number = 0) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.6, delay: i * 0.15, ease: "easeOut" as const },
+  }),
+};
+
+const float = {
+  animate: {
+    y: [0, -8, 0],
+    transition: { duration: 3, repeat: Infinity, ease: "easeInOut" as const },
+  },
+};
+
+const items = [
+  { icon: ShieldCheck, title: "Verified Manufacturers", desc: "Every supplier in our network is rigorously vetted for quality and reliability." },
+  { icon: Users, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
+  { icon: Globe, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
+  { icon: MapPin, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
+];
 
 const GlobalNetwork = () => {
   return (
@@ -12,36 +35,47 @@ const GlobalNetwork = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {[
-              { icon: ShieldCheck, title: "Verified Manufacturers", desc: "Every supplier in our network is rigorously vetted for quality and reliability." },
-              { icon: Users, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
-              { icon: Globe, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
-              { icon: MapPin, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
-            ].map((item, i) => (
-              <div key={i} className="bg-card p-8 rounded-lg border border-border card-hover premium-shadow">
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
+            {items.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
+                whileHover={{ y: -10, scale: 1.03, boxShadow: "0 20px 40px -12px hsl(var(--gold) / 0.2)", transition: { duration: 0.3 } }}
+                className="bg-card p-8 rounded-lg border border-border premium-shadow cursor-default"
+              >
+                <motion.div
+                  animate={float.animate}
+                  className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4"
+                >
                   <item.icon size={24} className="text-gold" />
-                </div>
+                </motion.div>
                 <h3 className="text-lg font-semibold text-gold-dark mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* World Map Placeholder */}
-          <div className="bg-primary rounded-lg p-12 text-center premium-shadow relative overflow-hidden">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }}
+            className="bg-primary rounded-lg p-12 text-center premium-shadow relative overflow-hidden"
+          >
             <div className="absolute inset-0 opacity-5" style={{
               backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
               backgroundSize: '24px 24px'
             }} />
             <div className="relative">
-              <Globe size={64} className="mx-auto text-gold-light mb-4" />
-              <h2 className="text-2xl font-bold mb-2 gold-gradient-text">Our Export Regions</h2>
-              <p className="text-primary-foreground/70 max-w-lg mx-auto">
+              <motion.div animate={{ y: [0, -12, 0], rotate: [0, 5, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}>
+                <Globe size={64} className="mx-auto text-gold-light mb-4" />
+              </motion.div>
+              <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-bold mb-2 gold-gradient-text">Our Export Regions</motion.h2>
+              <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-lg mx-auto">
                 We actively export to markets across Asia, Africa, the Middle East, Europe, and South America. Contact us to discuss supply to your region.
-              </p>
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
