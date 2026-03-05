@@ -104,7 +104,7 @@ const Header = () => {
             </button>
             {showTranslate && (
               <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl p-3 min-w-[200px] z-50">
-                <div id="google_translate_element" className="text-sm" />
+                <div id="google_translate_desktop" className="text-sm" />
               </div>
             )}
           </div>
@@ -166,7 +166,7 @@ const Header = () => {
             </div>
             {showTranslate && (
               <div className="mt-2 p-3 border border-border rounded-lg">
-                <div id="google_translate_element" className="text-sm" />
+                <div id="google_translate_mobile" className="text-sm" />
               </div>
             )}
           </nav>
