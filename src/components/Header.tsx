@@ -66,14 +66,14 @@ const Header = () => {
         {/* Main header row */}
         <div className="flex items-center justify-between h-[72px] lg:h-[80px]">
           {/* Logo + Tagline */}
-          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
-            <img
-              src={logo}
-              alt="Akanta Global"
-              className="h-14 md:h-16 lg:h-[68px] w-auto transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="flex flex-col justify-center">
-              <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] text-gold leading-tight">
+          <Link to="/" className="flex items-center group shrink-0">
+            <div className="flex flex-col items-center">
+              <img
+                src={logo}
+                alt="Akanta Global"
+                className="h-14 md:h-16 lg:h-[72px] w-auto transition-transform duration-300 group-hover:scale-105"
+              />
+              <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-[0.18em] text-gold leading-none -mt-1">
                 Stronger Together
               </span>
             </div>
