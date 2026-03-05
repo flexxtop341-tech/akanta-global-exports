@@ -65,11 +65,14 @@ const Header = () => {
 
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-3 group">
-          <img
-            src={logo}
-            alt="Akanta Global"
-            className="h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105"
-          />
+          <div className="flex flex-col items-center">
+            <img
+              src={logo}
+              alt="Akanta Global"
+              className="h-20 md:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.2em] text-gold mt-[-4px]">Stronger Together</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
