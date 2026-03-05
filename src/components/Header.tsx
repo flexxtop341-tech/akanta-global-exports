@@ -22,20 +22,23 @@ const Header = () => {
 
   useEffect(() => {
     if (showTranslate) {
-      // Re-initialize Google Translate when dropdown opens
       const tryInit = () => {
         const w = window as any;
         if (w.google?.translate?.TranslateElement) {
-          const el = document.getElementById('google_translate_element');
-          if (el) el.innerHTML = '';
-          new w.google.translate.TranslateElement(
-            { pageLanguage: 'en', layout: w.google.translate.TranslateElement.InlineLayout.SIMPLE },
-            'google_translate_element'
-          );
+          // Use the correct container based on screen size
+          const desktopEl = document.getElementById('google_translate_desktop');
+          const mobileEl = document.getElementById('google_translate_mobile');
+          const el = desktopEl || mobileEl;
+          if (el) {
+            el.innerHTML = '';
+            new w.google.translate.TranslateElement(
+              { pageLanguage: 'en', layout: w.google.translate.TranslateElement.InlineLayout.SIMPLE },
+              el.id
+            );
+          }
         }
       };
-      // Small delay to ensure DOM element is rendered
-      setTimeout(tryInit, 100);
+      setTimeout(tryInit, 200);
     }
   }, [showTranslate]);
 
