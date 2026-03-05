@@ -25,7 +25,6 @@ const Header = () => {
       const tryInit = () => {
         const w = window as any;
         if (w.google?.translate?.TranslateElement) {
-          // Use the correct container based on screen size
           const desktopEl = document.getElementById('google_translate_desktop');
           const mobileEl = document.getElementById('google_translate_mobile');
           const el = desktopEl || mobileEl;
@@ -56,82 +55,86 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-card/98 backdrop-blur-md shadow-[0_4px_30px_-8px_hsl(var(--primary)/0.15)] py-1"
-          : "bg-card/95 backdrop-blur-sm py-2"
+          ? "bg-card/98 backdrop-blur-md shadow-[0_4px_30px_-8px_hsl(var(--primary)/0.15)]"
+          : "bg-card/95 backdrop-blur-sm"
       }`}
     >
       {/* Top gold accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), transparent)' }} />
 
-      <div className="container mx-auto flex items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex flex-col items-center">
+      <div className="container mx-auto px-4">
+        {/* Main header row */}
+        <div className="flex items-center justify-between h-[72px] lg:h-[80px]">
+          {/* Logo + Tagline */}
+          <Link to="/" className="flex items-center gap-2.5 group shrink-0">
             <img
               src={logo}
               alt="Akanta Global"
-              className="h-20 md:h-24 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-14 md:h-16 lg:h-[68px] w-auto transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.2em] text-gold mt-[-4px]">Stronger Together</span>
-          </div>
-        </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`relative text-sm font-medium px-3 py-2 rounded-md transition-all duration-300 ${
-                location.pathname === item.path
-                  ? "text-gold bg-gold/8"
-                  : "text-foreground/70 hover:text-gold hover:bg-gold/5"
-              }`}
-            >
-              {item.label}
-              {location.pathname === item.path && (
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-5 h-[2px] rounded-full bg-gold" />
-              )}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden lg:flex items-center gap-2">
-          {/* Translate Button */}
-          <div className="relative">
-            <button
-              onClick={() => setShowTranslate(!showTranslate)}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium text-foreground/70 hover:text-gold hover:bg-gold/5 transition-all duration-300 border border-transparent hover:border-gold/20"
-            >
-              <Globe size={16} />
-              <span>Translate</span>
-            </button>
-            {showTranslate && (
-              <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl p-3 min-w-[200px] z-50">
-                <div id="google_translate_desktop" className="text-sm" />
-              </div>
-            )}
-          </div>
-
-          <Link
-            to="/contact"
-            className="relative overflow-hidden bg-primary text-primary-foreground px-6 py-2.5 rounded-md text-sm font-semibold transition-all duration-300 hover:shadow-[0_4px_20px_-4px_hsl(var(--gold)/0.5)] group border border-gold/20"
-            style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))' }}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-              Request Quote
-            </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-gold/20 to-gold-light/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="flex flex-col justify-center">
+              <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.15em] text-gold leading-tight">
+                Stronger Together
+              </span>
+            </div>
           </Link>
-        </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setIsMobileOpen(!isMobileOpen)}
-          className="lg:hidden p-2 text-foreground hover:text-gold transition-colors rounded-md hover:bg-gold/5"
-          aria-label="Toggle menu"
-        >
-          {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-0.5 mx-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`relative text-[13px] font-medium px-2.5 py-2 rounded-md transition-all duration-300 whitespace-nowrap ${
+                  location.pathname === item.path
+                    ? "text-gold bg-gold/8"
+                    : "text-foreground/70 hover:text-gold hover:bg-gold/5"
+                }`}
+              >
+                {item.label}
+                {location.pathname === item.path && (
+                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full bg-gold" />
+                )}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Right actions */}
+          <div className="hidden lg:flex items-center gap-2 shrink-0">
+            <div className="relative">
+              <button
+                onClick={() => setShowTranslate(!showTranslate)}
+                className="flex items-center gap-1.5 px-2.5 py-2 rounded-md text-[13px] font-medium text-foreground/70 hover:text-gold hover:bg-gold/5 transition-all duration-300 border border-transparent hover:border-gold/20"
+              >
+                <Globe size={15} />
+                <span>Translate</span>
+              </button>
+              {showTranslate && (
+                <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl p-3 min-w-[200px] z-50">
+                  <div id="google_translate_desktop" className="text-sm" />
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/contact"
+              className="relative overflow-hidden text-primary-foreground px-5 py-2 rounded-md text-[13px] font-semibold transition-all duration-300 hover:shadow-[0_4px_20px_-4px_hsl(var(--gold)/0.5)] group border border-gold/20"
+              style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))' }}
+            >
+              <span className="relative z-10">Request Quote</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-gold/20 to-gold-light/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
+          </div>
+
+          {/* Mobile toggle */}
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className="lg:hidden p-2 text-foreground hover:text-gold transition-colors rounded-md hover:bg-gold/5"
+            aria-label="Toggle menu"
+          >
+            {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
