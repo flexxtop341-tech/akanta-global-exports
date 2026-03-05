@@ -22,20 +22,23 @@ const Header = () => {
 
   useEffect(() => {
     if (showTranslate) {
-      // Re-initialize Google Translate when dropdown opens
       const tryInit = () => {
         const w = window as any;
         if (w.google?.translate?.TranslateElement) {
-          const el = document.getElementById('google_translate_element');
-          if (el) el.innerHTML = '';
-          new w.google.translate.TranslateElement(
-            { pageLanguage: 'en', layout: w.google.translate.TranslateElement.InlineLayout.SIMPLE },
-            'google_translate_element'
-          );
+          // Use the correct container based on screen size
+          const desktopEl = document.getElementById('google_translate_desktop');
+          const mobileEl = document.getElementById('google_translate_mobile');
+          const el = desktopEl || mobileEl;
+          if (el) {
+            el.innerHTML = '';
+            new w.google.translate.TranslateElement(
+              { pageLanguage: 'en', layout: w.google.translate.TranslateElement.InlineLayout.SIMPLE },
+              el.id
+            );
+          }
         }
       };
-      // Small delay to ensure DOM element is rendered
-      setTimeout(tryInit, 100);
+      setTimeout(tryInit, 200);
     }
   }, [showTranslate]);
 
@@ -101,7 +104,7 @@ const Header = () => {
             </button>
             {showTranslate && (
               <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl p-3 min-w-[200px] z-50">
-                <div id="google_translate_element" className="text-sm" />
+                <div id="google_translate_desktop" className="text-sm" />
               </div>
             )}
           </div>
@@ -163,7 +166,7 @@ const Header = () => {
             </div>
             {showTranslate && (
               <div className="mt-2 p-3 border border-border rounded-lg">
-                <div id="google_translate_element" className="text-sm" />
+                <div id="google_translate_mobile" className="text-sm" />
               </div>
             )}
           </nav>
