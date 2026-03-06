@@ -93,15 +93,15 @@ const Index = () => {
             >
               <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">About Akanta Global</motion.span>
               <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
-                <span className="gold-gradient-text">Trusted Supplier</span>{" "}
-                <span className="text-foreground">of Writing Instruments from India</span>
+                <span className="gold-gradient-text">Global Trading,</span>{" "}
+                <span className="text-foreground">Sourcing & Distribution</span>
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-4">
-                Akanta Global is committed to exporting high-quality, export-grade pens that meet international standards — supporting buyers with transparent pricing, timely delivery, and dependable service.
+                Akanta Global is dedicated to growing in the field of international trade and global sourcing. We connect trusted manufacturers with buyers across domestic and international markets. As a merchant export company, we focus on delivering quality products with smooth and transparent trade processes.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed mb-6">
-                We help importers, distributors, and promotional product companies grow their businesses through ethical sourcing, strong supplier partnerships, and customer-focused solutions.
+                We work closely with suppliers and global partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
               </motion.p>
               <motion.div variants={fadeUp} custom={5}>
                 <Link
