@@ -62,18 +62,18 @@ const Header = () => {
       {/* Top gold accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), transparent)' }} />
 
-      <div className="container mx-auto px-4">
+      <div className="max-w-[1400px] w-full mx-auto px-4">
         {/* Main header row */}
-        <div className="flex items-center justify-between h-[72px] lg:h-[80px]">
+        <div className="flex items-center justify-between h-[80px] lg:h-[90px]">
           {/* Logo + Tagline */}
           <Link to="/" className="flex items-center group shrink-0">
             <div className="flex flex-col items-center">
               <img
                 src={logo}
                 alt="Akanta Global"
-                className="h-14 md:h-16 lg:h-[72px] w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-16 md:h-20 lg:h-[80px] w-auto transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-[8px] md:text-[9px] font-bold uppercase tracking-[0.18em] text-gold leading-none -mt-1">
+              <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-gold leading-none -mt-0.5">
                 Stronger Together
               </span>
             </div>
