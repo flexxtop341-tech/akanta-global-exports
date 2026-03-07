@@ -6,12 +6,6 @@ import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
 
-const stats = [
-  { value: "45+", label: "Countries Served", dark: true },
-  { value: "98%", label: "On-Time Delivery", dark: false },
-  { value: "12+", label: "Years of Experience", dark: true },
-  { value: "100%", label: "Quality Assured", dark: false },
-];
 
 const categories = [
   { image: ballPens, title: "Ball Pens", desc: "Smooth-writing, durable pens for office, school & promotional use." },
