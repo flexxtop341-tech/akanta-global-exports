@@ -153,6 +153,8 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Our Services */}
+      <ServicesSection />
 
       {/* Product Categories */}
       <section className="py-20 bg-card overflow-hidden">
