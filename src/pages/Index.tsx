@@ -5,6 +5,7 @@ import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
+import globalTrade from "@/assets/global-trade.png";
 
 
 const categories = [
@@ -91,7 +92,7 @@ const Index = () => {
       {/* About Snapshot with Stats */}
       <section className="py-20 bg-background overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -123,25 +124,15 @@ const Index = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="grid grid-cols-2 gap-4"
+              variants={scaleIn}
+              custom={0}
+              className="flex items-center justify-center"
             >
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  variants={scaleIn}
-                  custom={i}
-                  className={`rounded-xl p-6 premium-shadow ${
-                    stat.dark
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-card border border-border"
-                  }`}
-                >
-                  <span className="text-3xl font-bold gold-gradient-text">{stat.value}</span>
-                  <p className={`text-sm mt-1 ${stat.dark ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
+              <img
+                src={globalTrade}
+                alt="Global trade illustration with pens and shipping boxes around a globe"
+                className="w-full max-w-md lg:max-w-lg object-contain"
+              />
             </motion.div>
           </div>
         </div>
