@@ -67,7 +67,7 @@ const Footer = () => {
                 "Trade Partnerships",
                 "Quality Assurance",
               ].map((item) => (
-                <span key={item} className="flex items-center gap-1.5 text-sm text-footer-foreground/60">
+                <span key={item} className="flex items-center gap-1.5 text-base text-footer-foreground/60">
                   <span className="w-1 h-1 rounded-full bg-gold/40" />
                   {item}
                 </span>
