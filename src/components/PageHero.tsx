@@ -8,7 +8,7 @@ const PageHero = ({ title, subtitle }: { title: string; subtitle: string }) => {
           backgroundSize: '24px 24px'
         }} />
         <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             <span className="gold-gradient-text">{title}</span>
           </h1>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">{subtitle}</p>
