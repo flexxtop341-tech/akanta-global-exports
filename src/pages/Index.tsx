@@ -22,7 +22,7 @@ import pensPattern from "@/assets/pens-pattern.png";
 import ctaBg from "@/assets/cta-bg.jpg";
 import pensCollection from "@/assets/pens-collection.png";
 
-const inputClass = "w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
+const inputClass = "w-full px-5 py-4 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-base focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
 
 const contactInfoItems = [
   { image: iconDistribution, title: "Visit Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003", color: "from-gold/20 to-amber-500/10" },
@@ -86,25 +86,25 @@ const ContactSection = () => {
             {/* Gold glow behind form */}
             <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-amber-400/10 to-gold/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-10 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
+            <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-12 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-amber-600 flex items-center justify-center shadow-lg shadow-gold/20">
                   <Send size={18} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground text-lg">Send Us a Message</h3>
-                  <p className="text-xs text-muted-foreground">We'd love to hear from you</p>
+                  <h3 className="font-bold text-foreground text-2xl">Send Us a Message</h3>
+                  <p className="text-sm text-muted-foreground">We'd love to hear from you</p>
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6">
                   {[
                     { key: "name", label: "Full Name", type: "text", placeholder: "John Doe", required: true, maxLen: 100 },
                     { key: "email", label: "Email Address", type: "email", placeholder: "john@example.com", required: true, maxLen: 255 },
                   ].map(f => (
                     <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                      <label className="block text-base font-medium text-foreground mb-2">
                         {f.label} {f.required && <span className="text-gold">*</span>}
                       </label>
                       <input
@@ -118,13 +118,13 @@ const ContactSection = () => {
                     </motion.div>
                   ))}
                 </div>
-                <div className="grid sm:grid-cols-2 gap-5">
+                <div className="grid sm:grid-cols-2 gap-6">
                   {[
                     { key: "phone", label: "Phone Number", type: "tel", placeholder: "+91 98765 43210", required: false, maxLen: 20 },
                     { key: "company", label: "Company Name", type: "text", placeholder: "Your Company", required: false, maxLen: 100 },
                   ].map(f => (
                     <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                      <label className="block text-base font-medium text-foreground mb-2">
                         {f.label}
                       </label>
                       <input
@@ -139,11 +139,11 @@ const ContactSection = () => {
                   ))}
                 </div>
                 <motion.div animate={focusedField === "message" ? { scale: 1.01 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                  <label className="block text-base font-medium text-foreground mb-2">
                     Message <span className="text-gold">*</span>
                   </label>
                   <textarea
-                    required rows={5} placeholder="Tell us about your requirements, desired products, and quantities..."
+                    required rows={6} placeholder="Tell us about your requirements, desired products, and quantities..."
                     maxLength={1000}
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
@@ -157,7 +157,7 @@ const ContactSection = () => {
                   type="submit" disabled={sending}
                   whileHover={{ scale: 1.03, boxShadow: "0 8px 30px -5px hsl(var(--gold) / 0.4)" }}
                   whileTap={{ scale: 0.97 }}
-                  className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-10 py-3.5 rounded-xl font-semibold transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
+                  className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-12 py-4 rounded-xl font-semibold text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
                 >
                   {sending ? (
                     <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
