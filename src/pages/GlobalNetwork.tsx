@@ -114,7 +114,7 @@ const GlobalNetwork = () => {
       />
       <PageHero
         title="Global Network"
-        subtitle="Akanta Global serves international markets with a reliable supply chain backed by verified Indian manufacturers."
+        subtitle="Akanta Global exports ball pens and writing instruments to importers and distributors across USA, UK, UAE, Africa, Europe, and Asia with a reliable supply chain."
       />
 
       {/* Shipping Port Banner */}
