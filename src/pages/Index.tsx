@@ -22,7 +22,7 @@ import pensPattern from "@/assets/pens-pattern.png";
 import ctaBg from "@/assets/cta-bg.jpg";
 import pensCollection from "@/assets/pens-collection.png";
 
-const inputClass = "w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
+const inputClass = "w-full px-5 py-4 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-base focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
 
 const contactInfoItems = [
   { image: iconDistribution, title: "Visit Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003", color: "from-gold/20 to-amber-500/10" },
