@@ -688,7 +688,7 @@ const Index = () => {
               <div className="relative">
                 <img
                   src={importExportIllustration}
-                  alt="International import export trading with ships, planes, trucks and globe"
+                  alt="Import ball pens from India — international stationery export company"
                   className="w-full max-w-lg mx-auto object-contain relative z-10"
                 />
                 {/* Floating stat cards */}
