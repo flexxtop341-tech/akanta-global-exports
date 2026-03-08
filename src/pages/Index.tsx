@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -306,6 +307,42 @@ const Index = () => {
             "@type": "BreadcrumbList",
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://akantaglobal.com/" }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What types of pens does Akanta Global export?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the minimum order quantity (MOQ) for bulk pen orders?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope." }
+              },
+              {
+                "@type": "Question",
+                "name": "Which countries does Akanta Global export pens to?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Akanta Global offer custom logo printing on pens?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer complete custom branding solutions including logo printing, custom colors, and packaging. Our custom pen service is ideal for promotional campaigns, corporate gifting, and private label distribution." }
+              },
+              {
+                "@type": "Question",
+                "name": "What certifications does Akanta Global hold?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Akanta Global holds ISO 9001:2015, ISO 14001:2015, FSSAI, IEC (Import Export Code), APEDA, and FIEO certifications — ensuring the highest international compliance standards for quality and export operations." }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I request a quote for bulk pen orders from India?",
+                "acceptedAnswer": { "@type": "Answer", "text": "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details." }
+              }
             ]
           }
         ]}
@@ -776,6 +813,82 @@ const Index = () => {
 
       {/* Contact Us */}
       <ContactSection />
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gold/[0.02] rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="relative container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 md:mb-16"
+          >
+            <span className="inline-block text-[11px] font-bold tracking-[0.25em] uppercase text-gold mb-4 px-4 py-1.5 rounded-full border border-gold/20 bg-gold/5">
+              Common Questions
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Frequently Asked <span className="gold-gradient-text">Questions</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Everything you need to know about ordering bulk pens, custom branding, and export from India.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-3xl mx-auto"
+          >
+            <Accordion type="single" collapsible className="space-y-3">
+              {[
+                {
+                  q: "What types of pens does Akanta Global export?",
+                  a: "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards."
+                },
+                {
+                  q: "What is the minimum order quantity (MOQ) for bulk pen orders?",
+                  a: "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope."
+                },
+                {
+                  q: "Which countries does Akanta Global export pens to?",
+                  a: "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa."
+                },
+                {
+                  q: "Does Akanta Global offer custom logo printing on pens?",
+                  a: "Yes, we offer complete custom branding solutions including logo printing, custom colors, and packaging. Our custom pen service is ideal for promotional campaigns, corporate gifting, and private label distribution."
+                },
+                {
+                  q: "What certifications does Akanta Global hold?",
+                  a: "Akanta Global holds ISO 9001:2015, ISO 14001:2015, FSSAI, IEC (Import Export Code), APEDA, and FIEO certifications — ensuring the highest international compliance standards for quality and export operations."
+                },
+                {
+                  q: "How can I request a quote for bulk pen orders from India?",
+                  a: "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details."
+                },
+              ].map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="bg-card border border-border/60 rounded-xl px-6 hover:border-gold/30 transition-colors duration-300 data-[state=open]:border-gold/40 data-[state=open]:shadow-lg data-[state=open]:shadow-gold/5"
+                >
+                  <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-foreground hover:text-gold transition-colors py-5 [&[data-state=open]]:text-gold">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground text-sm md:text-base leading-relaxed pb-5">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="py-20 md:py-32 relative overflow-hidden">
