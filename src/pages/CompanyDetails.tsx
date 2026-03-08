@@ -132,20 +132,6 @@ const CompanyDetails = () => {
         </div>
       </section>
 
-      {/* Animated Stats Counter */}
-      <section className="relative py-16 bg-primary overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
-          backgroundSize: '32px 32px'
-        }} />
-        <div className="container mx-auto px-4 relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <AnimatedCounter key={i} value={stat.value} label={stat.label} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* About Section - Split Layout */}
       <section className="py-20 bg-background">
