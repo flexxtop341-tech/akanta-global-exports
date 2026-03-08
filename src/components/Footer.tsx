@@ -126,7 +126,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-footer-foreground/40">
+          <p className="text-sm text-footer-foreground/40">
             © {new Date().getFullYear()} Akanta Global. All rights reserved.
           </p>
           <Link
