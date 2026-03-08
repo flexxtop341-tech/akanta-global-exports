@@ -108,11 +108,11 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
       />
 
       {/* Vector Icon */}
-      <div className="w-20 h-20 flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-110">
+      <div className="w-24 h-24 flex items-center justify-center mb-5 p-2 rounded-2xl bg-muted/50 border border-border/40 transition-all duration-500 group-hover:scale-110 group-hover:bg-gold/5 group-hover:border-gold/20">
         <img
           src={service.image}
           alt={service.title}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain drop-shadow-md"
         />
       </div>
 
