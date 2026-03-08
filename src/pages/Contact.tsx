@@ -156,7 +156,7 @@ const Contact = () => {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-amber-400/10 to-gold/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-              <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-10 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
+              <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-12 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-gold to-amber-600 flex items-center justify-center shadow-lg shadow-gold/20">
                     <Send size={18} className="text-white" />
