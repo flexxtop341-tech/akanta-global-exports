@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
+import buttonPens from "@/assets/button-pens.jpg";
+import metallicPens from "@/assets/metallic-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
