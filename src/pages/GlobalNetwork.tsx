@@ -1,8 +1,12 @@
-import { Globe, ShieldCheck, Users, MapPin } from "lucide-react";
+import { Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import globalMapBg from "@/assets/global-map-bg.jpg";
 import globalNetworkHero from "@/assets/global-network-hero.jpg";
+import iconQuality from "@/assets/icon-quality.png";
+import iconPartnership from "@/assets/icon-partnership.png";
+import iconGlobalReach from "@/assets/icon-global-reach.png";
+import iconShipping from "@/assets/icon-shipping.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -20,10 +24,10 @@ const float = {
 };
 
 const items = [
-  { icon: ShieldCheck, title: "Verified Manufacturers", desc: "Every supplier in our network is rigorously vetted for quality and reliability." },
-  { icon: Users, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
-  { icon: Globe, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
-  { icon: MapPin, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
+  { icon: iconQuality, title: "Verified Manufacturers", desc: "Every supplier in our network is rigorously vetted for quality and reliability." },
+  { icon: iconPartnership, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
+  { icon: iconGlobalReach, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
+  { icon: iconShipping, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
 ];
 
 const GlobalNetwork = () => {
@@ -69,12 +73,12 @@ const GlobalNetwork = () => {
                 whileHover={{ y: -10, scale: 1.03, boxShadow: "0 20px 40px -12px hsl(var(--gold) / 0.2)", transition: { duration: 0.3 } }}
                 className="bg-card p-8 rounded-lg border border-border premium-shadow cursor-default"
               >
-                <motion.div
-                  animate={float.animate}
-                  className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4"
-                >
-                  <item.icon size={24} className="text-gold" />
-                </motion.div>
+                  <motion.div
+                    animate={float.animate}
+                    className="w-14 h-14 shrink-0"
+                  >
+                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
+                  </motion.div>
                 <h3 className="text-lg font-semibold text-gold-dark mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </motion.div>
