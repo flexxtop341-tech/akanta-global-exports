@@ -205,9 +205,28 @@ const Certificates = () => {
   return (
     <>
       <SEOHead
-        title="Certifications & Compliance — ISO Certified Stationery Exporter"
-        description="Akanta Global holds ISO 9001, ISO 14001, FSSAI, IEC, APEDA, and FIEO certifications — ensuring the highest international standards for ball pen export and stationery trade compliance."
+        title="Certifications — ISO 9001, IEC, APEDA, FIEO Certified Pen Exporter"
+        description="Akanta Global holds ISO 9001:2015, ISO 14001, FSSAI, IEC, APEDA & FIEO certifications — ensuring world-class quality standards for ball pen export and stationery trade compliance from India."
         path="/certificates"
+        keywords="ISO certified pen exporter india, APEDA registered exporter, FIEO member stationery, IEC certificate pen company, ISO 9001 ball pen manufacturer, certified stationery supplier india, export compliance certificates, quality certified pen exporter nashik"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Certifications & Compliance — Akanta Global",
+          "description": "ISO 9001, ISO 14001, FSSAI, IEC, APEDA, FIEO certified ball pen exporter from India.",
+          "url": "https://akantaglobal.com/certificates",
+          "about": {
+            "@type": "Organization",
+            "name": "Akanta Global",
+            "hasCredential": [
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Quality Management", "name": "ISO 9001:2015" },
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Environmental", "name": "ISO 14001:2015" },
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Export License", "name": "IEC Certificate" },
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Export Registration", "name": "APEDA Registration" },
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Trade Membership", "name": "FIEO Membership" }
+            ]
+          }
+        }}
       />
       <PageHero
         title="Certifications & Compliance"

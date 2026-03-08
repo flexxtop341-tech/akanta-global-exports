@@ -64,9 +64,26 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Us — Trusted Indian Stationery Exporter"
-        description="Learn about Akanta Global — India's trusted ball pen exporter and stationery supplier. We bridge Indian manufacturers with international distributors through quality, transparency, and ethical sourcing."
+        title="About Us — Trusted Ball Pen Exporter & Stationery Supplier India"
+        description="Learn about Akanta Global — India's trusted ball pen exporter bridging Indian pen manufacturers with global distributors. Quality-assured writing instruments, ethical sourcing, transparent pricing & on-time delivery."
         path="/about"
+        keywords="about akanta global, ball pen exporter india, stationery supplier company, indian pen manufacturer, ethical sourcing pens india, quality pen exporter nashik, writing instrument supplier, pen trading company india, bulk stationery exporter, export grade pens india"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Akanta Global",
+          "description": "India's trusted ball pen exporter bridging Indian pen manufacturers with global distributors.",
+          "url": "https://akantaglobal.com/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Akanta Global",
+            "url": "https://akantaglobal.com",
+            "foundingDate": "2008",
+            "numberOfEmployees": { "@type": "QuantitativeValue", "value": "50+" },
+            "areaServed": "Worldwide",
+            "knowsAbout": ["Ball Pen Export", "Stationery Manufacturing", "Writing Instruments", "International Trade"]
+          }
+        }}
       />
       <PageHero
         title="About Akanta Global"

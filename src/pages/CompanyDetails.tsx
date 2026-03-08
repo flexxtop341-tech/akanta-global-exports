@@ -87,9 +87,29 @@ const CompanyDetails = () => {
   return (
     <>
       <SEOHead
-        title="Company Details — Pen Manufacturing Company India"
-        description="Akanta Global is a pen manufacturing company in India offering complete export solutions — from manufacturer verification and quality inspection to logistics and delivery of bulk writing instruments."
+        title="Company Profile — Ball Pen Export Company Nashik, India"
+        description="Akanta Global — pen export company in Nashik, India. Complete export solutions: manufacturer verification, quality inspection, export documentation & international logistics for bulk writing instruments."
         path="/company"
+        keywords="akanta global company details, pen export company nashik, ball pen trading company india, stationery exporter profile, pen manufacturer verification india, export documentation services, pen logistics company, writing instruments export company maharashtra"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Corporation",
+          "name": "Akanta Global",
+          "url": "https://akantaglobal.com",
+          "description": "Pen export company in Nashik, India providing complete export solutions for writing instruments.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
+            "addressLocality": "Nashik",
+            "addressRegion": "Maharashtra",
+            "postalCode": "422003",
+            "addressCountry": "IN"
+          },
+          "telephone": "+919673398945",
+          "email": "akantaglobal@gmail.com",
+          "foundingDate": "2008",
+          "numberOfEmployees": { "@type": "QuantitativeValue", "value": "50+" }
+        }}
       />
       <PageHero
         title="Company Details"

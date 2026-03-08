@@ -61,22 +61,45 @@ const Products = () => {
   return (
     <>
       <SEOHead
-        title="Export-Grade Writing Instruments — Ball Pens, Promotional & Custom Pens"
-        description="Explore Akanta Global's range of export-grade writing instruments — plastic ball pens, retractable pens, metallic pens, custom logo pens, and bulk promotional pens for international distributors."
+        title="Ball Pens Manufacturer India | Retractable, Metallic & Custom Pens"
+        description="Buy export-grade ball pens from India — plastic ball pens, retractable click pens, metallic pens & custom logo pens. Bulk orders from 10,000 units. Best wholesale pen manufacturer for global distributors."
         path="/products"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "Export-Grade Ball Pens",
-          "brand": { "@type": "Brand", "name": "Akanta Global" },
-          "description": "High-quality bulk ball pens and writing instruments for export from India. Available in plastic, metallic, and custom-branded options.",
-          "category": "Writing Instruments & Stationery",
-          "manufacturer": {
-            "@type": "Organization",
-            "name": "Akanta Global",
-            "url": "https://akantaglobal.com"
+        keywords="ball pen manufacturer india, retractable pen supplier, metallic ball pen exporter, custom logo pens india, bulk pen order india, wholesale writing instruments, promotional pens manufacturer, click pen supplier, plastic ball pen exporter, OEM pen manufacturer india, private label pen supplier, corporate gift pens, office stationery supplier india, pen MOQ 10000 units"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Export-Grade Writing Instruments",
+            "description": "Akanta Global's range of export-grade ball pens and writing instruments",
+            "url": "https://akantaglobal.com/products",
+            "numberOfItems": 4,
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Ball Pens", "url": "https://akantaglobal.com/products#ball-pens" },
+              { "@type": "ListItem", "position": 2, "name": "Click / Retractable Pens", "url": "https://akantaglobal.com/products#retractable-pens" },
+              { "@type": "ListItem", "position": 3, "name": "Metallic Ball Pens", "url": "https://akantaglobal.com/products#metallic-pens" },
+              { "@type": "ListItem", "position": 4, "name": "Custom Solutions", "url": "https://akantaglobal.com/products#custom-pens" }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Export-Grade Ball Pens",
+            "brand": { "@type": "Brand", "name": "Akanta Global" },
+            "description": "High-quality bulk ball pens and writing instruments for export from India. Plastic, metallic, retractable and custom-branded options. MOQ 10,000 units.",
+            "category": "Writing Instruments & Stationery",
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "Akanta Global",
+              "url": "https://akantaglobal.com"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "eligibleQuantity": { "@type": "QuantitativeValue", "minValue": 10000, "unitText": "units" }
+            }
           }
-        }}
+        ]}
       />
       <PageHero
         title="Our Products"

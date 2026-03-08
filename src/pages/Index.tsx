@@ -271,30 +271,44 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Leading Ball Pen Exporter from India"
-        description="Akanta Global is a trusted ball pen exporter and stationery supplier from India. We supply bulk promotional pens, office stationery, and custom branded writing instruments to global distributors and wholesale buyers."
+        title="Ball Pen Exporter India | Bulk Pen Supplier & Manufacturer"
+        description="Akanta Global — India's leading ball pen exporter & stationery supplier. We supply bulk promotional pens, retractable pens, metallic pens & custom branded writing instruments to global distributors and wholesale buyers."
         path="/"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Akanta Global",
-          "url": "https://akantaglobal.com",
-          "description": "Leading ball pen exporter and wholesale stationery supplier from India serving global distributors and importers.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
-            "addressLocality": "Nashik",
-            "addressRegion": "Maharashtra",
-            "postalCode": "422003",
-            "addressCountry": "IN"
+        keywords="ball pen exporter india, ball pen manufacturer india, bulk pen supplier india, wholesale stationery supplier, promotional pen manufacturer, writing instruments exporter, custom branded pens india, pen export company nashik, stationery trading company india, B2B pen supplier, retractable pen exporter, metallic ball pen supplier, office stationery exporter india, pen distributor india, cheap ball pens bulk order"
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Akanta Global",
+            "alternateName": "Akanta Global Exports",
+            "url": "https://akantaglobal.com",
+            "logo": "https://akantaglobal.com/favicon.ico",
+            "description": "Leading ball pen exporter and wholesale stationery supplier from India serving global distributors and importers.",
+            "foundingDate": "2008",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
+              "addressLocality": "Nashik",
+              "addressRegion": "Maharashtra",
+              "postalCode": "422003",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+919673398945",
+              "contactType": "sales",
+              "areaServed": ["US", "GB", "AE", "IN", "ZA", "NG", "KE", "DE", "FR"],
+              "availableLanguage": ["English", "Hindi"]
+            }
           },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+919673398945",
-            "contactType": "sales",
-            "availableLanguage": ["English", "Hindi"]
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://akantaglobal.com/" }
+            ]
           }
-        }}
+        ]}
       />
       {/* Hero */}
       <section className="relative min-h-[75vh] md:min-h-[85vh] flex items-center">
