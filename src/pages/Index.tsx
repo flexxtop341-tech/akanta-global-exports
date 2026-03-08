@@ -954,6 +954,19 @@ const Index = () => {
               </Link>
             </motion.div>
           </motion.div>
+          
+          {/* Trust tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="mt-8 text-primary-foreground/50 text-sm flex items-center justify-center gap-2"
+          >
+            <span className="w-8 h-px bg-gradient-to-r from-transparent to-gold/40" />
+            <span>Trusted by 500+ businesses worldwide</span>
+            <span className="w-8 h-px bg-gradient-to-l from-transparent to-gold/40" />
+          </motion.p>
         </motion.div>
       </section>
     </>
