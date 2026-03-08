@@ -118,7 +118,7 @@ const ContactSection = () => {
                     </motion.div>
                   ))}
                 </div>
-                <div className="grid sm:grid-cols-2 gap-5">
+                <div className="grid sm:grid-cols-2 gap-6">
                   {[
                     { key: "phone", label: "Phone Number", type: "tel", placeholder: "+91 98765 43210", required: false, maxLen: 20 },
                     { key: "company", label: "Company Name", type: "text", placeholder: "Your Company", required: false, maxLen: 100 },
