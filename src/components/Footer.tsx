@@ -18,14 +18,14 @@ const Footer = () => {
 
       <div className="container mx-auto px-4 pt-16 pb-8 relative">
         {/* Main grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-14 items-start">
           {/* Brand */}
-          <div className="lg:pr-6">
-            <img src={logo} alt="Akanta Global" className="h-36 w-auto mb-4 brightness-0 invert" />
-            <p className="text-base text-footer-foreground/60 leading-relaxed mb-5">
+          <div className="lg:pr-4">
+            <img src={logo} alt="Akanta Global" className="h-28 w-auto mb-3 brightness-0 invert" />
+            <p className="text-sm text-footer-foreground/60 leading-relaxed mb-4">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1 mb-5">
+            <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1 mb-4">
               Stronger Together
             </span>
             {/* Social Media Links */}
