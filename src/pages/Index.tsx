@@ -334,7 +334,7 @@ const Index = () => {
             >
               <Link
                 to="/products"
-                className="bg-gold text-white px-7 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
+                className="bg-gold text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg text-sm md:text-base"
               >
                 Explore Our Products
               </Link>
