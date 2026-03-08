@@ -100,8 +100,8 @@ const Footer = () => {
                   <Phone size={14} className="text-gold" />
                 </span>
                 <div>
-                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Phone</span>
-                  <span className="text-sm text-footer-foreground/70 group-hover:text-gold transition-colors">+91 96733 98945</span>
+                  <span className="text-xs uppercase tracking-widest text-footer-foreground/40 block">Phone</span>
+                  <span className="text-base text-footer-foreground/70 group-hover:text-gold transition-colors">+91 96733 98945</span>
                 </div>
               </a>
               <div className="flex items-start gap-3">
