@@ -46,6 +46,33 @@ const Products = () => {
         subtitle="We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export."
       />
 
+      {/* Showcase Banner */}
+      <section className="relative overflow-hidden">
+        <motion.img
+          src={productsShowcase}
+          alt="Premium writing instruments collection"
+          className="w-full h-64 md:h-80 object-cover"
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent flex items-center">
+          <div className="container mx-auto px-4">
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-2xl md:text-3xl font-bold text-white max-w-md"
+            >
+              Crafted for <span className="gold-gradient-text">Quality</span>, Built for <span className="gold-gradient-text">Export</span>
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10">
