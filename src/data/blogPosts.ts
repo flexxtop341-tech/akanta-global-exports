@@ -180,6 +180,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-02-25",
     readTime: "6 min read",
     excerpt: "Promotional products play an important role in modern marketing strategies. Learn why branded pens remain one of the most effective and affordable marketing tools.",
+    image: blogPromotionalImg,
+    imageAlt: "Colorful promotional pens with custom company logos for corporate branding and marketing campaigns",
     content: [
       {
         heading: "Introduction",
