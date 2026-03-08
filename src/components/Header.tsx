@@ -73,7 +73,7 @@ const Header = () => {
 
       <div className="w-full mx-auto px-6 lg:px-10">
         {/* Main header row */}
-        <div className="flex items-center justify-between h-[110px] lg:h-[145px]">
+        <div className="flex items-center justify-between h-[80px] lg:h-[145px]">
           {/* Logo + Tagline */}
           <Link to="/" className="flex items-center group shrink-0">
             <div className="flex flex-col items-center">
@@ -81,12 +81,12 @@ const Header = () => {
                 src={logo}
                 alt="Akanta Global"
                 className={`w-auto transition-all duration-500 group-hover:scale-105 ${
-                  isScrolled ? "h-20 md:h-24 lg:h-[100px]" : "h-28 md:h-32 lg:h-[135px]"
+                  isScrolled ? "h-14 md:h-24 lg:h-[100px]" : "h-16 md:h-32 lg:h-[135px]"
                 }`}
               />
               <span
                 className={`uppercase tracking-[0.25em] leading-none transition-all duration-500 ${
-                  isScrolled ? "text-[8px] md:text-[9px] lg:text-[10px] -mt-1" : "text-[9px] md:text-[11px] lg:text-[12px] -mt-2 lg:-mt-3"
+                  isScrolled ? "text-[7px] md:text-[9px] lg:text-[10px] -mt-0.5" : "text-[8px] md:text-[11px] lg:text-[12px] -mt-1 lg:-mt-3"
                 }`}
                 style={{
                   fontFamily: "'Georgia', 'Times New Roman', serif",
