@@ -191,7 +191,7 @@ const Contact = () => {
                       { key: "email", label: "Email Address", type: "email", placeholder: "john@example.com", required: true, maxLen: 255 },
                     ].map(f => (
                       <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                        <label className="block text-sm font-medium text-foreground mb-1.5">
+                        <label className="block text-base font-medium text-foreground mb-2">
                           {f.label} {f.required && <span className="text-gold">*</span>}
                         </label>
                         <input
