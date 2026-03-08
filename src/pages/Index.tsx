@@ -192,9 +192,9 @@ const ContactSection = () => {
                     <motion.div
                       animate={{ y: [0, -4, 0] }}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 border border-gold/10 p-2`}
+                      className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 border border-gold/20 p-2.5 shadow-lg`}
                     >
-                      <img src={item.image} alt={item.title} className="w-full h-full object-contain drop-shadow-md" />
+                      <img src={item.image} alt={item.title} className="w-full h-full object-contain drop-shadow-lg brightness-110 contrast-110" />
                     </motion.div>
                     <div>
                       <h4 className="font-bold text-foreground text-sm mb-1.5">{item.title}</h4>
