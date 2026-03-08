@@ -61,8 +61,8 @@ const ServicesSection = () => {
             <span className="gold-gradient-text">Our Services</span>
           </motion.h2>
           <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-5" />
-          <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
-            Comprehensive trade solutions to help businesses expand across international markets.
+          <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
+            Empowering global trade with reliable solutions — from sourcing and logistics to quality assurance and distribution.
           </motion.p>
         </motion.div>
 
