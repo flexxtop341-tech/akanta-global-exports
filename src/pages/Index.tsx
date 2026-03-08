@@ -92,8 +92,8 @@ const ContactSection = () => {
                   <Send size={18} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-foreground text-lg">Send Us a Message</h3>
-                  <p className="text-xs text-muted-foreground">We'd love to hear from you</p>
+                  <h3 className="font-bold text-foreground text-2xl">Send Us a Message</h3>
+                  <p className="text-sm text-muted-foreground">We'd love to hear from you</p>
                 </div>
               </div>
 
