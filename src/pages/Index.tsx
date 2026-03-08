@@ -404,7 +404,7 @@ const Index = () => {
       <section className="relative py-32 overflow-hidden">
         <motion.img
           src={shippingBg}
-          alt="International shipping port with cargo containers"
+          alt="Bulk ball pen exporter India — international shipping and logistics"
           className="absolute inset-0 w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           whileInView={{ scale: 1 }}
