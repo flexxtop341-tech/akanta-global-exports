@@ -392,7 +392,7 @@ const Index = () => {
             >
               <img
                 src={globalTrade}
-                alt="Global trade illustration with pens and shipping boxes around a globe"
+                alt="Ball pen exporter India — global trade illustration with writing instruments and shipping"
                 className="w-full max-w-md lg:max-w-lg object-contain"
               />
             </motion.div>
