@@ -25,7 +25,7 @@ const Footer = () => {
             <p className="text-sm text-footer-foreground/60 leading-relaxed mb-4">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1 mb-5">
+            <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1 mb-4">
               Stronger Together
             </span>
             {/* Social Media Links */}
