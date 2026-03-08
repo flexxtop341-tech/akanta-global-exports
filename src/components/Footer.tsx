@@ -22,17 +22,17 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:pr-6">
             <img src={logo} alt="Akanta Global" className="h-36 w-auto mb-4 brightness-0 invert" />
-            <p className="text-sm text-footer-foreground/60 leading-relaxed mb-5">
+            <p className="text-base text-footer-foreground/60 leading-relaxed mb-5">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
-            <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1">
               Stronger Together
             </span>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Quick Links</h4>
+            <h4 className="font-semibold mb-3 text-base uppercase tracking-[0.2em] text-gold">Quick Links</h4>
             <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
             <nav className="flex flex-col gap-2.5">
               {[
@@ -46,7 +46,7 @@ const Footer = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="group flex items-center gap-1.5 text-sm text-footer-foreground/60 hover:text-gold transition-all duration-300 hover:translate-x-1"
+                  className="group flex items-center gap-1.5 text-base text-footer-foreground/60 hover:text-gold transition-all duration-300 hover:translate-x-1"
                 >
                   <span className="w-1 h-1 rounded-full bg-gold/40 group-hover:bg-gold transition-colors" />
                   {link.label}
@@ -57,7 +57,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Our Services</h4>
+            <h4 className="font-semibold mb-3 text-base uppercase tracking-[0.2em] text-gold">Our Services</h4>
             <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
             <nav className="flex flex-col gap-2.5">
               {[
@@ -67,7 +67,7 @@ const Footer = () => {
                 "Trade Partnerships",
                 "Quality Assurance",
               ].map((item) => (
-                <span key={item} className="flex items-center gap-1.5 text-sm text-footer-foreground/60">
+                <span key={item} className="flex items-center gap-1.5 text-base text-footer-foreground/60">
                   <span className="w-1 h-1 rounded-full bg-gold/40" />
                   {item}
                 </span>
@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Get In Touch</h4>
+            <h4 className="font-semibold mb-3 text-base uppercase tracking-[0.2em] text-gold">Get In Touch</h4>
             <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
             <div className="flex flex-col gap-4">
               <a
@@ -88,8 +88,8 @@ const Footer = () => {
                   <Mail size={14} className="text-gold" />
                 </span>
                 <div>
-                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Email</span>
-                  <span className="text-sm text-footer-foreground/70 group-hover:text-gold transition-colors">akantaglobal@gmail.com</span>
+                  <span className="text-xs uppercase tracking-widest text-footer-foreground/40 block">Email</span>
+                  <span className="text-base text-footer-foreground/70 group-hover:text-gold transition-colors">akantaglobal@gmail.com</span>
                 </div>
               </a>
               <a
@@ -100,8 +100,8 @@ const Footer = () => {
                   <Phone size={14} className="text-gold" />
                 </span>
                 <div>
-                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Phone</span>
-                  <span className="text-sm text-footer-foreground/70 group-hover:text-gold transition-colors">+91 96733 98945</span>
+                  <span className="text-xs uppercase tracking-widest text-footer-foreground/40 block">Phone</span>
+                  <span className="text-base text-footer-foreground/70 group-hover:text-gold transition-colors">+91 96733 98945</span>
                 </div>
               </a>
               <div className="flex items-start gap-3">
@@ -109,8 +109,8 @@ const Footer = () => {
                   <MapPin size={14} className="text-gold" />
                 </span>
                 <div>
-                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Address</span>
-                  <span className="text-sm text-footer-foreground/70">Nashik – 422003, Maharashtra, India</span>
+                  <span className="text-xs uppercase tracking-widest text-footer-foreground/40 block">Address</span>
+                  <span className="text-base text-footer-foreground/70">Nashik – 422003, Maharashtra, India</span>
                 </div>
               </div>
             </div>
@@ -126,12 +126,12 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-footer-foreground/40">
+          <p className="text-sm text-footer-foreground/40">
             © {new Date().getFullYear()} Akanta Global. All rights reserved.
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-1.5 text-xs font-semibold text-gold/70 hover:text-gold transition-colors"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-gold/70 hover:text-gold transition-colors"
           >
             Request a Quote
             <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
