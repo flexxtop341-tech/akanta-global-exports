@@ -258,6 +258,7 @@ const About = () => {
                     <img
                       src={s.image}
                       alt={s.title}
+                      loading="lazy"
                       className="w-full h-full object-contain drop-shadow-[0_4px_12px_rgba(180,130,50,0.25)] group-hover/strength:scale-110 transition-transform duration-300"
                     />
                   </motion.div>
