@@ -10,7 +10,19 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
 User-agent: *
 Allow: /
+
+Disallow: /api/
+Disallow: /*.json$
 
 Sitemap: https://akantaglobal.com/sitemap.xml
