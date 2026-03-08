@@ -379,10 +379,17 @@ const Index = () => {
         {/* Floating Pen Illustrations */}
         {/* Pen 1 - Large, right side */}
         <motion.svg
-          className="absolute right-[10%] top-[15%] w-48 h-48 md:w-64 md:h-64 opacity-80"
+          className="absolute right-[10%] top-[15%] w-48 h-48 md:w-64 md:h-64 cursor-pointer"
           viewBox="0 0 100 100"
           animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          whileHover={{ 
+            scale: 1.15, 
+            rotate: 15,
+            filter: "drop-shadow(0 0 20px hsl(36, 80%, 55%))",
+            transition: { duration: 0.3 }
+          }}
+          style={{ opacity: 0.8 }}
         >
           <defs>
             <linearGradient id="penBody1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -399,10 +406,17 @@ const Index = () => {
 
         {/* Pen 2 - Medium, left side */}
         <motion.svg
-          className="absolute left-[5%] top-[60%] w-32 h-32 md:w-44 md:h-44 opacity-60"
+          className="absolute left-[5%] top-[60%] w-32 h-32 md:w-44 md:h-44 cursor-pointer"
           viewBox="0 0 100 100"
           animate={{ y: [0, -12, 0], rotate: [-5, 0, -5] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          whileHover={{ 
+            scale: 1.2, 
+            rotate: -20,
+            filter: "drop-shadow(0 0 18px hsl(36, 75%, 50%))",
+            transition: { duration: 0.3 }
+          }}
+          style={{ opacity: 0.6 }}
         >
           <rect x="15" y="45" width="60" height="8" rx="2" fill="hsl(var(--gold))" />
           <polygon points="75,45 88,49 75,53" fill="hsl(var(--primary))" />
@@ -410,12 +424,19 @@ const Index = () => {
           <circle cx="30" cy="49" r="2" fill="hsl(var(--gold-light) / 0.8)" />
         </motion.svg>
 
-        {/* Pen 3 - Small, top right */}
+        {/* Pen 3 - Small, bottom right */}
         <motion.svg
-          className="absolute right-[25%] bottom-[20%] w-24 h-24 md:w-36 md:h-36 opacity-50"
+          className="absolute right-[25%] bottom-[20%] w-24 h-24 md:w-36 md:h-36 cursor-pointer"
           viewBox="0 0 100 100"
           animate={{ y: [0, -10, 0], rotate: [10, 15, 10] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          whileHover={{ 
+            scale: 1.25, 
+            rotate: 25,
+            filter: "drop-shadow(0 0 15px hsl(36, 85%, 58%))",
+            transition: { duration: 0.3 }
+          }}
+          style={{ opacity: 0.5 }}
         >
           <rect x="20" y="46" width="50" height="7" rx="2" fill="hsl(var(--gold-light))" />
           <polygon points="70,46 82,49.5 70,53" fill="hsl(var(--primary-dark))" />
@@ -424,10 +445,17 @@ const Index = () => {
 
         {/* Pen 4 - Extra small, decorative */}
         <motion.svg
-          className="absolute left-[20%] top-[20%] w-16 h-16 md:w-24 md:h-24 opacity-40"
+          className="absolute left-[20%] top-[20%] w-16 h-16 md:w-24 md:h-24 cursor-pointer"
           viewBox="0 0 100 100"
           animate={{ y: [0, -8, 0], rotate: [-10, -5, -10] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+          whileHover={{ 
+            scale: 1.3, 
+            rotate: -25,
+            filter: "drop-shadow(0 0 12px hsl(36, 80%, 55%))",
+            transition: { duration: 0.3 }
+          }}
+          style={{ opacity: 0.4 }}
         >
           <rect x="25" y="47" width="45" height="6" rx="1.5" fill="hsl(var(--gold-dark))" />
           <polygon points="70,47 80,50 70,53" fill="hsl(var(--primary))" />
