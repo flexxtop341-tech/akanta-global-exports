@@ -923,7 +923,7 @@ const Index = () => {
           <motion.h2 
             variants={fadeUp} 
             custom={0} 
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+            className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight"
           >
             <span className="gold-gradient-text drop-shadow-lg">
               Let's Grow Your Business
