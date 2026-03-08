@@ -954,41 +954,6 @@ const Index = () => {
               </Link>
             </motion.div>
           </motion.div>
-          
-          {/* Trust indicators with icons */}
-          <motion.div 
-            variants={fadeUp} 
-            custom={3}
-            className="mt-16 grid grid-cols-3 max-w-md mx-auto gap-4"
-          >
-            {[
-              { stat: "45+", label: "Countries", icon: "🌍" },
-              { stat: "500+", label: "Partners", icon: "🤝" },
-              { stat: "10K+", label: "Orders", icon: "📦" },
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                className="relative group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 + i * 0.15, type: "spring", bounce: 0.4 }}
-                whileHover={{ y: -4 }}
-              >
-                <div className="bg-primary-foreground/5 backdrop-blur-sm border border-gold/10 rounded-xl p-4 hover:border-gold/30 transition-all duration-300">
-                  <motion.span
-                    className="text-2xl block mb-1"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
-                  >
-                    {item.icon}
-                  </motion.span>
-                  <span className="text-gold font-bold text-2xl block">{item.stat}</span>
-                  <span className="text-primary-foreground/50 text-xs uppercase tracking-wider">{item.label}</span>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </section>
     </>
