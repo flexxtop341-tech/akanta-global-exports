@@ -126,6 +126,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-01",
     readTime: "7 min read",
     excerpt: "India is one of the largest exporters of stationery products. This guide explains the complete process of importing ball pens from India for international distributors.",
+    image: blogImportImg,
+    imageAlt: "International cargo shipping containers at port for stationery export from India to global markets",
     content: [
       {
         heading: "Introduction",
