@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Instagram, Facebook, Linkedin } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
 
 const Footer = () => {
