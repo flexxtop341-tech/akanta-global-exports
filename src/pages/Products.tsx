@@ -80,7 +80,7 @@ const Products = () => {
       />
       <PageHero
         title="Our Products"
-        subtitle="We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export."
+        subtitle="We export a wide range of high-quality writing instruments — ball pens, promotional pens, custom logo pens, and office stationery designed to meet international quality standards and global export requirements."
       />
 
       {/* Premium Collection Banner */}
