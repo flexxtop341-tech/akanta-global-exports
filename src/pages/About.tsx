@@ -73,36 +73,6 @@ const About = () => {
         subtitle="Your trusted partner for high-quality Indian-made writing instruments — ball pens, promotional pens, and custom stationery — serving importers and distributors worldwide."
       />
 
-      {/* Stats Bar */}
-      <section className="relative -mt-10 z-10 pb-8">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4"
-          >
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                className="relative group/stat"
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-gold/15 to-amber-400/10 rounded-2xl opacity-0 group-hover/stat:opacity-100 blur-sm transition-opacity duration-500" />
-                <div className="relative bg-card/90 backdrop-blur-xl rounded-2xl border border-border/50 p-6 text-center shadow-[0_8px_30px_-10px_hsl(var(--primary)/0.1)]">
-                  <span className="text-3xl md:text-4xl font-bold gold-gradient-text">{stat.value}</span>
-                  <p className="text-xs md:text-sm text-muted-foreground mt-1 font-medium">{stat.label}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* Who We Are — with stock image */}
       <section className="py-20 relative overflow-hidden">
@@ -359,7 +329,7 @@ const About = () => {
               <span className="gold-gradient-text">Ready to Partner With Us?</span>
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-xl mx-auto text-lg mb-8 leading-relaxed">
-              Join 500+ satisfied clients across 50+ countries. Let's grow your business together.
+              Join our growing network of satisfied clients worldwide. Let's grow your business together.
             </motion.p>
             <motion.div variants={fadeUp} custom={2} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
