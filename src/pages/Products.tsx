@@ -61,9 +61,22 @@ const Products = () => {
   return (
     <>
       <SEOHead
-        title="Products — Export-Grade Writing Instruments"
-        description="Explore Akanta Global's range of export-grade writing instruments — ball pens, click pens, metallic pens, and custom promotional pens for international markets."
+        title="Export-Grade Writing Instruments — Ball Pens, Promotional & Custom Pens"
+        description="Explore Akanta Global's range of export-grade writing instruments — plastic ball pens, retractable pens, metallic pens, custom logo pens, and bulk promotional pens for international distributors."
         path="/products"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Export-Grade Ball Pens",
+          "brand": { "@type": "Brand", "name": "Akanta Global" },
+          "description": "High-quality bulk ball pens and writing instruments for export from India. Available in plastic, metallic, and custom-branded options.",
+          "category": "Writing Instruments & Stationery",
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "Akanta Global",
+            "url": "https://akantaglobal.com"
+          }
+        }}
       />
       <PageHero
         title="Our Products"
