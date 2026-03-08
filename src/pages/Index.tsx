@@ -739,65 +739,117 @@ const Index = () => {
       <ContactSection />
 
       {/* Final CTA */}
-      <section className="py-28 relative overflow-hidden">
-        <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <section className="py-32 relative overflow-hidden">
+        <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" />
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.88))'
-        }} />
-        <div className="absolute inset-0 opacity-[0.04]" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
+          background: 'linear-gradient(135deg, hsl(var(--primary) / 0.94) 0%, hsl(var(--primary-dark) / 0.92) 50%, hsl(var(--primary) / 0.90) 100%)'
         }} />
         
-        {/* Animated floating shapes */}
+        {/* Radial glow effects */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20" 
+          style={{ background: 'radial-gradient(circle, hsl(var(--gold) / 0.4) 0%, transparent 70%)' }} 
+        />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" 
+          style={{ background: 'radial-gradient(circle, hsl(var(--gold) / 0.5) 0%, transparent 60%)' }} 
+        />
+        <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-15" 
+          style={{ background: 'radial-gradient(circle, hsl(var(--gold) / 0.3) 0%, transparent 60%)' }} 
+        />
+        
+        {/* Animated particle dots */}
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1.5 h-1.5 rounded-full bg-gold/40"
+            style={{
+              left: `${10 + (i * 7)}%`,
+              top: `${15 + ((i % 4) * 20)}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.6, 0.2],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: 3 + (i % 3),
+              repeat: Infinity,
+              delay: i * 0.3,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+        
+        {/* Floating geometric shapes */}
         <motion.div
-          className="absolute top-10 left-[10%] w-20 h-20 rounded-full border border-gold/20"
-          animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-12 left-[8%] w-24 h-24 rounded-full border-2 border-gold/15"
+          animate={{ y: [0, -25, 0], rotate: [0, 180, 360], scale: [1, 1.1, 1] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-16 right-[15%] w-12 h-12 rounded-full bg-gold/10"
-          animate={{ y: [0, 15, 0], scale: [1, 1.2, 1] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute top-1/3 right-[8%] w-6 h-6 rotate-45 border-2 border-gold/30"
-          animate={{ rotate: [45, 135, 45], y: [0, -10, 0] }}
+          className="absolute bottom-20 right-[12%] w-16 h-16 rounded-full bg-gradient-to-br from-gold/15 to-gold/5"
+          animate={{ y: [0, 20, 0], scale: [1, 1.3, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-[5%] w-16 h-16 rounded-lg border border-gold/15 rotate-12"
-          animate={{ rotate: [12, -12, 12], scale: [1, 0.9, 1] }}
+          className="absolute top-1/3 right-[6%] w-8 h-8 rotate-45 border-2 border-gold/25"
+          animate={{ rotate: [45, 225, 45], y: [0, -15, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/4 left-[20%] w-3 h-3 rounded-full bg-gold/40"
-          animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.8, 0.4] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-1/3 left-[4%] w-20 h-20 rounded-2xl border border-gold/10 rotate-12"
+          animate={{ rotate: [12, -15, 12], scale: [1, 0.85, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-20 right-[25%] w-4 h-4 rounded-full bg-gold/30"
-          animate={{ scale: [1, 1.3, 1], y: [0, -8, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-[20%] right-[30%] w-4 h-4 rounded-full bg-gold/50"
+          animate={{ scale: [1, 2, 1], opacity: [0.5, 0.8, 0.5] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-[25%] left-[25%] w-3 h-3 rounded-full bg-gold/40"
+          animate={{ scale: [1, 1.8, 1], y: [0, -12, 0] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
         />
         
-        {/* Animated lines */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <motion.line
-            x1="0" y1="80" x2="100" y2="20"
-            stroke="hsl(var(--gold) / 0.1)" strokeWidth="0.1"
-            initial={{ pathLength: 0 }}
-            whileInView={{ pathLength: 1 }}
+        {/* Hexagon shapes */}
+        <motion.div
+          className="absolute top-[15%] left-[35%] w-12 h-12 opacity-20"
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))' }}
+          animate={{ rotate: [0, 60, 0], scale: [1, 1.2, 1] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-[20%] right-[35%] w-8 h-8 opacity-15"
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)', background: 'hsl(var(--gold))' }}
+          animate={{ rotate: [0, -60, 0], scale: [1, 1.3, 1] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        />
+        
+        {/* Animated curved lines */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 800 400" fill="none" preserveAspectRatio="xMidYMid slice">
+          <motion.path
+            d="M -50 350 Q 200 100 400 200 T 850 100"
+            stroke="hsl(var(--gold) / 0.12)" strokeWidth="1" fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            whileInView={{ pathLength: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 2, ease: "easeOut" }}
+            transition={{ duration: 2.5, ease: "easeOut" }}
           />
-          <motion.line
-            x1="0" y1="60" x2="100" y2="40"
-            stroke="hsl(var(--gold) / 0.08)" strokeWidth="0.08"
-            initial={{ pathLength: 0 }}
-            whileInView={{ pathLength: 1 }}
+          <motion.path
+            d="M -50 300 Q 150 150 350 250 T 850 150"
+            stroke="hsl(var(--gold) / 0.08)" strokeWidth="0.8" fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            whileInView={{ pathLength: 1, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 2.5, ease: "easeOut", delay: 0.3 }}
+            transition={{ duration: 3, ease: "easeOut", delay: 0.4 }}
+          />
+          <motion.path
+            d="M -50 250 Q 250 50 500 180 T 850 80"
+            stroke="hsl(var(--gold) / 0.06)" strokeWidth="0.6" fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            whileInView={{ pathLength: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 3.5, ease: "easeOut", delay: 0.8 }}
           />
         </svg>
         
@@ -807,51 +859,95 @@ const Index = () => {
           viewport={{ once: true, margin: "-80px" }}
           className="relative container mx-auto px-4 text-center"
         >
-          {/* Animated globe icon */}
+          {/* Animated globe with glow ring */}
           <motion.div
-            className="mx-auto mb-6 w-16 h-16 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center"
-            animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="mx-auto mb-8 relative"
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
           >
+            {/* Outer glow ring */}
             <motion.div
+              className="absolute inset-0 w-24 h-24 -m-4 rounded-full"
+              style={{ background: 'radial-gradient(circle, hsl(var(--gold) / 0.3) 0%, transparent 70%)' }}
+              animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0.8, 0.5] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            />
+            {/* Rotating ring */}
+            <motion.div
+              className="absolute inset-0 w-20 h-20 -m-2 rounded-full border border-dashed border-gold/30"
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="w-16 h-16 rounded-full bg-gradient-to-br from-gold/20 via-gold/10 to-gold/20 border border-gold/30 flex items-center justify-center backdrop-blur-sm shadow-lg shadow-gold/20"
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             >
-              <Globe2 size={32} className="text-gold" />
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              >
+                <Globe2 size={28} className="text-gold drop-shadow-lg" />
+              </motion.div>
             </motion.div>
           </motion.div>
           
+          {/* Heading with shimmer effect */}
           <motion.h2 
             variants={fadeUp} 
             custom={0} 
-            className="text-3xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
+            <span className="gold-gradient-text drop-shadow-lg">
+              Let's Grow Your Business
+            </span>
+            <br />
             <motion.span 
-              className="gold-gradient-text inline-block"
-              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-              style={{ backgroundSize: "200% auto" }}
+              className="text-primary-foreground/90"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
             >
-              Let's Grow Your Business Globally
+              Globally
             </motion.span>
           </motion.h2>
-          <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/80 max-w-xl mx-auto mb-10 text-lg">
+          
+          <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-2xl mx-auto mb-12 text-lg md:text-xl leading-relaxed">
             Partner with Akanta Global for reliable, high-quality pen exports from India to the world.
           </motion.p>
-          <motion.div variants={fadeUp} custom={2}>
+          
+          {/* Enhanced CTA button */}
+          <motion.div variants={fadeUp} custom={2} className="relative inline-block">
+            {/* Button glow */}
             <motion.div
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px hsl(var(--gold) / 0.4)" }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-block"
+              className="absolute inset-0 rounded-full blur-xl"
+              style={{ background: 'hsl(var(--gold) / 0.4)' }}
+              animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.6, 0.4] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              whileHover={{ scale: 1.08, boxShadow: "0 0 50px hsl(var(--gold) / 0.5)" }}
+              whileTap={{ scale: 0.95 }}
+              className="relative"
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-gold text-white px-10 py-4 rounded-full font-semibold hover:bg-gold-dark transition-colors shadow-xl shadow-gold/20"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-gold-light to-gold text-primary px-12 py-5 rounded-full font-bold text-lg hover:from-gold-light hover:via-gold hover:to-gold-light transition-all duration-500 shadow-2xl shadow-gold/30 overflow-hidden"
               >
-                Start a Partnership
+                {/* Shimmer effect */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12"
+                  animate={{ x: ["-100%", "200%"] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }}
+                />
+                <span className="relative z-10">Start a Partnership</span>
                 <motion.span
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
+                  className="relative z-10"
+                  animate={{ x: [0, 6, 0] }}
+                  transition={{ duration: 1.2, repeat: Infinity }}
                 >
                   →
                 </motion.span>
@@ -859,27 +955,37 @@ const Index = () => {
             </motion.div>
           </motion.div>
           
-          {/* Trust indicators */}
+          {/* Trust indicators with icons */}
           <motion.div 
             variants={fadeUp} 
             custom={3}
-            className="mt-12 flex flex-wrap justify-center gap-8 text-primary-foreground/50 text-sm"
+            className="mt-16 grid grid-cols-3 max-w-md mx-auto gap-4"
           >
             {[
-              { stat: "45+", label: "Countries" },
-              { stat: "500+", label: "Partners" },
-              { stat: "10K+", label: "Orders" },
+              { stat: "45+", label: "Countries", icon: "🌍" },
+              { stat: "500+", label: "Partners", icon: "🤝" },
+              { stat: "10K+", label: "Orders", icon: "📦" },
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                className="flex items-center gap-2"
-                initial={{ opacity: 0, y: 20 }}
+                className="relative group"
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 + i * 0.15 }}
+                transition={{ delay: 0.6 + i * 0.15, type: "spring", bounce: 0.4 }}
+                whileHover={{ y: -4 }}
               >
-                <span className="text-gold font-bold text-lg">{item.stat}</span>
-                <span>{item.label}</span>
+                <div className="bg-primary-foreground/5 backdrop-blur-sm border border-gold/10 rounded-xl p-4 hover:border-gold/30 transition-all duration-300">
+                  <motion.span
+                    className="text-2xl block mb-1"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
+                  >
+                    {item.icon}
+                  </motion.span>
+                  <span className="text-gold font-bold text-2xl block">{item.stat}</span>
+                  <span className="text-primary-foreground/50 text-xs uppercase tracking-wider">{item.label}</span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
