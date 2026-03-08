@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Ship, PackageCheck, Globe2 } from "lucide-react";
+import iconShipping from "@/assets/icon-shipping.png";
+import iconQualityProduct from "@/assets/icon-quality-product.png";
+import iconGlobalReach from "@/assets/icon-global-reach.png";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
