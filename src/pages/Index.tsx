@@ -9,6 +9,7 @@ import customPens from "@/assets/custom-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
 import shippingBg from "@/assets/shipping-bg.jpg";
 import trustedPartnerBg from "@/assets/trusted-partner-bg.png";
+import importExportIllustration from "@/assets/import-export-illustration.png";
 
 
 const categories = [
