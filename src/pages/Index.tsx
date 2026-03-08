@@ -586,7 +586,7 @@ const Index = () => {
             </motion.h2>
             <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
             <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              High-quality, export-grade writing instruments inspected and certified for international markets.
+              Export-grade ball pens, promotional pens, custom logo pens, and office stationery — inspected and certified for international markets.
             </motion.p>
           </motion.div>
 
