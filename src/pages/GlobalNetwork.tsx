@@ -1,6 +1,8 @@
 import { Globe, ShieldCheck, Users, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
+import globalMapBg from "@/assets/global-map-bg.jpg";
+import globalNetworkHero from "@/assets/global-network-hero.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -32,6 +34,28 @@ const GlobalNetwork = () => {
         subtitle="Akanta Global serves international markets with a reliable supply chain backed by verified Indian manufacturers."
       />
 
+      {/* Shipping Port Banner */}
+      <section className="relative h-64 md:h-80 overflow-hidden -mt-1">
+        <img
+          src={globalNetworkHero}
+          alt="International shipping port"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent flex items-end">
+          <div className="container mx-auto px-4 pb-8">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-primary-foreground/90 text-sm md:text-base max-w-xl"
+            >
+              Strategically connected to India's major seaports and airports, ensuring timely global delivery.
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -57,23 +81,26 @@ const GlobalNetwork = () => {
             ))}
           </div>
 
-          {/* World Map Placeholder */}
+          {/* World Map with Real Image */}
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="bg-primary rounded-lg p-12 text-center premium-shadow relative overflow-hidden"
+            className="rounded-lg overflow-hidden premium-shadow relative"
           >
-            <div className="absolute inset-0 opacity-5" style={{
-              backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
-              backgroundSize: '24px 24px'
-            }} />
-            <div className="relative">
-              <motion.div animate={{ y: [0, -12, 0], rotate: [0, 5, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}>
-                <Globe size={64} className="mx-auto text-gold-light mb-4" />
-              </motion.div>
-              <motion.h2 variants={fadeUp} custom={0} className="text-2xl font-bold mb-2 gold-gradient-text">Our Export Regions</motion.h2>
-              <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-lg mx-auto">
-                We actively export to markets across Asia, Africa, the Middle East, Europe, and South America. Contact us to discuss supply to your region.
-              </motion.p>
+            <img
+              src={globalMapBg}
+              alt="Global trade network map"
+              className="w-full h-72 md:h-96 object-cover"
+            />
+            <div className="absolute inset-0 bg-primary/60 flex items-center justify-center">
+              <div className="text-center px-4">
+                <motion.div animate={{ y: [0, -12, 0], rotate: [0, 5, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}>
+                  <Globe size={64} className="mx-auto text-gold-light mb-4" />
+                </motion.div>
+                <motion.h2 variants={fadeUp} custom={0} className="text-2xl md:text-3xl font-bold mb-2 gold-gradient-text">Our Export Regions</motion.h2>
+                <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-lg mx-auto text-sm md:text-base">
+                  We actively export to markets across Asia, Africa, the Middle East, Europe, and South America. Contact us to discuss supply to your region.
+                </motion.p>
+              </div>
             </div>
           </motion.div>
         </div>
