@@ -170,8 +170,10 @@ const CompanyDetails = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-[0.06] pointer-events-none" style={{ background: 'radial-gradient(circle, hsl(var(--gold)), transparent 70%)' }} />
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.8) 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
 
-                    <div className="relative z-10">
-                      <img src={logo} alt="Akanta Global" className="h-24 md:h-32 w-auto mx-auto mb-3" />
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-muted/40 border-2 border-gold/20 flex items-center justify-center mb-4 p-3">
+                        <img src={logo} alt="Akanta Global" className="w-full h-full object-contain" />
+                      </div>
                       <div className="w-16 h-[2px] mx-auto mb-4 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
                       <h2 className="text-xl md:text-2xl font-bold mb-2">
                         Excellence in <span className="gold-gradient-text">Global Trade</span>
