@@ -10,6 +10,9 @@ import globalTrade from "@/assets/global-trade.png";
 import shippingBg from "@/assets/shipping-bg.jpg";
 import trustedPartnerBg from "@/assets/trusted-partner-bg.png";
 import importExportIllustration from "@/assets/import-export-illustration.png";
+import pensPattern from "@/assets/pens-pattern.png";
+import ctaBg from "@/assets/cta-bg.jpg";
+import pensCollection from "@/assets/pens-collection.png";
 
 
 const categories = [
@@ -94,7 +97,9 @@ const Index = () => {
       </section>
 
       {/* About Snapshot with Stats */}
-      <section className="py-20 bg-background overflow-hidden">
+      <section className="py-20 bg-background overflow-hidden relative">
+        {/* Decorative pen pattern */}
+        <img src={pensPattern} alt="" className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-[0.03] pointer-events-none" />
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -312,7 +317,10 @@ const Index = () => {
       <ServicesSection />
 
       {/* Product Categories */}
-      <section className="py-20 bg-card overflow-hidden">
+      <section className="py-20 bg-card overflow-hidden relative">
+        {/* Floating pen collection decoration */}
+        <img src={pensCollection} alt="" className="absolute -bottom-20 -right-20 w-80 h-80 object-contain opacity-[0.05] pointer-events-none rotate-12" />
+        <img src={pensPattern} alt="" className="absolute top-0 left-0 w-1/3 h-full object-cover opacity-[0.025] pointer-events-none" />
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
@@ -503,9 +511,13 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.4) 1px, transparent 1px)`,
+      <section className="py-24 relative overflow-hidden">
+        <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.88))'
+        }} />
+        <div className="absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
           backgroundSize: '24px 24px'
         }} />
         <motion.div
