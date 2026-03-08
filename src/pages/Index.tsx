@@ -1,6 +1,8 @@
+import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Ship, PackageCheck, Globe2 } from "lucide-react";
+import { Ship, PackageCheck, Globe2, Send, Phone, Mail, MapPin } from "lucide-react";
+import { toast } from "sonner";
 import iconShipping from "@/assets/icon-shipping.png";
 import iconQualityProduct from "@/assets/icon-quality-product.png";
 import iconGlobalReach from "@/assets/icon-global-reach.png";
@@ -16,6 +18,127 @@ import pensPattern from "@/assets/pens-pattern.png";
 import ctaBg from "@/assets/cta-bg.jpg";
 import pensCollection from "@/assets/pens-collection.png";
 
+const inputClass = "w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300";
+
+const ContactSection = () => {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const message = form.message.trim();
+    if (!name || !email || !message) return;
+    if (name.length > 100 || email.length > 255 || message.length > 1000) {
+      toast.error("Please shorten your inputs.");
+      return;
+    }
+    setSending(true);
+    setTimeout(() => {
+      toast.success("Message sent! We'll get back to you shortly.");
+      setForm({ name: "", email: "", phone: "", company: "", message: "" });
+      setSending(false);
+    }, 1000);
+  };
+
+  return (
+    <section className="py-20 bg-card overflow-hidden">
+      <div className="container mx-auto px-4">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="text-center mb-12">
+          <motion.span variants={fadeUp} custom={0} className="text-gold text-sm font-semibold tracking-widest uppercase">Get In Touch</motion.span>
+          <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
+            <span className="gold-gradient-text">Contact Us</span>
+          </motion.h2>
+          <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
+          <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-2xl mx-auto">
+            Have a question or want to start a partnership? Drop us a message and we'll respond within 24 hours.
+          </motion.p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          {/* Form */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-3 bg-background rounded-xl border border-border p-8 premium-shadow"
+          >
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1">Full Name *</label>
+                  <input type="text" required placeholder="John Doe" maxLength={100} value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className={inputClass} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1">Email Address *</label>
+                  <input type="email" required placeholder="john@example.com" maxLength={255} value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1">Phone Number</label>
+                  <input type="tel" placeholder="+91 98765 43210" maxLength={20} value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className={inputClass} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-1">Company Name</label>
+                  <input type="text" placeholder="Your Company" maxLength={100} value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} className={inputClass} />
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-foreground mb-1">Message *</label>
+                <textarea required rows={4} placeholder="Tell us about your requirements..." maxLength={1000} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className={`${inputClass} resize-none`} />
+              </div>
+              <motion.button type="submit" disabled={sending} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="bg-gold text-white px-8 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors disabled:opacity-50 flex items-center gap-2 shadow-md">
+                {sending ? "Sending..." : "Send Message"} <Send size={16} />
+              </motion.button>
+            </form>
+          </motion.div>
+
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-2 space-y-5"
+          >
+            {[
+              { icon: MapPin, title: "Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003" },
+              { icon: Phone, title: "Call Us", text: "+91 96733 98945", href: "tel:+919673398945" },
+              { icon: Mail, title: "Email Us", text: "akantaglobal@gmail.com", href: "mailto:akantaglobal@gmail.com" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 + i * 0.1 }}
+                whileHover={{ y: -4, transition: { duration: 0.3 } }}
+                className="bg-background rounded-xl border border-border p-6 premium-shadow"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
+                    <item.icon size={18} className="text-gold" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm mb-1">{item.title}</h4>
+                    {item.href ? (
+                      <a href={item.href} className="text-sm text-muted-foreground hover:text-gold transition-colors">{item.text}</a>
+                    ) : (
+                      <p className="text-sm text-muted-foreground">{item.text}</p>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const categories = [
   { image: ballPens, title: "Ball Pens", desc: "Classic smooth-writing ball pens for everyday office, school & bulk use." },
@@ -509,6 +632,9 @@ const Index = () => {
           </div>
         </motion.div>
       </section>
+
+      {/* Contact Us */}
+      <ContactSection />
 
       {/* Final CTA */}
       <section className="py-24 relative overflow-hidden">
