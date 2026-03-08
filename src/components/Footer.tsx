@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Instagram, Facebook, Linkedin } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
 
 const Footer = () => {
@@ -25,9 +25,28 @@ const Footer = () => {
             <p className="text-base text-footer-foreground/60 leading-relaxed mb-5">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
-            <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1">
+            <span className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1 mb-5">
               Stronger Together
             </span>
+            {/* Social Media Links */}
+            <div className="flex items-center gap-3">
+              {[
+                { icon: Instagram, href: "https://www.instagram.com/akantaglobal", label: "Instagram" },
+                { icon: Facebook, href: "https://www.facebook.com/akantaglobal", label: "Facebook" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/akantaglobal", label: "LinkedIn" },
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-9 h-9 rounded-lg bg-gold/10 border border-gold/15 flex items-center justify-center text-gold/60 hover:text-gold hover:bg-gold/20 hover:border-gold/30 transition-all duration-300 hover:scale-110"
+                >
+                  <social.icon size={16} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}
