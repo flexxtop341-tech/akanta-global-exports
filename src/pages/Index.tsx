@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Ship, PackageCheck, Globe2, Send, Phone, Mail, MapPin } from "lucide-react";
+import { Ship, PackageCheck, Globe2, Send, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import iconShipping from "@/assets/icon-shipping.png";
 import iconQualityProduct from "@/assets/icon-quality-product.png";
@@ -18,11 +18,18 @@ import pensPattern from "@/assets/pens-pattern.png";
 import ctaBg from "@/assets/cta-bg.jpg";
 import pensCollection from "@/assets/pens-collection.png";
 
-const inputClass = "w-full px-4 py-3 rounded-md border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all duration-300";
+const inputClass = "w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
+
+const contactInfoItems = [
+  { icon: MapPin, title: "Visit Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003", color: "from-gold/20 to-amber-500/10" },
+  { icon: Phone, title: "Call Us Directly", text: "+91 96733 98945", href: "tel:+919673398945", color: "from-emerald-500/20 to-green-400/10" },
+  { icon: Mail, title: "Send an Email", text: "akantaglobal@gmail.com", href: "mailto:akantaglobal@gmail.com", color: "from-blue-500/20 to-sky-400/10" },
+];
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -43,96 +50,188 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-20 bg-card overflow-hidden">
-      <div className="container mx-auto px-4">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="text-center mb-12">
-          <motion.span variants={fadeUp} custom={0} className="text-gold text-sm font-semibold tracking-widest uppercase">Get In Touch</motion.span>
-          <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
-            <span className="gold-gradient-text">Contact Us</span>
+    <section className="py-24 relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gold/[0.03] rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} className="text-center mb-14">
+          <motion.span variants={fadeUp} custom={0} className="inline-block text-gold text-xs font-bold tracking-[0.25em] uppercase bg-gold/5 border border-gold/20 rounded-full px-5 py-1.5 mb-4">
+            Get In Touch
+          </motion.span>
+          <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-5xl font-bold mt-2 mb-3">
+            <span className="gold-gradient-text">Let's Work Together</span>
           </motion.h2>
-          <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
-          <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-2xl mx-auto">
-            Have a question or want to start a partnership? Drop us a message and we'll respond within 24 hours.
+          <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-5" />
+          <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto text-base leading-relaxed">
+            Ready to expand your business globally? Share your requirements and our team will respond within 24 hours.
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-10 max-w-6xl mx-auto items-start">
           {/* Form */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-3 bg-background rounded-xl border border-border p-8 premium-shadow"
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-3 relative group"
           >
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1">Full Name *</label>
-                  <input type="text" required placeholder="John Doe" maxLength={100} value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} className={inputClass} />
+            {/* Gold glow behind form */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-amber-400/10 to-gold/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            
+            <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-10 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-amber-600 flex items-center justify-center shadow-lg shadow-gold/20">
+                  <Send size={18} className="text-white" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1">Email Address *</label>
-                  <input type="email" required placeholder="john@example.com" maxLength={255} value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} className={inputClass} />
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1">Phone Number</label>
-                  <input type="tel" placeholder="+91 98765 43210" maxLength={20} value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} className={inputClass} />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1">Company Name</label>
-                  <input type="text" placeholder="Your Company" maxLength={100} value={form.company} onChange={e => setForm({ ...form, company: e.target.value })} className={inputClass} />
+                  <h3 className="font-bold text-foreground text-lg">Send Us a Message</h3>
+                  <p className="text-xs text-muted-foreground">We'd love to hear from you</p>
                 </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-1">Message *</label>
-                <textarea required rows={4} placeholder="Tell us about your requirements..." maxLength={1000} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className={`${inputClass} resize-none`} />
-              </div>
-              <motion.button type="submit" disabled={sending} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="bg-gold text-white px-8 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors disabled:opacity-50 flex items-center gap-2 shadow-md">
-                {sending ? "Sending..." : "Send Message"} <Send size={16} />
-              </motion.button>
-            </form>
+
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {[
+                    { key: "name", label: "Full Name", type: "text", placeholder: "John Doe", required: true, maxLen: 100 },
+                    { key: "email", label: "Email Address", type: "email", placeholder: "john@example.com", required: true, maxLen: 255 },
+                  ].map(f => (
+                    <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                        {f.label} {f.required && <span className="text-gold">*</span>}
+                      </label>
+                      <input
+                        type={f.type} required={f.required} placeholder={f.placeholder} maxLength={f.maxLen}
+                        value={form[f.key as keyof typeof form]}
+                        onChange={e => setForm({ ...form, [f.key]: e.target.value })}
+                        onFocus={() => setFocusedField(f.key)}
+                        onBlur={() => setFocusedField(null)}
+                        className={inputClass}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {[
+                    { key: "phone", label: "Phone Number", type: "tel", placeholder: "+91 98765 43210", required: false, maxLen: 20 },
+                    { key: "company", label: "Company Name", type: "text", placeholder: "Your Company", required: false, maxLen: 100 },
+                  ].map(f => (
+                    <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
+                      <label className="block text-sm font-medium text-foreground mb-1.5">
+                        {f.label}
+                      </label>
+                      <input
+                        type={f.type} placeholder={f.placeholder} maxLength={f.maxLen}
+                        value={form[f.key as keyof typeof form]}
+                        onChange={e => setForm({ ...form, [f.key]: e.target.value })}
+                        onFocus={() => setFocusedField(f.key)}
+                        onBlur={() => setFocusedField(null)}
+                        className={inputClass}
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+                <motion.div animate={focusedField === "message" ? { scale: 1.01 } : { scale: 1 }} transition={{ duration: 0.2 }}>
+                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                    Message <span className="text-gold">*</span>
+                  </label>
+                  <textarea
+                    required rows={5} placeholder="Tell us about your requirements, desired products, and quantities..."
+                    maxLength={1000}
+                    value={form.message}
+                    onChange={e => setForm({ ...form, message: e.target.value })}
+                    onFocus={() => setFocusedField("message")}
+                    onBlur={() => setFocusedField(null)}
+                    className={`${inputClass} resize-none`}
+                  />
+                  <p className="text-xs text-muted-foreground/50 mt-1 text-right">{form.message.length}/1000</p>
+                </motion.div>
+                <motion.button
+                  type="submit" disabled={sending}
+                  whileHover={{ scale: 1.03, boxShadow: "0 8px 30px -5px hsl(var(--gold) / 0.4)" }}
+                  whileTap={{ scale: 0.97 }}
+                  className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-10 py-3.5 rounded-xl font-semibold transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
+                >
+                  {sending ? (
+                    <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
+                  ) : (
+                    <>Send Message <Send size={16} /></>
+                  )}
+                </motion.button>
+              </form>
+            </div>
           </motion.div>
 
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="lg:col-span-2 space-y-5"
           >
-            {[
-              { icon: MapPin, title: "Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003" },
-              { icon: Phone, title: "Call Us", text: "+91 96733 98945", href: "tel:+919673398945" },
-              { icon: Mail, title: "Email Us", text: "akantaglobal@gmail.com", href: "mailto:akantaglobal@gmail.com" },
-            ].map((item, i) => (
+            {contactInfoItems.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.1 }}
-                whileHover={{ y: -4, transition: { duration: 0.3 } }}
-                className="bg-background rounded-xl border border-border p-6 premium-shadow"
+                transition={{ delay: 0.3 + i * 0.15, duration: 0.5 }}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                className="group/card relative"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center shrink-0">
-                    <item.icon size={18} className="text-gold" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground text-sm mb-1">{item.title}</h4>
-                    {item.href ? (
-                      <a href={item.href} className="text-sm text-muted-foreground hover:text-gold transition-colors">{item.text}</a>
-                    ) : (
-                      <p className="text-sm text-muted-foreground">{item.text}</p>
-                    )}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-gold/10 to-transparent rounded-2xl opacity-0 group-hover/card:opacity-100 blur-sm transition-opacity duration-500" />
+                <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-6 shadow-[0_8px_30px_-10px_hsl(var(--primary)/0.1)]">
+                  <div className="flex items-start gap-4">
+                    <motion.div
+                      animate={{ y: [0, -4, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shrink-0 border border-gold/10`}
+                    >
+                      <item.icon size={20} className="text-gold" />
+                    </motion.div>
+                    <div>
+                      <h4 className="font-bold text-foreground text-sm mb-1.5">{item.title}</h4>
+                      {item.href ? (
+                        <a href={item.href} className="text-sm text-muted-foreground hover:text-gold transition-colors duration-300 leading-relaxed">{item.text}</a>
+                      ) : (
+                        <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
             ))}
+
+            {/* Quick response badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+              className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6 border border-gold/10 shadow-[0_8px_30px_-10px_hsl(var(--gold)/0.15)]"
+            >
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse shadow-lg shadow-emerald-400/50" />
+                <span className="text-sm font-semibold text-primary-foreground">Quick Response Guaranteed</span>
+              </div>
+              <p className="text-xs text-primary-foreground/70 leading-relaxed mb-4">
+                Our dedicated team responds to all inquiries within 24 hours. For urgent matters, call us directly.
+              </p>
+              <motion.a
+                href="https://wa.me/919673398945"
+                target="_blank" rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-xl font-semibold hover:bg-[#1ebe5a] transition-colors text-sm shadow-lg shadow-[#25D366]/20"
+              >
+                <MessageCircle size={16} />
+                Chat on WhatsApp
+              </motion.a>
+            </motion.div>
           </motion.div>
         </div>
       </div>
