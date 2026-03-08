@@ -108,8 +108,8 @@ const GlobalNetwork = () => {
   return (
     <>
       <SEOHead
-        title="Global Network"
-        description="Akanta Global's international trade network spans multiple continents with strategic access to India's major seaports and airports for seamless export logistics."
+        title="Global Export Network — Ball Pen Exporter Worldwide"
+        description="Akanta Global exports ball pens and writing instruments to USA, UK, UAE, Africa, Europe and Asia. Strategic access to India's major seaports for seamless stationery export logistics."
         path="/global-network"
       />
       <PageHero
