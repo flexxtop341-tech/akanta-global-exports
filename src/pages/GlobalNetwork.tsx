@@ -121,7 +121,7 @@ const GlobalNetwork = () => {
       <section className="relative h-72 md:h-96 overflow-hidden -mt-1">
         <motion.img
           src={globalNetworkHero}
-          alt="International shipping port"
+          alt="Bulk pen exporter worldwide — international shipping port for stationery exports"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}

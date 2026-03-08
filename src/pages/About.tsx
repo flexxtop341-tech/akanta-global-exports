@@ -233,7 +233,7 @@ const About = () => {
           >
             <motion.img
               src={aboutQualityInspect}
-              alt="Quality inspection of writing instruments at Akanta Global"
+              alt="Quality inspection of writing instruments — bulk ball pen supplier India"
               className="w-full h-64 md:h-80 object-cover"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.8 }}

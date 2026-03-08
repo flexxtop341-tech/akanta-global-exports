@@ -79,8 +79,8 @@ const Contact = () => {
         }}
       />
       <PageHero
-        title="Contact Us"
-        subtitle="Ready to start a global partnership? Get in touch with our team today."
+        title="Get a Quote"
+        subtitle="Ready to buy bulk pens from India? Contact our team for wholesale pricing, custom logo pen quotes, and export inquiries."
       />
 
       {/* Info Cards */}

@@ -192,7 +192,7 @@ const Products = () => {
       <section className="relative h-64 md:h-72 overflow-hidden">
         <img
           src={productsQualityBanner}
-          alt="Quality inspection process"
+          alt="Quality inspection of ball pens for export — bulk pen exporter India"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-primary/75 flex items-center">
