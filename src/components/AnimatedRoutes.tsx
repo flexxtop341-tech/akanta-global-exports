@@ -8,6 +8,8 @@ import GlobalNetwork from "@/pages/GlobalNetwork";
 import Certificates from "@/pages/Certificates";
 import Team from "@/pages/Team";
 import Contact from "@/pages/Contact";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import NotFound from "@/pages/NotFound";
 
 const pageTransition = {
