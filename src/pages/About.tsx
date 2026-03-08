@@ -274,7 +274,7 @@ const About = () => {
 
       {/* Business Model — with vector step icons */}
       <section className="py-24 relative overflow-hidden">
-        <img src={aboutWarehouse} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={aboutWarehouse} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-card/90 to-background/95 backdrop-blur-[2px]" />
 
         <div className="container mx-auto px-4 relative z-10">
