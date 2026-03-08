@@ -59,13 +59,18 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us — Bulk Ball Pen Exporter India"
-        description="Contact Akanta Global for bulk ball pen orders, export inquiries, and wholesale stationery partnerships. Best ball pen exporter in India — get a quote today."
+        title="Contact Us — Get a Quote for Bulk Ball Pen Orders India"
+        description="Contact Akanta Global for bulk ball pen orders, export inquiries & wholesale stationery partnerships. Get a free quote from India's leading pen exporter. Call +91 96733 98945."
         path="/contact"
+        keywords="contact ball pen exporter india, get quote bulk pens, wholesale pen inquiry, ball pen order india, stationery export inquiry, pen supplier contact nashik, bulk pen quote, B2B pen order, pen export partnership, pen trading inquiry india"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Akanta Global",
+          "@id": "https://akantaglobal.com/#localbusiness",
+          "url": "https://akantaglobal.com/contact",
+          "telephone": "+919673398945",
+          "email": "akantaglobal@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Meri Mhasrul",
@@ -74,8 +79,15 @@ const Contact = () => {
             "postalCode": "422003",
             "addressCountry": "IN"
           },
-          "telephone": "+919673398945",
-          "email": "akantaglobal@gmail.com"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "19.9975",
+            "longitude": "73.7898"
+          },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+          ]
         }}
       />
       <PageHero

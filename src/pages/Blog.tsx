@@ -9,19 +9,28 @@ const Blog = () => {
   return (
     <>
       <SEOHead
-        title="Blog — Ball Pen Export & Stationery Industry Insights"
-        description="Read expert articles on ball pen manufacturing, stationery export from India, promotional pens marketing strategies, and global sourcing guides for distributors."
+        title="Blog — Ball Pen Export Tips, Stationery Sourcing & Trade Guides"
+        description="Expert articles on ball pen manufacturing in India, stationery export guides, promotional pen marketing strategies, bulk sourcing tips & global distributor insights from Akanta Global."
         path="/blog"
+        keywords="ball pen export blog, stationery industry insights, pen manufacturing india articles, how to import pens from india, promotional pen marketing, bulk pen buying guide, stationery sourcing tips, pen trade articles, writing instruments blog, india stationery export guide"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Blog",
-          "name": "Akanta Global Blog",
-          "description": "Insights on ball pen manufacturing, stationery export, and promotional products from India",
+          "name": "Akanta Global Blog — Pen Export & Stationery Insights",
+          "description": "Expert articles on ball pen manufacturing, stationery export from India, promotional pen marketing & global sourcing guides.",
           "url": "https://akantaglobal.com/blog",
           "publisher": {
             "@type": "Organization",
-            "name": "Akanta Global"
-          }
+            "name": "Akanta Global",
+            "url": "https://akantaglobal.com"
+          },
+          "blogPost": blogPosts.slice(0, 6).map(post => ({
+            "@type": "BlogPosting",
+            "headline": post.seoTitle,
+            "description": post.metaDescription,
+            "url": `https://akantaglobal.com/blog/${post.slug}`,
+            "datePublished": post.date
+          }))
         }}
       />
 

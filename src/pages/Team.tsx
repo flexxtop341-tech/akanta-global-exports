@@ -21,9 +21,30 @@ const Team = () => {
   return (
     <>
       <SEOHead
-        title="Our Team — Leadership Behind India's Trusted Pen Export Company"
-        description="Meet the leadership team at Akanta Global — Babita Gunjal (Founder) and Karan Gunjal (Co-Founder) driving excellence in ball pen manufacturing and stationery exports from India."
+        title="Our Team — Babita Gunjal & Karan Gunjal | Pen Export Leaders India"
+        description="Meet the founders of Akanta Global — Babita Gunjal (Founder) & Karan Gunjal (Co-Founder) driving India's ball pen export excellence. 16+ years of stationery trade expertise."
         path="/team"
+        keywords="akanta global founder, babita gunjal, karan gunjal, pen export company leadership, stationery business india founders, ball pen exporter team, indian export company leaders"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "Team — Akanta Global",
+          "url": "https://akantaglobal.com/team",
+          "mainEntity": [
+            {
+              "@type": "Person",
+              "name": "Babita Gunjal",
+              "jobTitle": "Founder & Managing Director",
+              "worksFor": { "@type": "Organization", "name": "Akanta Global" }
+            },
+            {
+              "@type": "Person",
+              "name": "Karan Gunjal",
+              "jobTitle": "Co-Founder & Business Head",
+              "worksFor": { "@type": "Organization", "name": "Akanta Global" }
+            }
+          ]
+        }}
       />
       <PageHero
         title="Leadership"

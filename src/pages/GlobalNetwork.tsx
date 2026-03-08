@@ -108,9 +108,31 @@ const GlobalNetwork = () => {
   return (
     <>
       <SEOHead
-        title="Global Export Network — Ball Pen Exporter Worldwide"
-        description="Akanta Global exports ball pens and writing instruments to USA, UK, UAE, Africa, Europe and Asia. Strategic access to India's major seaports for seamless stationery export logistics."
+        title="Global Export Network — Ball Pen Supplier to USA, UK, UAE, Africa"
+        description="Akanta Global exports ball pens & writing instruments to 50+ countries — USA, UK, UAE, Africa, Europe & Asia. Strategic seaport access from JNPT Mumbai, Mundra & Chennai for fast stationery export logistics."
         path="/global-network"
+        keywords="ball pen exporter worldwide, pen supplier USA, pen exporter UAE, stationery exporter africa, ball pen supplier europe, writing instruments exporter asia, bulk pen shipping india, international pen distributor, pen export logistics india, seaport stationery export, JNPT pen export, global pen supply chain"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Global Export Network — Akanta Global",
+          "description": "Akanta Global's worldwide pen export network covering 50+ countries across 6 continents.",
+          "url": "https://akantaglobal.com/global-network",
+          "about": {
+            "@type": "Organization",
+            "name": "Akanta Global",
+            "areaServed": [
+              { "@type": "Country", "name": "United States" },
+              { "@type": "Country", "name": "United Kingdom" },
+              { "@type": "Country", "name": "United Arab Emirates" },
+              { "@type": "Country", "name": "South Africa" },
+              { "@type": "Country", "name": "Nigeria" },
+              { "@type": "Country", "name": "Kenya" },
+              { "@type": "Country", "name": "Germany" },
+              { "@type": "Country", "name": "France" }
+            ]
+          }
+        }}
       />
       <PageHero
         title="Global Network"
