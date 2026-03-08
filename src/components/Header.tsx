@@ -73,7 +73,7 @@ const Header = () => {
                 alt="Akanta Global"
                 className="h-16 md:h-20 lg:h-[80px] w-auto transition-transform duration-300 group-hover:scale-105"
               />
-              <span className="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.2em] text-gold leading-none -mt-0.5">
+              <span className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-gold leading-none -mt-0.5" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontStyle: 'italic', fontWeight: 500 }}>
                 Stronger Together
               </span>
             </div>
