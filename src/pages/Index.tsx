@@ -314,9 +314,9 @@ const Index = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 drop-shadow-lg"
             >
-              <span className="gold-gradient-text">Connecting Global Markets</span>
+              <span className="gold-gradient-text">Leading Ball Pen Exporter</span>
               <br />
-              <span className="text-white drop-shadow-lg">with Trust & Excellence</span>
+              <span className="text-white drop-shadow-lg">from India</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
