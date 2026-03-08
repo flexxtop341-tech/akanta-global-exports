@@ -1,7 +1,7 @@
 const PageHero = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
     <>
-      <section className="relative bg-primary py-20 overflow-hidden">
+      <section className="relative bg-primary py-14 md:py-20 overflow-hidden">
         {/* Subtle gold pattern overlay */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
