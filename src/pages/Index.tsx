@@ -6,9 +6,10 @@ import iconQualityProduct from "@/assets/icon-quality-product.png";
 import iconGlobalReach from "@/assets/icon-global-reach.png";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
-import gelPens from "@/assets/gel-pens.jpg";
-import promoPens from "@/assets/promo-pens.jpg";
-import customPens from "@/assets/custom-pens.jpg";
+import plasticPens from "@/assets/plastic-pens.jpg";
+import buttonPens from "@/assets/button-pens.jpg";
+import metallicPens from "@/assets/metallic-pens.jpg";
+import gelInkPens from "@/assets/gel-ink-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
 import shippingBg from "@/assets/shipping-bg.jpg";
 import trustedPartnerBg from "@/assets/trusted-partner-bg.png";
@@ -19,10 +20,11 @@ import pensCollection from "@/assets/pens-collection.png";
 
 
 const categories = [
-  { image: ballPens, title: "Ball Pens", desc: "Smooth-writing, durable pens for office, school & promotional use." },
-  { image: gelPens, title: "Gel Pens", desc: "Vibrant gel ink pens with superior writing comfort." },
-  { image: promoPens, title: "Promotional Pens", desc: "Custom-branded pens for events & marketing campaigns." },
-  { image: customPens, title: "Custom Solutions", desc: "Private-label pens with engraving & gift packaging." },
+  { image: ballPens, title: "Ball Pens", desc: "Classic smooth-writing ball pens for everyday office, school & bulk use." },
+  { image: plasticPens, title: "Plastic Pens", desc: "Lightweight, affordable plastic pens ideal for promotional & bulk orders." },
+  { image: buttonPens, title: "Click / Button Pens", desc: "Retractable push-button pens with sleek designs and comfortable grip." },
+  { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gifting & executive use." },
+  { image: gelInkPens, title: "Gel Ink Pens", desc: "Vibrant gel ink pens with smooth flow and superior writing comfort." },
 ];
 
 const fadeUp = {
@@ -340,8 +342,8 @@ const Index = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((cat, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {categories.slice(0, 3).map((cat, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -349,6 +351,43 @@ const Index = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className="group bg-background rounded-xl overflow-hidden border border-border premium-shadow cursor-pointer"
+              >
+                <div className="relative overflow-hidden h-48">
+                  <motion.img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                  <span className="absolute bottom-3 left-3 text-white font-bold text-lg drop-shadow-lg">
+                    {cat.title}
+                  </span>
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">{cat.desc}</p>
+                  <Link
+                    to="/products"
+                    className="inline-flex items-center text-gold text-sm font-semibold hover:text-gold-light transition-colors"
+                  >
+                    View Details →
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="grid sm:grid-cols-2 max-w-3xl mx-auto gap-6">
+            {categories.slice(3).map((cat, i) => (
+              <motion.div
+                key={i + 3}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+                variants={scaleIn}
+                custom={i + 3}
                 whileHover={{ y: -10, transition: { duration: 0.3 } }}
                 className="group bg-background rounded-xl overflow-hidden border border-border premium-shadow cursor-pointer"
               >
