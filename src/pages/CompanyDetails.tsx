@@ -21,12 +21,6 @@ const steps = [
   { icon: iconSupport, title: "Buyer Support", desc: "Dedicated post-delivery support and ongoing relationship management." },
 ];
 
-const companyFacts = [
-  { icon: Building2, label: "Headquarters", value: "Nashik, Maharashtra" },
-  { icon: MapPin, label: "Port Access", value: "JNPT & Mumbai Port" },
-  { icon: Calendar, label: "Established", value: "2020" },
-  { icon: Users, label: "Markets Served", value: "15+ Countries" },
-];
 
 const stats = [
   { value: "500K+", label: "Units Exported Monthly" },
