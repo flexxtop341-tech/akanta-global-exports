@@ -214,30 +214,6 @@ const Certificates = () => {
         subtitle="Our commitment to quality and compliance is backed by internationally recognized certifications and rigorous standards."
       />
 
-      {/* Stats Bar */}
-      <section className="py-12 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.4) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px'
-        }} />
-        <div className="relative container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
-              >
-                <p className="text-3xl md:text-4xl font-bold gold-gradient-text">{stat.value}</p>
-                <p className="text-primary-foreground/70 text-sm mt-1">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Badges */}
       <section className="py-10 bg-background">
