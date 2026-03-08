@@ -367,7 +367,7 @@ const Index = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-4">
-                Akanta Global is dedicated to growing in the field of international trade and global sourcing. We connect trusted manufacturers with buyers across domestic and international markets. As a merchant export company, we focus on delivering quality products with smooth and transparent trade processes.
+                Akanta Global is a trusted ball pen exporter and stationery supplier from India committed to delivering reliable export solutions for writing instruments and promotional stationery. With strong manufacturing partnerships and strict quality control, we supply affordable and durable ball pens designed for distributors, retailers, and corporate promotional campaigns.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed mb-6">
                 We work closely with suppliers and global partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
