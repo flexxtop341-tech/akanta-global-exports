@@ -1,6 +1,7 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import SEOHead from "@/components/SEOHead";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail, Phone, MapPin, RotateCcw } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
