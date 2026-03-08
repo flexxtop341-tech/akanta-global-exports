@@ -1,4 +1,5 @@
 import { Globe, Plane, Ship, Anchor, Package, TrendingUp, Users, MapPin, X } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
