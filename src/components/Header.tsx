@@ -62,7 +62,7 @@ const Header = () => {
       {/* Top gold accent line */}
       <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), transparent)' }} />
 
-      <div className="max-w-[1400px] w-full mx-auto px-4">
+      <div className="w-full mx-auto px-6 lg:px-10">
         {/* Main header row */}
         <div className="flex items-center justify-between h-[80px] lg:h-[90px]">
           {/* Logo + Tagline */}
