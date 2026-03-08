@@ -96,69 +96,157 @@ const CompanyDetails = () => {
 
       {/* Business Card Section */}
       <section className="py-16 md:py-24 bg-muted/30 -mt-1">
-        <div className="container mx-auto px-4 flex justify-center">
+        <div className="container mx-auto px-4 flex justify-center" style={{ perspective: '1200px' }}>
           <motion.div
-            initial={{ opacity: 0, y: 40, rotateY: -8 }}
-            whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+            initial={{ opacity: 0, y: 50, rotateX: 6 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)] border border-gold/15"
-            style={{ perspective: '1200px' }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            whileHover={{ scale: 1.015, boxShadow: '0 40px 100px -20px hsl(var(--primary) / 0.3)' }}
+            className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)] border border-gold/20"
           >
-            <div className="grid md:grid-cols-2 min-h-[320px] md:min-h-[380px]">
-              {/* Left — Shipping Image */}
-              <div className="relative overflow-hidden">
-                <img
+            <div className="grid md:grid-cols-2 min-h-[360px] md:min-h-[420px]">
+              {/* Left — Shipping Image with animated overlay */}
+              <div className="relative overflow-hidden group">
+                <motion.img
                   src={companyHeroBanner}
                   alt="Akanta Global shipping and logistics"
-                  className="w-full h-full object-cover min-h-[200px]"
+                  className="w-full h-full object-cover min-h-[220px] transition-transform duration-700 group-hover:scale-110"
+                  initial={{ scale: 1.15 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/30" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-white/90 bg-primary/60 backdrop-blur-sm rounded-full px-3 py-1 border border-white/10">
-                    Since Establishment
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+
+                {/* Floating vector icons */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="absolute top-6 left-6 flex flex-col gap-3"
+                >
+                  {[
+                    { icon: iconGlobalReach, label: "Global Reach" },
+                    { icon: iconQualityProduct, label: "Quality Products" },
+                    { icon: iconShipping, label: "Fast Shipping" },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={item.label}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.6 + i * 0.15 }}
+                      className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-lg px-3 py-2 border border-white/15"
+                    >
+                      <img src={item.icon} alt={item.label} className="w-7 h-7 object-contain drop-shadow-lg" />
+                      <span className="text-xs font-semibold text-white/90">{item.label}</span>
+                    </motion.div>
+                  ))}
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1 }}
+                  className="absolute bottom-5 left-5 right-5"
+                >
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-white/90 bg-gold/30 backdrop-blur-sm rounded-full px-4 py-1.5 border border-gold/20">
+                    ✦ Trusted Export Partner
                   </span>
-                </div>
+                </motion.div>
               </div>
 
               {/* Right — Logo & Info (visiting card style) */}
-              <div className="relative bg-card flex flex-col items-center justify-center p-8 md:p-10 text-center">
-                {/* Corner accents */}
-                <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-gold/30 rounded-tl-sm" />
-                <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-gold/30 rounded-tr-sm" />
-                <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-gold/30 rounded-bl-sm" />
-                <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-gold/30 rounded-br-sm" />
+              <div className="relative bg-card flex flex-col items-center justify-center p-8 md:p-10 text-center overflow-hidden">
+                {/* Animated corner accents */}
+                {[
+                  "top-3 left-3 border-t-2 border-l-2 rounded-tl-sm",
+                  "top-3 right-3 border-t-2 border-r-2 rounded-tr-sm",
+                  "bottom-3 left-3 border-b-2 border-l-2 rounded-bl-sm",
+                  "bottom-3 right-3 border-b-2 border-r-2 rounded-br-sm",
+                ].map((pos, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: 0.8 + i * 0.1 }}
+                    className={`absolute w-7 h-7 border-gold/40 ${pos}`}
+                  />
+                ))}
 
-                {/* Subtle dot pattern */}
+                {/* Radial glow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-[0.06] pointer-events-none"
+                  style={{ background: 'radial-gradient(circle, hsl(var(--gold)), transparent 70%)' }}
+                />
+
+                {/* Dot pattern */}
                 <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
                   backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.8) 1px, transparent 1px)`,
                   backgroundSize: '20px 20px'
                 }} />
 
                 <div className="relative z-10">
-                  <img
+                  <motion.img
                     src={logo}
                     alt="Akanta Global"
-                    className="h-24 md:h-32 w-auto mx-auto mb-4"
+                    className="h-24 md:h-32 w-auto mx-auto mb-3"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.4, type: "spring", bounce: 0.3 }}
                   />
-                  <div className="w-16 h-[2px] mx-auto mb-4 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
-                  <h2 className="text-xl md:text-2xl font-bold mb-2">
+
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    whileInView={{ scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="w-16 h-[2px] mx-auto mb-4 rounded-full origin-center"
+                    style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }}
+                  />
+
+                  <motion.h2
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                    className="text-xl md:text-2xl font-bold mb-2"
+                  >
                     Excellence in <span className="gold-gradient-text">Global Trade</span>
-                  </h2>
-                  <p className="text-muted-foreground text-sm mb-4 max-w-xs mx-auto">
+                  </motion.h2>
+
+                  <motion.p
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                    className="text-muted-foreground text-sm mb-5 max-w-xs mx-auto"
+                  >
                     Trusted Indian exporter of premium writing instruments to global markets.
-                  </p>
-                  <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground/70">
-                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted/60 border border-border/50">
+                  </motion.p>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.9 }}
+                    className="flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground/70"
+                  >
+                    <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted/60 border border-border/50 hover:border-gold/30 hover:bg-gold/5 transition-all duration-300">
                       📍 Nashik, India
                     </span>
-                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted/60 border border-border/50">
+                    <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted/60 border border-border/50 hover:border-gold/30 hover:bg-gold/5 transition-all duration-300">
                       🌍 Global Exports
                     </span>
-                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted/60 border border-border/50">
+                    <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted/60 border border-border/50 hover:border-gold/30 hover:bg-gold/5 transition-all duration-300">
                       ✅ ISO Certified
                     </span>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
