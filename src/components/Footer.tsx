@@ -46,7 +46,7 @@ const Footer = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="group flex items-center gap-1.5 text-sm text-footer-foreground/60 hover:text-gold transition-all duration-300 hover:translate-x-1"
+                  className="group flex items-center gap-1.5 text-base text-footer-foreground/60 hover:text-gold transition-all duration-300 hover:translate-x-1"
                 >
                   <span className="w-1 h-1 rounded-full bg-gold/40 group-hover:bg-gold transition-colors" />
                   {link.label}
