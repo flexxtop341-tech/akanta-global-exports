@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
+import productsHeroBanner from "@/assets/products-hero-banner.jpg";
+import productsQualityBanner from "@/assets/products-quality-banner.jpg";
 
 const products = [
   {
@@ -45,6 +48,33 @@ const Products = () => {
         subtitle="We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export."
       />
 
+      {/* Premium Collection Banner */}
+      <section className="relative h-72 md:h-80 overflow-hidden -mt-1">
+        <img
+          src={productsHeroBanner}
+          alt="Premium pen collection"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent flex items-center">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="max-w-md"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold gold-gradient-text mb-3">
+                Premium Collection
+              </h2>
+              <p className="text-primary-foreground/90 text-sm md:text-base">
+                Crafted with precision, exported with confidence. Explore our range of internationally certified writing instruments.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-10">
@@ -66,7 +96,7 @@ const Products = () => {
                     whileHover={{ scale: 1.08 }}
                     transition={{ duration: 0.5 }}
                   />
-                  <span className="absolute top-3 right-3 bg-gold text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+                  <span className="absolute top-3 right-3 bg-gold text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                     Export Ready
                   </span>
                 </div>
@@ -88,7 +118,7 @@ const Products = () => {
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
                     <Link
                       to="/contact"
-                      className="inline-block bg-gold text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-gold-dark transition-colors shadow-md"
+                      className="inline-block bg-gold text-primary-foreground text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-gold-dark transition-colors shadow-md"
                     >
                       Request Quote
                     </Link>
@@ -96,6 +126,43 @@ const Products = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quality Assurance Banner */}
+      <section className="relative h-64 md:h-72 overflow-hidden">
+        <img
+          src={productsQualityBanner}
+          alt="Quality inspection process"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/75 flex items-center">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col md:flex-row items-center gap-8 md:gap-12"
+            >
+              <div className="flex-1 text-center md:text-left">
+                <h2 className="text-2xl md:text-3xl font-bold gold-gradient-text mb-2">
+                  Quality Assured
+                </h2>
+                <p className="text-primary-foreground/80 text-sm max-w-lg">
+                  Every batch undergoes rigorous multi-stage quality inspection before export.
+                </p>
+              </div>
+              <div className="flex gap-6 md:gap-10">
+                {["ISO Certified", "Export Grade", "100% Inspected"].map((label) => (
+                  <div key={label} className="flex items-center gap-2">
+                    <CheckCircle2 size={18} className="text-gold" />
+                    <span className="text-primary-foreground/90 text-sm font-medium">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
