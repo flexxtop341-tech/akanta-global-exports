@@ -5,6 +5,7 @@ import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
+import productsShowcase from "@/assets/products-showcase-banner.jpg";
 
 const products = [
   {
