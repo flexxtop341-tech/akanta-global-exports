@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
