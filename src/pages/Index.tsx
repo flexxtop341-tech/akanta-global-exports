@@ -340,7 +340,7 @@ const Index = () => {
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white/50 text-white px-7 py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="border-2 border-white/50 text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm text-sm md:text-base"
               >
                 Contact Us
               </Link>
