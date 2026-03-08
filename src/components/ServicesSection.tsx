@@ -46,8 +46,9 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 bg-muted/40 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-muted/40 overflow-hidden relative">
+      <img src={pensPattern} alt="" className="absolute bottom-0 left-0 w-1/2 h-full object-cover opacity-[0.03] pointer-events-none scale-x-[-1]" />
+      <div className="container mx-auto px-4 relative">
         {/* Header */}
         <motion.div
           initial="hidden"
