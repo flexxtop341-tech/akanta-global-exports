@@ -21,8 +21,8 @@ const Team = () => {
   return (
     <>
       <SEOHead
-        title="Our Team & Leadership"
-        description="Meet the leadership team behind Akanta Global — Babita Gunjal (Founder) and Karan Gunjal (Co-Founder) driving excellence in Indian merchant exports."
+        title="Our Team — Leadership Behind India's Trusted Pen Export Company"
+        description="Meet the leadership team at Akanta Global — Babita Gunjal (Founder) and Karan Gunjal (Co-Founder) driving excellence in ball pen manufacturing and stationery exports from India."
         path="/team"
       />
       <PageHero

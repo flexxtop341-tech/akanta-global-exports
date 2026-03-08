@@ -108,20 +108,20 @@ const GlobalNetwork = () => {
   return (
     <>
       <SEOHead
-        title="Global Network"
-        description="Akanta Global's international trade network spans multiple continents with strategic access to India's major seaports and airports for seamless export logistics."
+        title="Global Export Network — Ball Pen Exporter Worldwide"
+        description="Akanta Global exports ball pens and writing instruments to USA, UK, UAE, Africa, Europe and Asia. Strategic access to India's major seaports for seamless stationery export logistics."
         path="/global-network"
       />
       <PageHero
         title="Global Network"
-        subtitle="Akanta Global serves international markets with a reliable supply chain backed by verified Indian manufacturers."
+        subtitle="Akanta Global exports ball pens and writing instruments to importers and distributors across USA, UK, UAE, Africa, Europe, and Asia with a reliable supply chain."
       />
 
       {/* Shipping Port Banner */}
       <section className="relative h-72 md:h-96 overflow-hidden -mt-1">
         <motion.img
           src={globalNetworkHero}
-          alt="International shipping port"
+          alt="Bulk pen exporter worldwide — international shipping port for stationery exports"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}

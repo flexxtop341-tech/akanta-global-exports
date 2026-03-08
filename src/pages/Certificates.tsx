@@ -205,8 +205,8 @@ const Certificates = () => {
   return (
     <>
       <SEOHead
-        title="Certifications & Compliance"
-        description="Akanta Global holds ISO 9001, ISO 14001, FSSAI, IEC, APEDA, and FIEO certifications — ensuring the highest standards in international trade and export compliance."
+        title="Certifications & Compliance — ISO Certified Stationery Exporter"
+        description="Akanta Global holds ISO 9001, ISO 14001, FSSAI, IEC, APEDA, and FIEO certifications — ensuring the highest international standards for ball pen export and stationery trade compliance."
         path="/certificates"
       />
       <PageHero

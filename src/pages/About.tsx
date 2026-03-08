@@ -64,13 +64,13 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Us"
-        description="Learn about Akanta Global — a Nashik-based merchant export company bridging Indian manufacturers with international buyers through quality, transparency, and reliability."
+        title="About Us — Trusted Indian Stationery Exporter"
+        description="Learn about Akanta Global — India's trusted ball pen exporter and stationery supplier. We bridge Indian manufacturers with international distributors through quality, transparency, and ethical sourcing."
         path="/about"
       />
       <PageHero
         title="About Akanta Global"
-        subtitle="Your trusted partner for high-quality Indian-made writing instruments, serving international markets with integrity and excellence."
+        subtitle="Your trusted partner for high-quality Indian-made writing instruments — ball pens, promotional pens, and custom stationery — serving importers and distributors worldwide."
       />
 
       {/* Stats Bar */}
@@ -125,8 +125,8 @@ const About = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.div variants={fadeUp} custom={3} className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Akanta Global is an international export company focused on supplying high-quality, export-grade pens that meet international standards. We support our buyers with transparent pricing, timely delivery, and dependable service.</p>
-                <p>Our mission is to help importers, distributors, and promotional product companies grow their businesses through ethical sourcing, strong supplier partnerships, and customer-focused solutions.</p>
+                <p>Akanta Global is a leading ball pen exporter and Indian stationery supplier focused on delivering high-quality, export-grade pens that meet international standards. We support our buyers — distributors, retailers, and promotional companies — with transparent pricing, timely delivery, and dependable service.</p>
+                <p>Our mission is to help importers, wholesale pen buyers, and corporate gift companies grow their businesses through ethical sourcing, strong manufacturing partnerships, and customer-focused solutions.</p>
               </motion.div>
 
               {/* Pen hero image */}
@@ -138,7 +138,7 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.15)]">
                   <motion.img
                     src={aboutPensHero}
-                    alt="Premium ball point pens by Akanta Global"
+                    alt="High quality ball pens from India — smooth writing pen manufacturer"
                     className="w-full h-56 object-cover"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.6 }}
@@ -233,7 +233,7 @@ const About = () => {
           >
             <motion.img
               src={aboutQualityInspect}
-              alt="Quality inspection of writing instruments at Akanta Global"
+              alt="Quality inspection of writing instruments — bulk ball pen supplier India"
               className="w-full h-64 md:h-80 object-cover"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.8 }}

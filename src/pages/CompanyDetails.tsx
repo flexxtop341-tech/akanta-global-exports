@@ -81,20 +81,20 @@ const CompanyDetails = () => {
   return (
     <>
       <SEOHead
-        title="Company Details"
-        description="Discover Akanta Global's business processes, quality assurance steps, and commitment to excellence in international merchant export operations."
+        title="Company Details — Pen Manufacturing Company India"
+        description="Akanta Global is a pen manufacturing company in India offering complete export solutions — from manufacturer verification and quality inspection to logistics and delivery of bulk writing instruments."
         path="/company"
       />
       <PageHero
         title="Company Details"
-        subtitle="Learn about our operations, business model, and commitment to excellence in international trade."
+        subtitle="India pen export company — learn about our operations, quality assurance, and commitment to excellence in international stationery trade."
       />
 
       {/* Company Banner */}
       <section className="relative h-72 md:h-96 overflow-hidden -mt-1">
         <motion.img
           src={companyHeroBanner}
-          alt="Akanta Global headquarters"
+          alt="Pen manufacturing company India — Akanta Global export headquarters"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
@@ -163,7 +163,7 @@ const CompanyDetails = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed">
-                Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As an export-focused company, we maintain strong partnerships with verified pen manufacturers across the region.
+                Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As a leading ball pen exporter and stationery export company, we maintain strong partnerships with verified pen manufacturers across the region.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed">
                 Our business model is built on transparency, quality assurance, and international compliance. We handle every step from manufacturer verification to final delivery.

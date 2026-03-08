@@ -244,9 +244,9 @@ const ContactSection = () => {
 };
 
 const categories = [
-  { image: ballPens, title: "Ball Pens", desc: "Classic smooth-writing ball pens for everyday office, school & bulk use." },
-  { image: buttonPens, title: "Click / Button Pens", desc: "Retractable push-button pens with sleek designs and comfortable grip." },
-  { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gifting & executive use." },
+  { image: ballPens, title: "Ball Pens", desc: "High-quality plastic ball pens for bulk orders — ideal for office stationery, school supplies, and wholesale distribution." },
+  { image: buttonPens, title: "Click / Retractable Pens", desc: "Retractable push-button pens with ergonomic grip — popular with bulk pen distributors and promotional product companies." },
+  { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gift pen suppliers and executive branding — smooth writing, durable build." },
 ];
 
 const fadeUp = {
@@ -271,9 +271,30 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Excellence in Global Trade"
-        description="Akanta Global is India's trusted merchant export company specializing in writing instruments, global sourcing, and international trade. Quality products, reliable partnerships."
+        title="Leading Ball Pen Exporter from India"
+        description="Akanta Global is a trusted ball pen exporter and stationery supplier from India. We supply bulk promotional pens, office stationery, and custom branded writing instruments to global distributors and wholesale buyers."
         path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Akanta Global",
+          "url": "https://akantaglobal.com",
+          "description": "Leading ball pen exporter and wholesale stationery supplier from India serving global distributors and importers.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
+            "addressLocality": "Nashik",
+            "addressRegion": "Maharashtra",
+            "postalCode": "422003",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919673398945",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Hindi"]
+          }
+        }}
       />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center">
@@ -293,9 +314,9 @@ const Index = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 drop-shadow-lg"
             >
-              <span className="gold-gradient-text">Connecting Global Markets</span>
+              <span className="gold-gradient-text">Leading Ball Pen Exporter</span>
               <br />
-              <span className="text-white drop-shadow-lg">with Trust & Excellence</span>
+              <span className="text-white drop-shadow-lg">from India</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -303,7 +324,7 @@ const Index = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md"
             >
-              Akanta Global is a trusted Indian export company delivering high-quality, export-grade writing instruments to international markets.
+              Akanta Global is a trusted ball pen exporter and stationery supplier from India specializing in high-quality writing instruments for international distributors and wholesale buyers. We supply bulk promotional pens, office stationery, and custom branded writing products to clients across global markets.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -346,10 +367,10 @@ const Index = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-4">
-                Akanta Global is dedicated to growing in the field of international trade and global sourcing. We connect trusted manufacturers with buyers across domestic and international markets. As a merchant export company, we focus on delivering quality products with smooth and transparent trade processes.
+                Akanta Global is a trusted ball pen exporter and stationery supplier from India committed to delivering reliable export solutions for writing instruments and promotional stationery. With strong manufacturing partnerships and strict quality control, we supply affordable and durable ball pens designed for distributors, retailers, and corporate promotional campaigns.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed mb-6">
-                We work closely with suppliers and global partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
+                As a wholesale pen supplier and global pen exporter, we work closely with suppliers and international partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
               </motion.p>
               <motion.div variants={fadeUp} custom={5}>
                 <Link
@@ -371,7 +392,7 @@ const Index = () => {
             >
               <img
                 src={globalTrade}
-                alt="Global trade illustration with pens and shipping boxes around a globe"
+                alt="Ball pen exporter India — global trade illustration with writing instruments and shipping"
                 className="w-full max-w-md lg:max-w-lg object-contain"
               />
             </motion.div>
@@ -383,7 +404,7 @@ const Index = () => {
       <section className="relative py-32 overflow-hidden">
         <motion.img
           src={shippingBg}
-          alt="International shipping port with cargo containers"
+          alt="Bulk ball pen exporter India — international shipping and logistics"
           className="absolute inset-0 w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           whileInView={{ scale: 1 }}
@@ -520,7 +541,7 @@ const Index = () => {
               }} />
               <img
                 src={trustedPartnerBg}
-                alt="Global trade network connecting continents with shipping and partnerships"
+                alt="Wholesale pen supplier India — trusted export partner for bulk writing instruments"
                 className="w-full max-w-lg object-contain relative z-10"
               />
               {/* Floating accent badges */}
@@ -565,7 +586,7 @@ const Index = () => {
             </motion.h2>
             <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
             <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              High-quality, export-grade writing instruments inspected and certified for international markets.
+              Export-grade ball pens, promotional pens, custom logo pens, and office stationery — inspected and certified for international markets.
             </motion.p>
           </motion.div>
 
@@ -667,7 +688,7 @@ const Index = () => {
               <div className="relative">
                 <img
                   src={importExportIllustration}
-                  alt="International import export trading with ships, planes, trucks and globe"
+                  alt="Import ball pens from India — international stationery export company"
                   className="w-full max-w-lg mx-auto object-contain relative z-10"
                 />
                 {/* Floating stat cards */}
@@ -922,7 +943,7 @@ const Index = () => {
           </motion.h2>
           
           <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-2xl mx-auto mb-12 text-lg md:text-xl leading-relaxed">
-            Partner with Akanta Global for reliable, high-quality pen exports from India to the world.
+            Partner with India's leading ball pen exporter for reliable, high-quality writing instruments shipped worldwide.
           </motion.p>
           
           {/* Enhanced CTA button */}

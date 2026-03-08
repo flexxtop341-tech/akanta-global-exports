@@ -14,28 +14,28 @@ const products = [
   {
     image: ballPens,
     title: "Ball Pens",
-    desc: "Classic smooth-writing ball pens for everyday office, school & bulk use.",
+    desc: "High-quality plastic ball pen manufacturer offering smooth-writing pens for bulk orders, office stationery, and wholesale distribution.",
     specs: ["Ink: Oil-based", "Tip: 0.5mm – 1.0mm", "Body: Plastic / Metal"],
     moq: "10,000 units",
   },
   {
     image: buttonPens,
-    title: "Click / Button Pens",
-    desc: "Retractable push-button pens with sleek designs and comfortable grip.",
+    title: "Click / Retractable Pens",
+    desc: "Retractable pen supplier with sleek push-button designs, ergonomic grip — ideal for promotional and office use.",
     specs: ["Retractable mechanism", "Ergonomic grip", "Body: Plastic / Metal"],
     moq: "10,000 units",
   },
   {
     image: metallicPens,
     title: "Metallic Ball Pens",
-    desc: "Premium metallic-finish pens for corporate gifting & executive use.",
+    desc: "Premium corporate gift pens supplier — full-metal finish ball pens for executive gifting and brand promotion.",
     specs: ["Ink: Oil-based", "Tip: 0.7mm – 1.0mm", "Body: Full Metal"],
     moq: "5,000 units",
   },
   {
     image: customPens,
-    title: "Custom Solutions",
-    desc: "Premium private-label pens with custom engraving, branding, and gift packaging.",
+    title: "Custom Logo Pens",
+    desc: "Custom printed pens supplier offering private-label pens with laser engraving, logo branding, and premium gift packaging.",
     specs: ["Custom engraving", "Premium gift boxes", "Tailored specifications"],
     moq: "2,000 units",
   },
@@ -61,20 +61,33 @@ const Products = () => {
   return (
     <>
       <SEOHead
-        title="Products — Export-Grade Writing Instruments"
-        description="Explore Akanta Global's range of export-grade writing instruments — ball pens, click pens, metallic pens, and custom promotional pens for international markets."
+        title="Export-Grade Writing Instruments — Ball Pens, Promotional & Custom Pens"
+        description="Explore Akanta Global's range of export-grade writing instruments — plastic ball pens, retractable pens, metallic pens, custom logo pens, and bulk promotional pens for international distributors."
         path="/products"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Export-Grade Ball Pens",
+          "brand": { "@type": "Brand", "name": "Akanta Global" },
+          "description": "High-quality bulk ball pens and writing instruments for export from India. Available in plastic, metallic, and custom-branded options.",
+          "category": "Writing Instruments & Stationery",
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "Akanta Global",
+            "url": "https://akantaglobal.com"
+          }
+        }}
       />
       <PageHero
         title="Our Products"
-        subtitle="We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export."
+        subtitle="We export a wide range of high-quality writing instruments — ball pens, promotional pens, custom logo pens, and office stationery designed to meet international quality standards and global export requirements."
       />
 
       {/* Premium Collection Banner */}
       <section className="relative h-72 md:h-80 overflow-hidden -mt-1">
         <img
           src={productsHeroBanner}
-          alt="Premium pen collection"
+          alt="Ball pen manufacturer India — premium pen collection for export"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent flex items-center">
@@ -114,7 +127,7 @@ const Products = () => {
             </motion.h2>
             <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
             <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              High-quality, export-grade writing instruments inspected and certified for international markets.
+              Export-grade ball pens, promotional pens, custom logo pens, and bulk writing instruments inspected and certified for international markets.
             </motion.p>
           </motion.div>
 
@@ -179,7 +192,7 @@ const Products = () => {
       <section className="relative h-64 md:h-72 overflow-hidden">
         <img
           src={productsQualityBanner}
-          alt="Quality inspection process"
+          alt="Quality inspection of ball pens for export — bulk pen exporter India"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-primary/75 flex items-center">
