@@ -1,7 +1,7 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Ship, PackageCheck, Globe2, Send, Phone, Mail, MapPin } from "lucide-react";
+import { Ship, PackageCheck, Globe2, Send, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import iconShipping from "@/assets/icon-shipping.png";
 import iconQualityProduct from "@/assets/icon-quality-product.png";
