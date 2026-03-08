@@ -36,20 +36,36 @@ const BlogPost = () => {
         description={post.metaDescription}
         path={`/blog/${post.slug}`}
         type="article"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": post.title,
-          "description": post.metaDescription,
-          "datePublished": post.date,
-          "author": { "@type": "Organization", "name": "Akanta Global" },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Akanta Global",
-            "url": "https://akantaglobal.com"
+        keywords={post.keywords.join(", ")}
+        article={{ publishedTime: post.date, author: "Akanta Global" }}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.metaDescription,
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "author": { "@type": "Organization", "name": "Akanta Global", "url": "https://akantaglobal.com" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Akanta Global",
+              "url": "https://akantaglobal.com",
+              "logo": { "@type": "ImageObject", "url": "https://akantaglobal.com/favicon.ico" }
+            },
+            "mainEntityOfPage": { "@type": "WebPage", "@id": `https://akantaglobal.com/blog/${post.slug}` },
+            "keywords": post.keywords.join(", ")
           },
-          "keywords": post.keywords.join(", ")
-        }}
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://akantaglobal.com/" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://akantaglobal.com/blog" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://akantaglobal.com/blog/${post.slug}` }
+            ]
+          }
+        ]}
       />
 
       {/* Hero */}
