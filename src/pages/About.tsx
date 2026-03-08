@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import aboutPensHero from "@/assets/about-pens-hero.jpg";
-import aboutLogisticsBg from "@/assets/about-logistics-bg.jpg";
 import iconAboutGlobal from "@/assets/icon-about-global.png";
 import iconAboutQuality from "@/assets/icon-about-quality.png";
 import iconAboutPartner from "@/assets/icon-about-partner.png";
