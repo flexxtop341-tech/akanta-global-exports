@@ -297,7 +297,7 @@ const Index = () => {
         }}
       />
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center">
+      <section className="relative min-h-[75vh] md:min-h-[85vh] flex items-center">
         <video
           src="/hero-video.mp4"
           autoPlay
