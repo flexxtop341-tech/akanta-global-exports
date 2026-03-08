@@ -1,36 +1,54 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-footer text-footer-foreground">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="relative bg-footer text-footer-foreground overflow-hidden">
+      {/* Top gold accent line */}
+      <div className="h-[2px]" style={{
+        background: 'linear-gradient(90deg, transparent 5%, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), transparent 95%)'
+      }} />
+
+      {/* Subtle dot pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+        backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.8) 1px, transparent 1px)`,
+        backgroundSize: '32px 32px'
+      }} />
+
+      <div className="container mx-auto px-4 pt-16 pb-8 relative">
+        {/* Main grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
           {/* Brand */}
-          <div>
-            <img src={logo} alt="Akanta Global" className="h-16 w-auto mb-3 brightness-0 invert" />
-            <p className="text-sm text-footer-foreground/70 leading-relaxed">
+          <div className="lg:pr-6">
+            <img src={logo} alt="Akanta Global" className="h-16 w-auto mb-4 brightness-0 invert" />
+            <p className="text-sm text-footer-foreground/60 leading-relaxed mb-5">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
+            <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1">
+              Stronger Together
+            </span>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gold">Quick Links</h4>
-            <div className="gold-divider mb-4" style={{ width: '32px' }} />
-            <nav className="flex flex-col gap-2">
+            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Quick Links</h4>
+            <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
+            <nav className="flex flex-col gap-2.5">
               {[
                 { label: "Home", path: "/" },
                 { label: "About", path: "/about" },
                 { label: "Products", path: "/products" },
+                { label: "Global Network", path: "/global-network" },
+                { label: "Certificates", path: "/certificates" },
                 { label: "Contact", path: "/contact" },
               ].map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-sm text-footer-foreground/70 hover:text-gold transition-colors"
+                  className="group flex items-center gap-1.5 text-sm text-footer-foreground/60 hover:text-gold transition-all duration-300 hover:translate-x-1"
                 >
+                  <span className="w-1 h-1 rounded-full bg-gold/40 group-hover:bg-gold transition-colors" />
                   {link.label}
                 </Link>
               ))}
@@ -39,42 +57,86 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gold">Services</h4>
-            <div className="gold-divider mb-4" style={{ width: '32px' }} />
-            <nav className="flex flex-col gap-2 text-sm text-footer-foreground/70">
-              <span>Writing Instrument Exports</span>
-              <span>Quality Inspection</span>
-              <span>Bulk & Private Label</span>
-              <span>Logistics Coordination</span>
+            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Our Services</h4>
+            <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
+            <nav className="flex flex-col gap-2.5">
+              {[
+                "Import & Export",
+                "Products Distribution",
+                "Merchant Export",
+                "Trade Partnerships",
+                "Quality Assurance",
+              ].map((item) => (
+                <span key={item} className="flex items-center gap-1.5 text-sm text-footer-foreground/60">
+                  <span className="w-1 h-1 rounded-full bg-gold/40" />
+                  {item}
+                </span>
+              ))}
             </nav>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-widest text-gold">Contact Us</h4>
-            <div className="gold-divider mb-4" style={{ width: '32px' }} />
-            <div className="flex flex-col gap-3 text-sm text-footer-foreground/70">
-              <a href="mailto:akantaglobal@gmail.com" className="flex items-center gap-2 hover:text-gold transition-colors">
-                <Mail size={14} className="text-gold shrink-0" />
-                akantaglobal@gmail.com
+            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Get In Touch</h4>
+            <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
+            <div className="flex flex-col gap-4">
+              <a
+                href="mailto:akantaglobal@gmail.com"
+                className="group flex items-start gap-3 hover:translate-x-1 transition-transform duration-300"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gold/10 border border-gold/15 shrink-0 group-hover:bg-gold/20 transition-colors">
+                  <Mail size={14} className="text-gold" />
+                </span>
+                <div>
+                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Email</span>
+                  <span className="text-sm text-footer-foreground/70 group-hover:text-gold transition-colors">akantaglobal@gmail.com</span>
+                </div>
               </a>
-              <a href="tel:+919673398945" className="flex items-center gap-2 hover:text-gold transition-colors">
-                <Phone size={14} className="text-gold shrink-0" />
-                +91 96733 98945
+              <a
+                href="tel:+919673398945"
+                className="group flex items-start gap-3 hover:translate-x-1 transition-transform duration-300"
+              >
+                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gold/10 border border-gold/15 shrink-0 group-hover:bg-gold/20 transition-colors">
+                  <Phone size={14} className="text-gold" />
+                </span>
+                <div>
+                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Phone</span>
+                  <span className="text-sm text-footer-foreground/70 group-hover:text-gold transition-colors">+91 96733 98945</span>
+                </div>
               </a>
-              <div className="flex items-start gap-2">
-                <MapPin size={14} className="text-gold shrink-0 mt-0.5" />
-                <span>Nashik – 422003, Maharashtra, India</span>
+              <div className="flex items-start gap-3">
+                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-gold/10 border border-gold/15 shrink-0">
+                  <MapPin size={14} className="text-gold" />
+                </span>
+                <div>
+                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Address</span>
+                  <span className="text-sm text-footer-foreground/70">Nashik – 422003, Maharashtra, India</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="h-px my-10" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.4), transparent)' }} />
+        {/* Gold separator */}
+        <div className="flex items-center gap-4 mb-6">
+          <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.3))' }} />
+          <div className="w-1.5 h-1.5 rotate-45 border border-gold/40" />
+          <div className="flex-1 h-[1px]" style={{ background: 'linear-gradient(90deg, hsl(var(--gold) / 0.3), transparent)' }} />
+        </div>
 
-        <p className="text-center text-xs text-footer-foreground/50">
-          © {new Date().getFullYear()} Akanta Global. All rights reserved.
-        </p>
+        {/* Bottom bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-footer-foreground/40">
+            © {new Date().getFullYear()} Akanta Global. All rights reserved.
+          </p>
+          <Link
+            to="/contact"
+            className="group inline-flex items-center gap-1.5 text-xs font-semibold text-gold/70 hover:text-gold transition-colors"
+          >
+            Request a Quote
+            <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </Link>
+        </div>
       </div>
 
       {/* WhatsApp Floating Button */}
