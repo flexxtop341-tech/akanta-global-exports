@@ -1,7 +1,7 @@
-import { Globe } from "lucide-react";
+import { Globe, Plane, Ship, Anchor } from "lucide-react";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
-import globalMapBg from "@/assets/global-map-bg.jpg";
+import { Link } from "react-router-dom";
 import globalNetworkHero from "@/assets/global-network-hero.jpg";
 import iconQuality from "@/assets/icon-quality.png";
 import iconPartnership from "@/assets/icon-partnership.png";
