@@ -139,7 +139,7 @@ const ContactSection = () => {
                   ))}
                 </div>
                 <motion.div animate={focusedField === "message" ? { scale: 1.01 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">
+                  <label className="block text-base font-medium text-foreground mb-2">
                     Message <span className="text-gold">*</span>
                   </label>
                   <textarea
