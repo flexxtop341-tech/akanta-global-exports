@@ -1,3 +1,7 @@
+import blogManufacturersImg from "@/assets/blog-ball-pen-manufacturers.jpg";
+import blogImportImg from "@/assets/blog-import-ball-pens.jpg";
+import blogPromotionalImg from "@/assets/blog-promotional-pens.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -7,6 +11,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   excerpt: string;
+  image: string;
+  imageAlt: string;
   content: BlogSection[];
 }
 
@@ -27,6 +33,8 @@ export const blogPosts: BlogPost[] = [
     date: "2026-03-05",
     readTime: "8 min read",
     excerpt: "India has become one of the leading global hubs for manufacturing high-quality writing instruments. Discover why global buyers choose Indian ball pen manufacturers.",
+    image: blogManufacturersImg,
+    imageAlt: "Ball pen manufacturing factory in India with modern injection molding machines and quality production line",
     content: [
       {
         heading: "Introduction",
