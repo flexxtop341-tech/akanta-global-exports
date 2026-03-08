@@ -701,10 +701,10 @@ const Index = () => {
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-2 -left-2 md:bottom-4 md:left-0 bg-white/10 backdrop-blur-lg rounded-2xl px-5 py-4 border border-white/15 shadow-2xl z-20"
+                  className="absolute -bottom-2 -left-2 md:bottom-4 md:left-0 bg-white/10 backdrop-blur-lg rounded-xl md:rounded-2xl px-3 py-2 md:px-5 md:py-4 border border-white/15 shadow-2xl z-20 hidden sm:block"
                 >
-                  <span className="block text-2xl font-bold gold-gradient-text">Global</span>
-                  <span className="text-white/70 text-[11px] font-medium">Market Presence</span>
+                  <span className="block text-lg md:text-2xl font-bold gold-gradient-text">Global</span>
+                  <span className="text-white/70 text-[10px] md:text-[11px] font-medium">Market Presence</span>
                 </motion.div>
               </div>
             </motion.div>
