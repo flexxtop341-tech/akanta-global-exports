@@ -43,29 +43,40 @@ const Blog = () => {
               >
                 <Link
                   to={`/blog/${post.slug}`}
-                  className="group block bg-card border border-border/60 rounded-2xl p-8 md:p-10 hover:border-gold/30 hover:shadow-[0_12px_40px_-12px_hsl(var(--gold)/0.15)] transition-all duration-500"
+                  className="group block bg-card border border-border/60 rounded-2xl overflow-hidden hover:border-gold/30 hover:shadow-[0_12px_40px_-12px_hsl(var(--gold)/0.15)] transition-all duration-500"
                 >
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.keywords.slice(0, 3).map((kw) => (
-                      <span
-                        key={kw}
-                        className="text-[11px] font-medium uppercase tracking-wider px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/15"
-                      >
-                        {kw}
-                      </span>
-                    ))}
+                  {/* Featured Image */}
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.imageAlt}
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
 
-                  {/* Title */}
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-gold transition-colors duration-300 mb-3 leading-tight">
-                    {post.title}
-                  </h2>
+                  <div className="p-8 md:p-10">
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {post.keywords.slice(0, 3).map((kw) => (
+                        <span
+                          key={kw}
+                          className="text-[11px] font-medium uppercase tracking-wider px-3 py-1 rounded-full bg-gold/10 text-gold border border-gold/15"
+                        >
+                          {kw}
+                        </span>
+                      ))}
+                    </div>
 
-                  {/* Excerpt */}
-                  <p className="text-muted-foreground leading-relaxed mb-5">
-                    {post.excerpt}
-                  </p>
+                    {/* Title */}
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-gold transition-colors duration-300 mb-3 leading-tight">
+                      {post.title}
+                    </h2>
+
+                    {/* Excerpt */}
+                    <p className="text-muted-foreground leading-relaxed mb-5">
+                      {post.excerpt}
+                    </p>
 
                   {/* Meta */}
                   <div className="flex items-center justify-between">
