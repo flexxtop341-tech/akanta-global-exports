@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
