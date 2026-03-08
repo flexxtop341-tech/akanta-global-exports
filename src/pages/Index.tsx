@@ -157,7 +157,7 @@ const ContactSection = () => {
                   type="submit" disabled={sending}
                   whileHover={{ scale: 1.03, boxShadow: "0 8px 30px -5px hsl(var(--gold) / 0.4)" }}
                   whileTap={{ scale: 0.97 }}
-                  className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-10 py-3.5 rounded-xl font-semibold transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
+                  className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-12 py-4 rounded-xl font-semibold text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
                 >
                   {sending ? (
                     <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
