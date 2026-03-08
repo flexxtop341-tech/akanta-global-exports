@@ -554,10 +554,10 @@ const Index = () => {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute bottom-4 left-4 bg-card rounded-xl px-4 py-3 border border-border premium-shadow flex items-center gap-2"
+                className="absolute bottom-4 left-4 bg-card rounded-xl px-3 py-2 md:px-4 md:py-3 border border-border premium-shadow flex items-center gap-2 hidden sm:flex"
               >
-                <PackageCheck className="w-5 h-5 text-gold" strokeWidth={1.5} />
-                <span className="text-xs font-bold text-foreground">Trusted Quality</span>
+                <PackageCheck className="w-4 h-4 md:w-5 md:h-5 text-gold" strokeWidth={1.5} />
+                <span className="text-[10px] md:text-xs font-bold text-foreground">Trusted Quality</span>
               </motion.div>
             </motion.div>
           </div>
