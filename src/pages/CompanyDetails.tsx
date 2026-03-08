@@ -124,7 +124,7 @@ const CompanyDetails = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               animate={{ rotateY: isFlipped ? 180 : 0 }}
               style={{ transformStyle: 'preserve-3d', transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)' }}
-              className="relative w-full min-h-[360px] md:min-h-[420px]"
+              className="relative w-full min-h-[420px] md:min-h-[440px]"
             >
               {/* ===== FRONT SIDE ===== */}
               <div
@@ -163,15 +163,17 @@ const CompanyDetails = () => {
                   </div>
 
                   {/* Right — Logo & Info */}
-                  <div className="relative bg-card flex flex-col items-center justify-center p-8 md:p-10 text-center overflow-hidden">
+                  <div className="relative bg-card flex flex-col items-center justify-center p-6 md:p-8 text-center overflow-hidden">
                     {["top-3 left-3 border-t-2 border-l-2 rounded-tl-sm","top-3 right-3 border-t-2 border-r-2 rounded-tr-sm","bottom-3 left-3 border-b-2 border-l-2 rounded-bl-sm","bottom-3 right-3 border-b-2 border-r-2 rounded-br-sm"].map((pos, i) => (
                       <div key={i} className={`absolute w-7 h-7 border-gold/40 ${pos}`} />
                     ))}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-[0.06] pointer-events-none" style={{ background: 'radial-gradient(circle, hsl(var(--gold)), transparent 70%)' }} />
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.8) 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
 
-                    <div className="relative z-10">
-                      <img src={logo} alt="Akanta Global" className="h-24 md:h-32 w-auto mx-auto mb-3" />
+                    <div className="relative z-10 flex flex-col items-center">
+                      <div className="w-28 h-28 md:w-36 md:h-36 rounded-full bg-muted/40 border-2 border-gold/20 flex items-center justify-center mb-4 p-3">
+                        <img src={logo} alt="Akanta Global" className="w-full h-full object-contain" />
+                      </div>
                       <div className="w-16 h-[2px] mx-auto mb-4 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
                       <h2 className="text-xl md:text-2xl font-bold mb-2">
                         Excellence in <span className="gold-gradient-text">Global Trade</span>
