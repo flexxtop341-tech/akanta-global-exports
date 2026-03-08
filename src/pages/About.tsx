@@ -258,6 +258,7 @@ const About = () => {
                     <img
                       src={s.image}
                       alt={s.title}
+                      loading="lazy"
                       className="w-full h-full object-contain drop-shadow-[0_4px_12px_rgba(180,130,50,0.25)] group-hover/strength:scale-110 transition-transform duration-300"
                     />
                   </motion.div>
@@ -273,7 +274,7 @@ const About = () => {
 
       {/* Business Model — with vector step icons */}
       <section className="py-24 relative overflow-hidden">
-        <img src={aboutWarehouse} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={aboutWarehouse} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-card/90 to-background/95 backdrop-blur-[2px]" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -310,6 +311,7 @@ const About = () => {
                     <img
                       src={step.image}
                       alt={step.title}
+                      loading="lazy"
                       className="w-full h-full object-contain drop-shadow-[0_4px_12px_rgba(180,130,50,0.2)] group-hover/step:scale-110 transition-transform duration-300"
                     />
                   </motion.div>
@@ -342,7 +344,7 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
-        <img src={aboutPartnership} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={aboutPartnership} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.85))'
         }} />

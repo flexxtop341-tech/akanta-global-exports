@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import pensPattern from "@/assets/pens-pattern.png";
+import pensPattern from "@/assets/pens-pattern.jpg";
 import iconImportExport from "@/assets/icon-import-export.png";
 import iconDistribution from "@/assets/icon-distribution.png";
 import iconMerchantExport from "@/assets/icon-merchant-export.png";

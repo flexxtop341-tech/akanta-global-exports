@@ -10,13 +10,13 @@ import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
-import globalTrade from "@/assets/global-trade.png";
+import globalTrade from "@/assets/global-trade.jpg";
 import shippingBg from "@/assets/shipping-bg.jpg";
-import trustedPartnerBg from "@/assets/trusted-partner-bg.png";
-import importExportIllustration from "@/assets/import-export-illustration.png";
-import pensPattern from "@/assets/pens-pattern.png";
+import trustedPartnerBg from "@/assets/trusted-partner-bg.jpg";
+import importExportIllustration from "@/assets/import-export-illustration.jpg";
+import pensPattern from "@/assets/pens-pattern.jpg";
 import ctaBg from "@/assets/cta-bg.jpg";
-import pensCollection from "@/assets/pens-collection.png";
+
 
 const inputClass = "w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
 
@@ -322,7 +322,7 @@ const Index = () => {
       {/* About Snapshot with Stats */}
       <section className="py-20 bg-background overflow-hidden relative">
         {/* Decorative pen pattern */}
-        <img src={pensPattern} alt="" className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-[0.03] pointer-events-none" />
+        <img src={pensPattern} alt="" loading="lazy" className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-[0.03] pointer-events-none" />
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -363,6 +363,7 @@ const Index = () => {
               <img
                 src={globalTrade}
                 alt="Global trade illustration with pens and shipping boxes around a globe"
+                loading="lazy"
                 className="w-full max-w-md lg:max-w-lg object-contain"
               />
             </motion.div>
@@ -439,7 +440,7 @@ const Index = () => {
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4 p-2 rounded-2xl bg-white/10 border border-white/10 group-hover:scale-110 group-hover:bg-white/15 transition-all duration-500">
-                    <img src={item.image} alt={item.label} className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]" />
+                    <img src={item.image} alt={item.label} loading="lazy" className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]" />
                   </div>
                   <span className="block text-2xl font-bold gold-gradient-text mb-0.5">{item.stat}</span>
                   <span className="block text-white/50 text-xs uppercase tracking-widest mb-3">{item.statLabel}</span>
@@ -737,7 +738,7 @@ const Index = () => {
 
       {/* Final CTA */}
       <section className="py-24 relative overflow-hidden">
-        <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={ctaBg} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.88))'
         }} />
