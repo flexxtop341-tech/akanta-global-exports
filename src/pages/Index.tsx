@@ -512,6 +512,9 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* Contact Us */}
+      <ContactSection />
+
       {/* Final CTA */}
       <section className="py-24 relative overflow-hidden">
         <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
