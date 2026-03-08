@@ -117,6 +117,18 @@ const BlogPost = () => {
         </svg>
       </div>
 
+      {/* Featured Image */}
+      <div className="container mx-auto px-4 max-w-4xl -mt-6 md:-mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.3)]">
+          <img
+            src={post.image}
+            alt={post.imageAlt}
+            loading="eager"
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+
       {/* Content */}
       <article className="py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-3xl">
