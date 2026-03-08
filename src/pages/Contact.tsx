@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import SEOHead from "@/components/SEOHead";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2, Globe, Shield, Headphones } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
