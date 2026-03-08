@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Ship, PackageCheck, Globe2 } from "lucide-react";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
+import shippingBg from "@/assets/shipping-bg.jpg";
 
 
 const categories = [
