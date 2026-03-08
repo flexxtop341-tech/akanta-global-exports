@@ -64,8 +64,8 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Us"
-        description="Learn about Akanta Global — a Nashik-based merchant export company bridging Indian manufacturers with international buyers through quality, transparency, and reliability."
+        title="About Us — Trusted Indian Stationery Exporter"
+        description="Learn about Akanta Global — India's trusted ball pen exporter and stationery supplier. We bridge Indian manufacturers with international distributors through quality, transparency, and ethical sourcing."
         path="/about"
       />
       <PageHero
