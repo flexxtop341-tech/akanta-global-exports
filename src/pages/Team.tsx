@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import founderAvatar from "@/assets/team-founder-avatar.png";
+import karanAvatar from "@/assets/team-karan-avatar.png";
 import iconGlobal from "@/assets/icon-team-global.png";
 import iconQuality from "@/assets/icon-team-quality.png";
 import iconPartner from "@/assets/icon-team-partner.png";
@@ -129,6 +130,95 @@ const Team = () => {
                     <p className="text-xs text-muted-foreground">{stat.label}</p>
                   </motion.div>
                 ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Karan Gunjal Section */}
+      <section className="py-20 bg-muted/20 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-gold/5 rounded-full blur-3xl" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
+            {/* Info Side (reversed) */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="order-2 md:order-1"
+            >
+              <span className="text-gold font-semibold text-xs uppercase tracking-[0.2em]">
+                Co-Founder
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-1">
+                <span className="gold-gradient-text">Karan Gunjal</span>
+              </h2>
+              <p className="text-gold/80 font-medium mb-6">Co-Founder & Operations Head</p>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Karan brings strong operational expertise to Akanta Global, overseeing logistics, supply chain management, and client relations. His strategic approach ensures seamless execution from sourcing to delivery.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                With a focus on efficiency and innovation, Karan plays a pivotal role in scaling the company's operations and strengthening its global network of partners and suppliers.
+              </p>
+
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="h-0.5 w-24 bg-gradient-to-r from-gold to-gold-light origin-left"
+              />
+            </motion.div>
+
+            {/* Avatar Side */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+              className="flex justify-center order-1 md:order-2"
+            >
+              <div className="relative">
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-4 rounded-full border-2 border-dashed border-gold/20"
+                />
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+                  className="absolute -inset-8 rounded-full border border-dashed border-gold/10"
+                />
+
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 premium-shadow"
+                  style={{
+                    background: "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))",
+                  }}
+                >
+                  <img
+                    src={karanAvatar}
+                    alt="Karan Gunjal - Co-Founder"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
+                  animate={{ y: [0, -5, 0] }}
+                  className="absolute -bottom-2 -left-2 bg-card border border-gold/30 rounded-full px-4 py-2 premium-shadow"
+                >
+                  <span className="text-xs font-semibold gold-gradient-text">Operations Head</span>
+                </motion.div>
               </div>
             </motion.div>
           </div>
