@@ -124,7 +124,7 @@ const CompanyDetails = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               animate={{ rotateY: isFlipped ? 180 : 0 }}
               style={{ transformStyle: 'preserve-3d', transition: 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)' }}
-              className="relative w-full min-h-[360px] md:min-h-[420px]"
+              className="relative w-full min-h-[420px] md:min-h-[440px]"
             >
               {/* ===== FRONT SIDE ===== */}
               <div
