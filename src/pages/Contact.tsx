@@ -59,8 +59,8 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us"
-        description="Get in touch with Akanta Global for export inquiries, partnership opportunities, and international trade solutions. Located in Nashik, Maharashtra, India."
+        title="Contact Us — Bulk Ball Pen Exporter India"
+        description="Contact Akanta Global for bulk ball pen orders, export inquiries, and wholesale stationery partnerships. Best ball pen exporter in India — get a quote today."
         path="/contact"
         jsonLd={{
           "@context": "https://schema.org",
