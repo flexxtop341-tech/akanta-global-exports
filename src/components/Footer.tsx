@@ -88,8 +88,8 @@ const Footer = () => {
                   <Mail size={14} className="text-gold" />
                 </span>
                 <div>
-                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Email</span>
-                  <span className="text-sm text-footer-foreground/70 group-hover:text-gold transition-colors">akantaglobal@gmail.com</span>
+                  <span className="text-xs uppercase tracking-widest text-footer-foreground/40 block">Email</span>
+                  <span className="text-base text-footer-foreground/70 group-hover:text-gold transition-colors">akantaglobal@gmail.com</span>
                 </div>
               </a>
               <a
