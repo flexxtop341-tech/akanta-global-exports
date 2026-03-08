@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRightLeft, Truck, FileText, Handshake, ShieldCheck } from "lucide-react";
 import pensPattern from "@/assets/pens-pattern.png";
+import iconImportExport from "@/assets/icon-import-export.png";
+import iconDistribution from "@/assets/icon-distribution.png";
+import iconMerchantExport from "@/assets/icon-merchant-export.png";
+import iconPartnership from "@/assets/icon-partnership.png";
+import iconQuality from "@/assets/icon-quality.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,34 +17,29 @@ const fadeUp = {
 
 const services = [
   {
-    icon: ArrowRightLeft,
+    image: iconImportExport,
     title: "Import & Export",
     desc: "Akanta Global connects trusted suppliers with global buyers through reliable import and export services.",
-    accent: "var(--gold)",
   },
   {
-    icon: Truck,
+    image: iconDistribution,
     title: "Products Distribution",
     desc: "Akanta Global supports businesses with global sourcing and product distribution to international markets.",
-    accent: "var(--accent)",
   },
   {
-    icon: FileText,
+    image: iconMerchantExport,
     title: "Merchant Export Services",
     desc: "We handle export documentation, logistics, and delivery to ensure smooth international trade.",
-    accent: "var(--destructive)",
   },
   {
-    icon: Handshake,
+    image: iconPartnership,
     title: "Trade Partnerships",
     desc: "We aim to build long-term partnerships with buyers, distributors, and sourcing agents across global markets.",
-    accent: "var(--primary)",
   },
   {
-    icon: ShieldCheck,
+    image: iconQuality,
     title: "Quality Assurance",
     desc: "We focus on delivering quality products by working with trusted suppliers and maintaining reliable sourcing standards.",
-    accent: "var(--gold-dark)",
   },
 ];
 
@@ -105,21 +104,15 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => {
       {/* Top accent bar */}
       <div
         className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ background: `linear-gradient(90deg, transparent, hsl(${service.accent}), transparent)` }}
+        style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), transparent)' }}
       />
 
-      {/* Icon */}
-      <div
-        className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-110 group-hover:rounded-xl"
-        style={{
-          backgroundColor: `hsl(${service.accent} / 0.1)`,
-          boxShadow: `0 0 0 0px hsl(${service.accent} / 0)`,
-        }}
-      >
-        <service.icon
-          className="w-7 h-7 transition-transform duration-300 group-hover:scale-105"
-          strokeWidth={1.5}
-          style={{ color: `hsl(${service.accent})` }}
+      {/* Vector Icon */}
+      <div className="w-20 h-20 flex items-center justify-center mb-5 transition-all duration-500 group-hover:scale-110">
+        <img
+          src={service.image}
+          alt={service.title}
+          className="w-full h-full object-contain"
         />
       </div>
 
