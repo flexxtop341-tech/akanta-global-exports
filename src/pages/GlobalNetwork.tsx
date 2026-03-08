@@ -73,12 +73,12 @@ const GlobalNetwork = () => {
                 whileHover={{ y: -10, scale: 1.03, boxShadow: "0 20px 40px -12px hsl(var(--gold) / 0.2)", transition: { duration: 0.3 } }}
                 className="bg-card p-8 rounded-lg border border-border premium-shadow cursor-default"
               >
-                  <motion.div
-                    animate={float.animate}
-                    className="w-14 h-14 shrink-0"
-                  >
-                    <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
-                  </motion.div>
+                <motion.div
+                  animate={float.animate}
+                  className="w-16 h-16 rounded-xl bg-gold/10 flex items-center justify-center mb-4 p-3"
+                >
+                  <img src={item.icon} alt={item.title} className="w-full h-full object-contain drop-shadow-md" />
+                </motion.div>
                 <h3 className="text-lg font-semibold text-gold-dark mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </motion.div>
