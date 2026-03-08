@@ -75,6 +75,38 @@ const BlogPost = () => {
               {post.readTime}
             </span>
           </div>
+
+          {/* Social Share */}
+          <div className="flex items-center gap-3 mt-5">
+            <span className="text-xs text-primary-foreground/50 uppercase tracking-wider">Share:</span>
+            <a
+              href={shareLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Share on LinkedIn"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-gold/80 flex items-center justify-center text-primary-foreground/70 hover:text-white transition-all duration-300"
+            >
+              <Linkedin size={16} />
+            </a>
+            <a
+              href={shareLinks.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Share on X (Twitter)"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-gold/80 flex items-center justify-center text-primary-foreground/70 hover:text-white transition-all duration-300"
+            >
+              <XIcon size={14} />
+            </a>
+            <a
+              href={shareLinks.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Share on WhatsApp"
+              className="w-9 h-9 rounded-full bg-white/10 hover:bg-gold/80 flex items-center justify-center text-primary-foreground/70 hover:text-white transition-all duration-300"
+            >
+              <MessageCircle size={16} />
+            </a>
+          </div>
         </div>
       </section>
 
