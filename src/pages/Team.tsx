@@ -205,7 +205,7 @@ const Team = () => {
                   <img
                     src={karanAvatar}
                     alt="Karan Gunjal - Co-Founder"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center"
                   />
                 </motion.div>
 
