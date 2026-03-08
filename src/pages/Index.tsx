@@ -764,7 +764,7 @@ const Index = () => {
       <ContactSection />
 
       {/* Final CTA */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(135deg, hsl(var(--primary) / 0.94) 0%, hsl(var(--primary-dark) / 0.92) 50%, hsl(var(--primary) / 0.90) 100%)'
