@@ -541,7 +541,7 @@ const Index = () => {
               }} />
               <img
                 src={trustedPartnerBg}
-                alt="Global trade network connecting continents with shipping and partnerships"
+                alt="Wholesale pen supplier India — trusted export partner for bulk writing instruments"
                 className="w-full max-w-lg object-contain relative z-10"
               />
               {/* Floating accent badges */}
