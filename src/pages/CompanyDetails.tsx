@@ -81,8 +81,8 @@ const CompanyDetails = () => {
   return (
     <>
       <SEOHead
-        title="Company Details"
-        description="Discover Akanta Global's business processes, quality assurance steps, and commitment to excellence in international merchant export operations."
+        title="Company Details — Pen Manufacturing Company India"
+        description="Akanta Global is a pen manufacturing company in India offering complete export solutions — from manufacturer verification and quality inspection to logistics and delivery of bulk writing instruments."
         path="/company"
       />
       <PageHero
