@@ -271,9 +271,30 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Excellence in Global Trade"
-        description="Akanta Global is India's trusted merchant export company specializing in writing instruments, global sourcing, and international trade. Quality products, reliable partnerships."
+        title="Leading Ball Pen Exporter from India"
+        description="Akanta Global is a trusted ball pen exporter and stationery supplier from India. We supply bulk promotional pens, office stationery, and custom branded writing instruments to global distributors and wholesale buyers."
         path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Akanta Global",
+          "url": "https://akantaglobal.com",
+          "description": "Leading ball pen exporter and wholesale stationery supplier from India serving global distributors and importers.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
+            "addressLocality": "Nashik",
+            "addressRegion": "Maharashtra",
+            "postalCode": "422003",
+            "addressCountry": "IN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+919673398945",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Hindi"]
+          }
+        }}
       />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center">
