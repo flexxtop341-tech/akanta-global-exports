@@ -218,8 +218,8 @@ const Index = () => {
                 >
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-500">
-                    <img src={item.image} alt={item.label} className="w-full h-full object-contain drop-shadow-lg" />
+                  <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4 p-2 rounded-2xl bg-white/10 border border-white/10 group-hover:scale-110 group-hover:bg-white/15 transition-all duration-500">
+                    <img src={item.image} alt={item.label} className="w-full h-full object-contain drop-shadow-[0_2px_8px_rgba(255,255,255,0.3)]" />
                   </div>
                   <span className="block text-2xl font-bold gold-gradient-text mb-0.5">{item.stat}</span>
                   <span className="block text-white/50 text-xs uppercase tracking-widest mb-3">{item.statLabel}</span>
