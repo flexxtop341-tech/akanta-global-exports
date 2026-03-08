@@ -20,10 +20,11 @@ import pensCollection from "@/assets/pens-collection.png";
 
 
 const categories = [
-  { image: ballPens, title: "Ball Pens", desc: "Smooth-writing, durable pens for office, school & promotional use." },
-  { image: gelPens, title: "Gel Pens", desc: "Vibrant gel ink pens with superior writing comfort." },
-  { image: promoPens, title: "Promotional Pens", desc: "Custom-branded pens for events & marketing campaigns." },
-  { image: customPens, title: "Custom Solutions", desc: "Private-label pens with engraving & gift packaging." },
+  { image: ballPens, title: "Ball Pens", desc: "Classic smooth-writing ball pens for everyday office, school & bulk use." },
+  { image: plasticPens, title: "Plastic Pens", desc: "Lightweight, affordable plastic pens ideal for promotional & bulk orders." },
+  { image: buttonPens, title: "Click / Button Pens", desc: "Retractable push-button pens with sleek designs and comfortable grip." },
+  { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gifting & executive use." },
+  { image: gelInkPens, title: "Gel Ink Pens", desc: "Vibrant gel ink pens with smooth flow and superior writing comfort." },
 ];
 
 const fadeUp = {
