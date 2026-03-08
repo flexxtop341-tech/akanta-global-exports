@@ -388,6 +388,120 @@ const Index = () => {
         </div>
       </section>
 
+      {/* International Import-Export Trading */}
+      <section className="relative py-28 overflow-hidden">
+        {/* Unique diagonal split background */}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(160deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 55%, hsl(var(--primary-dark)) 55%, hsl(var(--primary-dark)) 100%)'
+        }} />
+        {/* Subtle animated grid pattern */}
+        <div className="absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage: `
+            linear-gradient(hsl(var(--gold) / 0.5) 1px, transparent 1px),
+            linear-gradient(90deg, hsl(var(--gold) / 0.5) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px'
+        }} />
+        {/* Gold accent line on the diagonal */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 bottom-0 left-[55%] w-[2px] origin-top-left rotate-[20deg] hidden lg:block" style={{
+            background: 'linear-gradient(to bottom, transparent, hsl(var(--gold) / 0.3), transparent)'
+          }} />
+        </div>
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="relative container mx-auto px-4"
+        >
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left — Illustration with layered effects */}
+            <motion.div
+              variants={scaleIn}
+              custom={0}
+              className="relative order-2 lg:order-1"
+            >
+              <div className="absolute -inset-8 rounded-3xl opacity-20 blur-2xl" style={{
+                background: 'radial-gradient(ellipse at center, hsl(var(--gold) / 0.3), transparent 70%)'
+              }} />
+              <div className="relative">
+                <img
+                  src={importExportIllustration}
+                  alt="International import export trading with ships, planes, trucks and globe"
+                  className="w-full max-w-lg mx-auto object-contain relative z-10"
+                />
+                {/* Floating stat cards */}
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-2 -right-2 md:top-2 md:right-2 bg-white/10 backdrop-blur-lg rounded-2xl px-5 py-4 border border-white/15 shadow-2xl z-20"
+                >
+                  <span className="block text-2xl font-bold gold-gradient-text">100+</span>
+                  <span className="text-white/70 text-[11px] font-medium">Products Exported</span>
+                </motion.div>
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  className="absolute -bottom-2 -left-2 md:bottom-4 md:left-0 bg-white/10 backdrop-blur-lg rounded-2xl px-5 py-4 border border-white/15 shadow-2xl z-20"
+                >
+                  <span className="block text-2xl font-bold gold-gradient-text">Global</span>
+                  <span className="text-white/70 text-[11px] font-medium">Market Presence</span>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Right — Content */}
+            <div className="order-1 lg:order-2">
+              <motion.div variants={fadeUp} custom={0} className="inline-flex items-center gap-3 mb-5">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-gold/15 border border-gold/25">
+                  <Globe2 className="w-5 h-5 text-gold" strokeWidth={1.5} />
+                </span>
+                <span className="text-gold font-semibold text-xs uppercase tracking-[0.25em]">International Trading</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold mb-5 leading-[1.15]">
+                <span className="text-white">International</span>{" "}
+                <span className="gold-gradient-text">Import–Export</span>
+                <br />
+                <span className="text-white">Trading Company</span>
+              </motion.h2>
+              <motion.div variants={fadeUp} custom={2} className="flex items-center gap-2 mb-7">
+                <span className="h-[2px] w-10 bg-gradient-to-r from-gold to-gold-light rounded-full" />
+                <span className="h-[2px] w-5 bg-gold/40 rounded-full" />
+                <span className="h-[2px] w-2 bg-gold/20 rounded-full" />
+              </motion.div>
+              <motion.p variants={fadeUp} custom={3} className="text-white/75 leading-relaxed mb-4 text-base">
+                Akanta Global plays an important role in global trade by supporting the smooth movement of goods across international markets. We focus on reliable sourcing, efficient export processes, and timely shipping to meet the growing demand for quality products worldwide. Our aim is to create a strong and dependable platform that connects global buyers with trusted suppliers.
+              </motion.p>
+              <motion.p variants={fadeUp} custom={4} className="text-white/75 leading-relaxed mb-10 text-base">
+                As an export-focused trading company, Akanta Global works closely with manufacturers, distributors, and international partners to simplify the export process. From product sourcing and export coordination to logistics and delivery, we help businesses expand into global markets and build strong international trade relationships.
+              </motion.p>
+
+              {/* Feature pills */}
+              <motion.div variants={fadeUp} custom={5} className="flex flex-wrap gap-3 mb-8">
+                {["Reliable Sourcing", "Export Coordination", "Global Logistics", "Trusted Suppliers"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs font-semibold text-gold bg-gold/10 border border-gold/20 rounded-full px-4 py-2 backdrop-blur-sm"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </motion.div>
+
+              <motion.div variants={fadeUp} custom={6}>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-2 text-gold font-semibold hover:text-gold-light transition-colors border border-gold/30 hover:border-gold/60 rounded-md px-6 py-3 bg-gold/5 hover:bg-gold/10 backdrop-blur-sm"
+                >
+                  Discover Our Story →
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" style={{
