@@ -297,7 +297,7 @@ const Index = () => {
         }}
       />
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center">
+      <section className="relative min-h-[75vh] md:min-h-[85vh] flex items-center">
         <video
           src="/hero-video.mp4"
           autoPlay
@@ -312,7 +312,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 drop-shadow-lg"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6 drop-shadow-lg"
             >
               <span className="gold-gradient-text">Leading Ball Pen Exporter</span>
               <br />
@@ -322,9 +322,9 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md"
+              className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed drop-shadow-md"
             >
-              Akanta Global is a trusted ball pen exporter and stationery supplier from India specializing in high-quality writing instruments for international distributors and wholesale buyers. We supply bulk promotional pens, office stationery, and custom branded writing products to clients across global markets.
+              Akanta Global is a trusted ball pen exporter and stationery supplier from India. We supply bulk promotional pens, office stationery, and custom branded writing instruments to global distributors and wholesale buyers.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -334,13 +334,13 @@ const Index = () => {
             >
               <Link
                 to="/products"
-                className="bg-gold text-white px-7 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
+                className="bg-gold text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg text-sm md:text-base"
               >
                 Explore Our Products
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white/50 text-white px-7 py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="border-2 border-white/50 text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm text-sm md:text-base"
               >
                 Contact Us
               </Link>
@@ -399,7 +399,7 @@ const Index = () => {
       </section>
 
       {/* Commitment to Export & Shipping */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 md:py-32 overflow-hidden">
         <motion.img
           src={shippingBg}
           alt="Bulk ball pen exporter India — international shipping and logistics"
@@ -546,18 +546,18 @@ const Index = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-4 right-4 bg-card rounded-xl px-4 py-3 border border-border premium-shadow flex items-center gap-2"
+                className="absolute top-4 right-4 bg-card rounded-xl px-3 py-2 md:px-4 md:py-3 border border-border premium-shadow flex items-center gap-2 hidden sm:flex"
               >
-                <Ship className="w-5 h-5 text-gold" strokeWidth={1.5} />
-                <span className="text-xs font-bold text-foreground">Global Exports</span>
+                <Ship className="w-4 h-4 md:w-5 md:h-5 text-gold" strokeWidth={1.5} />
+                <span className="text-[10px] md:text-xs font-bold text-foreground">Global Exports</span>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute bottom-4 left-4 bg-card rounded-xl px-4 py-3 border border-border premium-shadow flex items-center gap-2"
+                className="absolute bottom-4 left-4 bg-card rounded-xl px-3 py-2 md:px-4 md:py-3 border border-border premium-shadow flex items-center gap-2 hidden sm:flex"
               >
-                <PackageCheck className="w-5 h-5 text-gold" strokeWidth={1.5} />
-                <span className="text-xs font-bold text-foreground">Trusted Quality</span>
+                <PackageCheck className="w-4 h-4 md:w-5 md:h-5 text-gold" strokeWidth={1.5} />
+                <span className="text-[10px] md:text-xs font-bold text-foreground">Trusted Quality</span>
               </motion.div>
             </motion.div>
           </div>
@@ -647,7 +647,7 @@ const Index = () => {
       </section>
 
       {/* International Import-Export Trading */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-16 md:py-28 overflow-hidden">
         {/* Unique diagonal split background */}
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(160deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 55%, hsl(var(--primary-dark)) 55%, hsl(var(--primary-dark)) 100%)'
@@ -693,18 +693,18 @@ const Index = () => {
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -top-2 -right-2 md:top-2 md:right-2 bg-white/10 backdrop-blur-lg rounded-2xl px-5 py-4 border border-white/15 shadow-2xl z-20"
+                  className="absolute -top-2 -right-2 md:top-2 md:right-2 bg-white/10 backdrop-blur-lg rounded-xl md:rounded-2xl px-3 py-2 md:px-5 md:py-4 border border-white/15 shadow-2xl z-20 hidden sm:block"
                 >
-                  <span className="block text-2xl font-bold gold-gradient-text">100+</span>
-                  <span className="text-white/70 text-[11px] font-medium">Products Exported</span>
+                  <span className="block text-lg md:text-2xl font-bold gold-gradient-text">100+</span>
+                  <span className="text-white/70 text-[10px] md:text-[11px] font-medium">Products Exported</span>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -bottom-2 -left-2 md:bottom-4 md:left-0 bg-white/10 backdrop-blur-lg rounded-2xl px-5 py-4 border border-white/15 shadow-2xl z-20"
+                  className="absolute -bottom-2 -left-2 md:bottom-4 md:left-0 bg-white/10 backdrop-blur-lg rounded-xl md:rounded-2xl px-3 py-2 md:px-5 md:py-4 border border-white/15 shadow-2xl z-20 hidden sm:block"
                 >
-                  <span className="block text-2xl font-bold gold-gradient-text">Global</span>
-                  <span className="text-white/70 text-[11px] font-medium">Market Presence</span>
+                  <span className="block text-lg md:text-2xl font-bold gold-gradient-text">Global</span>
+                  <span className="text-white/70 text-[10px] md:text-[11px] font-medium">Market Presence</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -764,7 +764,7 @@ const Index = () => {
       <ContactSection />
 
       {/* Final CTA */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover scale-105" />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(135deg, hsl(var(--primary) / 0.94) 0%, hsl(var(--primary-dark) / 0.92) 50%, hsl(var(--primary) / 0.90) 100%)'
@@ -923,7 +923,7 @@ const Index = () => {
           <motion.h2 
             variants={fadeUp} 
             custom={0} 
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+            className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight"
           >
             <span className="gold-gradient-text drop-shadow-lg">
               Let's Grow Your Business
@@ -960,7 +960,7 @@ const Index = () => {
             >
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-gold-light to-gold text-primary px-12 py-5 rounded-full font-bold text-lg hover:from-gold-light hover:via-gold hover:to-gold-light transition-all duration-500 shadow-2xl shadow-gold/30 overflow-hidden"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-gold-light to-gold text-primary px-8 py-4 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg hover:from-gold-light hover:via-gold hover:to-gold-light transition-all duration-500 shadow-2xl shadow-gold/30 overflow-hidden"
               >
                 {/* Shimmer effect */}
                 <motion.div
