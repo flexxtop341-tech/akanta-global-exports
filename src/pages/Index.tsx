@@ -737,7 +737,7 @@ const Index = () => {
 
       {/* Final CTA */}
       <section className="py-24 relative overflow-hidden">
-        <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={ctaBg} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.88))'
         }} />
