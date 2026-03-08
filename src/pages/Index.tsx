@@ -318,9 +318,6 @@ const Index = () => {
 
       {/* Product Categories */}
       <section className="py-20 bg-card overflow-hidden relative">
-        {/* Floating pen collection decoration */}
-        <img src={pensCollection} alt="" className="absolute -bottom-20 -right-20 w-80 h-80 object-contain opacity-[0.05] pointer-events-none rotate-12" />
-        <img src={pensPattern} alt="" className="absolute top-0 left-0 w-1/3 h-full object-cover opacity-[0.025] pointer-events-none" />
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
