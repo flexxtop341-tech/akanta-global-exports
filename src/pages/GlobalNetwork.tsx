@@ -75,7 +75,7 @@ const GlobalNetwork = () => {
               >
                 <motion.div
                   animate={float.animate}
-                  className="w-16 h-16 rounded-xl bg-gold/10 flex items-center justify-center mb-4 p-3"
+                  className="w-24 h-24 rounded-xl bg-gold/10 flex items-center justify-center mb-4 p-4"
                 >
                   <img src={item.icon} alt={item.title} className="w-full h-full object-contain drop-shadow-md" />
                 </motion.div>
