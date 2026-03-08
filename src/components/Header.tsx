@@ -11,6 +11,7 @@ const navItems = [
   { label: "Global Network", path: "/global-network" },
   { label: "Certificates", path: "/certificates" },
   { label: "Team", path: "/team" },
+  { label: "Blog", path: "/blog" },
   { label: "Contact", path: "/contact" },
 ];
 
