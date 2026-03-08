@@ -163,7 +163,7 @@ const CompanyDetails = () => {
                   </div>
 
                   {/* Right — Logo & Info */}
-                  <div className="relative bg-card flex flex-col items-center justify-center p-8 md:p-10 text-center overflow-hidden">
+                  <div className="relative bg-card flex flex-col items-center justify-center p-6 md:p-8 text-center overflow-hidden">
                     {["top-3 left-3 border-t-2 border-l-2 rounded-tl-sm","top-3 right-3 border-t-2 border-r-2 rounded-tr-sm","bottom-3 left-3 border-b-2 border-l-2 rounded-bl-sm","bottom-3 right-3 border-b-2 border-r-2 rounded-br-sm"].map((pos, i) => (
                       <div key={i} className={`absolute w-7 h-7 border-gold/40 ${pos}`} />
                     ))}
