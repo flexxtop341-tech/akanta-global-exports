@@ -223,6 +223,90 @@ const Index = () => {
         </motion.div>
       </section>
 
+      {/* Trusted Export Partner */}
+      <section className="relative py-24 bg-background overflow-hidden">
+        {/* Vector art background */}
+        <img
+          src={trustedPartnerBg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-contain opacity-[0.06] pointer-events-none"
+        />
+        <div className="absolute top-0 left-0 w-72 h-72 rounded-full opacity-20 blur-3xl" style={{ background: 'hsl(var(--gold) / 0.3)' }} />
+        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-15 blur-3xl" style={{ background: 'hsl(var(--primary) / 0.25)' }} />
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="relative container mx-auto px-4"
+        >
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            {/* Left — Content */}
+            <div>
+              <motion.span variants={fadeUp} custom={0} className="inline-flex items-center gap-2 text-gold font-semibold text-xs uppercase tracking-[0.25em] mb-4">
+                <span className="w-8 h-[2px] bg-gold rounded-full" />
+                Why Choose Us
+              </motion.span>
+              <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mb-2 leading-tight">
+                <span className="gold-gradient-text">Akanta Global:</span>{" "}
+                <span className="text-foreground">A Trusted Export Partner</span>
+              </motion.h2>
+              <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
+              <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-4">
+                Akanta Global is committed to exporting quality products to international markets. With growing global demand for reliable and affordable products, export trade creates strong opportunities for businesses worldwide. Our focus is to supply dependable products while ensuring smooth and efficient export processes.
+              </motion.p>
+              <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed mb-8">
+                Akanta Global provides a reliable platform that connects international buyers with trusted manufacturers and suppliers. We aim to bridge the gap between global demand and supply by delivering quality products to different parts of the world. With a focus on trust, consistency, and strong partnerships, Akanta Global works to build long-term relationships in international trade.
+              </motion.p>
+              <motion.div variants={fadeUp} custom={5}>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-2 bg-gold text-white px-6 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
+                >
+                  Partner With Us →
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Right — Illustration with floating accents */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={scaleIn}
+              custom={0}
+              className="relative flex items-center justify-center"
+            >
+              <div className="absolute inset-0 rounded-3xl opacity-30" style={{
+                background: 'radial-gradient(circle at center, hsl(var(--gold) / 0.15), transparent 70%)'
+              }} />
+              <img
+                src={trustedPartnerBg}
+                alt="Global trade network connecting continents with shipping and partnerships"
+                className="w-full max-w-lg object-contain relative z-10"
+              />
+              {/* Floating accent badges */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-4 right-4 bg-card rounded-xl px-4 py-3 border border-border premium-shadow flex items-center gap-2"
+              >
+                <Ship className="w-5 h-5 text-gold" strokeWidth={1.5} />
+                <span className="text-xs font-bold text-foreground">Global Exports</span>
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                className="absolute bottom-4 left-4 bg-card rounded-xl px-4 py-3 border border-border premium-shadow flex items-center gap-2"
+              >
+                <PackageCheck className="w-5 h-5 text-gold" strokeWidth={1.5} />
+                <span className="text-xs font-bold text-foreground">Trusted Quality</span>
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
+
       {/* Our Services */}
       <ServicesSection />
 
