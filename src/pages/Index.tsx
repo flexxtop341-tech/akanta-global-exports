@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Ship, PackageCheck, Globe2 } from "lucide-react";
+import iconShipping from "@/assets/icon-shipping.png";
+import iconQualityProduct from "@/assets/icon-quality-product.png";
+import iconGlobalReach from "@/assets/icon-global-reach.png";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
@@ -202,9 +205,9 @@ const Index = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
-                { icon: Ship, label: "Reliable Shipping", sub: "Smooth logistics worldwide", stat: "45+" , statLabel: "Countries" },
-                { icon: PackageCheck, label: "Quality Products", sub: "Export-grade standards", stat: "100%", statLabel: "Inspected" },
-                { icon: Globe2, label: "Global Reach", sub: "Markets across continents", stat: "24/7", statLabel: "Support" },
+                { image: iconShipping, label: "Reliable Shipping", sub: "Smooth logistics worldwide", stat: "45+" , statLabel: "Countries" },
+                { image: iconQualityProduct, label: "Quality Products", sub: "Export-grade standards", stat: "100%", statLabel: "Inspected" },
+                { image: iconGlobalReach, label: "Global Reach", sub: "Markets across continents", stat: "24/7", statLabel: "Support" },
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -215,8 +218,8 @@ const Index = () => {
                 >
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  <div className="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gold/20 transition-all duration-500">
-                    <item.icon className="w-7 h-7 text-gold" strokeWidth={1.5} />
+                  <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-500">
+                    <img src={item.image} alt={item.label} className="w-full h-full object-contain drop-shadow-lg" />
                   </div>
                   <span className="block text-2xl font-bold gold-gradient-text mb-0.5">{item.stat}</span>
                   <span className="block text-white/50 text-xs uppercase tracking-widest mb-3">{item.statLabel}</span>
