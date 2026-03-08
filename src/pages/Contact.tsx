@@ -31,7 +31,7 @@ const fadeUp = {
   }),
 };
 
-const inputClass = "w-full px-4 py-3.5 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
+const inputClass = "w-full px-5 py-4 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-base focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
@@ -121,12 +121,12 @@ const Contact = () => {
                       <card.icon size={20} className="text-gold" />
                     </motion.div>
                     <div>
-                      <h3 className="font-bold text-foreground text-sm mb-1.5">{card.title}</h3>
+                      <h3 className="font-bold text-foreground text-base mb-1.5">{card.title}</h3>
                       {card.lines.map((line, j) =>
                         card.href ? (
-                          <a key={j} href={card.href} className="block text-xs text-muted-foreground hover:text-gold transition-colors duration-300 leading-relaxed">{line}</a>
+                          <a key={j} href={card.href} className="block text-sm text-muted-foreground hover:text-gold transition-colors duration-300 leading-relaxed">{line}</a>
                         ) : (
-                          <p key={j} className="text-xs text-muted-foreground leading-relaxed">{line}</p>
+                          <p key={j} className="text-sm text-muted-foreground leading-relaxed">{line}</p>
                         )
                       )}
                     </div>
@@ -156,14 +156,14 @@ const Contact = () => {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-gold/20 via-amber-400/10 to-gold/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-              <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-10 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
+              <div className="relative bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-8 md:p-12 shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.1)]">
                 <div className="flex items-center gap-3 mb-8">
                   <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-gold to-amber-600 flex items-center justify-center shadow-lg shadow-gold/20">
                     <Send size={18} className="text-white" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-foreground text-xl">Send Us a Message</h2>
-                    <p className="text-xs text-muted-foreground">We'd love to hear from you</p>
+                    <h2 className="font-bold text-foreground text-2xl">Send Us a Message</h2>
+                    <p className="text-sm text-muted-foreground">We'd love to hear from you</p>
                   </div>
                 </div>
 
@@ -176,7 +176,7 @@ const Contact = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + i * 0.1 }}
-                      className="flex items-center gap-1.5 text-xs text-muted-foreground bg-gold/5 border border-gold/15 rounded-full px-3 py-1.5"
+                      className="flex items-center gap-1.5 text-sm text-muted-foreground bg-gold/5 border border-gold/15 rounded-full px-3 py-1.5"
                     >
                       <h.icon size={12} className="text-gold" />
                       <span>{h.text}</span>
@@ -184,14 +184,14 @@ const Contact = () => {
                   ))}
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-6">
                     {[
                       { key: "name", label: "Full Name", type: "text", placeholder: "John Doe", required: true, maxLen: 100 },
                       { key: "email", label: "Email Address", type: "email", placeholder: "john@example.com", required: true, maxLen: 255 },
                     ].map(f => (
                       <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                        <label className="block text-sm font-medium text-foreground mb-1.5">
+                        <label className="block text-base font-medium text-foreground mb-2">
                           {f.label} {f.required && <span className="text-gold">*</span>}
                         </label>
                         <input
@@ -205,13 +205,13 @@ const Contact = () => {
                       </motion.div>
                     ))}
                   </div>
-                  <div className="grid sm:grid-cols-2 gap-5">
+                  <div className="grid sm:grid-cols-2 gap-6">
                     {[
                       { key: "phone", label: "Phone Number", type: "tel", placeholder: "+91 98765 43210", maxLen: 20 },
                       { key: "company", label: "Company Name", type: "text", placeholder: "Your Company", maxLen: 100 },
                     ].map(f => (
                       <motion.div key={f.key} animate={focusedField === f.key ? { scale: 1.02 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                        <label className="block text-sm font-medium text-foreground mb-1.5">{f.label}</label>
+                        <label className="block text-base font-medium text-foreground mb-2">{f.label}</label>
                         <input
                           type={f.type} placeholder={f.placeholder} maxLength={f.maxLen}
                           value={form[f.key as keyof typeof form]}
@@ -224,11 +224,11 @@ const Contact = () => {
                     ))}
                   </div>
                   <motion.div animate={focusedField === "message" ? { scale: 1.01 } : { scale: 1 }} transition={{ duration: 0.2 }}>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">
+                    <label className="block text-base font-medium text-foreground mb-2">
                       Message <span className="text-gold">*</span>
                     </label>
                     <textarea
-                      required rows={5} placeholder="Tell us about your requirements, products, and quantities..."
+                      required rows={6} placeholder="Tell us about your requirements, products, and quantities..."
                       maxLength={1000}
                       value={form.message}
                       onChange={e => setForm({ ...form, message: e.target.value })}
@@ -242,7 +242,7 @@ const Contact = () => {
                     type="submit" disabled={sending}
                     whileHover={{ scale: 1.03, boxShadow: "0 8px 30px -5px hsl(var(--gold) / 0.4)" }}
                     whileTap={{ scale: 0.97 }}
-                    className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-10 py-3.5 rounded-xl font-semibold transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
+                    className="w-full sm:w-auto bg-gradient-to-r from-gold to-amber-600 text-white px-12 py-4 rounded-xl font-semibold text-base transition-all disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
                   >
                     {sending ? (
                       <motion.div animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: "linear" }} className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full" />
