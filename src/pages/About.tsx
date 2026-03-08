@@ -1,4 +1,5 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
@@ -62,6 +63,11 @@ const scaleIn = {
 const About = () => {
   return (
     <>
+      <SEOHead
+        title="About Us"
+        description="Learn about Akanta Global — a Nashik-based merchant export company bridging Indian manufacturers with international buyers through quality, transparency, and reliability."
+        path="/about"
+      />
       <PageHero
         title="About Akanta Global"
         subtitle="Your trusted partner for high-quality Indian-made writing instruments, serving international markets with integrity and excellence."

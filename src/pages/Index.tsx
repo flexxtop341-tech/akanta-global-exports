@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Ship, PackageCheck, Globe2, Send, MessageCircle } from "lucide-react";
@@ -269,6 +270,11 @@ const scaleIn = {
 const Index = () => {
   return (
     <>
+      <SEOHead
+        title="Excellence in Global Trade"
+        description="Akanta Global is India's trusted merchant export company specializing in writing instruments, global sourcing, and international trade. Quality products, reliable partnerships."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center">
         <video

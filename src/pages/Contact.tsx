@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import SEOHead from "@/components/SEOHead";
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2, Globe, Shield, Headphones } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
@@ -57,6 +58,26 @@ const Contact = () => {
 
   return (
     <>
+      <SEOHead
+        title="Contact Us"
+        description="Get in touch with Akanta Global for export inquiries, partnership opportunities, and international trade solutions. Located in Nashik, Maharashtra, India."
+        path="/contact"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Akanta Global",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Meri Mhasrul",
+            "addressLocality": "Nashik",
+            "addressRegion": "Maharashtra",
+            "postalCode": "422003",
+            "addressCountry": "IN"
+          },
+          "telephone": "+919673398945",
+          "email": "akantaglobal@gmail.com"
+        }}
+      />
       <PageHero
         title="Contact Us"
         subtitle="Ready to start a global partnership? Get in touch with our team today."

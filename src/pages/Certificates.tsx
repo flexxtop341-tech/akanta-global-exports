@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2, ArrowRight, Eye, Download, X, Calendar, Building2, ShieldCheck } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
@@ -203,6 +204,11 @@ const Certificates = () => {
 
   return (
     <>
+      <SEOHead
+        title="Certifications & Compliance"
+        description="Akanta Global holds ISO 9001, ISO 14001, FSSAI, IEC, APEDA, and FIEO certifications — ensuring the highest standards in international trade and export compliance."
+        path="/certificates"
+      />
       <PageHero
         title="Certifications & Compliance"
         subtitle="Our commitment to quality and compliance is backed by internationally recognized certifications and rigorous standards."

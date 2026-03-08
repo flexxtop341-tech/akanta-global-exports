@@ -1,4 +1,5 @@
 import { ArrowRight, Linkedin, Mail, Instagram } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
@@ -19,6 +20,11 @@ const strengths = [
 const Team = () => {
   return (
     <>
+      <SEOHead
+        title="Our Team & Leadership"
+        description="Meet the leadership team behind Akanta Global — Babita Gunjal (Founder) and Karan Gunjal (Co-Founder) driving excellence in Indian merchant exports."
+        path="/team"
+      />
       <PageHero
         title="Leadership"
         subtitle="Meet the driving force behind Akanta Global's success in international trade."

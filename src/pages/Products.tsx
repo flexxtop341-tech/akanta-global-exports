@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
@@ -59,6 +60,11 @@ const scaleIn = {
 const Products = () => {
   return (
     <>
+      <SEOHead
+        title="Products — Export-Grade Writing Instruments"
+        description="Explore Akanta Global's range of export-grade writing instruments — ball pens, click pens, metallic pens, and custom promotional pens for international markets."
+        path="/products"
+      />
       <PageHero
         title="Our Products"
         subtitle="We export a wide range of high-quality writing instruments from India. Every product is inspected and certified for international export."

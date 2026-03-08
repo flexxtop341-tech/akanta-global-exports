@@ -1,4 +1,5 @@
 import { Globe, Plane, Ship, Anchor, Package, TrendingUp, Users, MapPin, X } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import PageHero from "@/components/PageHero";
@@ -106,6 +107,11 @@ const GlobalNetwork = () => {
 
   return (
     <>
+      <SEOHead
+        title="Global Network"
+        description="Akanta Global's international trade network spans multiple continents with strategic access to India's major seaports and airports for seamless export logistics."
+        path="/global-network"
+      />
       <PageHero
         title="Global Network"
         subtitle="Akanta Global serves international markets with a reliable supply chain backed by verified Indian manufacturers."
