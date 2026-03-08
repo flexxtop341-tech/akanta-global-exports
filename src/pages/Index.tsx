@@ -511,9 +511,13 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.4) 1px, transparent 1px)`,
+      <section className="py-24 relative overflow-hidden">
+        <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.88))'
+        }} />
+        <div className="absolute inset-0 opacity-[0.04]" style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
           backgroundSize: '24px 24px'
         }} />
         <motion.div
