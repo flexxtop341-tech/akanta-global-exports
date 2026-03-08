@@ -363,6 +363,7 @@ const Index = () => {
               <img
                 src={globalTrade}
                 alt="Global trade illustration with pens and shipping boxes around a globe"
+                loading="lazy"
                 className="w-full max-w-md lg:max-w-lg object-contain"
               />
             </motion.div>
