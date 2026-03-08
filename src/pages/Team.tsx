@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import founderAvatar from "@/assets/team-founder-avatar.png";
+import karanAvatar from "@/assets/team-karan-avatar.png";
 import iconGlobal from "@/assets/icon-team-global.png";
 import iconQuality from "@/assets/icon-team-quality.png";
 import iconPartner from "@/assets/icon-team-partner.png";
