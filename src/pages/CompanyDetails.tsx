@@ -95,6 +95,43 @@ const CompanyDetails = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
+        
+        {/* Animated Text Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-gold font-medium text-sm uppercase tracking-[0.3em] mb-3"
+            >
+              Since 2020
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4"
+            >
+              Excellence in{" "}
+              <span className="gold-gradient-text">Global Trade</span>
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="text-primary-foreground/70 text-sm md:text-base max-w-md mx-auto"
+            >
+              Nashik, India • Serving 15+ Countries Worldwide
+            </motion.p>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1, delay: 0.9 }}
+              className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-6"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Animated Stats Counter */}
