@@ -138,7 +138,7 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.15)]">
                   <motion.img
                     src={aboutPensHero}
-                    alt="Premium ball point pens by Akanta Global"
+                    alt="High quality ball pens from India — smooth writing pen manufacturer"
                     className="w-full h-56 object-cover"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.6 }}
