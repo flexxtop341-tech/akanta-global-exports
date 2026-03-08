@@ -11,7 +11,7 @@ const PageHero = ({ title, subtitle }: { title: string; subtitle: string }) => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             <span className="gold-gradient-text">{title}</span>
           </h1>
-          <p className="text-primary-foreground/80 max-w-2xl mx-auto text-lg">{subtitle}</p>
+          <p className="text-primary-foreground/80 max-w-2xl mx-auto text-base md:text-lg px-2">{subtitle}</p>
         </div>
       </section>
       {/* Wave divider */}
