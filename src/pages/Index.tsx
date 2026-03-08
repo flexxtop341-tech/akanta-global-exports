@@ -351,8 +351,6 @@ const Index = () => {
 
       {/* About Snapshot with Stats */}
       <section className="py-20 bg-background overflow-hidden relative">
-        {/* Decorative pen pattern */}
-        <img src={pensPattern} alt="" className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-[0.03] pointer-events-none" />
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
