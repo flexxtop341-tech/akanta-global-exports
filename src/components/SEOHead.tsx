@@ -8,6 +8,7 @@ interface SEOHeadProps {
   keywords?: string;
   jsonLd?: object | object[];
   imageUrl?: string;
+  noIndex?: boolean;
   article?: {
     publishedTime?: string;
     author?: string;
@@ -22,6 +23,7 @@ const SEOHead = ({
   keywords,
   jsonLd,
   imageUrl,
+  noIndex = false,
   article,
 }: SEOHeadProps) => {
   const baseUrl = "https://akantaglobal.com";
@@ -35,11 +37,19 @@ const SEOHead = ({
       : [jsonLd]
     : [];
 
+  const robotsContent = noIndex
+    ? "noindex, nofollow"
+    : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1";
+
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={fullUrl} />
+
+      {/* Hreflang */}
+      <link rel="alternate" hrefLang="en" href={fullUrl} />
+      <link rel="alternate" hrefLang="x-default" href={fullUrl} />
 
       {/* Keywords */}
       {keywords && <meta name="keywords" content={keywords} />}
@@ -51,7 +61,9 @@ const SEOHead = ({
       <meta name="ICBM" content="19.9975, 73.7898" />
 
       {/* Robots */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="robots" content={robotsContent} />
+      <meta name="googlebot" content={robotsContent} />
+      <meta name="bingbot" content={robotsContent} />
 
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
