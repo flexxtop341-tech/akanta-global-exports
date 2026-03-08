@@ -58,7 +58,7 @@ const ServicesSection = () => {
             What We Do
           </motion.span>
           <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-3 mb-3">
-            <span className="gold-gradient-text">Akanta Global Services</span>
+            <span className="gold-gradient-text">Our Services</span>
           </motion.h2>
           <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-5" />
           <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-lg mx-auto text-sm leading-relaxed">
