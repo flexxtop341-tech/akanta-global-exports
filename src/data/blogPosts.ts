@@ -1,6 +1,9 @@
 import blogManufacturersImg from "@/assets/blog-ball-pen-manufacturers.jpg";
 import blogImportImg from "@/assets/blog-import-ball-pens.jpg";
 import blogPromotionalImg from "@/assets/blog-promotional-pens.jpg";
+import blogBulkPensImg from "@/assets/blog-bulk-ball-pens.jpg";
+import blogPromoMarketingImg from "@/assets/blog-promotional-marketing.jpg";
+import blogIndiaHubImg from "@/assets/blog-india-stationery-hub.jpg";
 
 export interface BlogPost {
   slug: string;
