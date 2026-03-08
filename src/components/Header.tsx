@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
 
 const navItems = [
@@ -55,12 +55,20 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-card/98 backdrop-blur-md shadow-[0_4px_30px_-8px_hsl(var(--primary)/0.15)]"
-          : "bg-card/95 backdrop-blur-sm"
+          ? "bg-card/[0.98] backdrop-blur-xl shadow-[0_4px_40px_-8px_hsl(var(--primary)/0.18)]"
+          : "bg-card backdrop-blur-sm"
       }`}
     >
-      {/* Top gold accent line */}
-      <div className="absolute top-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), transparent)' }} />
+      {/* Top gold accent bar */}
+      <div className="h-[3px] relative overflow-hidden">
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(90deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)), hsl(var(--gold)), hsl(var(--gold-dark)))'
+        }} />
+        <div className="absolute inset-0 opacity-50" style={{
+          background: 'linear-gradient(90deg, transparent 0%, white 50%, transparent 100%)',
+          animation: 'shimmer 3s ease-in-out infinite',
+        }} />
+      </div>
 
       <div className="w-full mx-auto px-6 lg:px-10">
         {/* Main header row */}
@@ -71,9 +79,24 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Akanta Global"
-                className="h-28 md:h-32 lg:h-[135px] w-auto transition-transform duration-300 group-hover:scale-105"
+                className={`w-auto transition-all duration-500 group-hover:scale-105 ${
+                  isScrolled ? "h-20 md:h-24 lg:h-[100px]" : "h-28 md:h-32 lg:h-[135px]"
+                }`}
               />
-              <span className="text-[9px] md:text-[11px] lg:text-[12px] uppercase tracking-[0.25em] text-gold leading-none -mt-2 lg:-mt-3" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontStyle: 'italic', fontWeight: 500 }}>
+              <span
+                className={`uppercase tracking-[0.25em] leading-none transition-all duration-500 ${
+                  isScrolled ? "text-[8px] md:text-[9px] lg:text-[10px] -mt-1" : "text-[9px] md:text-[11px] lg:text-[12px] -mt-2 lg:-mt-3"
+                }`}
+                style={{
+                  fontFamily: "'Georgia', 'Times New Roman', serif",
+                  fontStyle: 'italic',
+                  fontWeight: 500,
+                  background: 'linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
                 Stronger Together
               </span>
             </div>
@@ -85,51 +108,63 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative text-[13px] font-medium px-2.5 py-2 rounded-md transition-all duration-300 whitespace-nowrap ${
+                className={`relative text-[13px] font-medium px-3 py-2 rounded-lg transition-all duration-300 whitespace-nowrap group ${
                   location.pathname === item.path
-                    ? "text-gold bg-gold/8"
-                    : "text-foreground/70 hover:text-gold hover:bg-gold/5"
+                    ? "text-gold"
+                    : "text-foreground/65 hover:text-foreground"
                 }`}
               >
                 {item.label}
-                {location.pathname === item.path && (
-                  <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-4 h-[2px] rounded-full bg-gold" />
-                )}
+                {/* Active indicator */}
+                <span
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] rounded-full transition-all duration-300 ${
+                    location.pathname === item.path
+                      ? "w-6 opacity-100"
+                      : "w-0 opacity-0 group-hover:w-4 group-hover:opacity-60"
+                  }`}
+                  style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }}
+                />
               </Link>
             ))}
           </nav>
 
           {/* Right actions */}
-          <div className="hidden lg:flex items-center gap-2 shrink-0">
+          <div className="hidden lg:flex items-center gap-3 shrink-0">
             <div className="relative">
               <button
                 onClick={() => setShowTranslate(!showTranslate)}
-                className="flex items-center gap-1.5 px-2.5 py-2 rounded-md text-[13px] font-medium text-foreground/70 hover:text-gold hover:bg-gold/5 transition-all duration-300 border border-transparent hover:border-gold/20"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-[13px] font-medium text-foreground/60 hover:text-gold transition-all duration-300 border border-border/60 hover:border-gold/30 hover:bg-gold/5"
               >
                 <Globe size={15} />
                 <span>Translate</span>
+                <ChevronDown size={12} className={`transition-transform duration-200 ${showTranslate ? 'rotate-180' : ''}`} />
               </button>
               {showTranslate && (
-                <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl p-3 min-w-[200px] z-50">
+                <div className="absolute top-full right-0 mt-2 bg-card border border-gold/15 rounded-xl shadow-[0_20px_50px_-12px_hsl(var(--primary)/0.2)] p-3 min-w-[200px] z-50">
                   <div id="google_translate_desktop" className="text-sm" />
                 </div>
               )}
             </div>
 
+            {/* Separator */}
+            <div className="h-8 w-[1px]" style={{ background: 'linear-gradient(to bottom, transparent, hsl(var(--border)), transparent)' }} />
+
             <Link
               to="/contact"
-              className="relative overflow-hidden text-primary-foreground px-5 py-2 rounded-md text-[13px] font-semibold transition-all duration-300 hover:shadow-[0_4px_20px_-4px_hsl(var(--gold)/0.5)] group border border-gold/20"
-              style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))' }}
+              className="relative overflow-hidden text-white px-6 py-2.5 rounded-lg text-[13px] font-semibold transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--gold)/0.4)] group"
+              style={{ background: 'linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)))' }}
             >
-              <span className="relative z-10">Request Quote</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-gold/20 to-gold-light/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative z-10 flex items-center gap-1.5">
+                Request Quote
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-gold-light/30 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-gold transition-colors rounded-md hover:bg-gold/5"
+            className="lg:hidden p-2.5 text-foreground hover:text-gold transition-all duration-300 rounded-lg hover:bg-gold/5 border border-transparent hover:border-gold/20"
             aria-label="Toggle menu"
           >
             {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -138,40 +173,48 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMobileOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`lg:hidden overflow-hidden transition-all duration-400 ${isMobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-card border-t border-gold/10">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-1">
+          {/* Gold line accent */}
+          <div className="h-[1px]" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.3), transparent)' }} />
+          <nav className="container mx-auto px-4 py-5 flex flex-col gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium py-2.5 px-3 rounded-md transition-all duration-300 ${
+                className={`text-sm font-medium py-3 px-4 rounded-lg transition-all duration-300 flex items-center gap-2 ${
                   location.pathname === item.path
-                    ? "text-gold bg-gold/8"
-                    : "text-foreground/70 hover:text-gold hover:bg-gold/5"
+                    ? "text-gold bg-gold/8 border-l-2 border-gold"
+                    : "text-foreground/70 hover:text-gold hover:bg-gold/5 border-l-2 border-transparent"
                 }`}
               >
+                {location.pathname === item.path && (
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                )}
                 {item.label}
               </Link>
             ))}
-            <div className="flex items-center gap-2 mt-3">
+
+            <div className="h-[1px] my-3" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.2), transparent)' }} />
+
+            <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowTranslate(!showTranslate)}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-md text-sm font-medium border border-gold/20 text-foreground/70 hover:text-gold transition-colors"
+                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium border border-gold/20 text-foreground/70 hover:text-gold hover:bg-gold/5 transition-all duration-300"
               >
                 <Globe size={16} />
                 Translate
               </button>
               <Link
                 to="/contact"
-                className="flex-1 text-center py-2.5 rounded-md text-sm font-semibold text-primary-foreground border border-gold/20"
-                style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))' }}
+                className="flex-1 text-center py-3 rounded-lg text-sm font-semibold text-white shadow-lg"
+                style={{ background: 'linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)))' }}
               >
                 Request Quote
               </Link>
             </div>
             {showTranslate && (
-              <div className="mt-2 p-3 border border-border rounded-lg">
+              <div className="mt-3 p-3 border border-gold/15 rounded-xl bg-muted/30">
                 <div id="google_translate_mobile" className="text-sm" />
               </div>
             )}
