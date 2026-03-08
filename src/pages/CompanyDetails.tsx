@@ -87,7 +87,7 @@ const CompanyDetails = () => {
       />
       <PageHero
         title="Company Details"
-        subtitle="Learn about our operations, business model, and commitment to excellence in international trade."
+        subtitle="India pen export company — learn about our operations, quality assurance, and commitment to excellence in international stationery trade."
       />
 
       {/* Company Banner */}
