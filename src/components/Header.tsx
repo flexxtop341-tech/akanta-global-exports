@@ -64,14 +64,14 @@ const Header = () => {
 
       <div className="w-full mx-auto px-6 lg:px-10">
         {/* Main header row */}
-        <div className="flex items-center justify-between h-[80px] lg:h-[90px]">
+        <div className="flex items-center justify-between h-[90px] lg:h-[110px]">
           {/* Logo + Tagline */}
           <Link to="/" className="flex items-center group shrink-0">
             <div className="flex flex-col items-center">
               <img
                 src={logo}
                 alt="Akanta Global"
-                className="h-16 md:h-20 lg:h-[80px] w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-20 md:h-24 lg:h-[100px] w-auto transition-transform duration-300 group-hover:scale-105"
               />
               <span className="text-[8px] md:text-[10px] uppercase tracking-[0.2em] text-gold leading-none -mt-0.5" style={{ fontFamily: "'Georgia', 'Times New Roman', serif", fontStyle: 'italic', fontWeight: 500 }}>
                 Stronger Together
