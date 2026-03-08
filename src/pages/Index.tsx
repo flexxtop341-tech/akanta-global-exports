@@ -437,7 +437,7 @@ const Index = () => {
                   variants={fadeUp}
                   custom={4 + i}
                   whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                  className="group relative bg-primary-dark rounded-2xl py-8 px-6 border border-gold/20 hover:border-gold/50 transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.3)]"
+                  className="group relative bg-gradient-to-br from-primary-dark via-primary to-primary-dark rounded-2xl py-8 px-6 border border-gold/20 hover:border-gold/50 transition-all duration-500 hover:shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.3)]"
                 >
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
