@@ -307,6 +307,42 @@ const Index = () => {
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://akantaglobal.com/" }
             ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What types of pens does Akanta Global export?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards." }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the minimum order quantity (MOQ) for bulk pen orders?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope." }
+              },
+              {
+                "@type": "Question",
+                "name": "Which countries does Akanta Global export pens to?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa." }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Akanta Global offer custom logo printing on pens?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer complete custom branding solutions including logo printing, custom colors, and packaging. Our custom pen service is ideal for promotional campaigns, corporate gifting, and private label distribution." }
+              },
+              {
+                "@type": "Question",
+                "name": "What certifications does Akanta Global hold?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Akanta Global holds ISO 9001:2015, ISO 14001:2015, FSSAI, IEC (Import Export Code), APEDA, and FIEO certifications — ensuring the highest international compliance standards for quality and export operations." }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I request a quote for bulk pen orders from India?",
+                "acceptedAnswer": { "@type": "Answer", "text": "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details." }
+              }
+            ]
           }
         ]}
       />
