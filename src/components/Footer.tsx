@@ -131,7 +131,7 @@ const Footer = () => {
           </p>
           <Link
             to="/contact"
-            className="group inline-flex items-center gap-1.5 text-xs font-semibold text-gold/70 hover:text-gold transition-colors"
+            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-gold/70 hover:text-gold transition-colors"
           >
             Request a Quote
             <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
