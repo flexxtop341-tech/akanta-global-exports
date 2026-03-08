@@ -647,7 +647,7 @@ const Index = () => {
       </section>
 
       {/* International Import-Export Trading */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-16 md:py-28 overflow-hidden">
         {/* Unique diagonal split background */}
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(160deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 55%, hsl(var(--primary-dark)) 55%, hsl(var(--primary-dark)) 100%)'
