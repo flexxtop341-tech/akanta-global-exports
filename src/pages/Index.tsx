@@ -16,7 +16,7 @@ import trustedPartnerBg from "@/assets/trusted-partner-bg.jpg";
 import importExportIllustration from "@/assets/import-export-illustration.jpg";
 import pensPattern from "@/assets/pens-pattern.jpg";
 import ctaBg from "@/assets/cta-bg.jpg";
-import pensCollection from "@/assets/pens-collection.png";
+
 
 const inputClass = "w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
 
