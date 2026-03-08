@@ -26,14 +26,6 @@ const strengths = [
   { image: iconAboutPartner, title: "Partner Focus", desc: "Building long-term, trust-based partnerships through transparent pricing, timely delivery, and dependable service." },
 ];
 
-const milestones = [
-  { year: "2008", title: "Foundation", desc: "Akanta Global was established with a vision to connect Indian manufacturers with global markets." },
-  { year: "2012", title: "First Export", desc: "Successfully completed our first international shipment of writing instruments." },
-  { year: "2016", title: "ISO Certification", desc: "Achieved ISO 9001:2015 certification for quality management systems." },
-  { year: "2020", title: "25+ Countries", desc: "Expanded operations to serve buyers in over 25 countries worldwide." },
-  { year: "2024", title: "50+ Countries", desc: "Expanded to 50+ countries, serving 500+ clients with diverse product portfolios." },
-];
-
 const businessSteps = [
   { num: "01", title: "Supplier Sourcing", desc: "We identify and vet reliable suppliers through rigorous due diligence processes.", image: iconStepSourcing },
   { num: "02", title: "Quality Checks", desc: "Every product undergoes comprehensive quality inspection at multiple stages.", image: iconStepQuality },
