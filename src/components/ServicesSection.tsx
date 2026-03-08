@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRightLeft, Truck, FileText, Handshake, ShieldCheck } from "lucide-react";
+import pensPattern from "@/assets/pens-pattern.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
