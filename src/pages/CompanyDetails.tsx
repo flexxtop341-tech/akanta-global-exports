@@ -84,7 +84,7 @@ const CompanyDetails = () => {
         subtitle="Learn about our operations, business model, and commitment to excellence in international trade."
       />
 
-      {/* Company Banner with Facts */}
+      {/* Company Banner */}
       <section className="relative h-72 md:h-96 overflow-hidden -mt-1">
         <motion.img
           src={companyHeroBanner}
@@ -94,31 +94,7 @@ const CompanyDetails = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent flex items-end">
-          <div className="container mx-auto px-4 pb-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-              {companyFacts.map((fact, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                  className="flex items-center gap-3 bg-primary/30 backdrop-blur-md rounded-lg p-3 border border-gold/10"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-gold/20 flex items-center justify-center shrink-0">
-                    <fact.icon size={20} className="text-gold-light" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-primary-foreground/60">{fact.label}</p>
-                    <p className="text-sm font-semibold text-primary-foreground">{fact.value}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
       </section>
 
       {/* Animated Stats Counter */}
