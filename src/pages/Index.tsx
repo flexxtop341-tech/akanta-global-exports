@@ -546,10 +546,10 @@ const Index = () => {
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-4 right-4 bg-card rounded-xl px-4 py-3 border border-border premium-shadow flex items-center gap-2"
+                className="absolute top-4 right-4 bg-card rounded-xl px-3 py-2 md:px-4 md:py-3 border border-border premium-shadow flex items-center gap-2 hidden sm:flex"
               >
-                <Ship className="w-5 h-5 text-gold" strokeWidth={1.5} />
-                <span className="text-xs font-bold text-foreground">Global Exports</span>
+                <Ship className="w-4 h-4 md:w-5 md:h-5 text-gold" strokeWidth={1.5} />
+                <span className="text-[10px] md:text-xs font-bold text-foreground">Global Exports</span>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
