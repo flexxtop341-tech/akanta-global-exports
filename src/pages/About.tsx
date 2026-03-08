@@ -1,4 +1,5 @@
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
