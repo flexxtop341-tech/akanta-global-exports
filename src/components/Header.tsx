@@ -64,7 +64,7 @@ const Header = () => {
 
       <div className="w-full mx-auto px-6 lg:px-10">
         {/* Main header row */}
-        <div className="flex items-center justify-between h-[100px] lg:h-[130px]">
+        <div className="flex items-center justify-between h-[110px] lg:h-[145px]">
           {/* Logo + Tagline */}
           <Link to="/" className="flex items-center group shrink-0">
             <div className="flex flex-col items-center">
