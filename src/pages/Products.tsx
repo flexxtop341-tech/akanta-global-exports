@@ -87,7 +87,7 @@ const Products = () => {
       <section className="relative h-72 md:h-80 overflow-hidden -mt-1">
         <img
           src={productsHeroBanner}
-          alt="Premium pen collection"
+          alt="Ball pen manufacturer India — premium pen collection for export"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-transparent flex items-center">
