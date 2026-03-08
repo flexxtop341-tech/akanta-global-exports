@@ -267,16 +267,137 @@ const Index = () => {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center">
-        <video
-          src="/hero-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="relative container mx-auto px-4 py-20">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-primary">
+        {/* Animated gold particle pattern */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.3) 1px, transparent 1px)`,
+              backgroundSize: '40px 40px'
+            }}
+            animate={{ 
+              backgroundPosition: ['0% 0%', '100% 100%'],
+            }}
+            transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
+          />
+        </div>
+        
+        {/* Radial glow effects */}
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+        
+        {/* Animated Ink Trail SVG */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
+          <motion.path
+            d="M-50,400 Q200,200 400,350 T700,250 T1000,400 T1400,300 T1600,400"
+            fill="none"
+            stroke="url(#goldGradient)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 0.4 }}
+            transition={{ duration: 3, ease: "easeInOut" }}
+          />
+          <motion.path
+            d="M-100,600 Q150,450 350,550 T650,400 T950,550 T1350,450 T1550,550"
+            fill="none"
+            stroke="url(#goldGradient)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 0.3 }}
+            transition={{ duration: 3.5, delay: 0.5, ease: "easeInOut" }}
+          />
+          <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(36, 72%, 52%)" />
+              <stop offset="50%" stopColor="hsl(36, 80%, 62%)" />
+              <stop offset="100%" stopColor="hsl(36, 72%, 52%)" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        {/* Floating Pen Illustrations */}
+        {/* Pen 1 - Large, right side */}
+        <motion.svg
+          className="absolute right-[10%] top-[15%] w-48 h-48 md:w-64 md:h-64 opacity-80"
+          viewBox="0 0 100 100"
+          animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <defs>
+            <linearGradient id="penBody1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="hsl(36, 72%, 52%)" />
+              <stop offset="100%" stopColor="hsl(36, 65%, 40%)" />
+            </linearGradient>
+          </defs>
+          <rect x="20" y="35" width="55" height="10" rx="2" fill="url(#penBody1)" />
+          <polygon points="75,35 90,40 75,45" fill="hsl(var(--primary-dark))" />
+          <rect x="18" y="37" width="5" height="6" rx="1" fill="hsl(var(--gold-dark))" />
+          <rect x="35" y="36" width="15" height="8" rx="1" fill="hsl(var(--gold-light) / 0.6)" />
+          <line x1="88" y1="40" x2="95" y2="40" stroke="hsl(var(--primary-dark))" strokeWidth="1" />
+        </motion.svg>
+
+        {/* Pen 2 - Medium, left side */}
+        <motion.svg
+          className="absolute left-[5%] top-[60%] w-32 h-32 md:w-44 md:h-44 opacity-60"
+          viewBox="0 0 100 100"
+          animate={{ y: [0, -12, 0], rotate: [-5, 0, -5] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        >
+          <rect x="15" y="45" width="60" height="8" rx="2" fill="hsl(var(--gold))" />
+          <polygon points="75,45 88,49 75,53" fill="hsl(var(--primary))" />
+          <rect x="13" y="46.5" width="4" height="5" rx="1" fill="hsl(var(--gold-dark))" />
+          <circle cx="30" cy="49" r="2" fill="hsl(var(--gold-light) / 0.8)" />
+        </motion.svg>
+
+        {/* Pen 3 - Small, top right */}
+        <motion.svg
+          className="absolute right-[25%] bottom-[20%] w-24 h-24 md:w-36 md:h-36 opacity-50"
+          viewBox="0 0 100 100"
+          animate={{ y: [0, -10, 0], rotate: [10, 15, 10] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        >
+          <rect x="20" y="46" width="50" height="7" rx="2" fill="hsl(var(--gold-light))" />
+          <polygon points="70,46 82,49.5 70,53" fill="hsl(var(--primary-dark))" />
+          <rect x="18" y="47" width="4" height="5" rx="1" fill="hsl(var(--gold))" />
+        </motion.svg>
+
+        {/* Pen 4 - Extra small, decorative */}
+        <motion.svg
+          className="absolute left-[20%] top-[20%] w-16 h-16 md:w-24 md:h-24 opacity-40"
+          viewBox="0 0 100 100"
+          animate={{ y: [0, -8, 0], rotate: [-10, -5, -10] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        >
+          <rect x="25" y="47" width="45" height="6" rx="1.5" fill="hsl(var(--gold-dark))" />
+          <polygon points="70,47 80,50 70,53" fill="hsl(var(--primary))" />
+        </motion.svg>
+
+        {/* Floating gold particles */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 rounded-full bg-gold/40"
+            style={{
+              left: `${15 + i * 10}%`,
+              top: `${20 + (i % 3) * 25}%`,
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.3, 0.7, 0.3],
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.3,
+            }}
+          />
+        ))}
+
+        <div className="relative container mx-auto px-4 py-20 z-10">
           <div className="max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -286,13 +407,13 @@ const Index = () => {
             >
               <span className="gold-gradient-text">Connecting Global Markets</span>
               <br />
-              <span className="text-white drop-shadow-lg">with Trust & Excellence</span>
+              <span className="text-primary-foreground drop-shadow-lg">with Trust & Excellence</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md"
+              className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed drop-shadow-md"
             >
               Akanta Global is a trusted Indian export company delivering high-quality, export-grade writing instruments to international markets.
             </motion.p>
@@ -304,13 +425,13 @@ const Index = () => {
             >
               <Link
                 to="/products"
-                className="bg-gold text-white px-7 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
+                className="bg-gold text-accent-foreground px-7 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
               >
                 Explore Our Products
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white/50 text-white px-7 py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="border-2 border-primary-foreground/50 text-primary-foreground px-7 py-3 rounded-md font-semibold hover:bg-primary-foreground/10 transition-colors backdrop-blur-sm"
               >
                 Contact Us
               </Link>
