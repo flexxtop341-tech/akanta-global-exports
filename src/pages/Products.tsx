@@ -5,8 +5,6 @@ import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
-import gelPens from "@/assets/gel-pens.jpg";
-import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
@@ -31,20 +29,6 @@ const products = [
     title: "Metallic Ball Pens",
     desc: "Premium metallic-finish pens for corporate gifting & executive use.",
     specs: ["Ink: Oil-based", "Tip: 0.7mm – 1.0mm", "Body: Full Metal"],
-    moq: "5,000 units",
-  },
-  {
-    image: gelPens,
-    title: "Gel Pens",
-    desc: "Vibrant gel ink pens offering superior writing comfort with a wide range of colors.",
-    specs: ["Ink: Water-based gel", "Tip: 0.38mm – 0.7mm", "Body: Plastic"],
-    moq: "10,000 units",
-  },
-  {
-    image: promoPens,
-    title: "Promotional Pens",
-    desc: "Custom-branded pens for corporate events, trade shows, and marketing campaigns.",
-    specs: ["Custom logo printing", "Multiple color options", "Bulk packaging available"],
     moq: "5,000 units",
   },
   {
