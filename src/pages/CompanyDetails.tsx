@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
