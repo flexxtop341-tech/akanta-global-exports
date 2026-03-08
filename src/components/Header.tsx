@@ -109,7 +109,7 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative text-[13px] font-medium px-3 py-2 rounded-lg transition-all duration-300 whitespace-nowrap group ${
+                className={`relative text-[14px] font-medium px-3 py-2 rounded-lg transition-all duration-300 whitespace-nowrap group ${
                   location.pathname === item.path
                     ? "text-gold"
                     : "text-foreground/65 hover:text-foreground"
