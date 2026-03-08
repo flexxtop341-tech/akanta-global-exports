@@ -77,7 +77,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-3 text-sm uppercase tracking-[0.2em] text-gold">Get In Touch</h4>
+            <h4 className="font-semibold mb-3 text-base uppercase tracking-[0.2em] text-gold">Get In Touch</h4>
             <div className="h-[2px] w-8 mb-5 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
             <div className="flex flex-col gap-4">
               <a
