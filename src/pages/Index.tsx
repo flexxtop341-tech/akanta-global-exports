@@ -960,7 +960,7 @@ const Index = () => {
             >
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-gold-light to-gold text-primary px-12 py-5 rounded-full font-bold text-lg hover:from-gold-light hover:via-gold hover:to-gold-light transition-all duration-500 shadow-2xl shadow-gold/30 overflow-hidden"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-gold via-gold-light to-gold text-primary px-8 py-4 md:px-12 md:py-5 rounded-full font-bold text-base md:text-lg hover:from-gold-light hover:via-gold hover:to-gold-light transition-all duration-500 shadow-2xl shadow-gold/30 overflow-hidden"
               >
                 {/* Shimmer effect */}
                 <motion.div
