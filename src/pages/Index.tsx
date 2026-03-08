@@ -244,9 +244,9 @@ const ContactSection = () => {
 };
 
 const categories = [
-  { image: ballPens, title: "Ball Pens", desc: "Classic smooth-writing ball pens for everyday office, school & bulk use." },
-  { image: buttonPens, title: "Click / Button Pens", desc: "Retractable push-button pens with sleek designs and comfortable grip." },
-  { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gifting & executive use." },
+  { image: ballPens, title: "Ball Pens", desc: "High-quality plastic ball pens for bulk orders — ideal for office stationery, school supplies, and wholesale distribution." },
+  { image: buttonPens, title: "Click / Retractable Pens", desc: "Retractable push-button pens with ergonomic grip — popular with bulk pen distributors and promotional product companies." },
+  { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gift pen suppliers and executive branding — smooth writing, durable build." },
 ];
 
 const fadeUp = {
