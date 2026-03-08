@@ -80,6 +80,11 @@ const CompanyDetails = () => {
 
   return (
     <>
+      <SEOHead
+        title="Company Details"
+        description="Discover Akanta Global's business processes, quality assurance steps, and commitment to excellence in international merchant export operations."
+        path="/company"
+      />
       <PageHero
         title="Company Details"
         subtitle="Learn about our operations, business model, and commitment to excellence in international trade."

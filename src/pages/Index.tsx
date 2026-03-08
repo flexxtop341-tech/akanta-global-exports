@@ -270,6 +270,11 @@ const scaleIn = {
 const Index = () => {
   return (
     <>
+      <SEOHead
+        title="Excellence in Global Trade"
+        description="Akanta Global is India's trusted merchant export company specializing in writing instruments, global sourcing, and international trade. Quality products, reliable partnerships."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex items-center">
         <video
