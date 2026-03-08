@@ -1,11 +1,14 @@
 import { useState, FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Ship, PackageCheck, Globe2, Send, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Ship, PackageCheck, Globe2, Send, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import iconShipping from "@/assets/icon-shipping.png";
 import iconQualityProduct from "@/assets/icon-quality-product.png";
 import iconGlobalReach from "@/assets/icon-global-reach.png";
+import iconDistribution from "@/assets/icon-distribution.png";
+import iconPartnership from "@/assets/icon-partnership.png";
+import iconAboutPartner from "@/assets/icon-about-partner.png";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
@@ -21,9 +24,9 @@ import pensCollection from "@/assets/pens-collection.png";
 const inputClass = "w-full px-4 py-3 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-gold/40 focus:border-gold/60 transition-all duration-300 placeholder:text-muted-foreground/50";
 
 const contactInfoItems = [
-  { icon: MapPin, title: "Visit Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003", color: "from-gold/20 to-amber-500/10" },
-  { icon: Phone, title: "Call Us Directly", text: "+91 96733 98945", href: "tel:+919673398945", color: "from-emerald-500/20 to-green-400/10" },
-  { icon: Mail, title: "Send an Email", text: "akantaglobal@gmail.com", href: "mailto:akantaglobal@gmail.com", color: "from-blue-500/20 to-sky-400/10" },
+  { image: iconDistribution, title: "Visit Our Office", text: "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner, Nashik – 422003", color: "from-gold/20 to-amber-500/10" },
+  { image: iconPartnership, title: "Call Us Directly", text: "+91 96733 98945", href: "tel:+919673398945", color: "from-emerald-500/20 to-green-400/10" },
+  { image: iconAboutPartner, title: "Send an Email", text: "akantaglobal@gmail.com", href: "mailto:akantaglobal@gmail.com", color: "from-blue-500/20 to-sky-400/10" },
 ];
 
 const ContactSection = () => {
