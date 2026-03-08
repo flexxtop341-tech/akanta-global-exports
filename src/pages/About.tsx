@@ -329,7 +329,7 @@ const About = () => {
               <span className="gold-gradient-text">Ready to Partner With Us?</span>
             </motion.h2>
             <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-xl mx-auto text-lg mb-8 leading-relaxed">
-              Join 500+ satisfied clients across 50+ countries. Let's grow your business together.
+              Join our growing network of satisfied clients worldwide. Let's grow your business together.
             </motion.p>
             <motion.div variants={fadeUp} custom={2} className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
