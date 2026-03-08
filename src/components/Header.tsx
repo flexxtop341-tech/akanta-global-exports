@@ -151,7 +151,7 @@ const Header = () => {
 
             <Link
               to="/contact"
-              className="relative overflow-hidden text-white px-6 py-2.5 rounded-lg text-[13px] font-semibold transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--gold)/0.4)] group"
+              className="relative overflow-hidden text-white px-5 py-1.5 rounded-md text-[12px] font-semibold transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--gold)/0.4)] group"
               style={{ background: 'linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)))' }}
             >
               <span className="relative z-10 flex items-center gap-1.5">
