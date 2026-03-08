@@ -99,14 +99,6 @@ const CompanyDetails = () => {
         {/* Animated Text Overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-gold font-medium text-sm uppercase tracking-[0.3em] mb-3"
-            >
-              Since 2020
-            </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
