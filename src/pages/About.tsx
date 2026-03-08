@@ -125,8 +125,8 @@ const About = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.div variants={fadeUp} custom={3} className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Akanta Global is an international export company focused on supplying high-quality, export-grade pens that meet international standards. We support our buyers with transparent pricing, timely delivery, and dependable service.</p>
-                <p>Our mission is to help importers, distributors, and promotional product companies grow their businesses through ethical sourcing, strong supplier partnerships, and customer-focused solutions.</p>
+                <p>Akanta Global is a leading ball pen exporter and Indian stationery supplier focused on delivering high-quality, export-grade pens that meet international standards. We support our buyers — distributors, retailers, and promotional companies — with transparent pricing, timely delivery, and dependable service.</p>
+                <p>Our mission is to help importers, wholesale pen buyers, and corporate gift companies grow their businesses through ethical sourcing, strong manufacturing partnerships, and customer-focused solutions.</p>
               </motion.div>
 
               {/* Pen hero image */}
