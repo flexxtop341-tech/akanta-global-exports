@@ -94,7 +94,7 @@ const CompanyDetails = () => {
       <section className="relative h-72 md:h-96 overflow-hidden -mt-1">
         <motion.img
           src={companyHeroBanner}
-          alt="Akanta Global headquarters"
+          alt="Pen manufacturing company India — Akanta Global export headquarters"
           className="w-full h-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
