@@ -76,6 +76,7 @@ const AnimatedCounter = ({ value, label }: { value: string; label: string }) => 
 };
 
 const CompanyDetails = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
   const timelineRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: timelineRef,
