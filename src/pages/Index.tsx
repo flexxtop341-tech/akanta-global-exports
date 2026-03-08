@@ -399,7 +399,7 @@ const Index = () => {
       </section>
 
       {/* Commitment to Export & Shipping */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-20 md:py-32 overflow-hidden">
         <motion.img
           src={shippingBg}
           alt="Bulk ball pen exporter India — international shipping and logistics"
