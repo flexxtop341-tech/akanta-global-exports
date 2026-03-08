@@ -10,11 +10,11 @@ import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
-import globalTrade from "@/assets/global-trade.png";
+import globalTrade from "@/assets/global-trade.jpg";
 import shippingBg from "@/assets/shipping-bg.jpg";
-import trustedPartnerBg from "@/assets/trusted-partner-bg.png";
-import importExportIllustration from "@/assets/import-export-illustration.png";
-import pensPattern from "@/assets/pens-pattern.png";
+import trustedPartnerBg from "@/assets/trusted-partner-bg.jpg";
+import importExportIllustration from "@/assets/import-export-illustration.jpg";
+import pensPattern from "@/assets/pens-pattern.jpg";
 import ctaBg from "@/assets/cta-bg.jpg";
 import pensCollection from "@/assets/pens-collection.png";
 
