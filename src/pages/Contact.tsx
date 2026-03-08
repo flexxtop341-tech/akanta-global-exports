@@ -176,7 +176,7 @@ const Contact = () => {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.3 + i * 0.1 }}
-                      className="flex items-center gap-1.5 text-xs text-muted-foreground bg-gold/5 border border-gold/15 rounded-full px-3 py-1.5"
+                      className="flex items-center gap-1.5 text-sm text-muted-foreground bg-gold/5 border border-gold/15 rounded-full px-3 py-1.5"
                     >
                       <h.icon size={12} className="text-gold" />
                       <span>{h.text}</span>
