@@ -141,17 +141,27 @@ const Index = () => {
       </section>
 
       {/* Commitment to Export & Shipping */}
-      <section className="relative py-28 overflow-hidden">
-        <img
+      <section className="relative py-32 overflow-hidden">
+        <motion.img
           src={shippingBg}
           alt="International shipping port with cargo containers"
           className="absolute inset-0 w-full h-full object-cover"
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px'
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92) 0%, hsl(var(--primary-dark) / 0.85) 50%, hsl(var(--primary) / 0.88) 100%)'
         }} />
+        <div className="absolute inset-0 opacity-[0.07]" style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.6) 1px, transparent 1px)`,
+          backgroundSize: '24px 24px'
+        }} />
+
+        {/* Decorative gold corner accents */}
+        <div className="absolute top-8 left-8 w-20 h-20 border-t-2 border-l-2 border-gold/25 rounded-tl-lg hidden lg:block" />
+        <div className="absolute bottom-8 right-8 w-20 h-20 border-b-2 border-r-2 border-gold/25 rounded-br-lg hidden lg:block" />
 
         <motion.div
           initial="hidden"
@@ -159,44 +169,55 @@ const Index = () => {
           viewport={{ once: true, margin: "-80px" }}
           className="relative container mx-auto px-4"
         >
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.span
               variants={fadeUp} custom={0}
-              className="inline-block text-gold font-semibold text-xs uppercase tracking-[0.25em] mb-3"
+              className="inline-flex items-center gap-2 text-gold font-semibold text-xs uppercase tracking-[0.3em] mb-4 bg-gold/10 px-4 py-1.5 rounded-full border border-gold/20 backdrop-blur-sm"
             >
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
               Our Promise
             </motion.span>
-            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
               <span className="gold-gradient-text">Our Commitment to</span>
               <br />
-              <span className="text-white">Export & Shipping</span>
+              <span className="text-white drop-shadow-lg">Export & Shipping</span>
             </motion.h2>
-            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-8" />
-            <motion.p variants={fadeUp} custom={3} className="text-white/85 text-base md:text-lg leading-relaxed mb-10">
+            <motion.div variants={fadeUp} custom={2} className="flex items-center justify-center gap-3 mb-8">
+              <span className="h-[1px] w-12 bg-gradient-to-r from-transparent to-gold/50" />
+              <span className="w-2 h-2 rotate-45 border border-gold/60" />
+              <span className="h-[2px] w-16 bg-gradient-to-r from-gold to-gold-light" />
+              <span className="w-2 h-2 rotate-45 border border-gold/60" />
+              <span className="h-[1px] w-12 bg-gradient-to-l from-transparent to-gold/50" />
+            </motion.div>
+            <motion.p variants={fadeUp} custom={3} className="text-white/80 text-base md:text-lg leading-relaxed mb-14 max-w-2xl mx-auto">
               At Akanta Global, we focus on exporting quality products to international markets with reliable shipping and smooth trade processes. We aim to create opportunities for businesses, distributors, and buyers who want to grow in global markets. By partnering with us, you get the opportunity to access quality products and expand your business through trusted export solutions.
             </motion.p>
 
-            <motion.div
-              variants={fadeUp} custom={4}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-5"
-            >
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
-                { icon: Ship, label: "Reliable Shipping", sub: "Smooth logistics worldwide" },
-                { icon: PackageCheck, label: "Quality Products", sub: "Export-grade standards" },
-                { icon: Globe2, label: "Global Reach", sub: "Markets across continents" },
+                { icon: Ship, label: "Reliable Shipping", sub: "Smooth logistics worldwide", stat: "45+" , statLabel: "Countries" },
+                { icon: PackageCheck, label: "Quality Products", sub: "Export-grade standards", stat: "100%", statLabel: "Inspected" },
+                { icon: Globe2, label: "Global Reach", sub: "Markets across continents", stat: "24/7", statLabel: "Support" },
               ].map((item, i) => (
                 <motion.div
                   key={i}
                   variants={fadeUp}
-                  custom={5 + i}
-                  className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl py-5 px-4 border border-white/10 hover:border-gold/30 transition-colors duration-300"
+                  custom={4 + i}
+                  whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                  className="group relative bg-white/[0.08] backdrop-blur-md rounded-2xl py-8 px-6 border border-white/10 hover:border-gold/40 transition-all duration-500 hover:bg-white/[0.12] hover:shadow-[0_20px_60px_-15px_hsl(var(--gold)/0.2)]"
                 >
-                  <item.icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
-                  <span className="text-white font-semibold text-sm">{item.label}</span>
-                  <span className="text-white/60 text-xs">{item.sub}</span>
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-[2px] bg-gradient-to-r from-transparent via-gold/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  <div className="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:bg-gold/20 transition-all duration-500">
+                    <item.icon className="w-7 h-7 text-gold" strokeWidth={1.5} />
+                  </div>
+                  <span className="block text-2xl font-bold gold-gradient-text mb-0.5">{item.stat}</span>
+                  <span className="block text-white/50 text-xs uppercase tracking-widest mb-3">{item.statLabel}</span>
+                  <span className="block text-white font-semibold text-base mb-1">{item.label}</span>
+                  <span className="block text-white/50 text-sm">{item.sub}</span>
                 </motion.div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </motion.div>
       </section>
