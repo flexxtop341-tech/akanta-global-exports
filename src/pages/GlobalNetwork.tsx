@@ -1,8 +1,12 @@
-import { Globe, ShieldCheck, Users, MapPin } from "lucide-react";
+import { Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import PageHero from "@/components/PageHero";
 import globalMapBg from "@/assets/global-map-bg.jpg";
 import globalNetworkHero from "@/assets/global-network-hero.jpg";
+import iconQuality from "@/assets/icon-quality.png";
+import iconPartnership from "@/assets/icon-partnership.png";
+import iconGlobalReach from "@/assets/icon-global-reach.png";
+import iconShipping from "@/assets/icon-shipping.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -20,10 +24,10 @@ const float = {
 };
 
 const items = [
-  { icon: ShieldCheck, title: "Verified Manufacturers", desc: "Every supplier in our network is rigorously vetted for quality and reliability." },
-  { icon: Users, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
-  { icon: Globe, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
-  { icon: MapPin, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
+  { icon: iconQuality, title: "Verified Manufacturers", desc: "Every supplier in our network is rigorously vetted for quality and reliability." },
+  { icon: iconPartnership, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
+  { icon: iconGlobalReach, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
+  { icon: iconShipping, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
 ];
 
 const GlobalNetwork = () => {
