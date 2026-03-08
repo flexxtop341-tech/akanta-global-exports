@@ -1,4 +1,4 @@
-import { ArrowRight, Linkedin, Mail, Twitter } from "lucide-react";
+import { ArrowRight, Linkedin, Mail, Instagram } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
@@ -101,8 +101,8 @@ const Team = () => {
                 <a href="mailto:babita@akantaglobal.com" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
                   <Mail size={16} className="text-gold-light" />
                 </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
-                  <Twitter size={16} className="text-gold-light" />
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
+                  <Instagram size={16} className="text-gold-light" />
                 </a>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
@@ -176,8 +176,8 @@ const Team = () => {
                 <a href="mailto:karan@akantaglobal.com" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
                   <Mail size={16} className="text-gold-light" />
                 </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
-                  <Twitter size={16} className="text-gold-light" />
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
+                  <Instagram size={16} className="text-gold-light" />
                 </a>
               </div>
 
