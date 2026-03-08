@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Ship, PackageCheck, Globe2 } from "lucide-react";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
+import shippingBg from "@/assets/shipping-bg.jpg";
 
 
 const categories = [
@@ -136,6 +138,67 @@ const Index = () => {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      {/* Commitment to Export & Shipping */}
+      <section className="relative py-28 overflow-hidden">
+        <img
+          src={shippingBg}
+          alt="International shipping port with cargo containers"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70" />
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
+          backgroundSize: '20px 20px'
+        }} />
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="relative container mx-auto px-4"
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <motion.span
+              variants={fadeUp} custom={0}
+              className="inline-block text-gold font-semibold text-xs uppercase tracking-[0.25em] mb-3"
+            >
+              Our Promise
+            </motion.span>
+            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="gold-gradient-text">Our Commitment to</span>
+              <br />
+              <span className="text-white">Export & Shipping</span>
+            </motion.h2>
+            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-8" />
+            <motion.p variants={fadeUp} custom={3} className="text-white/85 text-base md:text-lg leading-relaxed mb-10">
+              At Akanta Global, we focus on exporting quality products to international markets with reliable shipping and smooth trade processes. We aim to create opportunities for businesses, distributors, and buyers who want to grow in global markets. By partnering with us, you get the opportunity to access quality products and expand your business through trusted export solutions.
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp} custom={4}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-5"
+            >
+              {[
+                { icon: Ship, label: "Reliable Shipping", sub: "Smooth logistics worldwide" },
+                { icon: PackageCheck, label: "Quality Products", sub: "Export-grade standards" },
+                { icon: Globe2, label: "Global Reach", sub: "Markets across continents" },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp}
+                  custom={5 + i}
+                  className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl py-5 px-4 border border-white/10 hover:border-gold/30 transition-colors duration-300"
+                >
+                  <item.icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
+                  <span className="text-white font-semibold text-sm">{item.label}</span>
+                  <span className="text-white/60 text-xs">{item.sub}</span>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Our Services */}
