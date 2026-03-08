@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Building2, MapPin, Calendar, Users, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
