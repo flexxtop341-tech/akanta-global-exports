@@ -318,6 +318,64 @@ const Index = () => {
           </defs>
         </svg>
 
+        {/* Signature/Handwriting Animation - Company Name */}
+        <svg 
+          className="absolute bottom-[8%] right-[5%] w-[300px] md:w-[450px] lg:w-[550px] h-auto pointer-events-none opacity-70"
+          viewBox="0 0 400 100"
+          fill="none"
+        >
+          {/* "Akanta" - Stylized cursive path */}
+          <motion.path
+            d="M20,70 Q25,30 35,50 L40,70 M30,55 L45,55 M50,70 L50,35 Q65,30 70,45 Q75,60 70,70 M80,70 L80,40 Q95,35 100,50 L100,70 M110,70 L110,40 Q125,35 130,50 L130,70 M140,35 Q150,30 155,40 L155,70 Q155,30 170,35"
+            stroke="url(#signatureGradient)"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{ duration: 2.5, delay: 1, ease: "easeOut" }}
+          />
+          {/* "Global" - Stylized cursive path */}
+          <motion.path
+            d="M190,55 Q180,40 195,35 Q215,30 215,50 Q215,65 200,70 L215,70 M225,55 Q225,35 240,35 Q255,35 255,55 Q255,75 240,75 Q225,75 225,55 M265,30 L265,70 M275,70 L275,35 Q290,30 295,45 Q295,70 295,70 M305,70 Q305,35 320,35 Q335,35 335,55 Q335,75 320,75 M305,55 L330,55 M345,30 L345,70"
+            stroke="url(#signatureGradient)"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 1 }}
+            transition={{ duration: 2.5, delay: 2.5, ease: "easeOut" }}
+          />
+          {/* Decorative underline swoosh */}
+          <motion.path
+            d="M15,82 Q100,95 200,80 Q300,65 380,85"
+            stroke="url(#signatureGradient)"
+            strokeWidth="2"
+            strokeLinecap="round"
+            fill="none"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 0.8 }}
+            transition={{ duration: 1.5, delay: 4.5, ease: "easeInOut" }}
+          />
+          {/* Pen nib accent dot */}
+          <motion.circle
+            cx="380"
+            cy="85"
+            r="3"
+            fill="hsl(36, 80%, 62%)"
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, delay: 5.8 }}
+          />
+          <defs>
+            <linearGradient id="signatureGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="hsl(36, 72%, 52%)" />
+              <stop offset="50%" stopColor="hsl(36, 87%, 59%)" />
+              <stop offset="100%" stopColor="hsl(36, 80%, 62%)" />
+            </linearGradient>
+          </defs>
+        </svg>
+
         {/* Floating Pen Illustrations */}
         {/* Pen 1 - Large, right side */}
         <motion.svg
