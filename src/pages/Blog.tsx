@@ -93,6 +93,7 @@ const Blog = () => {
                     <span className="flex items-center gap-1.5 text-sm font-semibold text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       Read Article <ArrowRight size={14} />
                     </span>
+                    </div>
                   </div>
                 </Link>
               </motion.article>
