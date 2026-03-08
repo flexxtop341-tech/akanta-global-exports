@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import companyHeroBanner from "@/assets/company-hero-banner.jpg";
+import logo from "@/assets/akanta-logo-new.png";
 import iconVerify from "@/assets/icon-step-verify.png";
 import iconInspect from "@/assets/icon-step-inspect.png";
 import iconDocs from "@/assets/icon-step-docs.png";
