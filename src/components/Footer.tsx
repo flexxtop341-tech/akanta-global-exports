@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:pr-6">
             <img src={logo} alt="Akanta Global" className="h-36 w-auto mb-4 brightness-0 invert" />
-            <p className="text-sm text-footer-foreground/60 leading-relaxed mb-5">
+            <p className="text-base text-footer-foreground/60 leading-relaxed mb-5">
               Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
             </p>
             <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1">
