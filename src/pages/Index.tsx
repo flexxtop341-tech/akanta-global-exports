@@ -739,7 +739,7 @@ const Index = () => {
       <ContactSection />
 
       {/* Final CTA */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-28 relative overflow-hidden">
         <img src={ctaBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0" style={{
           background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.88))'
@@ -748,25 +748,140 @@ const Index = () => {
           backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
           backgroundSize: '24px 24px'
         }} />
+        
+        {/* Animated floating shapes */}
+        <motion.div
+          className="absolute top-10 left-[10%] w-20 h-20 rounded-full border border-gold/20"
+          animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-16 right-[15%] w-12 h-12 rounded-full bg-gold/10"
+          animate={{ y: [0, 15, 0], scale: [1, 1.2, 1] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-1/3 right-[8%] w-6 h-6 rotate-45 border-2 border-gold/30"
+          animate={{ rotate: [45, 135, 45], y: [0, -10, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-[5%] w-16 h-16 rounded-lg border border-gold/15 rotate-12"
+          animate={{ rotate: [12, -12, 12], scale: [1, 0.9, 1] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute top-1/4 left-[20%] w-3 h-3 rounded-full bg-gold/40"
+          animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0.8, 0.4] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-[25%] w-4 h-4 rounded-full bg-gold/30"
+          animate={{ scale: [1, 1.3, 1], y: [0, -8, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+        
+        {/* Animated lines */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <motion.line
+            x1="0" y1="80" x2="100" y2="20"
+            stroke="hsl(var(--gold) / 0.1)" strokeWidth="0.1"
+            initial={{ pathLength: 0 }}
+            whileInView={{ pathLength: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "easeOut" }}
+          />
+          <motion.line
+            x1="0" y1="60" x2="100" y2="40"
+            stroke="hsl(var(--gold) / 0.08)" strokeWidth="0.08"
+            initial={{ pathLength: 0 }}
+            whileInView={{ pathLength: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2.5, ease: "easeOut", delay: 0.3 }}
+          />
+        </svg>
+        
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           className="relative container mx-auto px-4 text-center"
         >
-          <motion.h2 variants={fadeUp} custom={0} className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="gold-gradient-text">Let's Grow Your Business Globally</span>
+          {/* Animated globe icon */}
+          <motion.div
+            className="mx-auto mb-6 w-16 h-16 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center"
+            animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            >
+              <Globe2 size={32} className="text-gold" />
+            </motion.div>
+          </motion.div>
+          
+          <motion.h2 
+            variants={fadeUp} 
+            custom={0} 
+            className="text-3xl md:text-5xl font-bold mb-6"
+          >
+            <motion.span 
+              className="gold-gradient-text inline-block"
+              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+              style={{ backgroundSize: "200% auto" }}
+            >
+              Let's Grow Your Business Globally
+            </motion.span>
           </motion.h2>
-          <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/80 max-w-xl mx-auto mb-8">
+          <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/80 max-w-xl mx-auto mb-10 text-lg">
             Partner with Akanta Global for reliable, high-quality pen exports from India to the world.
           </motion.p>
           <motion.div variants={fadeUp} custom={2}>
-            <Link
-              to="/contact"
-              className="inline-block bg-gold text-white px-8 py-3.5 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
+            <motion.div
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px hsl(var(--gold) / 0.4)" }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block"
             >
-              Start a Partnership
-            </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-gold text-white px-10 py-4 rounded-full font-semibold hover:bg-gold-dark transition-colors shadow-xl shadow-gold/20"
+              >
+                Start a Partnership
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              </Link>
+            </motion.div>
+          </motion.div>
+          
+          {/* Trust indicators */}
+          <motion.div 
+            variants={fadeUp} 
+            custom={3}
+            className="mt-12 flex flex-wrap justify-center gap-8 text-primary-foreground/50 text-sm"
+          >
+            {[
+              { stat: "45+", label: "Countries" },
+              { stat: "500+", label: "Partners" },
+              { stat: "10K+", label: "Orders" },
+            ].map((item, i) => (
+              <motion.div 
+                key={i}
+                className="flex items-center gap-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 + i * 0.15 }}
+              >
+                <span className="text-gold font-bold text-lg">{item.stat}</span>
+                <span>{item.label}</span>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
       </section>
