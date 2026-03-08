@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
+import buttonPens from "@/assets/button-pens.jpg";
+import metallicPens from "@/assets/metallic-pens.jpg";
 import gelPens from "@/assets/gel-pens.jpg";
 import promoPens from "@/assets/promo-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
@@ -13,9 +15,23 @@ const products = [
   {
     image: ballPens,
     title: "Ball Pens",
-    desc: "Smooth-writing, durable ball pens available in multiple styles. Ideal for office, school, and promotional use.",
+    desc: "Classic smooth-writing ball pens for everyday office, school & bulk use.",
     specs: ["Ink: Oil-based", "Tip: 0.5mm – 1.0mm", "Body: Plastic / Metal"],
     moq: "10,000 units",
+  },
+  {
+    image: buttonPens,
+    title: "Click / Button Pens",
+    desc: "Retractable push-button pens with sleek designs and comfortable grip.",
+    specs: ["Retractable mechanism", "Ergonomic grip", "Body: Plastic / Metal"],
+    moq: "10,000 units",
+  },
+  {
+    image: metallicPens,
+    title: "Metallic Ball Pens",
+    desc: "Premium metallic-finish pens for corporate gifting & executive use.",
+    specs: ["Ink: Oil-based", "Tip: 0.7mm – 1.0mm", "Body: Full Metal"],
+    moq: "5,000 units",
   },
   {
     image: gelPens,
