@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import aboutPensHero from "@/assets/about-pens-hero.jpg";
+import aboutQualityInspect from "@/assets/about-quality-inspect.jpg";
+import aboutWarehouse from "@/assets/about-warehouse.jpg";
+import aboutPartnership from "@/assets/about-partnership.jpg";
 import iconAboutGlobal from "@/assets/icon-about-global.png";
 import iconAboutQuality from "@/assets/icon-about-quality.png";
 import iconAboutPartner from "@/assets/icon-about-partner.png";
@@ -195,13 +198,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Core Strengths — with vector icons */}
+      {/* Core Strengths — with vector icons + stock image */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-card/30 via-card to-card/30" />
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gold/[0.02] rounded-full blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-10">
             <motion.span variants={fadeUp} custom={0} className="inline-block text-gold text-xs font-bold tracking-[0.25em] uppercase bg-gold/5 border border-gold/20 rounded-full px-5 py-1.5 mb-4">
               Why Choose Us
             </motion.span>
@@ -212,6 +215,28 @@ const About = () => {
             <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
               What sets us apart in the global writing instruments market.
             </motion.p>
+          </motion.div>
+
+          {/* Quality inspection banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative rounded-2xl overflow-hidden mb-12 group/banner border border-border/50 shadow-[0_12px_40px_-12px_hsl(var(--primary)/0.15)]"
+          >
+            <motion.img
+              src={aboutQualityInspect}
+              alt="Quality inspection of writing instruments at Akanta Global"
+              className="w-full h-64 md:h-80 object-cover"
+              whileHover={{ scale: 1.03 }}
+              transition={{ duration: 0.8 }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 p-8">
+              <h3 className="text-white text-2xl font-bold mb-1 drop-shadow-lg">Rigorous Quality Standards</h3>
+              <p className="text-white/80 text-sm max-w-md drop-shadow-md">Every writing instrument undergoes multi-stage inspection to ensure export-grade quality and consistency.</p>
+            </div>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -248,9 +273,8 @@ const About = () => {
 
       {/* Business Model — with vector step icons */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/[0.03] rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <img src={aboutWarehouse} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-card/90 to-background/95 backdrop-blur-[2px]" />
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center mb-16">
@@ -318,12 +342,9 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/90" />
-        <div className="absolute -top-20 -right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.5) 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
+        <img src={aboutPartnership} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(135deg, hsl(var(--primary) / 0.92), hsl(var(--primary-dark) / 0.85))'
         }} />
 
         <div className="container mx-auto px-4 relative z-10 text-center">
