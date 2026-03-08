@@ -143,7 +143,7 @@ const ContactSection = () => {
                     Message <span className="text-gold">*</span>
                   </label>
                   <textarea
-                    required rows={5} placeholder="Tell us about your requirements, desired products, and quantities..."
+                    required rows={6} placeholder="Tell us about your requirements, desired products, and quantities..."
                     maxLength={1000}
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
