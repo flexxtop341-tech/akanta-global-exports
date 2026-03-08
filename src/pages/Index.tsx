@@ -370,7 +370,7 @@ const Index = () => {
                 Akanta Global is a trusted ball pen exporter and stationery supplier from India committed to delivering reliable export solutions for writing instruments and promotional stationery. With strong manufacturing partnerships and strict quality control, we supply affordable and durable ball pens designed for distributors, retailers, and corporate promotional campaigns.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed mb-6">
-                We work closely with suppliers and global partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
+                As a wholesale pen supplier and global pen exporter, we work closely with suppliers and international partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
               </motion.p>
               <motion.div variants={fadeUp} custom={5}>
                 <Link
