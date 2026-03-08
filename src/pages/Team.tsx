@@ -20,6 +20,11 @@ const strengths = [
 const Team = () => {
   return (
     <>
+      <SEOHead
+        title="Our Team & Leadership"
+        description="Meet the leadership team behind Akanta Global — Babita Gunjal (Founder) and Karan Gunjal (Co-Founder) driving excellence in Indian merchant exports."
+        path="/team"
+      />
       <PageHero
         title="Leadership"
         subtitle="Meet the driving force behind Akanta Global's success in international trade."
