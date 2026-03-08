@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import companyHeroBanner from "@/assets/company-hero-banner.jpg";
+import logo from "@/assets/akanta-logo-new.png";
 import iconVerify from "@/assets/icon-step-verify.png";
 import iconInspect from "@/assets/icon-step-inspect.png";
 import iconDocs from "@/assets/icon-step-docs.png";
@@ -90,45 +91,75 @@ const CompanyDetails = () => {
         subtitle="India pen export company — learn about our operations, quality assurance, and commitment to excellence in international stationery trade."
       />
 
-      {/* Company Banner */}
-      <section className="relative h-72 md:h-96 overflow-hidden -mt-1">
-        <motion.img
-          src={companyHeroBanner}
-          alt="Pen manufacturing company India — Akanta Global export headquarters"
-          className="w-full h-full object-cover"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent" />
-        
-        {/* Animated Text Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-3xl md:text-5xl font-bold text-primary-foreground mb-4"
-            >
-              Excellence in{" "}
-              <span className="gold-gradient-text">Global Trade</span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="text-primary-foreground/70 text-sm md:text-base max-w-md mx-auto"
-            >
-              Nashik, India • Serving 15+ Countries Worldwide
-            </motion.p>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 1, delay: 0.9 }}
-              className="w-24 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mt-6"
-            />
-          </div>
+      {/* Business Card Section */}
+      <section className="py-16 md:py-24 bg-muted/30 -mt-1">
+        <div className="container mx-auto px-4 flex justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 40, rotateY: -8 }}
+            whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_30px_80px_-20px_hsl(var(--primary)/0.25)] border border-gold/15"
+            style={{ perspective: '1200px' }}
+          >
+            <div className="grid md:grid-cols-2 min-h-[320px] md:min-h-[380px]">
+              {/* Left — Shipping Image */}
+              <div className="relative overflow-hidden">
+                <img
+                  src={companyHeroBanner}
+                  alt="Akanta Global shipping and logistics"
+                  className="w-full h-full object-cover min-h-[200px]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary/30" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-white/90 bg-primary/60 backdrop-blur-sm rounded-full px-3 py-1 border border-white/10">
+                    Since Establishment
+                  </span>
+                </div>
+              </div>
+
+              {/* Right — Logo & Info (visiting card style) */}
+              <div className="relative bg-card flex flex-col items-center justify-center p-8 md:p-10 text-center">
+                {/* Corner accents */}
+                <div className="absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-gold/30 rounded-tl-sm" />
+                <div className="absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-gold/30 rounded-tr-sm" />
+                <div className="absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-gold/30 rounded-bl-sm" />
+                <div className="absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-gold/30 rounded-br-sm" />
+
+                {/* Subtle dot pattern */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+                  backgroundImage: `radial-gradient(circle, hsl(var(--gold) / 0.8) 1px, transparent 1px)`,
+                  backgroundSize: '20px 20px'
+                }} />
+
+                <div className="relative z-10">
+                  <img
+                    src={logo}
+                    alt="Akanta Global"
+                    className="h-24 md:h-32 w-auto mx-auto mb-4"
+                  />
+                  <div className="w-16 h-[2px] mx-auto mb-4 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(var(--gold)), hsl(var(--gold-light)))' }} />
+                  <h2 className="text-xl md:text-2xl font-bold mb-2">
+                    Excellence in <span className="gold-gradient-text">Global Trade</span>
+                  </h2>
+                  <p className="text-muted-foreground text-sm mb-4 max-w-xs mx-auto">
+                    Trusted Indian exporter of premium writing instruments to global markets.
+                  </p>
+                  <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-muted-foreground/70">
+                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted/60 border border-border/50">
+                      📍 Nashik, India
+                    </span>
+                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted/60 border border-border/50">
+                      🌍 Global Exports
+                    </span>
+                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-muted/60 border border-border/50">
+                      ✅ ISO Certified
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
