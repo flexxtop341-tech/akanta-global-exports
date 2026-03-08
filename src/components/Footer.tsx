@@ -109,8 +109,8 @@ const Footer = () => {
                   <MapPin size={14} className="text-gold" />
                 </span>
                 <div>
-                  <span className="text-[11px] uppercase tracking-widest text-footer-foreground/40 block">Address</span>
-                  <span className="text-sm text-footer-foreground/70">Nashik – 422003, Maharashtra, India</span>
+                  <span className="text-xs uppercase tracking-widest text-footer-foreground/40 block">Address</span>
+                  <span className="text-base text-footer-foreground/70">Nashik – 422003, Maharashtra, India</span>
                 </div>
               </div>
             </div>
