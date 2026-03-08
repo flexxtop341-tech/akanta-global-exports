@@ -1,5 +1,6 @@
-import { Globe, Plane, Ship, Anchor } from "lucide-react";
-import { motion } from "framer-motion";
+import { Globe, Plane, Ship, Anchor, Package, TrendingUp, Users, MapPin, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import globalNetworkHero from "@/assets/global-network-hero.jpg";
@@ -28,6 +29,76 @@ const items = [
   { icon: iconPartnership, title: "International Buyer Support", desc: "Dedicated support team for seamless communication across time zones." },
   { icon: iconGlobalReach, title: "Global Reach", desc: "Exporting to markets across Asia, Africa, Middle East, and beyond." },
   { icon: iconShipping, title: "Strategic Location", desc: "Based in Nashik with proximity to major Indian ports." },
+];
+
+interface RegionData {
+  id: string;
+  label: string;
+  x: string;
+  y: string;
+  countries: string[];
+  products: string[];
+  partners: number;
+  growth: string;
+  description: string;
+}
+
+const regions: RegionData[] = [
+  {
+    id: "middle-east",
+    label: "Middle East",
+    x: "58%",
+    y: "38%",
+    countries: ["UAE", "Saudi Arabia", "Qatar", "Kuwait", "Oman"],
+    products: ["Premium Gel Pens", "Corporate Stationery", "Custom Branding Pens"],
+    partners: 45,
+    growth: "+32%",
+    description: "Our largest export region with strong demand for premium writing instruments and corporate gifting solutions."
+  },
+  {
+    id: "africa",
+    label: "Africa",
+    x: "45%",
+    y: "55%",
+    countries: ["Nigeria", "Kenya", "South Africa", "Egypt", "Ghana"],
+    products: ["Ball Pens", "School Supplies", "Promotional Pens"],
+    partners: 28,
+    growth: "+24%",
+    description: "Rapidly growing market with focus on educational supplies and cost-effective writing solutions."
+  },
+  {
+    id: "south-asia",
+    label: "South Asia",
+    x: "68%",
+    y: "45%",
+    countries: ["Bangladesh", "Sri Lanka", "Nepal", "Myanmar"],
+    products: ["Gel Pens", "Metallic Pens", "Bulk Orders"],
+    partners: 35,
+    growth: "+28%",
+    description: "Regional neighbors with cultural affinity and strong trade relationships for diverse pen categories."
+  },
+  {
+    id: "europe",
+    label: "Europe",
+    x: "42%",
+    y: "25%",
+    countries: ["UK", "Germany", "France", "Netherlands", "Poland"],
+    products: ["Eco-Friendly Pens", "Designer Collections", "Premium Gifts"],
+    partners: 18,
+    growth: "+15%",
+    description: "Premium market segment focusing on sustainable products and high-quality craftsmanship."
+  },
+  {
+    id: "south-america",
+    label: "South America",
+    x: "25%",
+    y: "60%",
+    countries: ["Brazil", "Argentina", "Chile", "Colombia"],
+    products: ["Promotional Pens", "Custom Logo Pens", "Office Supplies"],
+    partners: 12,
+    growth: "+18%",
+    description: "Emerging market with growing demand for promotional products and office stationery."
+  },
 ];
 
 const GlobalNetwork = () => {
