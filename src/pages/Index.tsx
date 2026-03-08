@@ -322,9 +322,9 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed drop-shadow-md"
+              className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed drop-shadow-md"
             >
-              Akanta Global is a trusted ball pen exporter and stationery supplier from India specializing in high-quality writing instruments for international distributors and wholesale buyers. We supply bulk promotional pens, office stationery, and custom branded writing products to clients across global markets.
+              Akanta Global is a trusted ball pen exporter and stationery supplier from India. We supply bulk promotional pens, office stationery, and custom branded writing instruments to global distributors and wholesale buyers.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
