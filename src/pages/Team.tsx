@@ -1,27 +1,18 @@
-import { Globe, Shield, Handshake, TrendingUp, Target, Award, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import founderAvatar from "@/assets/team-founder-avatar.png";
+import iconGlobal from "@/assets/icon-team-global.png";
+import iconQuality from "@/assets/icon-team-quality.png";
+import iconPartner from "@/assets/icon-team-partner.png";
+import iconStrategy from "@/assets/icon-team-strategy.png";
 
 const strengths = [
-  { icon: Globe, label: "Global Trade Expertise", desc: "Deep knowledge of international markets and trade regulations." },
-  { icon: Shield, label: "Quality Assurance", desc: "Rigorous quality checks across the entire supply chain." },
-  { icon: Handshake, label: "Partner Relations", desc: "Building long-term trust with manufacturers and buyers worldwide." },
-  { icon: TrendingUp, label: "Market Strategy", desc: "Data-driven approach to identifying export opportunities." },
-];
-
-const values = [
-  { icon: Target, title: "Mission", desc: "To bridge Indian manufacturers with global markets through transparent, reliable, and efficient export solutions." },
-  { icon: Award, title: "Vision", desc: "To become India's most trusted merchant export partner, known for quality, integrity, and global reach." },
-];
-
-const milestones = [
-  { year: "2020", event: "Company Founded" },
-  { year: "2021", event: "First International Shipment" },
-  { year: "2022", event: "ISO Certifications Achieved" },
-  { year: "2023", event: "Expanded to 10+ Countries" },
-  { year: "2024", event: "APEDA & FIEO Registered" },
+  { icon: iconGlobal, label: "Global Trade Expertise", desc: "Deep knowledge of international markets and trade regulations." },
+  { icon: iconQuality, label: "Quality Assurance", desc: "Rigorous quality checks across the entire supply chain." },
+  { icon: iconPartner, label: "Partner Relations", desc: "Building long-term trust with manufacturers and buyers worldwide." },
+  { icon: iconStrategy, label: "Market Strategy", desc: "Data-driven approach to identifying export opportunities." },
 ];
 
 const Team = () => {
@@ -34,7 +25,6 @@ const Team = () => {
 
       {/* Founder Section */}
       <section className="py-20 bg-background relative overflow-hidden">
-        {/* Background glow */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gold/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/5 rounded-full blur-3xl" />
 
@@ -49,7 +39,6 @@ const Team = () => {
               className="flex justify-center"
             >
               <div className="relative">
-                {/* Decorative ring */}
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
@@ -76,7 +65,6 @@ const Team = () => {
                   />
                 </motion.div>
 
-                {/* Floating badge */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -115,7 +103,6 @@ const Team = () => {
                 establishing the company as a trusted bridge between Indian manufacturers and international buyers.
               </p>
 
-              {/* Decorative divider */}
               <motion.div
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
@@ -124,7 +111,6 @@ const Team = () => {
                 className="h-0.5 w-24 bg-gradient-to-r from-gold to-gold-light origin-left mb-8"
               />
 
-              {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { val: "5+", label: "Years Experience" },
@@ -149,7 +135,7 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Core Strengths */}
+      {/* Core Strengths with Vector Art */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -177,95 +163,18 @@ const Team = () => {
                 whileHover={{ y: -6, boxShadow: "0 16px 40px -10px hsl(var(--gold) / 0.15)", transition: { duration: 0.3 } }}
                 className="bg-card rounded-xl border border-border p-6 text-center cursor-default group"
               >
-                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <item.icon size={24} className="text-gold-light" />
-                </div>
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.label}
+                    className="w-16 h-16 mx-auto mb-4 object-contain drop-shadow-md group-hover:scale-110 transition-transform duration-300"
+                  />
+                </motion.div>
                 <h3 className="font-semibold text-foreground mb-2">{item.label}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Journey Timeline */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
-              <span className="gold-gradient-text">Our Journey</span>
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">Key milestones in Akanta Global's growth story.</p>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto relative">
-            {/* Vertical line */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold/40 via-gold/20 to-transparent hidden md:block" />
-
-            {milestones.map((m, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.12 }}
-                className={`flex items-center gap-6 mb-8 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-row`}
-              >
-                <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                  <motion.div
-                    whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-                    className="bg-card border border-border rounded-lg p-5 premium-shadow inline-block cursor-default"
-                  >
-                    <span className="text-2xl font-bold gold-gradient-text">{m.year}</span>
-                    <p className="text-sm text-muted-foreground mt-1">{m.event}</p>
-                  </motion.div>
-                </div>
-
-                {/* Center dot */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.2 + i * 0.12 }}
-                  className="hidden md:flex w-4 h-4 bg-gold rounded-full border-4 border-background shadow-md flex-shrink-0 z-10"
-                />
-
-                <div className="flex-1 hidden md:block" />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {values.map((v, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
-                whileHover={{ y: -6, boxShadow: "0 20px 50px -12px hsl(var(--gold) / 0.18)", transition: { duration: 0.3 } }}
-                className="bg-card rounded-xl border border-gold/20 p-8 cursor-default relative overflow-hidden"
-              >
-                <div className="absolute -top-10 -right-10 w-28 h-28 bg-gold/5 rounded-full blur-2xl" />
-                <div className="relative">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                    <v.icon size={22} className="text-gold-light" />
-                  </div>
-                  <h3 className="text-xl font-bold gold-gradient-text mb-3">{v.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
-                </div>
               </motion.div>
             ))}
           </div>
