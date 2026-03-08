@@ -162,8 +162,8 @@ const Contact = () => {
                     <Send size={18} className="text-white" />
                   </div>
                   <div>
-                    <h2 className="font-bold text-foreground text-xl">Send Us a Message</h2>
-                    <p className="text-xs text-muted-foreground">We'd love to hear from you</p>
+                    <h2 className="font-bold text-foreground text-2xl">Send Us a Message</h2>
+                    <p className="text-sm text-muted-foreground">We'd love to hear from you</p>
                   </div>
                 </div>
 
