@@ -126,7 +126,7 @@ const Contact = () => {
                         card.href ? (
                           <a key={j} href={card.href} className="block text-sm text-muted-foreground hover:text-gold transition-colors duration-300 leading-relaxed">{line}</a>
                         ) : (
-                          <p key={j} className="text-xs text-muted-foreground leading-relaxed">{line}</p>
+                          <p key={j} className="text-sm text-muted-foreground leading-relaxed">{line}</p>
                         )
                       )}
                     </div>
