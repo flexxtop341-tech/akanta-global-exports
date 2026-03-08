@@ -121,7 +121,7 @@ const Contact = () => {
                       <card.icon size={20} className="text-gold" />
                     </motion.div>
                     <div>
-                      <h3 className="font-bold text-foreground text-sm mb-1.5">{card.title}</h3>
+                      <h3 className="font-bold text-foreground text-base mb-1.5">{card.title}</h3>
                       {card.lines.map((line, j) =>
                         card.href ? (
                           <a key={j} href={card.href} className="block text-xs text-muted-foreground hover:text-gold transition-colors duration-300 leading-relaxed">{line}</a>
