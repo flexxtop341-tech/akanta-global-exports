@@ -62,7 +62,7 @@ const regions: RegionData[] = [
     x: "45%",
     y: "55%",
     countries: ["Nigeria", "Kenya", "South Africa", "Egypt", "Ghana"],
-    products: ["Ball Pens", "School Supplies", "Promotional Pens"],
+    products: ["Ball Pens", "School Supplies", "Jute Bags"],
     partners: 28,
     growth: "+24%",
     description: "Rapidly growing market with focus on educational supplies and cost-effective writing solutions."
