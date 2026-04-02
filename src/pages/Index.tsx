@@ -400,6 +400,88 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Our Services */}
+      <ServicesSection />
+
+      {/* Product Categories */}
+      <section className="py-20 bg-card overflow-hidden relative">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="text-center mb-14"
+          >
+            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">
+              What We Export
+            </motion.span>
+            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
+              <span className="gold-gradient-text">Our Product Categories</span>
+            </motion.h2>
+            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
+            <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
+              Export-grade ball pens, promotional pens, custom logo pens, and office stationery — inspected and certified for international markets.
+            </motion.p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {categories.slice(0, 3).map((cat, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+                variants={scaleIn}
+                custom={i}
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className="group bg-background rounded-xl overflow-hidden border border-border premium-shadow cursor-pointer"
+              >
+                <div className="relative overflow-hidden h-48">
+                  <motion.img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                  <span className="absolute bottom-3 left-3 text-white font-bold text-lg drop-shadow-lg">
+                    {cat.title}
+                  </span>
+                </div>
+                <div className="p-4">
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">{cat.desc}</p>
+                  <Link
+                    to="/products"
+                    className="inline-flex items-center text-gold text-sm font-semibold hover:text-gold-light transition-colors"
+                  >
+                    View Details →
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={0}
+            className="text-center mt-12"
+          >
+            <Link
+              to="/products"
+              className="inline-block bg-gold text-white px-8 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
+            >
+              Explore All Products
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* About Snapshot with Stats */}
       <section className="py-20 bg-background overflow-hidden relative">
         <div className="container mx-auto px-4">
@@ -613,88 +695,6 @@ const Index = () => {
             </motion.div>
           </div>
         </motion.div>
-      </section>
-
-      {/* Our Services */}
-      <ServicesSection />
-
-      {/* Product Categories */}
-      <section className="py-20 bg-card overflow-hidden relative">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            className="text-center mb-14"
-          >
-            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">
-              What We Export
-            </motion.span>
-            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
-              <span className="gold-gradient-text">Our Product Categories</span>
-            </motion.h2>
-            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
-            <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              Export-grade ball pens, promotional pens, custom logo pens, and office stationery — inspected and certified for international markets.
-            </motion.p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {categories.slice(0, 3).map((cat, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-60px" }}
-                variants={scaleIn}
-                custom={i}
-                whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="group bg-background rounded-xl overflow-hidden border border-border premium-shadow cursor-pointer"
-              >
-                <div className="relative overflow-hidden h-48">
-                  <motion.img
-                    src={cat.image}
-                    alt={cat.title}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
-                  <span className="absolute bottom-3 left-3 text-white font-bold text-lg drop-shadow-lg">
-                    {cat.title}
-                  </span>
-                </div>
-                <div className="p-4">
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">{cat.desc}</p>
-                  <Link
-                    to="/products"
-                    className="inline-flex items-center text-gold text-sm font-semibold hover:text-gold-light transition-colors"
-                  >
-                    View Details →
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            custom={0}
-            className="text-center mt-12"
-          >
-            <Link
-              to="/products"
-              className="inline-block bg-gold text-white px-8 py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg"
-            >
-              Explore All Products
-            </Link>
-          </motion.div>
-        </div>
       </section>
 
       {/* International Import-Export Trading */}
