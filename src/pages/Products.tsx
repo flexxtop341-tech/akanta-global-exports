@@ -112,7 +112,7 @@ const Products = () => {
       />
       <PageHero
         title="Our Products"
-        subtitle="We export a wide range of high-quality writing instruments — ball pens, promotional pens, custom logo pens, and office stationery designed to meet international quality standards and global export requirements."
+        subtitle="We export a wide range of high-quality writing instruments and eco-friendly jute bags — ball pens, promotional pens, custom logo pens, jute bags, and office stationery designed to meet international quality standards and global export requirements."
       />
 
       {/* Premium Collection Banner */}
