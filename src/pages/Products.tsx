@@ -7,6 +7,7 @@ import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
+import juteBags from "@/assets/jute-bags.jpg";
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
 
