@@ -13,6 +13,7 @@ import iconPartnership from "@/assets/icon-partnership.png";
 import iconAboutPartner from "@/assets/icon-about-partner.png";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
+import juteBags from "@/assets/jute-bags.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
