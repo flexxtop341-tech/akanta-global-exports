@@ -40,6 +40,13 @@ const products = [
     specs: ["Custom engraving", "Premium gift boxes", "Tailored specifications"],
     moq: "2,000 units",
   },
+  {
+    image: juteBags,
+    title: "Jute Bags",
+    desc: "Premium eco-friendly jute bags for export — ideal for retail packaging, corporate gifting, and sustainable branding solutions.",
+    specs: ["Material: Natural Jute", "Custom printing available", "Multiple sizes & styles"],
+    moq: "5,000 units",
+  },
 ];
 
 const fadeUp = {
