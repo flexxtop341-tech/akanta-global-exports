@@ -274,10 +274,10 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Ball Pen Exporter India | Bulk Pen Supplier & Manufacturer"
-        description="Akanta Global — India's leading ball pen exporter & stationery supplier. We supply bulk promotional pens, retractable pens, metallic pens & custom branded writing instruments to global distributors and wholesale buyers."
+        title="Ball Pen & Jute Bag Exporter India | Bulk Supplier & Manufacturer"
+        description="Akanta Global — India's leading ball pen exporter, jute bag supplier & stationery manufacturer. We supply bulk promotional pens, retractable pens, metallic pens, eco-friendly jute bags & custom branded products to global distributors and wholesale buyers."
         path="/"
-        keywords="ball pen exporter india, ball pen manufacturer india, bulk pen supplier india, wholesale stationery supplier, promotional pen manufacturer, writing instruments exporter, custom branded pens india, pen export company nashik, stationery trading company india, B2B pen supplier, retractable pen exporter, metallic ball pen supplier, office stationery exporter india, pen distributor india, cheap ball pens bulk order"
+        keywords="ball pen exporter india, jute bag exporter india, jute bags wholesale supplier, eco-friendly jute bags manufacturer, ball pen manufacturer india, bulk pen supplier india, wholesale stationery supplier, promotional pen manufacturer, writing instruments exporter, custom branded pens india, jute bag manufacturer nashik, B2B pen supplier, retractable pen exporter, metallic ball pen supplier"
         jsonLd={[
           {
             "@context": "https://schema.org",
