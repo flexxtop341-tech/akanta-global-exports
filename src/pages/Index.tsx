@@ -426,8 +426,8 @@ const Index = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {categories.slice(0, 3).map((cat, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            {categories.map((cat, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
