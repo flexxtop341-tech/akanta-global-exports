@@ -483,7 +483,7 @@ const Index = () => {
       </section>
 
       {/* About Snapshot with Stats */}
-      <section className="py-20 bg-background overflow-hidden relative">
+      <section className="py-16 md:py-24 bg-background overflow-hidden relative">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
