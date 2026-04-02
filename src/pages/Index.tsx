@@ -404,7 +404,7 @@ const Index = () => {
       <ServicesSection />
 
       {/* Product Categories */}
-      <section className="py-20 bg-card overflow-hidden relative">
+      <section className="py-16 md:py-24 bg-card overflow-hidden relative">
         <div className="container mx-auto px-4">
           <motion.div
             initial="hidden"
