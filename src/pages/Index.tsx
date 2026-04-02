@@ -249,6 +249,7 @@ const categories = [
   { image: ballPens, title: "Ball Pens", desc: "High-quality plastic ball pens for bulk orders — ideal for office stationery, school supplies, and wholesale distribution." },
   { image: buttonPens, title: "Click / Retractable Pens", desc: "Retractable push-button pens with ergonomic grip — popular with bulk pen distributors and promotional product companies." },
   { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gift pen suppliers and executive branding — smooth writing, durable build." },
+  { image: juteBags, title: "Jute Bags", desc: "Eco-friendly jute bags for wholesale and export — perfect for retail, gifting, and sustainable packaging solutions." },
 ];
 
 const fadeUp = {
