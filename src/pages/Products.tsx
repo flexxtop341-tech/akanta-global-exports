@@ -80,12 +80,13 @@ const Products = () => {
             "name": "Export-Grade Writing Instruments",
             "description": "Akanta Global's range of export-grade ball pens and writing instruments",
             "url": "https://akantaglobal.com/products",
-            "numberOfItems": 4,
+            "numberOfItems": 5,
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Ball Pens", "url": "https://akantaglobal.com/products#ball-pens" },
               { "@type": "ListItem", "position": 2, "name": "Click / Retractable Pens", "url": "https://akantaglobal.com/products#retractable-pens" },
               { "@type": "ListItem", "position": 3, "name": "Metallic Ball Pens", "url": "https://akantaglobal.com/products#metallic-pens" },
-              { "@type": "ListItem", "position": 4, "name": "Custom Solutions", "url": "https://akantaglobal.com/products#custom-pens" }
+              { "@type": "ListItem", "position": 4, "name": "Custom Solutions", "url": "https://akantaglobal.com/products#custom-pens" },
+              { "@type": "ListItem", "position": 5, "name": "Jute Bags", "url": "https://akantaglobal.com/products#jute-bags" }
             ]
           },
           {
