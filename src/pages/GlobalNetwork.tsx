@@ -62,7 +62,7 @@ const regions: RegionData[] = [
     x: "45%",
     y: "55%",
     countries: ["Nigeria", "Kenya", "South Africa", "Egypt", "Ghana"],
-    products: ["Ball Pens", "School Supplies", "Promotional Pens"],
+    products: ["Ball Pens", "School Supplies", "Jute Bags"],
     partners: 28,
     growth: "+24%",
     description: "Rapidly growing market with focus on educational supplies and cost-effective writing solutions."
@@ -84,7 +84,7 @@ const regions: RegionData[] = [
     x: "42%",
     y: "25%",
     countries: ["UK", "Germany", "France", "Netherlands", "Poland"],
-    products: ["Eco-Friendly Pens", "Designer Collections", "Premium Gifts"],
+    products: ["Eco-Friendly Jute Bags", "Designer Collections", "Premium Gifts"],
     partners: 18,
     growth: "+15%",
     description: "Premium market segment focusing on sustainable products and high-quality craftsmanship."
@@ -95,7 +95,7 @@ const regions: RegionData[] = [
     x: "25%",
     y: "60%",
     countries: ["Brazil", "Argentina", "Chile", "Colombia"],
-    products: ["Promotional Pens", "Custom Logo Pens", "Office Supplies"],
+    products: ["Promotional Pens", "Jute Bags", "Office Supplies"],
     partners: 12,
     growth: "+18%",
     description: "Emerging market with growing demand for promotional products and office stationery."

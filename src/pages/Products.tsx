@@ -7,6 +7,7 @@ import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
 import customPens from "@/assets/custom-pens.jpg";
+import juteBags from "@/assets/jute-bags.jpg";
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
 
@@ -39,6 +40,13 @@ const products = [
     specs: ["Custom engraving", "Premium gift boxes", "Tailored specifications"],
     moq: "2,000 units",
   },
+  {
+    image: juteBags,
+    title: "Jute Bags",
+    desc: "Premium eco-friendly jute bags for export — ideal for retail packaging, corporate gifting, and sustainable branding solutions.",
+    specs: ["Material: Natural Jute", "Custom printing available", "Multiple sizes & styles"],
+    moq: "5,000 units",
+  },
 ];
 
 const fadeUp = {
@@ -61,10 +69,10 @@ const Products = () => {
   return (
     <>
       <SEOHead
-        title="Ball Pens Manufacturer India | Retractable, Metallic & Custom Pens"
-        description="Buy export-grade ball pens from India — plastic ball pens, retractable click pens, metallic pens & custom logo pens. Bulk orders from 10,000 units. Best wholesale pen manufacturer for global distributors."
+        title="Ball Pens & Jute Bags Manufacturer India | Retractable, Metallic & Custom Products"
+        description="Buy export-grade ball pens and eco-friendly jute bags from India — plastic ball pens, retractable click pens, metallic pens, custom logo pens & premium jute bags. Bulk orders available. Best wholesale manufacturer for global distributors."
         path="/products"
-        keywords="ball pen manufacturer india, retractable pen supplier, metallic ball pen exporter, custom logo pens india, bulk pen order india, wholesale writing instruments, promotional pens manufacturer, click pen supplier, plastic ball pen exporter, OEM pen manufacturer india, private label pen supplier, corporate gift pens, office stationery supplier india, pen MOQ 10000 units"
+        keywords="ball pen manufacturer india, retractable pen supplier, metallic ball pen exporter, custom logo pens india, bulk pen order india, wholesale writing instruments, promotional pens manufacturer, jute bags exporter india, eco-friendly jute bags wholesale, jute bag manufacturer india, bulk jute bags supplier"
         jsonLd={[
           {
             "@context": "https://schema.org",
@@ -72,12 +80,13 @@ const Products = () => {
             "name": "Export-Grade Writing Instruments",
             "description": "Akanta Global's range of export-grade ball pens and writing instruments",
             "url": "https://akantaglobal.com/products",
-            "numberOfItems": 4,
+            "numberOfItems": 5,
             "itemListElement": [
               { "@type": "ListItem", "position": 1, "name": "Ball Pens", "url": "https://akantaglobal.com/products#ball-pens" },
               { "@type": "ListItem", "position": 2, "name": "Click / Retractable Pens", "url": "https://akantaglobal.com/products#retractable-pens" },
               { "@type": "ListItem", "position": 3, "name": "Metallic Ball Pens", "url": "https://akantaglobal.com/products#metallic-pens" },
-              { "@type": "ListItem", "position": 4, "name": "Custom Solutions", "url": "https://akantaglobal.com/products#custom-pens" }
+              { "@type": "ListItem", "position": 4, "name": "Custom Solutions", "url": "https://akantaglobal.com/products#custom-pens" },
+              { "@type": "ListItem", "position": 5, "name": "Jute Bags", "url": "https://akantaglobal.com/products#jute-bags" }
             ]
           },
           {
@@ -85,8 +94,8 @@ const Products = () => {
             "@type": "Product",
             "name": "Export-Grade Ball Pens",
             "brand": { "@type": "Brand", "name": "Akanta Global" },
-            "description": "High-quality bulk ball pens and writing instruments for export from India. Plastic, metallic, retractable and custom-branded options. MOQ 10,000 units.",
-            "category": "Writing Instruments & Stationery",
+            "description": "High-quality bulk ball pens, writing instruments, and eco-friendly jute bags for export from India. Plastic, metallic, retractable, custom-branded options and jute bags. MOQ from 2,000 units.",
+            "category": "Writing Instruments, Stationery & Jute Products",
             "manufacturer": {
               "@type": "Organization",
               "name": "Akanta Global",
@@ -103,7 +112,7 @@ const Products = () => {
       />
       <PageHero
         title="Our Products"
-        subtitle="We export a wide range of high-quality writing instruments — ball pens, promotional pens, custom logo pens, and office stationery designed to meet international quality standards and global export requirements."
+        subtitle="We export a wide range of high-quality writing instruments and eco-friendly jute bags — ball pens, promotional pens, custom logo pens, jute bags, and office stationery designed to meet international quality standards and global export requirements."
       />
 
       {/* Premium Collection Banner */}
@@ -150,11 +159,11 @@ const Products = () => {
             </motion.h2>
             <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
             <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              Export-grade ball pens, promotional pens, custom logo pens, and bulk writing instruments inspected and certified for international markets.
+              Export-grade ball pens, promotional pens, custom logo pens, eco-friendly jute bags, and bulk writing instruments inspected and certified for international markets.
             </motion.p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((p, i) => (
               <motion.div
                 key={i}

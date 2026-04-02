@@ -13,6 +13,7 @@ import iconPartnership from "@/assets/icon-partnership.png";
 import iconAboutPartner from "@/assets/icon-about-partner.png";
 import ServicesSection from "@/components/ServicesSection";
 import ballPens from "@/assets/ball-pens.jpg";
+import juteBags from "@/assets/jute-bags.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
 import metallicPens from "@/assets/metallic-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
@@ -248,6 +249,7 @@ const categories = [
   { image: ballPens, title: "Ball Pens", desc: "High-quality plastic ball pens for bulk orders — ideal for office stationery, school supplies, and wholesale distribution." },
   { image: buttonPens, title: "Click / Retractable Pens", desc: "Retractable push-button pens with ergonomic grip — popular with bulk pen distributors and promotional product companies." },
   { image: metallicPens, title: "Metallic Ball Pens", desc: "Premium metallic-finish pens for corporate gift pen suppliers and executive branding — smooth writing, durable build." },
+  { image: juteBags, title: "Jute Bags", desc: "Eco-friendly jute bags for wholesale and export — perfect for retail, gifting, and sustainable packaging solutions." },
 ];
 
 const fadeUp = {
@@ -272,10 +274,10 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Ball Pen Exporter India | Bulk Pen Supplier & Manufacturer"
-        description="Akanta Global — India's leading ball pen exporter & stationery supplier. We supply bulk promotional pens, retractable pens, metallic pens & custom branded writing instruments to global distributors and wholesale buyers."
+        title="Ball Pen & Jute Bag Exporter India | Bulk Supplier & Manufacturer"
+        description="Akanta Global — India's leading ball pen exporter, jute bag supplier & stationery manufacturer. We supply bulk promotional pens, retractable pens, metallic pens, eco-friendly jute bags & custom branded products to global distributors and wholesale buyers."
         path="/"
-        keywords="ball pen exporter india, ball pen manufacturer india, bulk pen supplier india, wholesale stationery supplier, promotional pen manufacturer, writing instruments exporter, custom branded pens india, pen export company nashik, stationery trading company india, B2B pen supplier, retractable pen exporter, metallic ball pen supplier, office stationery exporter india, pen distributor india, cheap ball pens bulk order"
+        keywords="ball pen exporter india, jute bag exporter india, jute bags wholesale supplier, eco-friendly jute bags manufacturer, ball pen manufacturer india, bulk pen supplier india, wholesale stationery supplier, promotional pen manufacturer, writing instruments exporter, custom branded pens india, jute bag manufacturer nashik, B2B pen supplier, retractable pen exporter, metallic ball pen supplier"
         jsonLd={[
           {
             "@context": "https://schema.org",
@@ -424,8 +426,8 @@ const Index = () => {
             </motion.p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {categories.slice(0, 3).map((cat, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            {categories.map((cat, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
