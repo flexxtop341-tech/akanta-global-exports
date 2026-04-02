@@ -84,7 +84,7 @@ const regions: RegionData[] = [
     x: "42%",
     y: "25%",
     countries: ["UK", "Germany", "France", "Netherlands", "Poland"],
-    products: ["Eco-Friendly Pens", "Designer Collections", "Premium Gifts"],
+    products: ["Eco-Friendly Jute Bags", "Designer Collections", "Premium Gifts"],
     partners: 18,
     growth: "+15%",
     description: "Premium market segment focusing on sustainable products and high-quality craftsmanship."
