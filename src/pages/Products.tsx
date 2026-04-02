@@ -94,8 +94,8 @@ const Products = () => {
             "@type": "Product",
             "name": "Export-Grade Ball Pens",
             "brand": { "@type": "Brand", "name": "Akanta Global" },
-            "description": "High-quality bulk ball pens and writing instruments for export from India. Plastic, metallic, retractable and custom-branded options. MOQ 10,000 units.",
-            "category": "Writing Instruments & Stationery",
+            "description": "High-quality bulk ball pens, writing instruments, and eco-friendly jute bags for export from India. Plastic, metallic, retractable, custom-branded options and jute bags. MOQ from 2,000 units.",
+            "category": "Writing Instruments, Stationery & Jute Products",
             "manufacturer": {
               "@type": "Organization",
               "name": "Akanta Global",
