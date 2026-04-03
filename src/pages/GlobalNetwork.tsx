@@ -73,7 +73,7 @@ const regions: RegionData[] = [
     x: "68%",
     y: "45%",
     countries: ["Bangladesh", "Sri Lanka", "Nepal", "Myanmar"],
-    products: ["Gel Pens", "Metallic Pens", "Bulk Orders"],
+    products: ["Gel Pens", "Metallic Pens", "Jute Bags", "Bulk Orders"],
     partners: 35,
     growth: "+28%",
     description: "Regional neighbors with cultural affinity and strong trade relationships for diverse pen categories."
