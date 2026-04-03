@@ -836,7 +836,7 @@ const Index = () => {
               Frequently Asked <span className="gold-gradient-text">Questions</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to know about ordering bulk pens, custom branding, and export from India.
+              Everything you need to know about ordering bulk pens, jute bags, custom branding, and export from India.
             </p>
           </motion.div>
 
