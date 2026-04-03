@@ -87,7 +87,7 @@ const About = () => {
       />
       <PageHero
         title="About Akanta Global"
-        subtitle="Your trusted partner for high-quality Indian-made writing instruments — ball pens, promotional pens, and custom stationery — serving importers and distributors worldwide."
+        subtitle="Your trusted partner for high-quality Indian-made writing instruments and eco-friendly jute bags — ball pens, promotional pens, and sustainable packaging — serving importers and distributors worldwide."
       />
 
 
