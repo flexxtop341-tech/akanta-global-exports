@@ -16,7 +16,7 @@ import iconStepLogistics from "@/assets/icon-step-logistics.png";
 import iconStepDelivery from "@/assets/icon-step-delivery.png";
 
 const whatWeDo = [
-  "Export high-quality, export-grade writing instruments",
+  "Export high-quality writing instruments & eco-friendly jute bags",
   "Supply to importers, distributors & promotional companies",
   "Quality inspection for performance, durability & consistency",
   "Transparent pricing & clear documentation",
@@ -25,8 +25,8 @@ const whatWeDo = [
 ];
 
 const strengths = [
-  { image: iconAboutGlobal, title: "Global Reach", desc: "Supplying export-grade writing instruments to importers, distributors, and promotional product companies worldwide." },
-  { image: iconAboutQuality, title: "Quality Assured", desc: "Every pen is carefully selected and inspected to ensure smooth writing performance, durability, and consistency." },
+  { image: iconAboutGlobal, title: "Global Reach", desc: "Supplying export-grade writing instruments and eco-friendly jute bags to importers, distributors, and promotional product companies worldwide." },
+  { image: iconAboutQuality, title: "Quality Assured", desc: "Every pen and jute bag is carefully selected and inspected to ensure performance, durability, and consistency." },
   { image: iconAboutPartner, title: "Partner Focus", desc: "Building long-term, trust-based partnerships through transparent pricing, timely delivery, and dependable service." },
 ];
 
@@ -64,10 +64,10 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Us — Trusted Ball Pen Exporter & Stationery Supplier India"
-        description="Learn about Akanta Global — India's trusted ball pen exporter bridging Indian pen manufacturers with global distributors. Quality-assured writing instruments, ethical sourcing, transparent pricing & on-time delivery."
+        title="About Us — Trusted Ball Pen & Jute Bag Exporter India"
+        description="Learn about Akanta Global — India's trusted ball pen exporter and jute bag supplier bridging Indian manufacturers with global distributors. Quality-assured writing instruments & eco-friendly jute bags."
         path="/about"
-        keywords="about akanta global, ball pen exporter india, stationery supplier company, indian pen manufacturer, ethical sourcing pens india, quality pen exporter nashik, writing instrument supplier, pen trading company india, bulk stationery exporter, export grade pens india"
+        keywords="about akanta global, ball pen exporter india, jute bag exporter india, stationery supplier company, indian pen manufacturer, ethical sourcing pens india, eco-friendly jute bags wholesale, quality pen exporter nashik, writing instrument supplier, pen trading company india, bulk jute bags supplier"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
@@ -87,7 +87,7 @@ const About = () => {
       />
       <PageHero
         title="About Akanta Global"
-        subtitle="Your trusted partner for high-quality Indian-made writing instruments — ball pens, promotional pens, and custom stationery — serving importers and distributors worldwide."
+        subtitle="Your trusted partner for high-quality Indian-made writing instruments and eco-friendly jute bags — ball pens, promotional pens, and sustainable packaging — serving importers and distributors worldwide."
       />
 
 
@@ -112,8 +112,8 @@ const About = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.div variants={fadeUp} custom={3} className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Akanta Global is a leading ball pen exporter and Indian stationery supplier focused on delivering high-quality, export-grade pens that meet international standards. We support our buyers — distributors, retailers, and promotional companies — with transparent pricing, timely delivery, and dependable service.</p>
-                <p>Our mission is to help importers, wholesale pen buyers, and corporate gift companies grow their businesses through ethical sourcing, strong manufacturing partnerships, and customer-focused solutions.</p>
+                <p>Akanta Global is a leading ball pen exporter, stationery supplier, and eco-friendly jute bag exporter from India — delivering high-quality, export-grade products that meet international standards. We support our buyers — distributors, retailers, and promotional companies — with transparent pricing, timely delivery, and dependable service.</p>
+                <p>Our mission is to help importers, wholesale buyers, and corporate gift companies grow their businesses through ethical sourcing of writing instruments and sustainable jute bags, strong manufacturing partnerships, and customer-focused solutions.</p>
               </motion.div>
 
               {/* Pen hero image */}
@@ -181,7 +181,7 @@ const About = () => {
                   {/* Vision statement */}
                   <div className="mt-8 pt-6 border-t border-gold/10">
                     <p className="text-sm text-primary-foreground/70 italic leading-relaxed">
-                      "We envision Indian-made pens gaining worldwide recognition for their value, consistency, and craftsmanship."
+                      "We envision Indian-made pens and eco-friendly jute bags gaining worldwide recognition for their value, consistency, and craftsmanship."
                     </p>
                   </div>
                 </div>
