@@ -59,10 +59,10 @@ const Contact = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us — Get a Quote for Bulk Ball Pen Orders India"
-        description="Contact Akanta Global for bulk ball pen orders, export inquiries & wholesale stationery partnerships. Get a free quote from India's leading pen exporter. Call +91 96733 98945."
+        title="Contact Us — Get a Quote for Bulk Ball Pens & Jute Bags India"
+        description="Contact Akanta Global for bulk ball pen orders, jute bag inquiries, export partnerships & wholesale stationery. Get a free quote from India's leading pen & jute bag exporter. Call +91 96733 98945."
         path="/contact"
-        keywords="contact ball pen exporter india, get quote bulk pens, wholesale pen inquiry, ball pen order india, stationery export inquiry, pen supplier contact nashik, bulk pen quote, B2B pen order, pen export partnership, pen trading inquiry india"
+        keywords="contact ball pen exporter india, get quote bulk pens, jute bag order india, wholesale pen inquiry, ball pen order india, stationery export inquiry, pen supplier contact nashik, bulk pen quote, B2B pen order, jute bags wholesale inquiry, pen export partnership, eco-friendly jute bags quote"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
