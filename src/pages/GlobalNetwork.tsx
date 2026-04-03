@@ -54,7 +54,7 @@ const regions: RegionData[] = [
     products: ["Premium Gel Pens", "Corporate Stationery", "Jute Bags", "Custom Branding Pens"],
     partners: 45,
     growth: "+32%",
-    description: "Our largest export region with strong demand for premium writing instruments and corporate gifting solutions."
+    description: "Our largest export region with strong demand for premium writing instruments, jute bags, and corporate gifting solutions."
   },
   {
     id: "africa",
