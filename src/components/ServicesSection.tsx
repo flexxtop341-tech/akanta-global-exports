@@ -39,7 +39,7 @@ const services = [
   {
     image: iconQuality,
     title: "Quality Assurance",
-    desc: "We focus on delivering quality products by working with trusted suppliers and maintaining reliable sourcing standards.",
+    desc: "We focus on delivering quality pens and jute bags by working with trusted suppliers and maintaining reliable sourcing standards.",
   },
 ];
 

@@ -92,7 +92,7 @@ const Contact = () => {
       />
       <PageHero
         title="Get a Quote"
-        subtitle="Ready to buy bulk pens from India? Contact our team for wholesale pricing, custom logo pen quotes, and export inquiries."
+        subtitle="Ready to buy bulk pens or eco-friendly jute bags from India? Contact our team for wholesale pricing, custom product quotes, and export inquiries."
       />
 
       {/* Info Cards */}

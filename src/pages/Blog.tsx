@@ -169,10 +169,10 @@ const Blog = () => {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            <span className="gold-gradient-text">Looking for a Reliable Pen Supplier?</span>
+            <span className="gold-gradient-text">Looking for a Reliable Pen & Jute Bag Supplier?</span>
           </h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
-            Contact Akanta Global for bulk ball pen orders, promotional pen customization, and reliable stationery export solutions.
+            Contact Akanta Global for bulk ball pen orders, eco-friendly jute bags, promotional pen customization, and reliable export solutions.
           </p>
           <Link
             to="/contact"

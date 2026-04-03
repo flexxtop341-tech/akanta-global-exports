@@ -213,7 +213,7 @@ const Certificates = () => {
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Certifications & Compliance — Akanta Global",
-          "description": "ISO 9001, ISO 14001, FSSAI, IEC, APEDA, FIEO certified ball pen exporter from India.",
+          "description": "ISO 9001, ISO 14001, FSSAI, IEC, APEDA, FIEO certified ball pen & jute bag exporter from India.",
           "url": "https://akantaglobal.com/certificates",
           "about": {
             "@type": "Organization",

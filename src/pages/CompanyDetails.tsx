@@ -433,7 +433,7 @@ const CompanyDetails = () => {
                 Ready to Partner With Us?
               </h2>
               <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
-                Let's discuss how Akanta Global can be your trusted export partner for premium writing instruments.
+                Let's discuss how Akanta Global can be your trusted export partner for premium writing instruments and eco-friendly jute bags.
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
                 <Link

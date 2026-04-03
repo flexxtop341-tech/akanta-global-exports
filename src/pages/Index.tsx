@@ -286,7 +286,7 @@ const Index = () => {
             "alternateName": "Akanta Global Exports",
             "url": "https://akantaglobal.com",
             "logo": "https://akantaglobal.com/favicon.ico",
-            "description": "Leading ball pen exporter and wholesale stationery supplier from India serving global distributors and importers.",
+            "description": "Leading ball pen exporter, jute bag supplier, and wholesale stationery manufacturer from India serving global distributors and importers.",
             "foundingDate": "2008",
             "address": {
               "@type": "PostalAddress",

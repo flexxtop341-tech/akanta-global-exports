@@ -340,7 +340,7 @@ const Team = () => {
             Work With Us
           </h2>
           <p className="text-primary-foreground/80 leading-relaxed mb-8">
-            Looking for a reliable export partner? Let's discuss how Akanta Global can help you
+            Looking for a reliable export partner for pens and jute bags? Let's discuss how Akanta Global can help you
             access quality Indian products for your international markets.
           </p>
           <Link to="/contact">

@@ -95,7 +95,7 @@ const regions: RegionData[] = [
     x: "25%",
     y: "60%",
     countries: ["Brazil", "Argentina", "Chile", "Colombia"],
-    products: ["Promotional Pens", "Jute Bags", "Office Supplies"],
+    products: ["Promotional Pens", "Jute Bags", "Office Supplies", "Eco Packaging"],
     partners: 12,
     growth: "+18%",
     description: "Emerging market with growing demand for promotional products and office stationery."
