@@ -51,10 +51,10 @@ const regions: RegionData[] = [
     x: "58%",
     y: "38%",
     countries: ["UAE", "Saudi Arabia", "Qatar", "Kuwait", "Oman"],
-    products: ["Premium Gel Pens", "Corporate Stationery", "Custom Branding Pens"],
+    products: ["Premium Gel Pens", "Corporate Stationery", "Jute Bags", "Custom Branding Pens"],
     partners: 45,
     growth: "+32%",
-    description: "Our largest export region with strong demand for premium writing instruments and corporate gifting solutions."
+    description: "Our largest export region with strong demand for premium writing instruments, jute bags, and corporate gifting solutions."
   },
   {
     id: "africa",
@@ -73,7 +73,7 @@ const regions: RegionData[] = [
     x: "68%",
     y: "45%",
     countries: ["Bangladesh", "Sri Lanka", "Nepal", "Myanmar"],
-    products: ["Gel Pens", "Metallic Pens", "Bulk Orders"],
+    products: ["Gel Pens", "Metallic Pens", "Jute Bags", "Bulk Orders"],
     partners: 35,
     growth: "+28%",
     description: "Regional neighbors with cultural affinity and strong trade relationships for diverse pen categories."
@@ -95,7 +95,7 @@ const regions: RegionData[] = [
     x: "25%",
     y: "60%",
     countries: ["Brazil", "Argentina", "Chile", "Colombia"],
-    products: ["Promotional Pens", "Jute Bags", "Office Supplies"],
+    products: ["Promotional Pens", "Jute Bags", "Office Supplies", "Eco Packaging"],
     partners: 12,
     growth: "+18%",
     description: "Emerging market with growing demand for promotional products and office stationery."
@@ -108,10 +108,10 @@ const GlobalNetwork = () => {
   return (
     <>
       <SEOHead
-        title="Global Export Network — Ball Pen Supplier to USA, UK, UAE, Africa"
-        description="Akanta Global exports ball pens & writing instruments to 50+ countries — USA, UK, UAE, Africa, Europe & Asia. Strategic seaport access from JNPT Mumbai, Mundra & Chennai for fast stationery export logistics."
+        title="Global Export Network — Ball Pen & Jute Bag Supplier to USA, UK, UAE, Africa"
+        description="Akanta Global exports ball pens, jute bags & writing instruments to 50+ countries — USA, UK, UAE, Africa, Europe & Asia. Strategic seaport access from JNPT Mumbai, Mundra & Chennai for fast export logistics."
         path="/global-network"
-        keywords="ball pen exporter worldwide, pen supplier USA, pen exporter UAE, stationery exporter africa, ball pen supplier europe, writing instruments exporter asia, bulk pen shipping india, international pen distributor, pen export logistics india, seaport stationery export, JNPT pen export, global pen supply chain"
+        keywords="ball pen exporter worldwide, jute bag exporter worldwide, pen supplier USA, jute bags supplier UAE, pen exporter UAE, stationery exporter africa, ball pen supplier europe, eco-friendly jute bags exporter, writing instruments exporter asia, bulk pen shipping india, international pen distributor, pen export logistics india, seaport stationery export, global pen supply chain"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebPage",
@@ -136,7 +136,7 @@ const GlobalNetwork = () => {
       />
       <PageHero
         title="Global Network"
-        subtitle="Akanta Global exports ball pens and writing instruments to importers and distributors across USA, UK, UAE, Africa, Europe, and Asia with a reliable supply chain."
+        subtitle="Akanta Global exports ball pens, eco-friendly jute bags, and writing instruments to importers and distributors across USA, UK, UAE, Africa, Europe, and Asia with a reliable supply chain."
       />
 
       {/* Shipping Port Banner */}

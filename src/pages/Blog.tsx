@@ -9,10 +9,10 @@ const Blog = () => {
   return (
     <>
       <SEOHead
-        title="Blog — Ball Pen Export Tips, Stationery Sourcing & Trade Guides"
-        description="Expert articles on ball pen manufacturing in India, stationery export guides, promotional pen marketing strategies, bulk sourcing tips & global distributor insights from Akanta Global."
+        title="Blog — Ball Pen & Jute Bag Export Tips, Sourcing & Trade Guides"
+        description="Expert articles on ball pen manufacturing, jute bag sourcing, stationery export guides, promotional pen marketing strategies, bulk sourcing tips & global distributor insights from Akanta Global."
         path="/blog"
-        keywords="ball pen export blog, stationery industry insights, pen manufacturing india articles, how to import pens from india, promotional pen marketing, bulk pen buying guide, stationery sourcing tips, pen trade articles, writing instruments blog, india stationery export guide"
+        keywords="ball pen export blog, jute bag export tips, stationery industry insights, pen manufacturing india articles, how to import pens from india, jute bags sourcing guide, promotional pen marketing, bulk pen buying guide, eco-friendly jute bags, stationery sourcing tips, pen trade articles, writing instruments blog, india stationery export guide"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Blog",
@@ -36,7 +36,7 @@ const Blog = () => {
 
       <PageHero
         title="Industry Insights & Guides"
-        subtitle="Expert articles on ball pen manufacturing, stationery export, and promotional marketing strategies for global buyers"
+        subtitle="Expert articles on ball pen manufacturing, jute bag sourcing, stationery export, and promotional marketing strategies for global buyers"
       />
 
       <section className="py-16 md:py-24">
@@ -169,10 +169,10 @@ const Blog = () => {
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            <span className="gold-gradient-text">Looking for a Reliable Pen Supplier?</span>
+            <span className="gold-gradient-text">Looking for a Reliable Pen & Jute Bag Supplier?</span>
           </h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">
-            Contact Akanta Global for bulk ball pen orders, promotional pen customization, and reliable stationery export solutions.
+            Contact Akanta Global for bulk ball pen orders, eco-friendly jute bags, promotional pen customization, and reliable export solutions.
           </p>
           <Link
             to="/contact"

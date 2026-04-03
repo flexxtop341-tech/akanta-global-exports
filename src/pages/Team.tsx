@@ -21,10 +21,10 @@ const Team = () => {
   return (
     <>
       <SEOHead
-        title="Our Team — Babita Gunjal & Karan Gunjal | Pen Export Leaders India"
-        description="Meet the founders of Akanta Global — Babita Gunjal (Founder) & Karan Gunjal (Co-Founder) driving India's ball pen export excellence. 16+ years of stationery trade expertise."
+        title="Our Team — Babita Gunjal & Karan Gunjal | Pen & Jute Bag Export Leaders"
+        description="Meet the founders of Akanta Global — Babita Gunjal (Founder) & Karan Gunjal (Co-Founder) driving India's ball pen & jute bag export excellence."
         path="/team"
-        keywords="akanta global founder, babita gunjal, karan gunjal, pen export company leadership, stationery business india founders, ball pen exporter team, indian export company leaders"
+        keywords="akanta global founder, babita gunjal, karan gunjal, pen export company leadership, jute bag exporter team, stationery business india founders, ball pen exporter team, indian export company leaders"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
@@ -134,7 +134,7 @@ const Team = () => {
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 With extensive experience in international trade and supplier management, Babita leads
-                Akanta Global's export operations. Her expertise in quality assurance, manufacturer
+                Akanta Global's export operations for writing instruments and eco-friendly jute bags. Her expertise in quality assurance, manufacturer
                 relationships, and export coordination ensures reliable service for every global partner.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -340,7 +340,7 @@ const Team = () => {
             Work With Us
           </h2>
           <p className="text-primary-foreground/80 leading-relaxed mb-8">
-            Looking for a reliable export partner? Let's discuss how Akanta Global can help you
+            Looking for a reliable export partner for pens and jute bags? Let's discuss how Akanta Global can help you
             access quality Indian products for your international markets.
           </p>
           <Link to="/contact">

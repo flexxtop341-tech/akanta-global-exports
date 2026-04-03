@@ -19,12 +19,12 @@ const services = [
   {
     image: iconImportExport,
     title: "Import & Export",
-    desc: "Akanta Global connects trusted suppliers with global buyers through reliable import and export services.",
+    desc: "Akanta Global connects trusted pen manufacturers and jute bag suppliers with global buyers through reliable import and export services.",
   },
   {
     image: iconDistribution,
     title: "Products Distribution",
-    desc: "Akanta Global supports businesses with global sourcing and product distribution to international markets.",
+    desc: "Akanta Global supports businesses with global sourcing of writing instruments and jute bags, and product distribution to international markets.",
   },
   {
     image: iconMerchantExport,
@@ -39,7 +39,7 @@ const services = [
   {
     image: iconQuality,
     title: "Quality Assurance",
-    desc: "We focus on delivering quality products by working with trusted suppliers and maintaining reliable sourcing standards.",
+    desc: "We focus on delivering quality pens and jute bags by working with trusted suppliers and maintaining reliable sourcing standards.",
   },
 ];
 

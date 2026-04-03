@@ -87,16 +87,16 @@ const CompanyDetails = () => {
   return (
     <>
       <SEOHead
-        title="Company Profile — Ball Pen Export Company Nashik, India"
-        description="Akanta Global — pen export company in Nashik, India. Complete export solutions: manufacturer verification, quality inspection, export documentation & international logistics for bulk writing instruments."
+        title="Company Profile — Ball Pen & Jute Bag Export Company Nashik, India"
+        description="Akanta Global — pen & jute bag export company in Nashik, India. Complete export solutions: manufacturer verification, quality inspection, export documentation & international logistics for bulk writing instruments and eco-friendly jute bags."
         path="/company"
-        keywords="akanta global company details, pen export company nashik, ball pen trading company india, stationery exporter profile, pen manufacturer verification india, export documentation services, pen logistics company, writing instruments export company maharashtra"
+        keywords="akanta global company details, pen export company nashik, jute bag exporter nashik, ball pen trading company india, stationery exporter profile, jute bags manufacturer india, pen manufacturer verification india, export documentation services, eco-friendly jute bags supplier, writing instruments export company maharashtra"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Corporation",
           "name": "Akanta Global",
           "url": "https://akantaglobal.com",
-          "description": "Pen export company in Nashik, India providing complete export solutions for writing instruments.",
+          "description": "Pen & jute bag export company in Nashik, India providing complete export solutions for writing instruments and eco-friendly jute bags.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
@@ -113,7 +113,7 @@ const CompanyDetails = () => {
       />
       <PageHero
         title="Company Details"
-        subtitle="India pen export company — learn about our operations, quality assurance, and commitment to excellence in international stationery trade."
+        subtitle="India's trusted pen & jute bag export company — learn about our operations, quality assurance, and commitment to excellence in international trade."
       />
 
       {/* Business Card Section — Flip Card */}
@@ -195,8 +195,8 @@ const CompanyDetails = () => {
                       <h2 className="text-lg md:text-xl font-bold mb-1.5 leading-tight">
                         Excellence in <span className="gold-gradient-text">Global Trade</span>
                       </h2>
-                      <p className="text-muted-foreground text-xs md:text-sm mb-4 max-w-[220px] leading-relaxed">
-                        Trusted Indian exporter of premium writing instruments.
+                       <p className="text-muted-foreground text-xs md:text-sm mb-4 max-w-[220px] leading-relaxed">
+                        Trusted Indian exporter of premium writing instruments & eco-friendly jute bags.
                       </p>
                       <div className="flex flex-col gap-1.5 text-[11px] text-muted-foreground/70 w-full max-w-[200px]">
                         <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted/60 border border-border/50 justify-center">📍 Nashik, India</span>
@@ -306,7 +306,7 @@ const CompanyDetails = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed">
-                Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As a leading ball pen exporter and stationery export company, we maintain strong partnerships with verified pen manufacturers across the region.
+                Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As a leading ball pen exporter, jute bag supplier, and stationery export company, we maintain strong partnerships with verified manufacturers across the region.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed">
                 Our business model is built on transparency, quality assurance, and international compliance. We handle every step from manufacturer verification to final delivery.
@@ -433,7 +433,7 @@ const CompanyDetails = () => {
                 Ready to Partner With Us?
               </h2>
               <p className="text-primary-foreground/80 max-w-lg mx-auto mb-8">
-                Let's discuss how Akanta Global can be your trusted export partner for premium writing instruments.
+                Let's discuss how Akanta Global can be your trusted export partner for premium writing instruments and eco-friendly jute bags.
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
                 <Link

@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="lg:pr-4">
             <img src={logo} alt="Akanta Global" className="h-28 w-auto mb-3 brightness-0 invert" />
             <p className="text-sm text-footer-foreground/60 leading-relaxed mb-4">
-              Trusted Indian exporter of high-quality writing instruments, delivering consistent quality and reliable international supply.
+              Trusted Indian exporter of high-quality writing instruments and eco-friendly jute bags, delivering consistent quality and reliable international supply.
             </p>
             <span className="inline-block text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 border border-gold/20 rounded-full px-3 py-1 mb-4">
               Stronger Together

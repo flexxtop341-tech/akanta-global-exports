@@ -286,7 +286,7 @@ const Index = () => {
             "alternateName": "Akanta Global Exports",
             "url": "https://akantaglobal.com",
             "logo": "https://akantaglobal.com/favicon.ico",
-            "description": "Leading ball pen exporter and wholesale stationery supplier from India serving global distributors and importers.",
+            "description": "Leading ball pen exporter, jute bag supplier, and wholesale stationery manufacturer from India serving global distributors and importers.",
             "foundingDate": "2008",
             "address": {
               "@type": "PostalAddress",
@@ -317,18 +317,18 @@ const Index = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What types of pens does Akanta Global export?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards." }
+                "name": "What products does Akanta Global export?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, custom branded/logo pens, and eco-friendly jute bags. All products are export-grade and manufactured to international quality standards." }
               },
               {
                 "@type": "Question",
-                "name": "What is the minimum order quantity (MOQ) for bulk pen orders?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope." }
+                "name": "What is the minimum order quantity (MOQ) for bulk orders?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Our standard MOQ is 10,000 units for pens and 5,000 units for jute bags per product variant. We offer flexible MOQs for custom branded and promotional orders depending on the project scope." }
               },
               {
                 "@type": "Question",
-                "name": "Which countries does Akanta Global export pens to?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa." }
+                "name": "Which countries does Akanta Global export to?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export pens and jute bags to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa." }
               },
               {
                 "@type": "Question",
@@ -342,8 +342,8 @@ const Index = () => {
               },
               {
                 "@type": "Question",
-                "name": "How can I request a quote for bulk pen orders from India?",
-                "acceptedAnswer": { "@type": "Answer", "text": "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details." }
+                "name": "How can I request a quote for bulk pen or jute bag orders from India?",
+                "acceptedAnswer": { "@type": "Answer", "text": "You can request a quote for pens or jute bags by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details." }
               }
             ]
           }
@@ -367,7 +367,7 @@ const Index = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6 drop-shadow-lg"
             >
-              <span className="gold-gradient-text">Leading Ball Pen Exporter</span>
+              <span className="gold-gradient-text">Leading Ball Pen & Jute Bag Exporter</span>
               <br />
               <span className="text-white drop-shadow-lg">from India</span>
             </motion.h1>
@@ -377,7 +377,7 @@ const Index = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed drop-shadow-md"
             >
-              Akanta Global is a trusted ball pen exporter and stationery supplier from India. We supply bulk promotional pens, office stationery, and custom branded writing instruments to global distributors and wholesale buyers.
+              Akanta Global is a trusted ball pen exporter, jute bag supplier, and stationery manufacturer from India. We supply bulk promotional pens, eco-friendly jute bags, office stationery, and custom branded writing instruments to global distributors and wholesale buyers.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -422,7 +422,7 @@ const Index = () => {
             </motion.h2>
             <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
             <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              Export-grade ball pens, promotional pens, custom logo pens, and office stationery — inspected and certified for international markets.
+              Export-grade ball pens, promotional pens, custom logo pens, eco-friendly jute bags, and office stationery — inspected and certified for international markets.
             </motion.p>
           </motion.div>
 
@@ -500,10 +500,10 @@ const Index = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider mb-6" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed mb-4">
-                Akanta Global is a trusted ball pen exporter and stationery supplier from India committed to delivering reliable export solutions for writing instruments and promotional stationery. With strong manufacturing partnerships and strict quality control, we supply affordable and durable ball pens designed for distributors, retailers, and corporate promotional campaigns.
+                Akanta Global is a trusted ball pen exporter, jute bag supplier, and stationery manufacturer from India committed to delivering reliable export solutions for writing instruments, eco-friendly jute bags, and promotional stationery. With strong manufacturing partnerships and strict quality control, we supply affordable and durable ball pens and premium jute bags designed for distributors, retailers, and corporate promotional campaigns.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed mb-6">
-                As a wholesale pen supplier and global pen exporter, we work closely with suppliers and international partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
+                As a wholesale pen supplier, jute bag exporter, and global trade partner, we work closely with suppliers and international partners to build strong business relationships. Our goal is to simplify international trade and bridge the gap between buyers and sellers while ensuring reliability, quality, and customer satisfaction in every transaction.
               </motion.p>
               <motion.div variants={fadeUp} custom={5}>
                 <Link
@@ -836,7 +836,7 @@ const Index = () => {
               Frequently Asked <span className="gold-gradient-text">Questions</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to know about ordering bulk pens, custom branding, and export from India.
+              Everything you need to know about ordering bulk pens, jute bags, custom branding, and export from India.
             </p>
           </motion.div>
 
@@ -850,16 +850,16 @@ const Index = () => {
             <Accordion type="single" collapsible className="space-y-3">
               {[
                 {
-                  q: "What types of pens does Akanta Global export?",
-                  a: "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards."
+                  q: "What products does Akanta Global export?",
+                  a: "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, custom branded/logo pens, and eco-friendly jute bags. All products are export-grade and manufactured to international quality standards."
                 },
                 {
-                  q: "What is the minimum order quantity (MOQ) for bulk pen orders?",
-                  a: "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope."
+                  q: "What is the minimum order quantity (MOQ) for bulk orders?",
+                  a: "Our standard MOQ is 10,000 units for pens and 5,000 units for jute bags per product variant. We offer flexible MOQs for custom branded and promotional orders depending on the project scope."
                 },
                 {
-                  q: "Which countries does Akanta Global export pens to?",
-                  a: "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa."
+                  q: "Which countries does Akanta Global export to?",
+                  a: "We export pens and jute bags to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa."
                 },
                 {
                   q: "Does Akanta Global offer custom logo printing on pens?",
@@ -870,8 +870,8 @@ const Index = () => {
                   a: "Akanta Global holds ISO 9001:2015, ISO 14001:2015, FSSAI, IEC (Import Export Code), APEDA, and FIEO certifications — ensuring the highest international compliance standards for quality and export operations."
                 },
                 {
-                  q: "How can I request a quote for bulk pen orders from India?",
-                  a: "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details."
+                  q: "How can I request a quote for bulk pen or jute bag orders from India?",
+                  a: "You can request a quote for pens or jute bags by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details."
                 },
               ].map((faq, i) => (
                 <AccordionItem
@@ -1070,7 +1070,7 @@ const Index = () => {
           </motion.h2>
           
           <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-2xl mx-auto mb-12 text-lg md:text-xl leading-relaxed">
-            Partner with India's leading ball pen exporter for reliable, high-quality writing instruments shipped worldwide.
+            Partner with India's leading ball pen & jute bag exporter for reliable, high-quality writing instruments and eco-friendly products shipped worldwide.
           </motion.p>
           
           {/* Enhanced CTA button */}

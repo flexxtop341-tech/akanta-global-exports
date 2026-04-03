@@ -205,15 +205,15 @@ const Certificates = () => {
   return (
     <>
       <SEOHead
-        title="Certifications — ISO 9001, IEC, APEDA, FIEO Certified Pen Exporter"
-        description="Akanta Global holds ISO 9001:2015, ISO 14001, FSSAI, IEC, APEDA & FIEO certifications — ensuring world-class quality standards for ball pen export and stationery trade compliance from India."
+        title="Certifications — ISO 9001, IEC, APEDA, FIEO Certified Pen & Jute Bag Exporter"
+        description="Akanta Global holds ISO 9001:2015, ISO 14001, FSSAI, IEC, APEDA & FIEO certifications — ensuring world-class quality standards for ball pen export, jute bag supply, and trade compliance from India."
         path="/certificates"
-        keywords="ISO certified pen exporter india, APEDA registered exporter, FIEO member stationery, IEC certificate pen company, ISO 9001 ball pen manufacturer, certified stationery supplier india, export compliance certificates, quality certified pen exporter nashik"
+        keywords="ISO certified pen exporter india, APEDA registered exporter, FIEO member stationery, IEC certificate pen company, ISO 9001 ball pen manufacturer, certified jute bag exporter india, certified stationery supplier india, export compliance certificates, quality certified pen exporter nashik"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Certifications & Compliance — Akanta Global",
-          "description": "ISO 9001, ISO 14001, FSSAI, IEC, APEDA, FIEO certified ball pen exporter from India.",
+          "description": "ISO 9001, ISO 14001, FSSAI, IEC, APEDA, FIEO certified ball pen & jute bag exporter from India.",
           "url": "https://akantaglobal.com/certificates",
           "about": {
             "@type": "Organization",
