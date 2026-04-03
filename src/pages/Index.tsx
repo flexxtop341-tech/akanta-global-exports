@@ -342,8 +342,8 @@ const Index = () => {
               },
               {
                 "@type": "Question",
-                "name": "How can I request a quote for bulk pen orders from India?",
-                "acceptedAnswer": { "@type": "Answer", "text": "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details." }
+                "name": "How can I request a quote for bulk pen or jute bag orders from India?",
+                "acceptedAnswer": { "@type": "Answer", "text": "You can request a quote for pens or jute bags by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details." }
               }
             ]
           }
