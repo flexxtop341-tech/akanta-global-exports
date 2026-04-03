@@ -9,10 +9,10 @@ const Blog = () => {
   return (
     <>
       <SEOHead
-        title="Blog — Ball Pen Export Tips, Stationery Sourcing & Trade Guides"
-        description="Expert articles on ball pen manufacturing in India, stationery export guides, promotional pen marketing strategies, bulk sourcing tips & global distributor insights from Akanta Global."
+        title="Blog — Ball Pen & Jute Bag Export Tips, Sourcing & Trade Guides"
+        description="Expert articles on ball pen manufacturing, jute bag sourcing, stationery export guides, promotional pen marketing strategies, bulk sourcing tips & global distributor insights from Akanta Global."
         path="/blog"
-        keywords="ball pen export blog, stationery industry insights, pen manufacturing india articles, how to import pens from india, promotional pen marketing, bulk pen buying guide, stationery sourcing tips, pen trade articles, writing instruments blog, india stationery export guide"
+        keywords="ball pen export blog, jute bag export tips, stationery industry insights, pen manufacturing india articles, how to import pens from india, jute bags sourcing guide, promotional pen marketing, bulk pen buying guide, eco-friendly jute bags, stationery sourcing tips, pen trade articles, writing instruments blog, india stationery export guide"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Blog",
