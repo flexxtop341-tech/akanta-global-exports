@@ -51,7 +51,7 @@ const regions: RegionData[] = [
     x: "58%",
     y: "38%",
     countries: ["UAE", "Saudi Arabia", "Qatar", "Kuwait", "Oman"],
-    products: ["Premium Gel Pens", "Corporate Stationery", "Custom Branding Pens"],
+    products: ["Premium Gel Pens", "Corporate Stationery", "Jute Bags", "Custom Branding Pens"],
     partners: 45,
     growth: "+32%",
     description: "Our largest export region with strong demand for premium writing instruments and corporate gifting solutions."
