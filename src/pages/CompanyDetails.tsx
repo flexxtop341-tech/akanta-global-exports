@@ -306,7 +306,7 @@ const CompanyDetails = () => {
               </motion.h2>
               <motion.div variants={fadeUp} custom={2} className="gold-divider" />
               <motion.p variants={fadeUp} custom={3} className="text-muted-foreground leading-relaxed">
-                Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As a leading ball pen exporter and stationery export company, we maintain strong partnerships with verified pen manufacturers across the region.
+                Akanta Global operates from Nashik, Maharashtra — a strategic location in western India with excellent connectivity to major ports. As a leading ball pen exporter, jute bag supplier, and stationery export company, we maintain strong partnerships with verified manufacturers across the region.
               </motion.p>
               <motion.p variants={fadeUp} custom={4} className="text-muted-foreground leading-relaxed">
                 Our business model is built on transparency, quality assurance, and international compliance. We handle every step from manufacturer verification to final delivery.
