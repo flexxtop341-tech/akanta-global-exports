@@ -327,8 +327,8 @@ const Index = () => {
               },
               {
                 "@type": "Question",
-                "name": "Which countries does Akanta Global export pens to?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa." }
+                "name": "Which countries does Akanta Global export to?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export pens and jute bags to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa." }
               },
               {
                 "@type": "Question",
