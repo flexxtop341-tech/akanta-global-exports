@@ -854,8 +854,8 @@ const Index = () => {
                   a: "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, custom branded/logo pens, and eco-friendly jute bags. All products are export-grade and manufactured to international quality standards."
                 },
                 {
-                  q: "What is the minimum order quantity (MOQ) for bulk pen orders?",
-                  a: "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope."
+                  q: "What is the minimum order quantity (MOQ) for bulk orders?",
+                  a: "Our standard MOQ is 10,000 units for pens and 5,000 units for jute bags per product variant. We offer flexible MOQs for custom branded and promotional orders depending on the project scope."
                 },
                 {
                   q: "Which countries does Akanta Global export pens to?",
