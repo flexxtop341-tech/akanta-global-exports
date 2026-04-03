@@ -1070,7 +1070,7 @@ const Index = () => {
           </motion.h2>
           
           <motion.p variants={fadeUp} custom={1} className="text-primary-foreground/70 max-w-2xl mx-auto mb-12 text-lg md:text-xl leading-relaxed">
-            Partner with India's leading ball pen exporter for reliable, high-quality writing instruments shipped worldwide.
+            Partner with India's leading ball pen & jute bag exporter for reliable, high-quality writing instruments and eco-friendly products shipped worldwide.
           </motion.p>
           
           {/* Enhanced CTA button */}
