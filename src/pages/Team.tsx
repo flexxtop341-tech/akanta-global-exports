@@ -134,7 +134,7 @@ const Team = () => {
               </div>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 With extensive experience in international trade and supplier management, Babita leads
-                Akanta Global's export operations. Her expertise in quality assurance, manufacturer
+                Akanta Global's export operations for writing instruments and eco-friendly jute bags. Her expertise in quality assurance, manufacturer
                 relationships, and export coordination ensures reliable service for every global partner.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
