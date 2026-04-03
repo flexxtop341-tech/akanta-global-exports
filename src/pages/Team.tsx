@@ -21,10 +21,10 @@ const Team = () => {
   return (
     <>
       <SEOHead
-        title="Our Team — Babita Gunjal & Karan Gunjal | Pen Export Leaders India"
-        description="Meet the founders of Akanta Global — Babita Gunjal (Founder) & Karan Gunjal (Co-Founder) driving India's ball pen export excellence. 16+ years of stationery trade expertise."
+        title="Our Team — Babita Gunjal & Karan Gunjal | Pen & Jute Bag Export Leaders"
+        description="Meet the founders of Akanta Global — Babita Gunjal (Founder) & Karan Gunjal (Co-Founder) driving India's ball pen & jute bag export excellence."
         path="/team"
-        keywords="akanta global founder, babita gunjal, karan gunjal, pen export company leadership, stationery business india founders, ball pen exporter team, indian export company leaders"
+        keywords="akanta global founder, babita gunjal, karan gunjal, pen export company leadership, jute bag exporter team, stationery business india founders, ball pen exporter team, indian export company leaders"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
