@@ -16,7 +16,7 @@ import iconStepLogistics from "@/assets/icon-step-logistics.png";
 import iconStepDelivery from "@/assets/icon-step-delivery.png";
 
 const whatWeDo = [
-  "Export high-quality, export-grade writing instruments",
+  "Export high-quality writing instruments & eco-friendly jute bags",
   "Supply to importers, distributors & promotional companies",
   "Quality inspection for performance, durability & consistency",
   "Transparent pricing & clear documentation",
