@@ -25,8 +25,8 @@ const whatWeDo = [
 ];
 
 const strengths = [
-  { image: iconAboutGlobal, title: "Global Reach", desc: "Supplying export-grade writing instruments to importers, distributors, and promotional product companies worldwide." },
-  { image: iconAboutQuality, title: "Quality Assured", desc: "Every pen is carefully selected and inspected to ensure smooth writing performance, durability, and consistency." },
+  { image: iconAboutGlobal, title: "Global Reach", desc: "Supplying export-grade writing instruments and eco-friendly jute bags to importers, distributors, and promotional product companies worldwide." },
+  { image: iconAboutQuality, title: "Quality Assured", desc: "Every pen and jute bag is carefully selected and inspected to ensure performance, durability, and consistency." },
   { image: iconAboutPartner, title: "Partner Focus", desc: "Building long-term, trust-based partnerships through transparent pricing, timely delivery, and dependable service." },
 ];
 
