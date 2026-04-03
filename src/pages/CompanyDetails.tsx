@@ -96,7 +96,7 @@ const CompanyDetails = () => {
           "@type": "Corporation",
           "name": "Akanta Global",
           "url": "https://akantaglobal.com",
-          "description": "Pen export company in Nashik, India providing complete export solutions for writing instruments.",
+          "description": "Pen & jute bag export company in Nashik, India providing complete export solutions for writing instruments and eco-friendly jute bags.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
