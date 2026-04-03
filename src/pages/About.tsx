@@ -181,7 +181,7 @@ const About = () => {
                   {/* Vision statement */}
                   <div className="mt-8 pt-6 border-t border-gold/10">
                     <p className="text-sm text-primary-foreground/70 italic leading-relaxed">
-                      "We envision Indian-made pens gaining worldwide recognition for their value, consistency, and craftsmanship."
+                      "We envision Indian-made pens and eco-friendly jute bags gaining worldwide recognition for their value, consistency, and craftsmanship."
                     </p>
                   </div>
                 </div>
