@@ -367,7 +367,7 @@ const Index = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6 drop-shadow-lg"
             >
-              <span className="gold-gradient-text">Leading Ball Pen Exporter</span>
+              <span className="gold-gradient-text">Leading Ball Pen & Jute Bag Exporter</span>
               <br />
               <span className="text-white drop-shadow-lg">from India</span>
             </motion.h1>
