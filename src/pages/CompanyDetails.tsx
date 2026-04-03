@@ -87,10 +87,10 @@ const CompanyDetails = () => {
   return (
     <>
       <SEOHead
-        title="Company Profile — Ball Pen Export Company Nashik, India"
-        description="Akanta Global — pen export company in Nashik, India. Complete export solutions: manufacturer verification, quality inspection, export documentation & international logistics for bulk writing instruments."
+        title="Company Profile — Ball Pen & Jute Bag Export Company Nashik, India"
+        description="Akanta Global — pen & jute bag export company in Nashik, India. Complete export solutions: manufacturer verification, quality inspection, export documentation & international logistics for bulk writing instruments and eco-friendly jute bags."
         path="/company"
-        keywords="akanta global company details, pen export company nashik, ball pen trading company india, stationery exporter profile, pen manufacturer verification india, export documentation services, pen logistics company, writing instruments export company maharashtra"
+        keywords="akanta global company details, pen export company nashik, jute bag exporter nashik, ball pen trading company india, stationery exporter profile, jute bags manufacturer india, pen manufacturer verification india, export documentation services, eco-friendly jute bags supplier, writing instruments export company maharashtra"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "Corporation",
