@@ -858,8 +858,8 @@ const Index = () => {
                   a: "Our standard MOQ is 10,000 units for pens and 5,000 units for jute bags per product variant. We offer flexible MOQs for custom branded and promotional orders depending on the project scope."
                 },
                 {
-                  q: "Which countries does Akanta Global export pens to?",
-                  a: "We export to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa."
+                  q: "Which countries does Akanta Global export to?",
+                  a: "We export pens and jute bags to 50+ countries across 6 continents including the USA, UK, UAE, South Africa, Nigeria, Kenya, Germany, France, and many more markets in Asia, Europe, and Africa."
                 },
                 {
                   q: "Does Akanta Global offer custom logo printing on pens?",
