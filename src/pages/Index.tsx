@@ -317,8 +317,8 @@ const Index = () => {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What types of pens does Akanta Global export?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards." }
+                "name": "What products does Akanta Global export?",
+                "acceptedAnswer": { "@type": "Answer", "text": "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, custom branded/logo pens, and eco-friendly jute bags. All products are export-grade and manufactured to international quality standards." }
               },
               {
                 "@type": "Question",
