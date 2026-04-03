@@ -870,8 +870,8 @@ const Index = () => {
                   a: "Akanta Global holds ISO 9001:2015, ISO 14001:2015, FSSAI, IEC (Import Export Code), APEDA, and FIEO certifications — ensuring the highest international compliance standards for quality and export operations."
                 },
                 {
-                  q: "How can I request a quote for bulk pen orders from India?",
-                  a: "You can request a quote by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details."
+                  q: "How can I request a quote for bulk pen or jute bag orders from India?",
+                  a: "You can request a quote for pens or jute bags by visiting our Contact page, calling us at +91 96733 98945, or emailing akantaglobal@gmail.com. Our team typically responds within 24 hours with competitive pricing and order details."
                 },
               ].map((faq, i) => (
                 <AccordionItem
