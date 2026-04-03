@@ -36,7 +36,7 @@ const Blog = () => {
 
       <PageHero
         title="Industry Insights & Guides"
-        subtitle="Expert articles on ball pen manufacturing, stationery export, and promotional marketing strategies for global buyers"
+        subtitle="Expert articles on ball pen manufacturing, jute bag sourcing, stationery export, and promotional marketing strategies for global buyers"
       />
 
       <section className="py-16 md:py-24">
