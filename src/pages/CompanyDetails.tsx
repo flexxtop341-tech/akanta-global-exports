@@ -195,8 +195,8 @@ const CompanyDetails = () => {
                       <h2 className="text-lg md:text-xl font-bold mb-1.5 leading-tight">
                         Excellence in <span className="gold-gradient-text">Global Trade</span>
                       </h2>
-                      <p className="text-muted-foreground text-xs md:text-sm mb-4 max-w-[220px] leading-relaxed">
-                        Trusted Indian exporter of premium writing instruments.
+                       <p className="text-muted-foreground text-xs md:text-sm mb-4 max-w-[220px] leading-relaxed">
+                        Trusted Indian exporter of premium writing instruments & eco-friendly jute bags.
                       </p>
                       <div className="flex flex-col gap-1.5 text-[11px] text-muted-foreground/70 w-full max-w-[200px]">
                         <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted/60 border border-border/50 justify-center">📍 Nashik, India</span>
