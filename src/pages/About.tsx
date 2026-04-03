@@ -64,10 +64,10 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Us — Trusted Ball Pen Exporter & Stationery Supplier India"
-        description="Learn about Akanta Global — India's trusted ball pen exporter bridging Indian pen manufacturers with global distributors. Quality-assured writing instruments, ethical sourcing, transparent pricing & on-time delivery."
+        title="About Us — Trusted Ball Pen & Jute Bag Exporter India"
+        description="Learn about Akanta Global — India's trusted ball pen exporter and jute bag supplier bridging Indian manufacturers with global distributors. Quality-assured writing instruments & eco-friendly jute bags."
         path="/about"
-        keywords="about akanta global, ball pen exporter india, stationery supplier company, indian pen manufacturer, ethical sourcing pens india, quality pen exporter nashik, writing instrument supplier, pen trading company india, bulk stationery exporter, export grade pens india"
+        keywords="about akanta global, ball pen exporter india, jute bag exporter india, stationery supplier company, indian pen manufacturer, ethical sourcing pens india, eco-friendly jute bags wholesale, quality pen exporter nashik, writing instrument supplier, pen trading company india, bulk jute bags supplier"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
