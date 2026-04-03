@@ -322,8 +322,8 @@ const Index = () => {
               },
               {
                 "@type": "Question",
-                "name": "What is the minimum order quantity (MOQ) for bulk pen orders?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Our standard minimum order quantity is 10,000 units per product variant. We offer flexible MOQs for custom branded and promotional pen orders depending on the project scope." }
+                "name": "What is the minimum order quantity (MOQ) for bulk orders?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Our standard MOQ is 10,000 units for pens and 5,000 units for jute bags per product variant. We offer flexible MOQs for custom branded and promotional orders depending on the project scope." }
               },
               {
                 "@type": "Question",
