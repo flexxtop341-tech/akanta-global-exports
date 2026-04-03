@@ -113,7 +113,7 @@ const CompanyDetails = () => {
       />
       <PageHero
         title="Company Details"
-        subtitle="India pen export company — learn about our operations, quality assurance, and commitment to excellence in international stationery trade."
+        subtitle="India's trusted pen & jute bag export company — learn about our operations, quality assurance, and commitment to excellence in international trade."
       />
 
       {/* Business Card Section — Flip Card */}
