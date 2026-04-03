@@ -19,7 +19,7 @@ const services = [
   {
     image: iconImportExport,
     title: "Import & Export",
-    desc: "Akanta Global connects trusted suppliers with global buyers through reliable import and export services.",
+    desc: "Akanta Global connects trusted pen manufacturers and jute bag suppliers with global buyers through reliable import and export services.",
   },
   {
     image: iconDistribution,
