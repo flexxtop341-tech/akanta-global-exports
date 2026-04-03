@@ -24,7 +24,7 @@ const services = [
   {
     image: iconDistribution,
     title: "Products Distribution",
-    desc: "Akanta Global supports businesses with global sourcing and product distribution to international markets.",
+    desc: "Akanta Global supports businesses with global sourcing of writing instruments and jute bags, and product distribution to international markets.",
   },
   {
     image: iconMerchantExport,
