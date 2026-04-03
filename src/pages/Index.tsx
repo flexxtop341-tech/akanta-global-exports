@@ -850,8 +850,8 @@ const Index = () => {
             <Accordion type="single" collapsible className="space-y-3">
               {[
                 {
-                  q: "What types of pens does Akanta Global export?",
-                  a: "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, and custom branded/logo pens. All products are export-grade and manufactured to international quality standards."
+                  q: "What products does Akanta Global export?",
+                  a: "We export a wide range of writing instruments including plastic ball pens, retractable click pens, metallic ball pens, custom branded/logo pens, and eco-friendly jute bags. All products are export-grade and manufactured to international quality standards."
                 },
                 {
                   q: "What is the minimum order quantity (MOQ) for bulk pen orders?",
