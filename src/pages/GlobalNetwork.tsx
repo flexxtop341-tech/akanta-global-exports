@@ -108,10 +108,10 @@ const GlobalNetwork = () => {
   return (
     <>
       <SEOHead
-        title="Global Export Network — Ball Pen Supplier to USA, UK, UAE, Africa"
-        description="Akanta Global exports ball pens & writing instruments to 50+ countries — USA, UK, UAE, Africa, Europe & Asia. Strategic seaport access from JNPT Mumbai, Mundra & Chennai for fast stationery export logistics."
+        title="Global Export Network — Ball Pen & Jute Bag Supplier to USA, UK, UAE, Africa"
+        description="Akanta Global exports ball pens, jute bags & writing instruments to 50+ countries — USA, UK, UAE, Africa, Europe & Asia. Strategic seaport access from JNPT Mumbai, Mundra & Chennai for fast export logistics."
         path="/global-network"
-        keywords="ball pen exporter worldwide, pen supplier USA, pen exporter UAE, stationery exporter africa, ball pen supplier europe, writing instruments exporter asia, bulk pen shipping india, international pen distributor, pen export logistics india, seaport stationery export, JNPT pen export, global pen supply chain"
+        keywords="ball pen exporter worldwide, jute bag exporter worldwide, pen supplier USA, jute bags supplier UAE, pen exporter UAE, stationery exporter africa, ball pen supplier europe, eco-friendly jute bags exporter, writing instruments exporter asia, bulk pen shipping india, international pen distributor, pen export logistics india, seaport stationery export, global pen supply chain"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebPage",
