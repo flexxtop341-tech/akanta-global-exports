@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Ship, PackageCheck, Globe2, Send, MessageCircle } from "lucide-react";
+import { Ship, PackageCheck, Globe2, Send, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 import iconShipping from "@/assets/icon-shipping.png";
 import iconQualityProduct from "@/assets/icon-quality-product.png";
