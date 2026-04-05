@@ -1,6 +1,6 @@
 import { useState, FormEvent } from "react";
 import SEOHead from "@/components/SEOHead";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2, Globe, Shield, Headphones } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2, Globe, Shield, Headphones, Instagram, Facebook, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import PageHero from "@/components/PageHero";
@@ -325,6 +325,35 @@ const Contact = () => {
                     Chat on WhatsApp
                   </motion.a>
                 </div>
+              </motion.div>
+
+              {/* Social Media */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="flex items-center gap-4 bg-card/80 backdrop-blur-xl rounded-2xl border border-border/50 p-5 shadow-[0_8px_30px_-10px_hsl(var(--primary)/0.05)]"
+              >
+                <span className="text-sm font-semibold text-foreground">Follow Us:</span>
+                {[
+                  { icon: Instagram, href: "https://www.instagram.com/akantaglobal/", label: "Instagram" },
+                  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579243288534", label: "Facebook" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/akanta-global/?viewAsMember=true", label: "LinkedIn" },
+                ].map((social) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    whileHover={{ scale: 1.15, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-10 h-10 rounded-xl bg-gradient-to-br from-gold/20 to-amber-500/10 border border-gold/20 flex items-center justify-center text-gold hover:from-gold hover:to-amber-600 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-gold/20"
+                  >
+                    <social.icon size={18} />
+                  </motion.a>
+                ))}
               </motion.div>
 
               {/* Quick response badge */}
