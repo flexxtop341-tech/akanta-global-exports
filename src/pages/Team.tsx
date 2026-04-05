@@ -197,13 +197,13 @@ const Team = () => {
               <p className="text-gold/80 font-medium mb-4">Co-Founder & Operations Head</p>
 
               <div className="flex gap-3 mb-6">
-                <a href="https://www.linkedin.com/in/karan-gunjal" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
+                <a href="https://www.linkedin.com/company/akanta-global/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
                   <Linkedin size={16} className="text-gold-light" />
                 </a>
-                <a href="mailto:karan@akantaglobal.com" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
-                  <Mail size={16} className="text-gold-light" />
+                <a href="https://www.facebook.com/profile.php?id=61579243288534" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
+                  <Facebook size={16} className="text-gold-light" />
                 </a>
-                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
+                <a href="https://www.instagram.com/akantaglobal/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary flex items-center justify-center hover:scale-110 transition-transform duration-200 premium-shadow">
                   <Instagram size={16} className="text-gold-light" />
                 </a>
               </div>

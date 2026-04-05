@@ -31,9 +31,9 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex items-center gap-3">
               {[
-                { icon: Instagram, href: "https://www.instagram.com/akantaglobal", label: "Instagram" },
-                { icon: Facebook, href: "https://www.facebook.com/akantaglobal", label: "Facebook" },
-                { icon: Linkedin, href: "https://www.linkedin.com/company/akantaglobal", label: "LinkedIn" },
+                { icon: Instagram, href: "https://www.instagram.com/akantaglobal/", label: "Instagram" },
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579243288534", label: "Facebook" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/akanta-global/?viewAsMember=true", label: "LinkedIn" },
               ].map((social) => (
                 <a
                   key={social.label}
