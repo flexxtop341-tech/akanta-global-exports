@@ -19,7 +19,7 @@ import metallicPens from "@/assets/metallic-pens.jpg";
 import globalTrade from "@/assets/global-trade.png";
 import shippingBg from "@/assets/shipping-bg.jpg";
 import trustedPartnerBg from "@/assets/trusted-partner-bg.png";
-import importExportIllustration from "@/assets/import-export-illustration.png";
+import importExportIllustration from "@/assets/globe-export.png";
 import pensPattern from "@/assets/pens-pattern.png";
 import ctaBg from "@/assets/cta-bg.jpg";
 import pensCollection from "@/assets/pens-collection.png";
