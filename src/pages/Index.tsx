@@ -398,6 +398,32 @@ const Index = () => {
                 Contact Us
               </Link>
             </motion.div>
+
+            {/* Social Media Icons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.7 }}
+              className="flex items-center gap-3 mt-6"
+            >
+              <span className="text-white/60 text-sm font-medium mr-1">Follow Us:</span>
+              {[
+                { icon: Instagram, href: "https://www.instagram.com/akantaglobal/", label: "Instagram" },
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61579243288534", label: "Facebook" },
+                { icon: Linkedin, href: "https://www.linkedin.com/company/akanta-global/?viewAsMember=true", label: "LinkedIn" },
+              ].map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-lg bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center text-white/70 hover:text-gold hover:bg-gold/20 hover:border-gold/40 transition-all duration-300 hover:scale-110"
+                >
+                  <social.icon size={18} />
+                </a>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
