@@ -10,6 +10,16 @@ import customPens from "@/assets/custom-pens.jpg";
 import juteBags from "@/assets/jute-bags.jpg";
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
+import penCopper from "@/assets/pen-copper.jpg";
+import penBlackGold from "@/assets/pen-black-gold.jpg";
+import penSilverClick from "@/assets/pen-silver-click.jpg";
+import penBlueGold from "@/assets/pen-blue-gold.jpg";
+import penBronzePattern from "@/assets/pen-bronze-pattern.jpg";
+import penNavyRosegold from "@/assets/pen-navy-rosegold.jpg";
+import penCopperMatte from "@/assets/pen-copper-matte.jpg";
+import penBlackMatte from "@/assets/pen-black-matte.jpg";
+import penGold from "@/assets/pen-gold.jpg";
+import penBlackExecutive from "@/assets/pen-black-executive.jpg";
 
 const products = [
   {
@@ -47,6 +57,19 @@ const products = [
     specs: ["Material: Natural Jute", "Custom printing available", "Multiple sizes & styles"],
     moq: "5,000 units",
   },
+];
+
+const ballPenGallery = [
+  { image: penCopper, name: "Copper Finish Ball Pen" },
+  { image: penBlackGold, name: "Black & Gold Ball Pen" },
+  { image: penSilverClick, name: "Silver Click Pen" },
+  { image: penBlueGold, name: "Blue & Gold Ball Pen" },
+  { image: penBronzePattern, name: "Bronze Pattern Ball Pen" },
+  { image: penNavyRosegold, name: "Navy Rose Gold Ball Pen" },
+  { image: penCopperMatte, name: "Copper Matte Ball Pen" },
+  { image: penBlackMatte, name: "Black Matte Ball Pen" },
+  { image: penGold, name: "Gold Finish Ball Pen" },
+  { image: penBlackExecutive, name: "Black Executive Ball Pen" },
 ];
 
 const fadeUp = {
@@ -213,6 +236,57 @@ const Products = () => {
                       Quote <ArrowRight size={14} />
                     </Link>
                   </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ball Pen Gallery */}
+      <section className="py-20 bg-background overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            className="text-center mb-14"
+          >
+            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">
+              Our Collection
+            </motion.span>
+            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
+              <span className="gold-gradient-text">Ball Pen Varieties</span>
+            </motion.h2>
+            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
+            <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
+              Explore our premium range of export-grade ball pens — available in multiple finishes, colors, and styles for bulk and custom orders.
+            </motion.p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {ballPenGallery.map((pen, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+                variants={scaleIn}
+                custom={i}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                className="group bg-card rounded-xl overflow-hidden border border-border premium-shadow"
+              >
+                <div className="relative overflow-hidden aspect-[3/4] bg-muted/30">
+                  <motion.img
+                    src={pen.image}
+                    alt={`${pen.name} — export-grade ball pen from Akanta Global`}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.08 }}
+                    transition={{ duration: 0.4 }}
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <h3 className="text-xs font-semibold text-foreground">{pen.name}</h3>
                 </div>
               </motion.div>
             ))}
