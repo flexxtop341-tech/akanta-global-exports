@@ -10,6 +10,16 @@ import customPens from "@/assets/custom-pens.jpg";
 import juteBags from "@/assets/jute-bags.jpg";
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
+import penCopper from "@/assets/pen-copper.jpg";
+import penBlackGold from "@/assets/pen-black-gold.jpg";
+import penSilverClick from "@/assets/pen-silver-click.jpg";
+import penBlueGold from "@/assets/pen-blue-gold.jpg";
+import penBronzePattern from "@/assets/pen-bronze-pattern.jpg";
+import penNavyRosegold from "@/assets/pen-navy-rosegold.jpg";
+import penCopperMatte from "@/assets/pen-copper-matte.jpg";
+import penBlackMatte from "@/assets/pen-black-matte.jpg";
+import penGold from "@/assets/pen-gold.jpg";
+import penBlackExecutive from "@/assets/pen-black-executive.jpg";
 
 const products = [
   {
