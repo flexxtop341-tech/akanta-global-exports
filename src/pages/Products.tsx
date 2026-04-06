@@ -73,6 +73,8 @@ const ballPenGallery = [
   { image: penBlackMatte, name: "Black Matte Ball Pen" },
   { image: penGold, name: "Gold Finish Ball Pen" },
   { image: penBlackExecutive, name: "Black Executive Ball Pen" },
+  { image: penDualTone1, name: "Dual Tone Ball Pen" },
+  { image: penDualTone2, name: "Dual Tone Cap Pen" },
 ];
 
 const fadeUp = {
