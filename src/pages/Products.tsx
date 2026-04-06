@@ -287,7 +287,13 @@ const Products = () => {
                               transition={{ delay: j * 0.05, duration: 0.3 }}
                               className="rounded-lg overflow-hidden border border-border/50 bg-muted/20"
                             >
-                              <div className="aspect-[3/4] overflow-hidden">
+                              <div
+                                className="aspect-[3/4] overflow-hidden cursor-pointer"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setLightboxImage({ src: pen.image, name: pen.name });
+                                }}
+                              >
                                 <img
                                   src={pen.image}
                                   alt={`${pen.name} — Akanta Global`}
