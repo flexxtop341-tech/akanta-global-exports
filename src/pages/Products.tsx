@@ -95,6 +95,7 @@ const scaleIn = {
 
 const Products = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<{ src: string; name: string } | null>(null);
   return (
     <>
       <SEOHead
