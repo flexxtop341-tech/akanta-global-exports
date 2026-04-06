@@ -90,6 +90,7 @@ const scaleIn = {
 };
 
 const Products = () => {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
   return (
     <>
       <SEOHead
