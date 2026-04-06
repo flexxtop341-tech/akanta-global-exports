@@ -197,8 +197,12 @@ const Products = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
-                whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="group bg-background rounded-xl overflow-hidden border border-border premium-shadow cursor-pointer"
+                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${p.title === "Ball Pens" ? "cursor-pointer" : ""}`}
+                onClick={() => {
+                  if (p.title === "Ball Pens") {
+                    setExpandedCard(expandedCard === p.title ? null : p.title);
+                  }
+                }}
               >
                 <div className="relative overflow-hidden h-52">
                   <motion.img
@@ -234,11 +238,65 @@ const Products = () => {
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-gold text-sm font-semibold hover:text-gold-light transition-colors gap-1"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Quote <ArrowRight size={14} />
                     </Link>
                   </div>
+
+                  {/* View Collection toggle for Ball Pens */}
+                  {p.title === "Ball Pens" && (
+                    <div className="mt-4 pt-3 border-t border-border/50">
+                      <button
+                        className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
+                      >
+                        {expandedCard === p.title ? "Hide Collection" : "View Collection"}
+                        <motion.span
+                          animate={{ rotate: expandedCard === p.title ? 180 : 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <ChevronDown size={14} />
+                        </motion.span>
+                      </button>
+                    </div>
+                  )}
                 </div>
+
+                {/* Expandable Gallery */}
+                <AnimatePresence>
+                  {p.title === "Ball Pens" && expandedCard === p.title && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5">
+                        <div className="grid grid-cols-2 gap-3">
+                          {ballPenGallery.map((pen, j) => (
+                            <motion.div
+                              key={j}
+                              initial={{ opacity: 0, scale: 0.9 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: j * 0.05, duration: 0.3 }}
+                              className="rounded-lg overflow-hidden border border-border/50 bg-muted/20"
+                            >
+                              <div className="aspect-[3/4] overflow-hidden">
+                                <img
+                                  src={pen.image}
+                                  alt={`${pen.name} — Akanta Global`}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                              <p className="text-[10px] font-medium text-center py-1.5 text-muted-foreground">{pen.name}</p>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
