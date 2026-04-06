@@ -303,51 +303,6 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Ball Pen Gallery */}
-      <section className="py-20 bg-background overflow-hidden">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            className="text-center mb-14"
-          >
-            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">
-              Our Collection
-            </motion.span>
-            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
-              <span className="gold-gradient-text">Ball Pen Varieties</span>
-            </motion.h2>
-            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
-            <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              Explore our premium range of export-grade ball pens — available in multiple finishes, colors, and styles for bulk and custom orders.
-            </motion.p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {ballPenGallery.map((pen, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                variants={scaleIn}
-                custom={i}
-                whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                className="group bg-card rounded-xl overflow-hidden border border-border premium-shadow"
-              >
-                <div className="relative overflow-hidden aspect-[3/4] bg-muted/30">
-                  <motion.img
-                    src={pen.image}
-                    alt={`${pen.name} — export-grade ball pen from Akanta Global`}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.4 }}
-                  />
-                </div>
-                <div className="p-3 text-center">
-                  <h3 className="text-xs font-semibold text-foreground">{pen.name}</h3>
-                </div>
               </motion.div>
             ))}
           </div>
