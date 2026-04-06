@@ -59,6 +59,19 @@ const products = [
   },
 ];
 
+const ballPenGallery = [
+  { image: penCopper, name: "Copper Finish Ball Pen" },
+  { image: penBlackGold, name: "Black & Gold Ball Pen" },
+  { image: penSilverClick, name: "Silver Click Pen" },
+  { image: penBlueGold, name: "Blue & Gold Ball Pen" },
+  { image: penBronzePattern, name: "Bronze Pattern Ball Pen" },
+  { image: penNavyRosegold, name: "Navy Rose Gold Ball Pen" },
+  { image: penCopperMatte, name: "Copper Matte Ball Pen" },
+  { image: penBlackMatte, name: "Black Matte Ball Pen" },
+  { image: penGold, name: "Gold Finish Ball Pen" },
+  { image: penBlackExecutive, name: "Black Executive Ball Pen" },
+];
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number = 0) => ({
