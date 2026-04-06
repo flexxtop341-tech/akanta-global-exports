@@ -21,6 +21,8 @@ import penCopperMatte from "@/assets/pen-copper-matte.jpg";
 import penBlackMatte from "@/assets/pen-black-matte.jpg";
 import penGold from "@/assets/pen-gold.jpg";
 import penBlackExecutive from "@/assets/pen-black-executive.jpg";
+import penDualTone1 from "@/assets/pen-dual-tone-1.jpg";
+import penDualTone2 from "@/assets/pen-dual-tone-2.jpg";
 
 const products = [
   {
