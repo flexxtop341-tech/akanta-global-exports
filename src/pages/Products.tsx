@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
-import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, ArrowRight, ChevronDown } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ballPens from "@/assets/ball-pens.jpg";
 import buttonPens from "@/assets/button-pens.jpg";
@@ -89,6 +90,7 @@ const scaleIn = {
 };
 
 const Products = () => {
+  const [expandedCard, setExpandedCard] = useState<string | null>(null);
   return (
     <>
       <SEOHead
@@ -195,8 +197,12 @@ const Products = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
-                whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                className="group bg-background rounded-xl overflow-hidden border border-border premium-shadow cursor-pointer"
+                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${p.title === "Ball Pens" ? "cursor-pointer" : ""}`}
+                onClick={() => {
+                  if (p.title === "Ball Pens") {
+                    setExpandedCard(expandedCard === p.title ? null : p.title);
+                  }
+                }}
               >
                 <div className="relative overflow-hidden h-52">
                   <motion.img
@@ -232,67 +238,71 @@ const Products = () => {
                     <Link
                       to="/contact"
                       className="inline-flex items-center text-gold text-sm font-semibold hover:text-gold-light transition-colors gap-1"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       Quote <ArrowRight size={14} />
                     </Link>
                   </div>
+
+                  {/* View Collection toggle for Ball Pens */}
+                  {p.title === "Ball Pens" && (
+                    <div className="mt-4 pt-3 border-t border-border/50">
+                      <button
+                        className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
+                      >
+                        {expandedCard === p.title ? "Hide Collection" : "View Collection"}
+                        <motion.span
+                          animate={{ rotate: expandedCard === p.title ? 180 : 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <ChevronDown size={14} />
+                        </motion.span>
+                      </button>
+                    </div>
+                  )}
                 </div>
+
+                {/* Expandable Gallery */}
+                <AnimatePresence>
+                  {p.title === "Ball Pens" && expandedCard === p.title && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5">
+                        <div className="grid grid-cols-2 gap-3">
+                          {ballPenGallery.map((pen, j) => (
+                            <motion.div
+                              key={j}
+                              initial={{ opacity: 0, scale: 0.9 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: j * 0.05, duration: 0.3 }}
+                              className="rounded-lg overflow-hidden border border-border/50 bg-muted/20"
+                            >
+                              <div className="aspect-[3/4] overflow-hidden">
+                                <img
+                                  src={pen.image}
+                                  alt={`${pen.name} — Akanta Global`}
+                                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                />
+                              </div>
+                              <p className="text-[10px] font-medium text-center py-1.5 text-muted-foreground">{pen.name}</p>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Ball Pen Gallery */}
-      <section className="py-20 bg-background overflow-hidden">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            className="text-center mb-14"
-          >
-            <motion.span variants={fadeUp} custom={0} className="text-gold font-semibold text-sm uppercase tracking-widest block">
-              Our Collection
-            </motion.span>
-            <motion.h2 variants={fadeUp} custom={1} className="text-3xl md:text-4xl font-bold mt-2 mb-2">
-              <span className="gold-gradient-text">Ball Pen Varieties</span>
-            </motion.h2>
-            <motion.div variants={fadeUp} custom={2} className="gold-divider mx-auto mb-4" />
-            <motion.p variants={fadeUp} custom={3} className="text-muted-foreground max-w-xl mx-auto">
-              Explore our premium range of export-grade ball pens — available in multiple finishes, colors, and styles for bulk and custom orders.
-            </motion.p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {ballPenGallery.map((pen, i) => (
-              <motion.div
-                key={i}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                variants={scaleIn}
-                custom={i}
-                whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                className="group bg-card rounded-xl overflow-hidden border border-border premium-shadow"
-              >
-                <div className="relative overflow-hidden aspect-[3/4] bg-muted/30">
-                  <motion.img
-                    src={pen.image}
-                    alt={`${pen.name} — export-grade ball pen from Akanta Global`}
-                    className="w-full h-full object-cover"
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.4 }}
-                  />
-                </div>
-                <div className="p-3 text-center">
-                  <h3 className="text-xs font-semibold text-foreground">{pen.name}</h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Quality Assurance Banner */}
       <section className="relative h-64 md:h-72 overflow-hidden">
