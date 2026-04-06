@@ -303,11 +303,6 @@ const Products = () => {
         </div>
       </section>
 
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Quality Assurance Banner */}
       <section className="relative h-64 md:h-72 overflow-hidden">
