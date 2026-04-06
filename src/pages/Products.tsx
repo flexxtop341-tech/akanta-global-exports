@@ -21,6 +21,8 @@ import penCopperMatte from "@/assets/pen-copper-matte.jpg";
 import penBlackMatte from "@/assets/pen-black-matte.jpg";
 import penGold from "@/assets/pen-gold.jpg";
 import penBlackExecutive from "@/assets/pen-black-executive.jpg";
+import penDualTone1 from "@/assets/pen-dual-tone-1.jpg";
+import penDualTone2 from "@/assets/pen-dual-tone-2.jpg";
 
 const products = [
   {
@@ -71,6 +73,8 @@ const ballPenGallery = [
   { image: penBlackMatte, name: "Black Matte Ball Pen" },
   { image: penGold, name: "Gold Finish Ball Pen" },
   { image: penBlackExecutive, name: "Black Executive Ball Pen" },
+  { image: penDualTone1, name: "Dual Tone Ball Pen" },
+  { image: penDualTone2, name: "Dual Tone Cap Pen" },
 ];
 
 const fadeUp = {
