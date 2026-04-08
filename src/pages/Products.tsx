@@ -272,8 +272,8 @@ const Products = () => {
                     </Link>
                   </div>
 
-                  {/* View Collection toggle for Ball Pens */}
-                  {p.title === "Ball Pens" && (
+                  {/* View Collection toggle for Ball Pens & Retractable Pens */}
+                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") && (
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
