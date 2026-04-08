@@ -227,7 +227,7 @@ const Products = () => {
                 custom={i}
                 className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") ? "cursor-pointer" : ""}`}
                 onClick={() => {
-                  if (p.title === "Ball Pens") {
+                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens") {
                     setExpandedCard(expandedCard === p.title ? null : p.title);
                   }
                 }}
