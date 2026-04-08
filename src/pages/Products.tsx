@@ -72,6 +72,19 @@ const products = [
   },
 ];
 
+const retractablePenGallery = [
+  { image: retractablePen1, name: "Black Matte Click Pen" },
+  { image: retractablePen2, name: "Lime Green Click Pen" },
+  { image: retractablePen3, name: "White & Green Click Pen" },
+  { image: retractablePen4, name: "Black Classic Click Pen" },
+  { image: retractablePen5, name: "Orange Grip Click Pen" },
+  { image: retractablePen6, name: "White NovoMed Pen" },
+  { image: retractablePen7, name: "White & Blue Click Pen" },
+  { image: retractablePen8, name: "White Silver Click Pen" },
+  { image: retractablePen9, name: "Blue Cap Ball Pen" },
+  { image: retractablePen10, name: "White Blue Cap Pen" },
+];
+
 const ballPenGallery = [
   { image: penCopper, name: "Copper Finish Ball Pen" },
   { image: penBlackGold, name: "Black & Gold Ball Pen" },
