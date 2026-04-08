@@ -80,8 +80,14 @@ const products = [
     specs: ["Material: Natural Jute", "Custom printing available", "Multiple sizes & styles"],
     moq: "5,000 units",
   },
+  {
+    image: juteBag1,
+    title: "Printed Jute Bags",
+    desc: "Custom printed jute bags with vibrant designs — perfect for retail branding, promotional events, corporate gifting, and eco-conscious packaging.",
+    specs: ["Material: Natural Jute", "Full-color custom printing", "Multiple sizes & handle styles"],
+    moq: "3,000 units",
+  },
 ];
-
 const retractablePenGallery = [
   { image: retractablePen1, name: "Black Matte Click Pen" },
   { image: retractablePen2, name: "Lime Green Click Pen" },
