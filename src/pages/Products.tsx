@@ -33,6 +33,16 @@ import retractablePen7 from "@/assets/retractable-pen-7.jpg";
 import retractablePen8 from "@/assets/retractable-pen-8.jpg";
 import retractablePen9 from "@/assets/retractable-pen-9.jpg";
 import retractablePen10 from "@/assets/retractable-pen-10.jpg";
+import juteBag1 from "@/assets/jute-bag-1.jpg";
+import juteBag2 from "@/assets/jute-bag-2.jpg";
+import juteBag3 from "@/assets/jute-bag-3.jpg";
+import juteBag4 from "@/assets/jute-bag-4.jpg";
+import juteBag5 from "@/assets/jute-bag-5.jpg";
+import juteBag6 from "@/assets/jute-bag-6.jpg";
+import juteBag7 from "@/assets/jute-bag-7.jpg";
+import juteBag8 from "@/assets/jute-bag-8.jpg";
+import juteBag9 from "@/assets/jute-bag-9.jpg";
+import juteBag10 from "@/assets/jute-bag-10.jpg";
 
 const products = [
   {
@@ -70,8 +80,14 @@ const products = [
     specs: ["Material: Natural Jute", "Custom printing available", "Multiple sizes & styles"],
     moq: "5,000 units",
   },
+  {
+    image: juteBag1,
+    title: "Printed Jute Bags",
+    desc: "Custom printed jute bags with vibrant designs — perfect for retail branding, promotional events, corporate gifting, and eco-conscious packaging.",
+    specs: ["Material: Natural Jute", "Full-color custom printing", "Multiple sizes & handle styles"],
+    moq: "3,000 units",
+  },
 ];
-
 const retractablePenGallery = [
   { image: retractablePen1, name: "Black Matte Click Pen" },
   { image: retractablePen2, name: "Lime Green Click Pen" },
@@ -83,6 +99,19 @@ const retractablePenGallery = [
   { image: retractablePen8, name: "White Silver Click Pen" },
   { image: retractablePen9, name: "Blue Cap Ball Pen" },
   { image: retractablePen10, name: "White Blue Cap Pen" },
+];
+
+const juteBagGallery = [
+  { image: juteBag1, name: "Girls Can Do Anything" },
+  { image: juteBag2, name: "Fairy Mushroom Design" },
+  { image: juteBag3, name: "African Art Print" },
+  { image: juteBag4, name: "Cat & Umbrella" },
+  { image: juteBag5, name: "Bee Kind" },
+  { image: juteBag6, name: "Pink Hat Lady" },
+  { image: juteBag7, name: "I Love My Dog" },
+  { image: juteBag8, name: "Leopard Hearts Love" },
+  { image: juteBag9, name: "Pink Owl" },
+  { image: juteBag10, name: "Girl on Bicycle" },
 ];
 
 const ballPenGallery = [
@@ -225,9 +254,9 @@ const Products = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
-                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") ? "cursor-pointer" : ""}`}
+                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") ? "cursor-pointer" : ""}`}
                 onClick={() => {
-                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens") {
+                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") {
                     setExpandedCard(expandedCard === p.title ? null : p.title);
                   }
                 }}
@@ -273,7 +302,7 @@ const Products = () => {
                   </div>
 
                   {/* View Collection toggle for Ball Pens & Retractable Pens */}
-                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") && (
+                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && (
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
@@ -292,7 +321,7 @@ const Products = () => {
 
                 {/* Expandable Gallery */}
                 <AnimatePresence>
-                  {((p.title === "Ball Pens" && expandedCard === p.title) || (p.title === "Click / Retractable Pens" && expandedCard === p.title)) && (
+                  {((p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && expandedCard === p.title) && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -302,7 +331,7 @@ const Products = () => {
                     >
                       <div className="px-5 pb-5">
                         <div className="grid grid-cols-2 gap-3">
-                          {(p.title === "Ball Pens" ? ballPenGallery : retractablePenGallery).map((pen, j) => (
+                          {(p.title === "Ball Pens" ? ballPenGallery : p.title === "Click / Retractable Pens" ? retractablePenGallery : juteBagGallery).map((pen, j) => (
                             <motion.div
                               key={j}
                               initial={{ opacity: 0, scale: 0.9 }}
