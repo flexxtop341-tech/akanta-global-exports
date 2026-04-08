@@ -23,6 +23,16 @@ import penGold from "@/assets/pen-gold.jpg";
 import penBlackExecutive from "@/assets/pen-black-executive.jpg";
 import penDualTone1 from "@/assets/pen-dual-tone-1.jpg";
 import penDualTone2 from "@/assets/pen-dual-tone-2.jpg";
+import retractablePen1 from "@/assets/retractable-pen-1.jpg";
+import retractablePen2 from "@/assets/retractable-pen-2.jpg";
+import retractablePen3 from "@/assets/retractable-pen-3.jpg";
+import retractablePen4 from "@/assets/retractable-pen-4.jpg";
+import retractablePen5 from "@/assets/retractable-pen-5.jpg";
+import retractablePen6 from "@/assets/retractable-pen-6.jpg";
+import retractablePen7 from "@/assets/retractable-pen-7.jpg";
+import retractablePen8 from "@/assets/retractable-pen-8.jpg";
+import retractablePen9 from "@/assets/retractable-pen-9.jpg";
+import retractablePen10 from "@/assets/retractable-pen-10.jpg";
 
 const products = [
   {
