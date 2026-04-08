@@ -256,7 +256,7 @@ const Products = () => {
                 custom={i}
                 className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") ? "cursor-pointer" : ""}`}
                 onClick={() => {
-                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens") {
+                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") {
                     setExpandedCard(expandedCard === p.title ? null : p.title);
                   }
                 }}
@@ -302,7 +302,7 @@ const Products = () => {
                   </div>
 
                   {/* View Collection toggle for Ball Pens & Retractable Pens */}
-                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") && (
+                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && (
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
@@ -321,7 +321,7 @@ const Products = () => {
 
                 {/* Expandable Gallery */}
                 <AnimatePresence>
-                  {((p.title === "Ball Pens" && expandedCard === p.title) || (p.title === "Click / Retractable Pens" && expandedCard === p.title)) && (
+                  {((p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && expandedCard === p.title) && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -331,7 +331,7 @@ const Products = () => {
                     >
                       <div className="px-5 pb-5">
                         <div className="grid grid-cols-2 gap-3">
-                          {(p.title === "Ball Pens" ? ballPenGallery : retractablePenGallery).map((pen, j) => (
+                          {(p.title === "Ball Pens" ? ballPenGallery : p.title === "Click / Retractable Pens" ? retractablePenGallery : juteBagGallery).map((pen, j) => (
                             <motion.div
                               key={j}
                               initial={{ opacity: 0, scale: 0.9 }}
