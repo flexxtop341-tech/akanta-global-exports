@@ -292,7 +292,7 @@ const Products = () => {
 
                 {/* Expandable Gallery */}
                 <AnimatePresence>
-                  {p.title === "Ball Pens" && expandedCard === p.title && (
+                  {((p.title === "Ball Pens" && expandedCard === p.title) || (p.title === "Click / Retractable Pens" && expandedCard === p.title)) && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -302,7 +302,7 @@ const Products = () => {
                     >
                       <div className="px-5 pb-5">
                         <div className="grid grid-cols-2 gap-3">
-                          {ballPenGallery.map((pen, j) => (
+                          {(p.title === "Ball Pens" ? ballPenGallery : retractablePenGallery).map((pen, j) => (
                             <motion.div
                               key={j}
                               initial={{ opacity: 0, scale: 0.9 }}
