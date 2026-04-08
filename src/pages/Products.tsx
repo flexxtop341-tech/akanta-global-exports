@@ -101,6 +101,19 @@ const retractablePenGallery = [
   { image: retractablePen10, name: "White Blue Cap Pen" },
 ];
 
+const juteBagGallery = [
+  { image: juteBag1, name: "Girls Can Do Anything" },
+  { image: juteBag2, name: "Fairy Mushroom Design" },
+  { image: juteBag3, name: "African Art Print" },
+  { image: juteBag4, name: "Cat & Umbrella" },
+  { image: juteBag5, name: "Bee Kind" },
+  { image: juteBag6, name: "Pink Hat Lady" },
+  { image: juteBag7, name: "I Love My Dog" },
+  { image: juteBag8, name: "Leopard Hearts Love" },
+  { image: juteBag9, name: "Pink Owl" },
+  { image: juteBag10, name: "Girl on Bicycle" },
+];
+
 const ballPenGallery = [
   { image: penCopper, name: "Copper Finish Ball Pen" },
   { image: penBlackGold, name: "Black & Gold Ball Pen" },
