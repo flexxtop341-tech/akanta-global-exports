@@ -43,6 +43,16 @@ import juteBag7 from "@/assets/jute-bag-7.jpg";
 import juteBag8 from "@/assets/jute-bag-8.jpg";
 import juteBag9 from "@/assets/jute-bag-9.jpg";
 import juteBag10 from "@/assets/jute-bag-10.jpg";
+import juteBag11 from "@/assets/jute-bag-11.jpg";
+import juteBag12 from "@/assets/jute-bag-12.jpg";
+import juteBag13 from "@/assets/jute-bag-13.jpg";
+import juteBag14 from "@/assets/jute-bag-14.jpg";
+import juteBag15 from "@/assets/jute-bag-15.jpg";
+import juteBag16 from "@/assets/jute-bag-16.jpg";
+import juteBag17 from "@/assets/jute-bag-17.jpg";
+import juteBag18 from "@/assets/jute-bag-18.jpg";
+import juteBag19 from "@/assets/jute-bag-19.jpg";
+import juteBag20 from "@/assets/jute-bag-20.jpg";
 
 const products = [
   {
@@ -112,6 +122,16 @@ const juteBagGallery = [
   { image: juteBag8, name: "Leopard Hearts Love" },
   { image: juteBag9, name: "Pink Owl" },
   { image: juteBag10, name: "Girl on Bicycle" },
+  { image: juteBag11, name: "Fairy Mushroom (Zip)" },
+  { image: juteBag12, name: "Snoopy Love (Zip)" },
+  { image: juteBag13, name: "African Art (Zip)" },
+  { image: juteBag14, name: "Pink Owl (Juco)" },
+  { image: juteBag15, name: "I Love My Dog (Juco)" },
+  { image: juteBag16, name: "Pink Hat Lady (Juco)" },
+  { image: juteBag17, name: "Bee Kind (Juco)" },
+  { image: juteBag18, name: "Girls Can Do Anything (Juco)" },
+  { image: juteBag19, name: "Toucan Bird" },
+  { image: juteBag20, name: "Snoopy Love Balloons" },
 ];
 
 const ballPenGallery = [
