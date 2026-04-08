@@ -23,6 +23,16 @@ import penGold from "@/assets/pen-gold.jpg";
 import penBlackExecutive from "@/assets/pen-black-executive.jpg";
 import penDualTone1 from "@/assets/pen-dual-tone-1.jpg";
 import penDualTone2 from "@/assets/pen-dual-tone-2.jpg";
+import retractablePen1 from "@/assets/retractable-pen-1.jpg";
+import retractablePen2 from "@/assets/retractable-pen-2.jpg";
+import retractablePen3 from "@/assets/retractable-pen-3.jpg";
+import retractablePen4 from "@/assets/retractable-pen-4.jpg";
+import retractablePen5 from "@/assets/retractable-pen-5.jpg";
+import retractablePen6 from "@/assets/retractable-pen-6.jpg";
+import retractablePen7 from "@/assets/retractable-pen-7.jpg";
+import retractablePen8 from "@/assets/retractable-pen-8.jpg";
+import retractablePen9 from "@/assets/retractable-pen-9.jpg";
+import retractablePen10 from "@/assets/retractable-pen-10.jpg";
 
 const products = [
   {
@@ -60,6 +70,19 @@ const products = [
     specs: ["Material: Natural Jute", "Custom printing available", "Multiple sizes & styles"],
     moq: "5,000 units",
   },
+];
+
+const retractablePenGallery = [
+  { image: retractablePen1, name: "Black Matte Click Pen" },
+  { image: retractablePen2, name: "Lime Green Click Pen" },
+  { image: retractablePen3, name: "White & Green Click Pen" },
+  { image: retractablePen4, name: "Black Classic Click Pen" },
+  { image: retractablePen5, name: "Orange Grip Click Pen" },
+  { image: retractablePen6, name: "White NovoMed Pen" },
+  { image: retractablePen7, name: "White & Blue Click Pen" },
+  { image: retractablePen8, name: "White Silver Click Pen" },
+  { image: retractablePen9, name: "Blue Cap Ball Pen" },
+  { image: retractablePen10, name: "White Blue Cap Pen" },
 ];
 
 const ballPenGallery = [
@@ -202,9 +225,9 @@ const Products = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
-                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${p.title === "Ball Pens" ? "cursor-pointer" : ""}`}
+                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") ? "cursor-pointer" : ""}`}
                 onClick={() => {
-                  if (p.title === "Ball Pens") {
+                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens") {
                     setExpandedCard(expandedCard === p.title ? null : p.title);
                   }
                 }}
@@ -249,8 +272,8 @@ const Products = () => {
                     </Link>
                   </div>
 
-                  {/* View Collection toggle for Ball Pens */}
-                  {p.title === "Ball Pens" && (
+                  {/* View Collection toggle for Ball Pens & Retractable Pens */}
+                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens") && (
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
@@ -269,7 +292,7 @@ const Products = () => {
 
                 {/* Expandable Gallery */}
                 <AnimatePresence>
-                  {p.title === "Ball Pens" && expandedCard === p.title && (
+                  {((p.title === "Ball Pens" && expandedCard === p.title) || (p.title === "Click / Retractable Pens" && expandedCard === p.title)) && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -279,7 +302,7 @@ const Products = () => {
                     >
                       <div className="px-5 pb-5">
                         <div className="grid grid-cols-2 gap-3">
-                          {ballPenGallery.map((pen, j) => (
+                          {(p.title === "Ball Pens" ? ballPenGallery : retractablePenGallery).map((pen, j) => (
                             <motion.div
                               key={j}
                               initial={{ opacity: 0, scale: 0.9 }}
