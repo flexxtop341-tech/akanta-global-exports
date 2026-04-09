@@ -53,6 +53,16 @@ import juteBag17 from "@/assets/jute-bag-17.jpg";
 import juteBag18 from "@/assets/jute-bag-18.jpg";
 import juteBag19 from "@/assets/jute-bag-19.jpg";
 import juteBag20 from "@/assets/jute-bag-20.jpg";
+import ballPen13 from "@/assets/ball-pen-13.jpg";
+import ballPen14 from "@/assets/ball-pen-14.jpg";
+import ballPen15 from "@/assets/ball-pen-15.jpg";
+import ballPen16 from "@/assets/ball-pen-16.jpg";
+import ballPen17 from "@/assets/ball-pen-17.jpg";
+import ballPen18 from "@/assets/ball-pen-18.jpg";
+import ballPen19 from "@/assets/ball-pen-19.jpg";
+import ballPen20 from "@/assets/ball-pen-20.jpg";
+import ballPen21 from "@/assets/ball-pen-21.jpg";
+import ballPen22 from "@/assets/ball-pen-22.jpg";
 
 const products = [
   {
