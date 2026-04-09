@@ -297,9 +297,9 @@ const Products = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
-                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") ? "cursor-pointer" : ""}`}
+                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") ? "cursor-pointer" : ""}`}
                 onClick={() => {
-                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") {
+                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") {
                     setExpandedCard(expandedCard === p.title ? null : p.title);
                   }
                 }}
@@ -345,7 +345,7 @@ const Products = () => {
                   </div>
 
                   {/* View Collection toggle for Ball Pens & Retractable Pens */}
-                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && (
+                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") && (
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
