@@ -157,6 +157,16 @@ const ballPenGallery = [
   { image: penBlackExecutive, name: "Black Executive Ball Pen" },
   { image: penDualTone1, name: "Dual Tone Ball Pen" },
   { image: penDualTone2, name: "Dual Tone Cap Pen" },
+  { image: ballPen13, name: "Orange Cap Ball Pen" },
+  { image: ballPen14, name: "Blue Stick Ball Pen" },
+  { image: ballPen15, name: "Green Striped Ball Pen" },
+  { image: ballPen16, name: "Sky Blue Ball Pen" },
+  { image: ballPen17, name: "Blue Cap White Body Pen" },
+  { image: ballPen18, name: "Black Click Pen" },
+  { image: ballPen19, name: "Blue Cap Clear Body Pen" },
+  { image: ballPen20, name: "Blue Capped Ball Pen" },
+  { image: ballPen21, name: "Blue Grip Ball Pen" },
+  { image: ballPen22, name: "Blue Striped Ball Pen" },
 ];
 
 const fadeUp = {
