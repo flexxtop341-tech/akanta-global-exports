@@ -144,7 +144,7 @@ const juteBagGallery = [
   { image: juteBag20, name: "Snoopy Love Balloons" },
 ];
 
-const ballPenGallery = [
+const metallicPenGallery = [
   { image: penCopper, name: "Copper Finish Ball Pen" },
   { image: penBlackGold, name: "Black & Gold Ball Pen" },
   { image: penSilverClick, name: "Silver Click Pen" },
@@ -157,6 +157,9 @@ const ballPenGallery = [
   { image: penBlackExecutive, name: "Black Executive Ball Pen" },
   { image: penDualTone1, name: "Dual Tone Ball Pen" },
   { image: penDualTone2, name: "Dual Tone Cap Pen" },
+];
+
+const ballPenGallery = [
   { image: ballPen13, name: "Orange Cap Ball Pen" },
   { image: ballPen14, name: "Blue Stick Ball Pen" },
   { image: ballPen15, name: "Green Striped Ball Pen" },
@@ -294,9 +297,9 @@ const Products = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 variants={scaleIn}
                 custom={i}
-                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") ? "cursor-pointer" : ""}`}
+                className={`group bg-background rounded-xl overflow-hidden border border-border premium-shadow ${(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") ? "cursor-pointer" : ""}`}
                 onClick={() => {
-                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") {
+                  if (p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") {
                     setExpandedCard(expandedCard === p.title ? null : p.title);
                   }
                 }}
@@ -342,7 +345,7 @@ const Products = () => {
                   </div>
 
                   {/* View Collection toggle for Ball Pens & Retractable Pens */}
-                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && (
+                  {(p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") && (
                     <div className="mt-4 pt-3 border-t border-border/50">
                       <button
                         className="flex items-center gap-2 text-gold text-xs font-semibold uppercase tracking-wider w-full justify-center hover:text-gold-light transition-colors"
@@ -361,7 +364,7 @@ const Products = () => {
 
                 {/* Expandable Gallery */}
                 <AnimatePresence>
-                  {((p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && expandedCard === p.title) && (
+                  {((p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") && expandedCard === p.title) && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -371,7 +374,7 @@ const Products = () => {
                     >
                       <div className="px-5 pb-5">
                         <div className="grid grid-cols-2 gap-3">
-                          {(p.title === "Ball Pens" ? ballPenGallery : p.title === "Click / Retractable Pens" ? retractablePenGallery : juteBagGallery).map((pen, j) => (
+                          {(p.title === "Ball Pens" ? ballPenGallery : p.title === "Click / Retractable Pens" ? retractablePenGallery : p.title === "Metallic Ball Pens" ? metallicPenGallery : juteBagGallery).map((pen, j) => (
                             <motion.div
                               key={j}
                               initial={{ opacity: 0, scale: 0.9 }}
