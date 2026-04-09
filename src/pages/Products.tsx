@@ -144,7 +144,7 @@ const juteBagGallery = [
   { image: juteBag20, name: "Snoopy Love Balloons" },
 ];
 
-const ballPenGallery = [
+const metallicPenGallery = [
   { image: penCopper, name: "Copper Finish Ball Pen" },
   { image: penBlackGold, name: "Black & Gold Ball Pen" },
   { image: penSilverClick, name: "Silver Click Pen" },
@@ -157,6 +157,9 @@ const ballPenGallery = [
   { image: penBlackExecutive, name: "Black Executive Ball Pen" },
   { image: penDualTone1, name: "Dual Tone Ball Pen" },
   { image: penDualTone2, name: "Dual Tone Cap Pen" },
+];
+
+const ballPenGallery = [
   { image: ballPen13, name: "Orange Cap Ball Pen" },
   { image: ballPen14, name: "Blue Stick Ball Pen" },
   { image: ballPen15, name: "Green Striped Ball Pen" },
@@ -361,7 +364,7 @@ const Products = () => {
 
                 {/* Expandable Gallery */}
                 <AnimatePresence>
-                  {((p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags") && expandedCard === p.title) && (
+                  {((p.title === "Ball Pens" || p.title === "Click / Retractable Pens" || p.title === "Printed Jute Bags" || p.title === "Metallic Ball Pens") && expandedCard === p.title) && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -371,7 +374,7 @@ const Products = () => {
                     >
                       <div className="px-5 pb-5">
                         <div className="grid grid-cols-2 gap-3">
-                          {(p.title === "Ball Pens" ? ballPenGallery : p.title === "Click / Retractable Pens" ? retractablePenGallery : juteBagGallery).map((pen, j) => (
+                          {(p.title === "Ball Pens" ? ballPenGallery : p.title === "Click / Retractable Pens" ? retractablePenGallery : p.title === "Metallic Ball Pens" ? metallicPenGallery : juteBagGallery).map((pen, j) => (
                             <motion.div
                               key={j}
                               initial={{ opacity: 0, scale: 0.9 }}
