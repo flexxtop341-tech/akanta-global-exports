@@ -8,7 +8,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 import iconCertIso from "@/assets/icon-cert-iso.png";
 import iconCertEnv from "@/assets/icon-cert-env.png";
-import iconCertFood from "@/assets/icon-cert-food.png";
+
 
 const badges = [
   "100% Compliance Rate",
