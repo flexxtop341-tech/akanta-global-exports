@@ -72,7 +72,7 @@ export type ProductCategory = {
 export const productCategories: ProductCategory[] = [
   {
     slug: "ball-pens",
-    image: ballPens,
+    image: ballPen18,
     title: "Ball Pens",
     desc: "High-quality plastic ball pen manufacturer offering smooth-writing pens for bulk orders, office stationery, and wholesale distribution.",
     longDesc: "Explore our full Ball Pens collection — smooth-writing oil-based ink pens with a variety of body styles, cap colours, and grip designs. Ideal for promotional campaigns, office supply, and wholesale export.",
@@ -93,7 +93,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: "click-retractable-pens",
-    image: buttonPens,
+    image: retractablePen1,
     title: "Click / Retractable Pens",
     desc: "Retractable pen supplier with sleek push-button designs, ergonomic grip — ideal for promotional and office use.",
     longDesc: "Push-button retractable pens with ergonomic grips and contemporary designs — perfect for branded promotions, conferences, and office distribution.",
@@ -114,7 +114,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: "metallic-ball-pens",
-    image: metallicPens,
+    image: penBlackGold,
     title: "Metallic Ball Pens",
     desc: "Premium corporate gift pens supplier — full-metal finish ball pens for executive gifting and brand promotion.",
     longDesc: "Premium full-metal pens with refined finishes — copper, rose gold, matte black, dual-tone and more. Built for executive gifting and luxury brand promotion.",
@@ -137,7 +137,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: "custom-logo-pens",
-    image: customPens,
+    image: penBlackExecutive,
     title: "Custom Logo Pens",
     desc: "Custom printed pens supplier offering private-label pens with laser engraving, logo branding, and premium gift packaging.",
     longDesc: "Private-label pens with laser engraving, pad printing, and premium gift packaging — tailored to your brand identity and corporate gifting needs.",
@@ -147,7 +147,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: "jute-bags",
-    image: juteBags,
+    image: juteBag14,
     title: "Jute Bags",
     desc: "Premium eco-friendly jute bags for export — ideal for retail packaging, corporate gifting, and sustainable branding solutions.",
     longDesc: "Natural, sustainable jute bags in multiple sizes and styles — designed for retail, gifting, and eco-conscious branding.",
@@ -157,7 +157,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     slug: "printed-jute-bags",
-    image: juteBag1,
+    image: juteBag2,
     title: "Printed Jute Bags",
     desc: "Custom printed jute bags with vibrant designs — perfect for retail branding, promotional events, corporate gifting, and eco-conscious packaging.",
     longDesc: "Vibrant full-colour printed jute bags in a wide range of artistic designs — perfect for retail, promotions, and gifting.",
