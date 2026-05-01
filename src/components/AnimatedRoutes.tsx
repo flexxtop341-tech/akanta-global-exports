@@ -4,6 +4,7 @@ import Index from "@/pages/Index";
 import About from "@/pages/About";
 import CompanyDetails from "@/pages/CompanyDetails";
 import Products from "@/pages/Products";
+import ProductCategory from "@/pages/ProductCategory";
 import GlobalNetwork from "@/pages/GlobalNetwork";
 import Certificates from "@/pages/Certificates";
 import Team from "@/pages/Team";
@@ -34,6 +35,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
         <Route path="/company" element={<PageWrapper><CompanyDetails /></PageWrapper>} />
         <Route path="/products" element={<PageWrapper><Products /></PageWrapper>} />
+        <Route path="/products/:slug" element={<PageWrapper><ProductCategory /></PageWrapper>} />
         <Route path="/global-network" element={<PageWrapper><GlobalNetwork /></PageWrapper>} />
         <Route path="/certificates" element={<PageWrapper><Certificates /></PageWrapper>} />
         <Route path="/team" element={<PageWrapper><Team /></PageWrapper>} />
