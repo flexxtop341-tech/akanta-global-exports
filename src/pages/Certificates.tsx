@@ -9,9 +9,6 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import iconCertIso from "@/assets/icon-cert-iso.png";
 import iconCertEnv from "@/assets/icon-cert-env.png";
 import iconCertFood from "@/assets/icon-cert-food.png";
-import iconCertIec from "@/assets/icon-cert-iec.png";
-import iconCertApeda from "@/assets/icon-cert-apeda.png";
-import iconCertFieo from "@/assets/icon-cert-fieo.png";
 
 const badges = [
   "100% Compliance Rate",
@@ -40,46 +37,6 @@ const certs = [
     issued: "June 10, 2023",
     expires: "June 9, 2026",
     scope: "Environmental management for warehousing, packaging, and logistics operations across all export activities.",
-  },
-  {
-    icon: iconCertFood, category: "Food Safety", title: "FSSAI License",
-    desc: "Food Safety and Standards Authority of India certification for all food product exports.",
-    highlight: false,
-    certNo: "FSSAI-10023041002581",
-    issuer: "Food Safety and Standards Authority of India",
-    issued: "January 1, 2023",
-    expires: "December 31, 2027",
-    scope: "Manufacturing, storage, and export of processed food products including spices, grains, and packaged goods.",
-  },
-  {
-    icon: iconCertIec, category: "Import-Export Code", title: "IEC Registration",
-    desc: "Government of India Import Export Code, mandatory for all international trade operations.",
-    highlight: true,
-    certNo: "IEC-0323XXXXXX",
-    issuer: "Directorate General of Foreign Trade (DGFT)",
-    issued: "February 20, 2020",
-    expires: "Lifetime Validity",
-    scope: "Authorization to conduct import and export of goods and services from India to any international market.",
-  },
-  {
-    icon: iconCertApeda, category: "Agricultural Exports", title: "APEDA Registration",
-    desc: "Agricultural and Processed Food Products Export Development Authority registration.",
-    highlight: false,
-    certNo: "APEDA-RCMC-AG-2024",
-    issuer: "Agricultural & Processed Food Products Export Development Authority",
-    issued: "April 5, 2024",
-    expires: "March 31, 2029",
-    scope: "Export of scheduled agricultural and processed food products under APEDA guidelines and quality standards.",
-  },
-  {
-    icon: iconCertFieo, category: "Trade Association", title: "FIEO Membership",
-    desc: "Federation of Indian Export Organizations membership for premier export support.",
-    highlight: false,
-    certNo: "FIEO-MH-2024-AG-1187",
-    issuer: "Federation of Indian Export Organisations",
-    issued: "January 15, 2024",
-    expires: "January 14, 2027",
-    scope: "Membership providing access to trade facilitation, export promotion events, and government liaison services.",
   },
 ];
 
