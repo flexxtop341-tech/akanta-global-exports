@@ -259,16 +259,6 @@ const Team = () => {
                   />
                 </motion.div>
 
-                <motion.div
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  animate={{ y: [0, -5, 0] }}
-                  className="absolute -bottom-2 -left-2 bg-card border border-gold/30 rounded-full px-4 py-2 premium-shadow"
-                >
-                  <span className="text-xs font-semibold gold-gradient-text">Operations Head</span>
-                </motion.div>
               </div>
             </motion.div>
           </div>
