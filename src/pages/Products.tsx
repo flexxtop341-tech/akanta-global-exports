@@ -29,8 +29,8 @@ const Products = () => {
   return (
     <>
       <SEOHead
-        title="Ball Pens & Jute Bags Manufacturer India | Retractable, Metallic & Custom Products"
-        description="Buy export-grade ball pens and eco-friendly jute bags from India — plastic ball pens, retractable click pens, metallic pens, custom logo pens & premium jute bags. Bulk orders available."
+        title="Ball Pens & Jute Bags — Bulk Manufacturer India"
+        description="Export-grade ball pens & eco-friendly jute bags from India. Plastic, retractable, metallic, custom logo pens & jute bags in bulk."
         path="/products"
         keywords="ball pen manufacturer india, retractable pen supplier, metallic ball pen exporter, custom logo pens india, bulk pen order india, jute bags exporter india"
         jsonLd={[

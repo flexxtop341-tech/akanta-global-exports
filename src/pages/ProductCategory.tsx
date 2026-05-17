@@ -15,9 +15,42 @@ const ProductCategory = () => {
   return (
     <>
       <SEOHead
-        title={`${category.title} — Manufacturer & Exporter India | Akanta Global`}
-        description={category.desc}
+        title={`${category.title} — Exporter India`}
+        description={category.desc.length > 160 ? category.desc.slice(0, 157) + "..." : category.desc}
         path={`/products/${category.slug}`}
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: `${category.title} — Akanta Global`,
+            description: category.desc,
+            url: `https://akantaglobal.com/products/${category.slug}`,
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: category.gallery.length,
+              itemListElement: category.gallery.map((item, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                item: {
+                  "@type": "Product",
+                  name: item.name,
+                  image: `https://akantaglobal.com${item.image}`,
+                  description: `${item.name} — ${category.title} by Akanta Global`,
+                  brand: { "@type": "Brand", name: "Akanta Global" },
+                },
+              })),
+            },
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://akantaglobal.com/" },
+              { "@type": "ListItem", position: 2, name: "Products", item: "https://akantaglobal.com/products" },
+              { "@type": "ListItem", position: 3, name: category.title, item: `https://akantaglobal.com/products/${category.slug}` },
+            ],
+          },
+        ]}
       />
 
       {/* Hero */}
