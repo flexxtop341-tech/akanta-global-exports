@@ -9,8 +9,8 @@ const Blog = () => {
   return (
     <>
       <SEOHead
-        title="Blog — Ball Pen & Jute Bag Export Tips, Sourcing & Trade Guides"
-        description="Expert articles on ball pen manufacturing, jute bag sourcing, stationery export guides, promotional pen marketing strategies, bulk sourcing tips & global distributor insights from Akanta Global."
+        title="Blog — Pen & Jute Bag Export Insights"
+        description="Expert guides on ball pen manufacturing, jute bag sourcing, stationery export & promotional pen marketing for global buyers."
         path="/blog"
         keywords="ball pen export blog, jute bag export tips, stationery industry insights, pen manufacturing india articles, how to import pens from india, jute bags sourcing guide, promotional pen marketing, bulk pen buying guide, eco-friendly jute bags, stationery sourcing tips, pen trade articles, writing instruments blog, india stationery export guide"
         jsonLd={{

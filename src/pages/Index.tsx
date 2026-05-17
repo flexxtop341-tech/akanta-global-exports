@@ -274,36 +274,11 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Ball Pen & Jute Bag Exporter India | Bulk Supplier & Manufacturer"
-        description="Akanta Global — India's leading ball pen exporter, jute bag supplier & stationery manufacturer. We supply bulk promotional pens, retractable pens, metallic pens, eco-friendly jute bags & custom branded products to global distributors and wholesale buyers."
+        title="Ball Pen & Jute Bag Exporter India"
+        description="India's leading bulk ball pen & jute bag exporter — promotional, metallic, retractable & custom branded stationery for global distributors."
         path="/"
         keywords="ball pen exporter india, jute bag exporter india, jute bags wholesale supplier, eco-friendly jute bags manufacturer, ball pen manufacturer india, bulk pen supplier india, wholesale stationery supplier, promotional pen manufacturer, writing instruments exporter, custom branded pens india, jute bag manufacturer nashik, B2B pen supplier, retractable pen exporter, metallic ball pen supplier"
         jsonLd={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Akanta Global",
-            "alternateName": "Akanta Global Exports",
-            "url": "https://akantaglobal.com",
-            "logo": "https://akantaglobal.com/favicon.ico",
-            "description": "Leading ball pen exporter, jute bag supplier, and wholesale stationery manufacturer from India serving global distributors and importers.",
-            "foundingDate": "2008",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Dnyan Sarita Society, Room No. 1, Ground Floor, Opp SBI Bank, Near RTO Corner",
-              "addressLocality": "Nashik",
-              "addressRegion": "Maharashtra",
-              "postalCode": "422003",
-              "addressCountry": "IN"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+919673398945",
-              "contactType": "sales",
-              "areaServed": ["US", "GB", "AE", "IN", "ZA", "NG", "KE", "DE", "FR"],
-              "availableLanguage": ["English", "Hindi"]
-            }
-          },
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",

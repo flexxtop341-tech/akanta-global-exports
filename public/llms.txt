@@ -1,0 +1,26 @@
+# Akanta Global
+
+> India-based bulk exporter of ball pens, jute bags, and custom branded stationery for global distributors, importers, and wholesale buyers.
+
+Akanta Global manufactures and exports plastic ball pens, retractable click pens, metallic ball pens, custom logo pens, and eco-friendly jute bags from Nashik, Maharashtra. MOQ: 10,000 units for pens, 5,000 units for jute bags.
+
+## Pages
+
+- [Home](/): Company overview, hero products, and contact form.
+- [About](/about): Company story, mission, and export pillars.
+- [Products](/products): Product categories — pens and jute bags.
+- [Company Details](/company): Registration, certifications, and corporate info.
+- [Global Network](/global-network): Countries served and export reach.
+- [Certifications](/certificates): ISO 9001:2015 and ISO 14001:2015.
+- [Team](/team): Founder and leadership.
+- [Blog](/blog): Sourcing guides and stationery export insights.
+- [Contact](/contact): Quote requests and inquiries.
+
+## Product Categories
+
+- [Ball Pens](/products/ball-pens): Plastic ball pens for bulk orders.
+- [Click / Retractable Pens](/products/click-retractable-pens): Push-button retractable pens.
+- [Metallic Ball Pens](/products/metallic-ball-pens): Premium metal-finish pens for executive gifting.
+- [Custom Logo Pens](/products/custom-logo-pens): Private-label pens with logo printing.
+- [Jute Bags](/products/jute-bags): Eco-friendly jute bags for export.
+- [Printed Jute Bags](/products/printed-jute-bags): Custom-printed promotional jute bags.
