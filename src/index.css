@@ -160,4 +160,20 @@
     0%, 100% { transform: translateX(-100%); }
     50% { transform: translateX(100%); }
   }
+
+  @keyframes catalogue-flash {
+    0%, 100% {
+      background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)));
+      box-shadow: 0 0 0 0 hsl(var(--gold) / 0.6), 0 8px 24px -6px hsl(var(--gold) / 0.5);
+    }
+    50% {
+      background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+      box-shadow: 0 0 0 12px hsl(var(--gold) / 0), 0 10px 30px -4px hsl(var(--gold) / 0.8);
+    }
+  }
+
+  .catalogue-flash-btn {
+    animation: catalogue-flash 1.6s ease-in-out infinite;
+  }
 }
+

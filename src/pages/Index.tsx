@@ -1,6 +1,8 @@
 import { useState, FormEvent } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SEOHead from "@/components/SEOHead";
+import CatalogueButton from "@/components/CatalogueButton";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Ship, PackageCheck, Globe2, Send, MessageCircle } from "lucide-react";
@@ -372,7 +374,9 @@ const Index = () => {
               >
                 Contact Us
               </Link>
+              <CatalogueButton label="Download Catalogue" />
             </motion.div>
+
 
             {/* Social Media Icons */}
             <motion.div
