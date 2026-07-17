@@ -149,13 +149,16 @@ const Footer = () => {
           <p className="text-sm text-footer-foreground/40">
             © {new Date().getFullYear()} Akanta Global. All rights reserved.
           </p>
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-1.5 text-sm font-semibold text-gold/70 hover:text-gold transition-colors"
-          >
-            Request a Quote
-            <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <CatalogueButton label="View Catalogue" className="text-xs md:text-sm px-4 py-2" />
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-1.5 text-sm font-semibold text-gold/70 hover:text-gold transition-colors"
+            >
+              Request a Quote
+              <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </Link>
+          </div>
         </div>
       </div>
 
