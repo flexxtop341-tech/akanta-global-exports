@@ -78,9 +78,7 @@ const Team = () => {
                   className="absolute -inset-8 rounded-full border border-dashed border-gold/10"
                 />
 
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                <div
                   className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 premium-shadow"
                   style={{
                     background: "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))",
@@ -91,7 +89,7 @@ const Team = () => {
                     alt="Babita Gunjal - Founder"
                     className="w-full h-full object-cover object-top"
                   />
-                </motion.div>
+                </div>
 
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
@@ -244,9 +242,7 @@ const Team = () => {
                   className="absolute -inset-8 rounded-full border border-dashed border-gold/10"
                 />
 
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                <div
                   className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gold/30 premium-shadow"
                   style={{
                     background: "linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)))",
@@ -257,7 +253,7 @@ const Team = () => {
                     alt="Karan Gunjal - Co-Founder"
                     className="w-full h-full object-cover object-center"
                   />
-                </motion.div>
+                </div>
 
               </div>
             </motion.div>
