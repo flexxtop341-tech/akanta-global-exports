@@ -55,6 +55,18 @@ const Products = () => {
         subtitle="Browse our product categories — click any category to view the full gallery, specifications, and request a quote."
       />
 
+      {/* Catalogue CTA */}
+      <section className="bg-card py-8 border-b border-border">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+          <p className="text-foreground font-semibold text-base md:text-lg">
+            Explore our complete pen collection in one file —
+          </p>
+          <CatalogueButton label="Download Full Catalogue (PDF)" />
+        </div>
+      </section>
+
+
+
       {/* Premium Collection Banner */}
       <section className="relative h-72 md:h-80 overflow-hidden -mt-1">
         <img
