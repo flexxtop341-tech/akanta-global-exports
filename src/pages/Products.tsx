@@ -3,6 +3,8 @@ import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Images } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import CatalogueButton from "@/components/CatalogueButton";
+
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
 import { productCategories } from "@/data/productCategories";
