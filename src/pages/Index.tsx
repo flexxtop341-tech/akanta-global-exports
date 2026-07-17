@@ -372,7 +372,9 @@ const Index = () => {
               >
                 Contact Us
               </Link>
+              <CatalogueButton label="Download Catalogue" />
             </motion.div>
+
 
             {/* Social Media Icons */}
             <motion.div
