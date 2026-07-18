@@ -385,7 +385,7 @@ const Index = () => {
               transition={{ duration: 0.7, delay: 0.55 }}
               className="mt-5"
             >
-              <CatalogueQR size="lg" label="Scan to view our catalogue" />
+              <CatalogueQR size="lg" label="Scan to view our catalogue" labelClassName="text-white drop-shadow-md" />
             </motion.div>
 
 
