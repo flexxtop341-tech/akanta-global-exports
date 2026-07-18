@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
+import CatalogueButton from "./CatalogueButton";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -131,6 +132,8 @@ const Header = () => {
 
           {/* Right actions */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <CatalogueButton label="Catalogue" className="!px-4 !py-1.5 !text-[13px] !rounded-md" />
+
             <div className="relative">
               <button
                 onClick={() => setShowTranslate(!showTranslate)}
@@ -197,6 +200,8 @@ const Header = () => {
             ))}
 
             <div className="h-[1px] my-3" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.2), transparent)' }} />
+
+            <CatalogueButton label="Download Catalogue" className="w-full justify-center !py-3 !rounded-lg !text-sm mb-3" />
 
             <div className="flex items-center gap-3">
               <button
