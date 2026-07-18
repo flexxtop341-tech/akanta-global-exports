@@ -202,13 +202,7 @@ const Header = () => {
             <div className="h-[1px] my-3" style={{ background: 'linear-gradient(90deg, transparent, hsl(var(--gold) / 0.2), transparent)' }} />
 
             <div className="flex items-center gap-3">
-              <button
-                onClick={() => setShowTranslate(!showTranslate)}
-                className="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-medium border border-gold/20 text-foreground/70 hover:text-gold hover:bg-gold/5 transition-all duration-300"
-              >
-                <Globe size={16} />
-                Translate
-              </button>
+              <CatalogueButton label="Catalogue" className="flex-1 justify-center !py-3 !rounded-lg !text-sm" />
               <Link
                 to="/contact"
                 className="flex-1 text-center py-3 rounded-lg text-sm font-semibold text-white shadow-lg"
