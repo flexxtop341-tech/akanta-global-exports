@@ -419,9 +419,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Services */}
-      <ServicesSection />
-
       {/* Product Categories */}
       <section className="py-16 md:py-24 bg-card overflow-hidden relative">
         <div className="container mx-auto px-4">
@@ -500,6 +497,9 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Our Services */}
+      <ServicesSection />
 
       {/* About Snapshot with Stats */}
       <section className="py-16 md:py-24 bg-background overflow-hidden relative">
