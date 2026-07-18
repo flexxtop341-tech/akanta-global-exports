@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowUpRight, Instagram, Facebook, Linkedin } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
 import CatalogueButton from "@/components/CatalogueButton";
+import CatalogueQR from "@/components/CatalogueQR";
 
 const Footer = () => {
   return (
@@ -150,6 +151,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Akanta Global. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
+            <CatalogueQR size="sm" className="hidden sm:flex" />
             <CatalogueButton label="View Catalogue" className="text-xs md:text-sm px-4 py-2" />
             <Link
               to="/contact"
