@@ -132,6 +132,8 @@ const Header = () => {
 
           {/* Right actions */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
+            <CatalogueButton label="Catalogue" className="!px-4 !py-1.5 !text-[13px] !rounded-md" />
+
             <div className="relative">
               <button
                 onClick={() => setShowTranslate(!showTranslate)}
