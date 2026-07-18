@@ -4,6 +4,7 @@ interface Props {
   label?: string;
   size?: "sm" | "md" | "lg";
   className?: string;
+  labelClassName?: string;
   showLabel?: boolean;
 }
 
@@ -17,6 +18,7 @@ const CatalogueQR = ({
   label,
   size = "md",
   className = "",
+  labelClassName = "",
   showLabel = true,
 }: Props) => {
   const s = sizes[size];
@@ -30,7 +32,7 @@ const CatalogueQR = ({
         />
       </div>
       {showLabel && (
-        <span className={`${s.text} text-muted-foreground font-medium text-center max-w-[160px] leading-tight`}>
+        <span className={`${s.text} font-medium text-center max-w-[160px] leading-tight ${labelClassName || "text-muted-foreground"}`}>
           {label || s.label}
         </span>
       )}
