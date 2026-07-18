@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import logo from "@/assets/akanta-logo-new.png";
+import CatalogueButton from "./CatalogueButton";
 
 const navItems = [
   { label: "Home", path: "/" },
