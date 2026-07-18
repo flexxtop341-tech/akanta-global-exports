@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Images } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import CatalogueButton from "@/components/CatalogueButton";
+import CatalogueQR from "@/components/CatalogueQR";
 
 import productsHeroBanner from "@/assets/products-hero-banner.jpg";
 import productsQualityBanner from "@/assets/products-quality-banner.jpg";
@@ -64,6 +65,9 @@ const Products = () => {
             Explore our complete pen collection in one file —
           </p>
           <CatalogueButton label="Download Full Catalogue (PDF)" />
+        </div>
+        <div className="container mx-auto px-4 mt-6 flex justify-center">
+          <CatalogueQR size="md" label="Or scan the QR code to open the catalogue" />
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Download, X, FileText } from "lucide-react";
 import catalogueAsset from "@/assets/pen-catalogue.pdf.asset.json";
+import CatalogueQR from "@/components/CatalogueQR";
 
 interface Props {
   className?: string;
@@ -50,7 +51,8 @@ const CatalogueButton = ({ className = "", label = "Download Catalogue" }: Props
                   Akanta Global — Pen Catalogue
                 </h3>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
+                <CatalogueQR size="sm" className="hidden md:flex" />
                 <a
                   href={catalogueAsset.url}
                   target="_blank"

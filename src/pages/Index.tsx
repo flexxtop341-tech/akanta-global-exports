@@ -2,6 +2,7 @@ import { useState, FormEvent } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import SEOHead from "@/components/SEOHead";
 import CatalogueButton from "@/components/CatalogueButton";
+import CatalogueQR from "@/components/CatalogueQR";
 
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -375,6 +376,16 @@ const Index = () => {
                 Contact Us
               </Link>
               <CatalogueButton label="Download Catalogue" />
+            </motion.div>
+
+            {/* Catalogue QR */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.55 }}
+              className="mt-5"
+            >
+              <CatalogueQR size="md" label="Scan to view our catalogue" labelClassName="text-white drop-shadow-md" />
             </motion.div>
 
 
