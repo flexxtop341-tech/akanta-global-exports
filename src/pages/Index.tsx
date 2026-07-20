@@ -383,9 +383,11 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="mt-5 flex justify-center md:justify-start"
+              className="mt-5 flex justify-center"
             >
-              <CatalogueQR size="md" label="Scan to view our catalogue" labelClassName="text-white drop-shadow-md" />
+              <div className="inline-flex flex-col items-center p-3 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10">
+                <CatalogueQR size="md" label="Scan to view our catalogue" labelClassName="text-white drop-shadow-md" />
+              </div>
             </motion.div>
 
 
