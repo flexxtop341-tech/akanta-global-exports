@@ -249,7 +249,7 @@ const Team = () => {
                   }}
                 >
                   <img
-                    src={karanAvatar}
+                    src={karanAvatarAsset.url}
                     alt="Karan Gunjal - Co-Founder"
                     className="w-full h-full object-cover object-center"
                   />
