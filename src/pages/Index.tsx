@@ -338,60 +338,49 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="relative container mx-auto px-4 py-20">
-          <div className="max-w-2xl">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6 drop-shadow-lg"
-            >
-              <span className="gold-gradient-text">Leading Ball Pen & Jute Bag Exporter</span>
-              <br />
-              <span className="text-white drop-shadow-lg">from India</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed drop-shadow-md"
-            >
-              Akanta Global is a trusted ball pen exporter, jute bag supplier, and stationery manufacturer from India. We supply bulk promotional pens, eco-friendly jute bags, office stationery, and custom branded writing instruments to global distributors and wholesale buyers.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-              className="flex flex-wrap gap-4"
-            >
-              <Link
-                to="/products"
-                className="bg-gold text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg text-sm md:text-base"
+          <div className="flex flex-col md:flex-row items-end justify-between gap-10">
+            <div className="max-w-2xl">
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 md:mb-6 drop-shadow-lg"
               >
-                Explore Our Products
-              </Link>
-              <Link
-                to="/contact"
-                className="border-2 border-white/50 text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm text-sm md:text-base"
+                <span className="gold-gradient-text">Leading Ball Pen & Jute Bag Exporter</span>
+                <br />
+                <span className="text-white drop-shadow-lg">from India</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3 }}
+                className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed drop-shadow-md"
               >
-                Contact Us
-              </Link>
-              <CatalogueButton label="Download Catalogue" />
-            </motion.div>
+                Akanta Global is a trusted ball pen exporter, jute bag supplier, and stationery manufacturer from India. We supply bulk promotional pens, eco-friendly jute bags, office stationery, and custom branded writing instruments to global distributors and wholesale buyers.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 }}
+                className="flex flex-wrap gap-4"
+              >
+                <Link
+                  to="/products"
+                  className="bg-gold text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-gold-dark transition-colors shadow-lg text-sm md:text-base"
+                >
+                  Explore Our Products
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border-2 border-white/50 text-white px-6 py-2.5 md:px-7 md:py-3 rounded-md font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm text-sm md:text-base"
+                >
+                  Contact Us
+                </Link>
+                <CatalogueButton label="Download Catalogue" />
+              </motion.div>
 
-            {/* Catalogue QR */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.55 }}
-              className="mt-5 flex justify-center"
-            >
-              <div className="inline-flex flex-col items-center p-3 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10">
-                <CatalogueQR size="md" label="Scan to view our catalogue" labelClassName="text-white drop-shadow-md" />
-              </div>
-            </motion.div>
 
-
-            {/* Social Media Icons */}
+              {/* Social Media Icons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -429,7 +418,20 @@ const Index = () => {
               ))}
             </motion.div>
           </div>
+
+          {/* Catalogue QR — bottom right of hero */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.55 }}
+            className="flex-shrink-0"
+          >
+            <div className="inline-flex flex-col items-center p-3 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10">
+              <CatalogueQR size="md" label="Scan to view our catalogue" labelClassName="text-white drop-shadow-md" />
+            </div>
+          </motion.div>
         </div>
+      </div>
       </section>
 
       {/* Product Categories */}
