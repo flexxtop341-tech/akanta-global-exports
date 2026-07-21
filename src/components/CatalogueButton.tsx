@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Download, X, FileText } from "lucide-react";
-import catalogueAsset from "@/assets/pen-catalogue.pdf.asset.json";
+const catalogueAsset = { url: `${import.meta.env.BASE_URL}Akanta-Global-Pen-Catalogue.pdf` };
 import CatalogueQR from "@/components/CatalogueQR";
 
 interface Props {
