@@ -1,4 +1,4 @@
-import qrAsset from "@/assets/catalogue-qr.png.asset.json";
+const qrAsset = { url: `${import.meta.env.BASE_URL}catalogue-qr.png` };
 
 interface Props {
   label?: string;
