@@ -87,8 +87,9 @@ const Team = () => {
                   <img
                     src={founderAvatar}
                     alt="Babita Gunjal - Founder"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-center"
                   />
+
                 </div>
 
                 <motion.div
