@@ -253,6 +253,7 @@ const CertificateModal = ({ cert, open, onClose, onOpenPdf }: { cert: CertType |
 
 const Certificates = () => {
   const [selectedCert, setSelectedCert] = useState<CertType | null>(null);
+  const [pdfCert, setPdfCert] = useState<CertType | null>(null);
 
   return (
     <>
@@ -424,7 +425,13 @@ const Certificates = () => {
       </section>
 
       {/* Certificate Modal */}
-      <CertificateModal cert={selectedCert} open={!!selectedCert} onClose={() => setSelectedCert(null)} />
+      <CertificateModal
+        cert={selectedCert}
+        open={!!selectedCert}
+        onClose={() => setSelectedCert(null)}
+        onOpenPdf={(cert) => setPdfCert(cert)}
+      />
+      <PdfViewerModal cert={pdfCert} open={!!pdfCert} onClose={() => setPdfCert(null)} />
     </>
   );
 };
