@@ -93,7 +93,11 @@ const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open
             backgroundSize: '16px 16px'
           }} />
           <div className="relative">
-            <img src={cert.icon} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg" />
+            {cert.img ? (
+              <img src={cert.img} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg" />
+            ) : cert.Icon ? (
+              <cert.Icon className="w-14 h-14 mx-auto mb-3 text-gold drop-shadow-lg" strokeWidth={1.5} />
+            ) : null}
             <p className="text-gold font-semibold text-xs uppercase tracking-[0.2em]">{cert.category}</p>
             <h3 className="text-2xl font-bold gold-gradient-text mt-1">{cert.title}</h3>
           </div>
@@ -169,15 +173,25 @@ const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open
             >
               <X size={16} /> Close
             </button>
-            <button
-              onClick={() => {
-                // Placeholder - would download actual PDF
-                alert(`PDF download for ${cert.title} will be available soon. Please contact us to request a copy.`);
-              }}
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
-            >
-              <Download size={16} /> Download PDF
-            </button>
+            {cert.pdf ? (
+              <a
+                href={cert.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
+              >
+                <FileText size={16} /> View Original PDF
+              </a>
+            ) : (
+              <button
+                onClick={() => {
+                  alert(`PDF download for ${cert.title} will be available soon. Please contact us to request a copy.`);
+                }}
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
+              >
+                <Download size={16} /> Download PDF
+              </button>
+            )}
           </div>
         </div>
       </DialogContent>
