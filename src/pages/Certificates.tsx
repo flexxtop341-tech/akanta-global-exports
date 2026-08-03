@@ -83,7 +83,38 @@ const certs = [
 
 type CertType = typeof certs[number];
 
-const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open: boolean; onClose: () => void }) => {
+const PdfViewerModal = ({ cert, open, onClose }: { cert: CertType | null; open: boolean; onClose: () => void }) => {
+  if (!cert || !cert.pdf) return null;
+  return (
+    <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
+      <DialogContent className="max-w-5xl w-[95vw] p-0 overflow-hidden border-gold/20 bg-card">
+        <DialogTitle className="sr-only">{cert.title} document</DialogTitle>
+        <div className="flex items-center justify-between gap-3 px-5 py-3 bg-primary text-primary-foreground">
+          <div className="flex items-center gap-2 min-w-0">
+            <FileText size={18} className="text-gold shrink-0" />
+            <span className="font-semibold text-sm md:text-base truncate">{cert.title}</span>
+          </div>
+          <a
+            href={cert.pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="inline-flex items-center gap-1.5 text-xs md:text-sm font-semibold px-3 py-1.5 rounded-md text-primary bg-gradient-to-r from-gold to-gold-light transition-transform hover:scale-105 mr-8"
+          >
+            <Download size={14} /> Download
+          </a>
+        </div>
+        <iframe
+          src={`${cert.pdf}#view=FitH`}
+          title={`${cert.title} document`}
+          className="w-full h-[80vh] bg-muted"
+        />
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+const CertificateModal = ({ cert, open, onClose, onOpenPdf }: { cert: CertType | null; open: boolean; onClose: () => void; onOpenPdf: (cert: CertType) => void }) => {
   if (!cert) return null;
 
   return (
@@ -109,7 +140,25 @@ const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open
         </div>
 
         {/* Certificate Body */}
-        <div className="p-6">
+        <div className="p-6 max-h-[70vh] overflow-y-auto">
+          {cert.thumb && cert.pdf && (
+            <button
+              onClick={() => onOpenPdf(cert)}
+              className="group relative block w-full mb-5 rounded-lg overflow-hidden border border-gold/25 bg-white"
+              aria-label={`Open full ${cert.title} document`}
+            >
+              <img
+                src={cert.thumb}
+                alt={`${cert.title} first page preview`}
+                className="w-full h-56 object-cover object-top"
+              />
+              <span className="absolute inset-0 flex items-center justify-center bg-primary/50 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary text-xs font-semibold px-3 py-1.5 rounded-full">
+                  <Eye size={14} /> Open full document
+                </span>
+              </span>
+            </button>
+          )}
           {/* Certificate Preview */}
           <div className="border border-border rounded-lg p-5 mb-5 bg-background relative">
             {/* Watermark */}
@@ -179,14 +228,12 @@ const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open
               <X size={16} /> Close
             </button>
             {cert.pdf ? (
-              <a
-                href={cert.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => onOpenPdf(cert)}
                 className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
               >
                 <FileText size={16} /> View Original PDF
-              </a>
+              </button>
             ) : (
               <button
                 onClick={() => {
@@ -300,17 +347,24 @@ const Certificates = () => {
                   <div className="absolute -top-12 -right-12 w-32 h-32 bg-gold/5 rounded-full blur-2xl group-hover:bg-gold/10 transition-colors duration-500" />
                 )}
 
-                <motion.div
-                  animate={{ y: [0, -6, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
-                  className="relative z-10"
-                >
-                  {cert.img ? (
-                    <img src={cert.img} alt={cert.title} className="w-20 h-20 mx-auto object-contain drop-shadow-md" />
-                  ) : cert.Icon ? (
-                    <cert.Icon className="w-16 h-16 mx-auto text-gold drop-shadow-md" strokeWidth={1.5} />
-                  ) : null}
-                </motion.div>
+                {cert.thumb ? (
+                  <div className="relative z-10 mx-auto w-32 h-40 rounded-lg overflow-hidden border border-gold/25 bg-white shadow-md group-hover:shadow-lg transition-shadow">
+                    <img
+                      src={cert.thumb}
+                      alt={`${cert.title} document preview`}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative z-10">
+                    {cert.img ? (
+                      <img src={cert.img} alt={cert.title} className="w-20 h-20 mx-auto object-contain drop-shadow-md" />
+                    ) : cert.Icon ? (
+                      <cert.Icon className="w-16 h-16 mx-auto text-gold drop-shadow-md" strokeWidth={1.5} />
+                    ) : null}
+                  </div>
+                )}
 
                 <div className="relative z-10 mt-5">
                   <span className="text-gold font-semibold text-xs uppercase tracking-[0.2em]">{cert.category}</span>
