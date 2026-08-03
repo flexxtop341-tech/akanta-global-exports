@@ -300,7 +300,11 @@ const Certificates = () => {
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
                   className="relative z-10"
                 >
-                  <img src={cert.icon} alt={cert.title} className="w-20 h-20 mx-auto object-contain drop-shadow-md" />
+                  {cert.img ? (
+                    <img src={cert.img} alt={cert.title} className="w-20 h-20 mx-auto object-contain drop-shadow-md" />
+                  ) : cert.Icon ? (
+                    <cert.Icon className="w-16 h-16 mx-auto text-gold drop-shadow-md" strokeWidth={1.5} />
+                  ) : null}
                 </motion.div>
 
                 <div className="relative z-10 mt-5">
