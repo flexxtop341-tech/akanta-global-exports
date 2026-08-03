@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { CheckCircle2, ArrowRight, Eye, Download, X, Calendar, Building2, ShieldCheck } from "lucide-react";
+import { CheckCircle2, ArrowRight, Eye, Download, X, Calendar, Building2, ShieldCheck, FileText, Globe, Receipt, Factory } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 import iconCertIso from "@/assets/icon-cert-iso.png";
 import iconCertEnv from "@/assets/icon-cert-env.png";
-
 
 const badges = [
   "100% Compliance Rate",
@@ -19,7 +18,7 @@ const badges = [
 
 const certs = [
   {
-    icon: iconCertIso, category: "Quality Management", title: "ISO 9001:2015",
+    img: iconCertIso, Icon: null, category: "Quality Management", title: "ISO 9001:2015",
     desc: "International standard for quality management systems, ensuring consistent quality in all operations.",
     highlight: true,
     certNo: "QMS-2023-AG-04821",
@@ -27,9 +26,10 @@ const certs = [
     issued: "March 15, 2023",
     expires: "March 14, 2026",
     scope: "Export of consumer goods, writing instruments, and industrial products with full supply chain quality management.",
+    pdf: null as string | null,
   },
   {
-    icon: iconCertEnv, category: "Environmental Management", title: "ISO 14001:2015",
+    img: iconCertEnv, Icon: null, category: "Environmental Management", title: "ISO 14001:2015",
     desc: "Certification for environmental management systems, demonstrating our commitment to sustainability.",
     highlight: false,
     certNo: "EMS-2023-AG-07392",
@@ -37,15 +37,44 @@ const certs = [
     issued: "June 10, 2023",
     expires: "June 9, 2026",
     scope: "Environmental management for warehousing, packaging, and logistics operations across all export activities.",
+    pdf: null as string | null,
+  },
+  {
+    img: null, Icon: Globe, category: "Export License", title: "IEC Certificate",
+    desc: "Importer-Exporter Code issued by the DGFT, Ministry of Commerce & Industry — our licence to trade internationally.",
+    highlight: true,
+    certNo: "AXGPG9231J",
+    issuer: "Directorate General of Foreign Trade (DGFT), Pune",
+    issued: "July 23, 2026",
+    expires: "Lifetime validity",
+    scope: "Authorisation to import and export goods from India, issued to Akanta Global (Proprietorship), Nashik, Maharashtra.",
+    pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate.pdf`,
+  },
+  {
+    img: null, Icon: Receipt, category: "Tax Registration", title: "GST Registration",
+    desc: "Goods & Services Tax registration certificate (Form GST REG-06) issued by the Government of India.",
+    highlight: false,
+    certNo: "27AXGPG9231J1ZA",
+    issuer: "Goods & Services Tax Network — Maharashtra (Nashik)",
+    issued: "March 16, 2026",
+    expires: "Valid — no expiry",
+    scope: "Regular GST registration for trading and export of writing instruments and jute products from Nashik, Maharashtra.",
+    pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate.pdf`,
+  },
+  {
+    img: null, Icon: Factory, category: "MSME Registration", title: "Udyam Registration",
+    desc: "Government of India MSME (Udyam) registration recognising Akanta Global as a registered micro enterprise.",
+    highlight: false,
+    certNo: "UDYAM-MH-23-0379353",
+    issuer: "Ministry of MSME, Government of India",
+    issued: "February 19, 2026",
+    expires: "Lifetime validity",
+    scope: "Micro enterprise engaged in wholesale trading (NIC 46412) — textiles, clothing accessories and allied consumer goods.",
+    pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration.pdf`,
   },
 ];
 
-const stats = [
-  { value: "6+", label: "Certifications" },
-  { value: "100%", label: "Compliance" },
-  { value: "Annual", label: "Audits" },
-  { value: "Global", label: "Standards" },
-];
+
 
 type CertType = typeof certs[number];
 
@@ -64,7 +93,11 @@ const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open
             backgroundSize: '16px 16px'
           }} />
           <div className="relative">
-            <img src={cert.icon} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg" />
+            {cert.img ? (
+              <img src={cert.img} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg" />
+            ) : cert.Icon ? (
+              <cert.Icon className="w-14 h-14 mx-auto mb-3 text-gold drop-shadow-lg" strokeWidth={1.5} />
+            ) : null}
             <p className="text-gold font-semibold text-xs uppercase tracking-[0.2em]">{cert.category}</p>
             <h3 className="text-2xl font-bold gold-gradient-text mt-1">{cert.title}</h3>
           </div>
@@ -140,15 +173,25 @@ const CertificateModal = ({ cert, open, onClose }: { cert: CertType | null; open
             >
               <X size={16} /> Close
             </button>
-            <button
-              onClick={() => {
-                // Placeholder - would download actual PDF
-                alert(`PDF download for ${cert.title} will be available soon. Please contact us to request a copy.`);
-              }}
-              className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
-            >
-              <Download size={16} /> Download PDF
-            </button>
+            {cert.pdf ? (
+              <a
+                href={cert.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
+              >
+                <FileText size={16} /> View Original PDF
+              </a>
+            ) : (
+              <button
+                onClick={() => {
+                  alert(`PDF download for ${cert.title} will be available soon. Please contact us to request a copy.`);
+                }}
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold to-gold-light text-primary rounded-lg px-4 py-2.5 text-sm font-semibold hover:shadow-lg transition-shadow"
+              >
+                <Download size={16} /> Download PDF
+              </button>
+            )}
           </div>
         </div>
       </DialogContent>
@@ -257,7 +300,11 @@ const Certificates = () => {
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.3 }}
                   className="relative z-10"
                 >
-                  <img src={cert.icon} alt={cert.title} className="w-20 h-20 mx-auto object-contain drop-shadow-md" />
+                  {cert.img ? (
+                    <img src={cert.img} alt={cert.title} className="w-20 h-20 mx-auto object-contain drop-shadow-md" />
+                  ) : cert.Icon ? (
+                    <cert.Icon className="w-16 h-16 mx-auto text-gold drop-shadow-md" strokeWidth={1.5} />
+                  ) : null}
                 </motion.div>
 
                 <div className="relative z-10 mt-5">
