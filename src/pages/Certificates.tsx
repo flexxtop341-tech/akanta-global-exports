@@ -27,6 +27,7 @@ const certs = [
     expires: "March 14, 2026",
     scope: "Export of consumer goods, writing instruments, and industrial products with full supply chain quality management.",
     pdf: null as string | null,
+    thumb: null as string | null,
   },
   {
     img: iconCertEnv, Icon: null, category: "Environmental Management", title: "ISO 14001:2015",
@@ -38,6 +39,7 @@ const certs = [
     expires: "June 9, 2026",
     scope: "Environmental management for warehousing, packaging, and logistics operations across all export activities.",
     pdf: null as string | null,
+    thumb: null as string | null,
   },
   {
     img: null, Icon: Globe, category: "Export License", title: "IEC Certificate",
@@ -49,6 +51,7 @@ const certs = [
     expires: "Lifetime validity",
     scope: "Authorisation to import and export goods from India, issued to Akanta Global (Proprietorship), Nashik, Maharashtra.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate.pdf`,
+    thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate-thumb.png`,
   },
   {
     img: null, Icon: Receipt, category: "Tax Registration", title: "GST Registration",
@@ -60,6 +63,7 @@ const certs = [
     expires: "Valid — no expiry",
     scope: "Regular GST registration for trading and export of writing instruments and jute products from Nashik, Maharashtra.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate.pdf`,
+    thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate-thumb.png`,
   },
   {
     img: null, Icon: Factory, category: "MSME Registration", title: "Udyam Registration",
@@ -71,6 +75,7 @@ const certs = [
     expires: "Lifetime validity",
     scope: "Micro enterprise engaged in wholesale trading (NIC 46412) — textiles, clothing accessories and allied consumer goods.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration.pdf`,
+    thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration-thumb.png`,
   },
 ];
 
