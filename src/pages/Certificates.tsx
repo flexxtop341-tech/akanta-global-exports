@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
-import iconCertIso from "@/assets/icon-cert-iso.png";
-import iconCertEnv from "@/assets/icon-cert-env.png";
 
 const badges = [
   "100% Compliance Rate",
