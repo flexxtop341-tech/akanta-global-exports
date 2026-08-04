@@ -107,7 +107,9 @@ const CertificateModal = ({ cert, open, onClose, onOpenPdf }: { cert: CertType |
             backgroundSize: '16px 16px'
           }} />
           <div className="relative">
-            {cert.img ? (
+            {cert.logo ? (
+              <img src={cert.logo} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg object-contain" />
+            ) : cert.img ? (
               <img src={cert.img} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg" />
             ) : cert.Icon ? (
               <cert.Icon className="w-14 h-14 mx-auto mb-3 text-gold drop-shadow-lg" strokeWidth={1.5} />
