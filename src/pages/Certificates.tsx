@@ -26,6 +26,7 @@ const certs = [
     scope: "Authorisation to import and export goods from India, issued to Akanta Global (Proprietorship), Nashik, Maharashtra.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate.pdf`,
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate-thumb.png`,
+    logo: `${import.meta.env.BASE_URL}certificates/logos/dgft-logo.png`,
   },
   {
     img: null, Icon: Receipt, category: "Tax Registration", title: "GST Registration",
@@ -38,6 +39,7 @@ const certs = [
     scope: "Regular GST registration for trading and export of writing instruments and jute products from Nashik, Maharashtra.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate.pdf`,
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate-thumb.png`,
+    logo: `${import.meta.env.BASE_URL}certificates/logos/gst-logo.png`,
   },
   {
     img: null, Icon: Factory, category: "MSME Registration", title: "Udyam Registration",
@@ -50,6 +52,7 @@ const certs = [
     scope: "Micro enterprise engaged in wholesale trading (NIC 46412) — textiles, clothing accessories and allied consumer goods.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration.pdf`,
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration-thumb.png`,
+    logo: `${import.meta.env.BASE_URL}certificates/logos/udyam-logo.png`,
   },
 ];
 
