@@ -324,7 +324,16 @@ const Certificates = () => {
                   <div className="absolute -top-12 -right-12 w-32 h-32 bg-gold/5 rounded-full blur-2xl group-hover:bg-gold/10 transition-colors duration-500" />
                 )}
 
-                {cert.thumb ? (
+                {cert.logo ? (
+                  <div className="relative z-10 mx-auto w-32 h-32 rounded-full overflow-hidden border border-gold/25 bg-white shadow-md group-hover:shadow-lg transition-shadow flex items-center justify-center p-3">
+                    <img
+                      src={cert.logo}
+                      alt={`${cert.title} logo`}
+                      loading="lazy"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ) : cert.thumb ? (
                   <div className="relative z-10 mx-auto w-32 h-40 rounded-lg overflow-hidden border border-gold/25 bg-white shadow-md group-hover:shadow-lg transition-shadow">
                     <img
                       src={cert.thumb}
