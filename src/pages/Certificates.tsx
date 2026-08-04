@@ -26,6 +26,7 @@ const certs = [
     scope: "Authorisation to import and export goods from India, issued to Akanta Global (Proprietorship), Nashik, Maharashtra.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate.pdf`,
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-IEC-Certificate-thumb.png`,
+    logo: `${import.meta.env.BASE_URL}certificates/logos/dgft-logo.png`,
   },
   {
     img: null, Icon: Receipt, category: "Tax Registration", title: "GST Registration",
@@ -38,6 +39,7 @@ const certs = [
     scope: "Regular GST registration for trading and export of writing instruments and jute products from Nashik, Maharashtra.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate.pdf`,
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-GST-Certificate-thumb.png`,
+    logo: `${import.meta.env.BASE_URL}certificates/logos/gst-logo.png`,
   },
   {
     img: null, Icon: Factory, category: "MSME Registration", title: "Udyam Registration",
@@ -50,6 +52,7 @@ const certs = [
     scope: "Micro enterprise engaged in wholesale trading (NIC 46412) — textiles, clothing accessories and allied consumer goods.",
     pdf: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration.pdf`,
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration-thumb.png`,
+    logo: `${import.meta.env.BASE_URL}certificates/logos/udyam-logo.png`,
   },
 ];
 
@@ -104,7 +107,9 @@ const CertificateModal = ({ cert, open, onClose, onOpenPdf }: { cert: CertType |
             backgroundSize: '16px 16px'
           }} />
           <div className="relative">
-            {cert.img ? (
+            {cert.logo ? (
+              <img src={cert.logo} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg object-contain" />
+            ) : cert.img ? (
               <img src={cert.img} alt={cert.title} className="w-16 h-16 mx-auto mb-3 drop-shadow-lg" />
             ) : cert.Icon ? (
               <cert.Icon className="w-14 h-14 mx-auto mb-3 text-gold drop-shadow-lg" strokeWidth={1.5} />
@@ -321,7 +326,16 @@ const Certificates = () => {
                   <div className="absolute -top-12 -right-12 w-32 h-32 bg-gold/5 rounded-full blur-2xl group-hover:bg-gold/10 transition-colors duration-500" />
                 )}
 
-                {cert.thumb ? (
+                {cert.logo ? (
+                  <div className="relative z-10 mx-auto w-32 h-32 rounded-full overflow-hidden border border-gold/25 bg-white shadow-md group-hover:shadow-lg transition-shadow flex items-center justify-center p-3">
+                    <img
+                      src={cert.logo}
+                      alt={`${cert.title} logo`}
+                      loading="lazy"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                ) : cert.thumb ? (
                   <div className="relative z-10 mx-auto w-32 h-40 rounded-lg overflow-hidden border border-gold/25 bg-white shadow-md group-hover:shadow-lg transition-shadow">
                     <img
                       src={cert.thumb}
