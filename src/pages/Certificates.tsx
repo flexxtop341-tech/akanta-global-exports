@@ -16,30 +16,6 @@ const badges = [
 
 const certs = [
   {
-    img: iconCertIso, Icon: null, category: "Quality Management", title: "ISO 9001:2015",
-    desc: "International standard for quality management systems, ensuring consistent quality in all operations.",
-    highlight: true,
-    certNo: "QMS-2023-AG-04821",
-    issuer: "Bureau Veritas Certification",
-    issued: "March 15, 2023",
-    expires: "March 14, 2026",
-    scope: "Export of consumer goods, writing instruments, and industrial products with full supply chain quality management.",
-    pdf: null as string | null,
-    thumb: null as string | null,
-  },
-  {
-    img: iconCertEnv, Icon: null, category: "Environmental Management", title: "ISO 14001:2015",
-    desc: "Certification for environmental management systems, demonstrating our commitment to sustainability.",
-    highlight: false,
-    certNo: "EMS-2023-AG-07392",
-    issuer: "TÜV SÜD South Asia",
-    issued: "June 10, 2023",
-    expires: "June 9, 2026",
-    scope: "Environmental management for warehousing, packaging, and logistics operations across all export activities.",
-    pdf: null as string | null,
-    thumb: null as string | null,
-  },
-  {
     img: null, Icon: Globe, category: "Export License", title: "IEC Certificate",
     desc: "Importer-Exporter Code issued by the DGFT, Ministry of Commerce & Industry — our licence to trade internationally.",
     highlight: true,
@@ -76,6 +52,7 @@ const certs = [
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration-thumb.png`,
   },
 ];
+
 
 
 
