@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import PageHero from "@/components/PageHero";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
-import iconCertIso from "@/assets/icon-cert-iso.png";
-import iconCertEnv from "@/assets/icon-cert-env.png";
 
 const badges = [
   "100% Compliance Rate",
@@ -17,30 +15,6 @@ const badges = [
 ];
 
 const certs = [
-  {
-    img: iconCertIso, Icon: null, category: "Quality Management", title: "ISO 9001:2015",
-    desc: "International standard for quality management systems, ensuring consistent quality in all operations.",
-    highlight: true,
-    certNo: "QMS-2023-AG-04821",
-    issuer: "Bureau Veritas Certification",
-    issued: "March 15, 2023",
-    expires: "March 14, 2026",
-    scope: "Export of consumer goods, writing instruments, and industrial products with full supply chain quality management.",
-    pdf: null as string | null,
-    thumb: null as string | null,
-  },
-  {
-    img: iconCertEnv, Icon: null, category: "Environmental Management", title: "ISO 14001:2015",
-    desc: "Certification for environmental management systems, demonstrating our commitment to sustainability.",
-    highlight: false,
-    certNo: "EMS-2023-AG-07392",
-    issuer: "TÜV SÜD South Asia",
-    issued: "June 10, 2023",
-    expires: "June 9, 2026",
-    scope: "Environmental management for warehousing, packaging, and logistics operations across all export activities.",
-    pdf: null as string | null,
-    thumb: null as string | null,
-  },
   {
     img: null, Icon: Globe, category: "Export License", title: "IEC Certificate",
     desc: "Importer-Exporter Code issued by the DGFT, Ministry of Commerce & Industry — our licence to trade internationally.",
@@ -78,6 +52,7 @@ const certs = [
     thumb: `${import.meta.env.BASE_URL}certificates/Akanta-Global-Udyam-Registration-thumb.png`,
   },
 ];
+
 
 
 
@@ -258,25 +233,23 @@ const Certificates = () => {
   return (
     <>
       <SEOHead
-        title="Certifications — ISO 9001, IEC, APEDA, FIEO Certified Pen & Jute Bag Exporter"
-        description="Akanta Global holds ISO 9001:2015, ISO 14001, FSSAI, IEC, APEDA & FIEO certifications — ensuring world-class quality standards for ball pen export, jute bag supply, and trade compliance from India."
+        title="Certifications — IEC, GST & Udyam Registered Pen & Jute Bag Exporter"
+        description="Akanta Global holds IEC, GST and Udyam MSME registrations — ensuring trade compliance for ball pen export, jute bag supply, and B2B exports from Nashik, India."
         path="/certificates"
-        keywords="ISO certified pen exporter india, APEDA registered exporter, FIEO member stationery, IEC certificate pen company, ISO 9001 ball pen manufacturer, certified jute bag exporter india, certified stationery supplier india, export compliance certificates, quality certified pen exporter nashik"
+        keywords="IEC registered exporter india, GST registered exporter, Udyam registered pen exporter, certified jute bag exporter india, export compliance certificates, nashik stationery exporter, b2b pen supplier india"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Certifications & Compliance — Akanta Global",
-          "description": "ISO 9001, ISO 14001, FSSAI, IEC, APEDA, FIEO certified ball pen & jute bag exporter from India.",
+          "description": "IEC, GST and Udyam registered ball pen & jute bag exporter from Nashik, India.",
           "url": "https://akantaglobal.com/certificates",
           "about": {
             "@type": "Organization",
             "name": "Akanta Global",
             "hasCredential": [
-              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Quality Management", "name": "ISO 9001:2015" },
-              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Environmental", "name": "ISO 14001:2015" },
               { "@type": "EducationalOccupationalCredential", "credentialCategory": "Export License", "name": "IEC Certificate" },
-              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Export Registration", "name": "APEDA Registration" },
-              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Trade Membership", "name": "FIEO Membership" }
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "Tax Registration", "name": "GST Registration" },
+              { "@type": "EducationalOccupationalCredential", "credentialCategory": "MSME Registration", "name": "Udyam Registration" }
             ]
           }
         }}
